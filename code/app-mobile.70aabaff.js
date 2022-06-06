@@ -1,4 +1,4 @@
-import{s as n,r as i,$ as p,n as b}from"./index.a1d1d5b7.js";var v=Object.defineProperty,d=Object.getOwnPropertyDescriptor,f=(l,r,t,s)=>{for(var e=s>1?void 0:s?d(r,t):r,c=l.length-1,o;c>=0;c--)(o=l[c])&&(e=(s?o(r,t,e):o(e))||e);return s&&e&&v(r,t,e),e};let a=class extends n{static get styles(){return i`
+import{s as n,r as i,$ as p,n as b}from"./index.1bf49314.js";var v=Object.defineProperty,d=Object.getOwnPropertyDescriptor,f=(l,r,t,s)=>{for(var e=s>1?void 0:s?d(r,t):r,c=l.length-1,o;c>=0;c--)(o=l[c])&&(e=(s?o(r,t,e):o(e))||e);return s&&e&&v(r,t,e),e};let a=class extends n{static get styles(){return i`
     .scroll-container {
       height: 100vh;
       overflow-y: scroll;
@@ -29,4 +29,4 @@ import{s as n,r as i,$ as p,n as b}from"./index.a1d1d5b7.js";var v=Object.define
         <img class="section" src="">
        </div>
     `}};a=f([b("app-mobile")],a);export{a as AppMobile};
-//# sourceMappingURL=app-mobile.a39b8a5f.js.map
+//# sourceMappingURL=app-mobile.70aabaff.js.map
