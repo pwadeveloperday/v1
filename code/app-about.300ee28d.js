@@ -1,4 +1,4 @@
-import{s as c,r as d,$ as h,n as l}from"./index.eab78a6a.js";var u=Object.defineProperty,i=Object.getOwnPropertyDescriptor,f=(n,r,t,a)=>{for(var e=a>1?void 0:a?i(r,t):r,s=n.length-1,o;s>=0;s--)(o=n[s])&&(e=(a?o(r,t,e):o(e))||e);return a&&e&&u(r,t,e),e};let p=class extends c{static get styles(){return d`
+import{s as c,r as d,$ as p,n as l}from"./index.a1d1d5b7.js";var h=Object.defineProperty,f=Object.getOwnPropertyDescriptor,i=(o,r,t,a)=>{for(var e=a>1?void 0:a?f(r,t):r,s=o.length-1,n;s>=0;s--)(n=o[s])&&(e=(a?n(r,t,e):n(e))||e);return a&&e&&h(r,t,e),e};let u=class extends c{static get styles(){return d`
 
     fluent-card {
       padding: 0px 18px 18px;
@@ -23,8 +23,12 @@ import{s as c,r as d,$ as h,n as l}from"./index.eab78a6a.js";var u=Object.define
         width: 54%;
       }
     }
-    `}constructor(){super()}render(){return h`
+    `}constructor(){super()}render(){return p`
       <app-header ?enableBack="${!0}"></app-header>
+      <fluent-breadcrumb>
+        <fluent-breadcrumb-item href="/">首页</fluent-breadcrumb-item>
+        <fluent-breadcrumb-item href="/about">关于</fluent-breadcrumb-item>
+      </fluent-breadcrumb>
 
       <div>
         <h2>About Page</h2>
@@ -39,5 +43,5 @@ import{s as c,r as d,$ as h,n as l}from"./index.eab78a6a.js";var u=Object.define
           <p>Check out <fluent-anchor href="https://docs.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/handle-files">these docs</fluent-anchor> to learn more about the advanced features that you can use in your PWA</p>
         </fluent-card>
       </div>
-    `}};p=f([l("app-about")],p);export{p as AppAbout};
-//# sourceMappingURL=app-about.05de8e2c.js.map
+    `}};u=i([l("app-about")],u);export{u as AppAbout};
+//# sourceMappingURL=app-about.300ee28d.js.map
