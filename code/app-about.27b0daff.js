@@ -1,4 +1,4 @@
-import{s as c,r as h,$ as u,n as d}from"./index.1bf49314.js";var i=Object.defineProperty,m=Object.getOwnPropertyDescriptor,f=(p,r,s,a)=>{for(var e=a>1?void 0:a?m(r,s):r,t=p.length-1,o;t>=0;t--)(o=p[t])&&(e=(a?o(r,s,e):o(e))||e);return a&&e&&i(r,s,e),e};let n=class extends c{static get styles(){return h`
+import{s as c,r as h,$ as u,n as d}from"./index.fcc1d9b1.js";var i=Object.defineProperty,m=Object.getOwnPropertyDescriptor,f=(p,r,s,a)=>{for(var e=a>1?void 0:a?m(r,s):r,t=p.length-1,o;t>=0;t--)(o=p[t])&&(e=(a?o(r,s,e):o(e))||e);return a&&e&&i(r,s,e),e};let n=class extends c{static get styles(){return h`
 
     fluent-card {
       padding: 1rem;
@@ -28,4 +28,4 @@ import{s as c,r as h,$ as u,n as d}from"./index.1bf49314.js";var i=Object.define
       </div>
       <app-footer></app-footer>
     `}};n=f([d("app-about")],n);export{n as AppAbout};
-//# sourceMappingURL=app-about.64c059dd.js.map
+//# sourceMappingURL=app-about.27b0daff.js.map
