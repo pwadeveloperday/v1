@@ -1,4 +1,4 @@
-import{s as p,r as f,$ as F,e as s,n as o}from"./index.1bf49314.js";var E=Object.defineProperty,i=Object.getOwnPropertyDescriptor,l=(c,e,t,r)=>{for(var u=r>1?void 0:r?i(e,t):e,n=c.length-1,a;n>=0;n--)(a=c[n])&&(u=(r?a(e,t,u):a(u))||u);return r&&u&&E(e,t,u),u};let d=class extends p{constructor(){super(),this.description=`
+import{s as p,r as f,$ as F,e as s,n as o}from"./index.fcc1d9b1.js";var E=Object.defineProperty,i=Object.getOwnPropertyDescriptor,l=(c,e,t,r)=>{for(var u=r>1?void 0:r?i(e,t):e,n=c.length-1,a;n>=0;n--)(a=c[n])&&(u=(r?a(e,t,u):a(u))||u);return r&&u&&E(e,t,u),u};let d=class extends p{constructor(){super(),this.description=`
     \u968F\u7740 PWA \u6280\u672F\u5F15\u5165\u4EE5\u53CA\u591A\u79CD Web \u5E73\u53F0\u80FD\u529B\u7684\u589E\u5F3A\uFF0CPWA \u6280\u672F\u7684 Web \u5E94\u7528\u83B7\u5F97\u4E86\u4E0E\u4F20\u7EDF\u672C\u5730\u5E94\u7528\u51E0\u4E4E\u76F8\u540C\u7684\u7528\u6237\u4F53\u9A8C\u5E76\u4E14\u5F97\u5230\u4E86\u5E7F\u6CDB\u7684\u5E94\u7528\uFF0C\u4E5F\u4FC3\u8FDB\u4E86\u5C0F\u7A0B\u5E8F\u751F\u6001\u7684\u53D1\u5C55\u3002
   `}static get styles(){return f`
       fluent-card {
@@ -22,4 +22,4 @@ import{s as p,r as f,$ as F,e as s,n as o}from"./index.1bf49314.js";var E=Object
 
       <app-footer></app-footer>
     `}};l([s({type:String})],d.prototype,"description",2);d=l([o("app-2021")],d);export{d as App2021};
-//# sourceMappingURL=app-2021.78a27e7e.js.map
+//# sourceMappingURL=app-2021.932d54a8.js.map
