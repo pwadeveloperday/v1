@@ -1,8 +1,11 @@
-import{s as c,r as h,$ as u,n as d}from"./index.fcc1d9b1.js";var i=Object.defineProperty,m=Object.getOwnPropertyDescriptor,f=(p,r,s,a)=>{for(var e=a>1?void 0:a?m(r,s):r,t=p.length-1,o;t>=0;t--)(o=p[t])&&(e=(a?o(r,s,e):o(e))||e);return a&&e&&i(r,s,e),e};let n=class extends c{static get styles(){return h`
+import{s as c,r as u,$ as d,n as h}from"./index.c8d51b44.js";var i=Object.defineProperty,m=Object.getOwnPropertyDescriptor,l=(p,a,s,r)=>{for(var e=r>1?void 0:r?m(a,s):a,t=p.length-1,o;t>=0;t--)(o=p[t])&&(e=(r?o(a,s,e):o(e))||e);return r&&e&&i(a,s,e),e};let n=class extends c{static get styles(){return u`
+    .about {
+      padding: 0 16px;
+    }
 
     fluent-card {
       padding: 1rem;
-      margin-top: 1rem;
+      margin-bottom: 1rem;
     }
 
     @media(prefers-color-scheme: light) {
@@ -13,9 +16,10 @@ import{s as c,r as h,$ as u,n as d}from"./index.fcc1d9b1.js";var i=Object.define
 
     @media (min-width: 1024px) {
     }
-    `}constructor(){super()}render(){return u`
+    `}constructor(){super()}render(){return d`
       <app-header ?enableBack="${!0}"></app-header>
-      <div>
+      <app-nav></app-nav>
+      <div class="about">
         <fluent-card>
           <h2>Did you know?</h2>
 
@@ -27,5 +31,5 @@ import{s as c,r as h,$ as u,n as d}from"./index.fcc1d9b1.js";var i=Object.define
         </fluent-card>
       </div>
       <app-footer></app-footer>
-    `}};n=f([d("app-about")],n);export{n as AppAbout};
-//# sourceMappingURL=app-about.27b0daff.js.map
+    `}};n=l([h("app-about")],n);export{n as AppAbout};
+//# sourceMappingURL=app-about.aaa630b1.js.map
