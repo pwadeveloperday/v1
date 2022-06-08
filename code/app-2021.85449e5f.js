@@ -1,6 +1,6 @@
-import{s as n,r as v,$ as i,e as c,n as h}from"./index.c8d51b44.js";var l=Object.defineProperty,o=Object.getOwnPropertyDescriptor,p=(a,u,t,C)=>{for(var e=C>1?void 0:C?o(u,t):u,r=a.length-1,d;r>=0;r--)(d=a[r])&&(e=(C?d(u,t,e):d(e))||e);return C&&e&&l(u,t,e),e};let s=class extends n{constructor(){super(),this.description=`
+import{s as p,r as i,$ as v,e as c,n as h}from"./index.e2b63653.js";var l=Object.defineProperty,o=Object.getOwnPropertyDescriptor,n=(a,u,t,C)=>{for(var e=C>1?void 0:C?o(u,t):u,r=a.length-1,d;r>=0;r--)(d=a[r])&&(e=(C?d(u,t,e):d(e))||e);return C&&e&&l(u,t,e),e};let s=class extends p{constructor(){super(),this.description=`
     \u968F\u7740 PWA \u6280\u672F\u5F15\u5165\u4EE5\u53CA\u591A\u79CD Web \u5E73\u53F0\u80FD\u529B\u7684\u589E\u5F3A\uFF0CPWA \u6280\u672F\u7684 Web \u5E94\u7528\u83B7\u5F97\u4E86\u4E0E\u4F20\u7EDF\u672C\u5730\u5E94\u7528\u51E0\u4E4E\u76F8\u540C\u7684\u7528\u6237\u4F53\u9A8C\u5E76\u4E14\u5F97\u5230\u4E86\u5E7F\u6CDB\u7684\u5E94\u7528\uFF0C\u4E5F\u4FC3\u8FDB\u4E86\u5C0F\u7A0B\u5E8F\u751F\u6001\u7684\u53D1\u5C55\u3002
-  `}static get styles(){return v`
+  `}static get styles(){return i`
       .p2021 {
         padding: 0 16px;
       }
@@ -18,9 +18,8 @@ import{s as n,r as v,$ as i,e as c,n as h}from"./index.c8d51b44.js";var l=Object
         font-weight: 600;
         font-size: 1rem;
       }
-    `}render(){return i`
+    `}render(){return v`
       <app-header ?enableBack="${!0}"></app-header>
-      <app-nav></app-nav>
       <div class="p2021">
 
       <fluent-card> ${this.description} </fluent-card>
@@ -74,5 +73,5 @@ import{s as n,r as v,$ as i,e as c,n as h}from"./index.c8d51b44.js";var l=Object
       </div>
 
       <app-footer></app-footer>
-    `}};p([c({type:String})],s.prototype,"description",2);s=p([h("app-2021")],s);export{s as App2021};
-//# sourceMappingURL=app-2021.fc0a3752.js.map
+    `}};n([c({type:String})],s.prototype,"description",2);s=n([h("app-2021")],s);export{s as App2021};
+//# sourceMappingURL=app-2021.85449e5f.js.map
