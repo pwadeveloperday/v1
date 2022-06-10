@@ -164,7 +164,7 @@ found at http://polymer.github.io/PATENTS.txt
       width: 100%;
       position: absolute;
       overflow: hidden;
-      background: url(/assets/img/vbg.png) no-repeat center center/cover;
+      /* background: url(/assets/img/vbg.png) no-repeat center center/cover; */
       z-index: -1000;
     }
 
@@ -352,7 +352,9 @@ found at http://polymer.github.io/PATENTS.txt
         `;return O`
         <div>
           <div id="superhero">
-            <video src="/assets/img/vbg.mp4" loop muted autoplay></video>
+            <video playsinline loop muted autoplay poster="/assets/img/vbg.png">
+              <source src="/assets/img/vbg.mp42" type="video/mp4">
+            </video>
             <div class="overlay"></div>
           </div>
           <app-header-home></app-header-home>
@@ -977,8 +979,8 @@ found at http://polymer.github.io/PATENTS.txt
           opacity: 1;
         }
       }
-    `}constructor(){super()}firstUpdated(){var e;new U((e=this.shadowRoot)==null?void 0:e.querySelector("#routerOutlet")).setRoutes([{path:"",animate:!0,children:[{path:"/",component:"app-home"},{path:"/2022",component:"app-2022",action:async()=>{await T(()=>import("./app-2022.a58ead89.js"),[])}},{path:"/2021",children:[{path:"/",component:"app-2021",action:async()=>{await T(()=>import("./app-2021.4f0bc6d6.js"),[])}},{path:"/:topic",component:"app-2021",action:async()=>{await T(()=>import("./app-2021.4f0bc6d6.js"),[])}}]},{path:"/mp",component:"app-mediaplayer",action:async()=>{await T(()=>import("./app-mediaplayer.f3ef950c.js"),[])}},{path:"/about",component:"app-about",action:async()=>{await T(()=>import("./app-about.acee1f7c.js"),[])}},{path:"/news",component:"app-news",action:async()=>{await T(()=>import("./app-news.9591cba6.js"),[])}},{path:"/sample",component:"app-sample",action:async()=>{await T(()=>import("./app-sample.240550a9.js"),[])}},{path:"/tutorial",component:"app-tutorial",action:async()=>{await T(()=>import("./app-tutorial.4faf4320.js"),[])}},{path:"/code-of-conduct",component:"app-coc",action:async()=>{await T(()=>import("./app-coc.7cc6a8f9.js"),[])}},{path:"/privacy",component:"app-privacy",action:async()=>{await T(()=>import("./app-privacy.7a08b387.js"),[])}}]}]),zn({immediate:!0})}render(){return O`
+    `}constructor(){super()}firstUpdated(){var e;new U((e=this.shadowRoot)==null?void 0:e.querySelector("#routerOutlet")).setRoutes([{path:"",animate:!0,children:[{path:"/",component:"app-home"},{path:"/2022",component:"app-2022",action:async()=>{await T(()=>import("./app-2022.22e78903.js"),[])}},{path:"/2021",children:[{path:"/",component:"app-2021",action:async()=>{await T(()=>import("./app-2021.052da7a8.js"),[])}},{path:"/:topic",component:"app-2021",action:async()=>{await T(()=>import("./app-2021.052da7a8.js"),[])}}]},{path:"/mp",component:"app-mediaplayer",action:async()=>{await T(()=>import("./app-mediaplayer.d1adf47b.js"),[])}},{path:"/about",component:"app-about",action:async()=>{await T(()=>import("./app-about.2f91ad58.js"),[])}},{path:"/news",component:"app-news",action:async()=>{await T(()=>import("./app-news.26249696.js"),[])}},{path:"/sample",component:"app-sample",action:async()=>{await T(()=>import("./app-sample.8c7cab13.js"),[])}},{path:"/tutorial",component:"app-tutorial",action:async()=>{await T(()=>import("./app-tutorial.748eec77.js"),[])}},{path:"/code-of-conduct",component:"app-coc",action:async()=>{await T(()=>import("./app-coc.6f05b78b.js"),[])}},{path:"/privacy",component:"app-privacy",action:async()=>{await T(()=>import("./app-privacy.cfb099e7.js"),[])}}]}]),zn({immediate:!0})}render(){return O`
       <main id="routerOutlet">
       </main>
     `}};Vt=wr([V("app-index")],Vt);"serviceWorker"in navigator&&navigator.serviceWorker.register("/sw.js");export{O as $,R as e,V as n,Wn as o,I as r,L as s};
-//# sourceMappingURL=index.604586b7.js.map
+//# sourceMappingURL=index.4707d668.js.map
