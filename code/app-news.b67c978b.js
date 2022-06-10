@@ -1,4 +1,4 @@
-import{s as d,r as c,$ as i,n as m}from"./index.7ba2b8c9.js";var l=Object.defineProperty,f=Object.getOwnPropertyDescriptor,u=(s,r,p,a)=>{for(var e=a>1?void 0:a?f(r,p):r,t=s.length-1,o;t>=0;t--)(o=s[t])&&(e=(a?o(r,p,e):o(e))||e);return a&&e&&l(r,p,e),e};let n=class extends d{static get styles(){return c`
+import{s as d,r as c,$ as i,n as m}from"./index.e844b11a.js";var l=Object.defineProperty,f=Object.getOwnPropertyDescriptor,u=(s,r,p,a)=>{for(var e=a>1?void 0:a?f(r,p):r,t=s.length-1,o;t>=0;t--)(o=s[t])&&(e=(a?o(r,p,e):o(e))||e);return a&&e&&l(r,p,e),e};let n=class extends d{static get styles(){return c`
     .about {
       padding: 0 16px;
       margin: 2rem 0px 0rem;
@@ -28,4 +28,4 @@ import{s as d,r as c,$ as i,n as m}from"./index.7ba2b8c9.js";var l=Object.define
       </div>
       <app-footer></app-footer>
     `}};n=u([m("app-news")],n);export{n as AppNews};
-//# sourceMappingURL=app-news.9a01138a.js.map
+//# sourceMappingURL=app-news.b67c978b.js.map

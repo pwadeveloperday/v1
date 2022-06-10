@@ -353,7 +353,7 @@ found at http://polymer.github.io/PATENTS.txt
         <div>
           <div id="superhero">
             <video playsinline loop muted autoplay poster="/assets/img/vbg.png">
-              <source src="/assets/img/vbg.mp4" type="video/mp4">
+              <source src="https://pwa-1253328120.cos.ap-shanghai.myqcloud.com/pwadev.io/vbg-720-5.mp4" type="video/mp4">
             </video>
             <div class="overlay"></div>
           </div>
@@ -979,8 +979,8 @@ found at http://polymer.github.io/PATENTS.txt
           opacity: 1;
         }
       }
-    `}constructor(){super()}firstUpdated(){var e;new U((e=this.shadowRoot)==null?void 0:e.querySelector("#routerOutlet")).setRoutes([{path:"",animate:!0,children:[{path:"/",component:"app-home"},{path:"/2022",component:"app-2022",action:async()=>{await T(()=>import("./app-2022.cf459f99.js"),[])}},{path:"/2021",children:[{path:"/",component:"app-2021",action:async()=>{await T(()=>import("./app-2021.5c264932.js"),[])}},{path:"/:topic",component:"app-2021",action:async()=>{await T(()=>import("./app-2021.5c264932.js"),[])}}]},{path:"/mp",component:"app-mediaplayer",action:async()=>{await T(()=>import("./app-mediaplayer.0448ccf9.js"),[])}},{path:"/about",component:"app-about",action:async()=>{await T(()=>import("./app-about.7e82a7b3.js"),[])}},{path:"/news",component:"app-news",action:async()=>{await T(()=>import("./app-news.9a01138a.js"),[])}},{path:"/sample",component:"app-sample",action:async()=>{await T(()=>import("./app-sample.6a989df7.js"),[])}},{path:"/tutorial",component:"app-tutorial",action:async()=>{await T(()=>import("./app-tutorial.f00ccbed.js"),[])}},{path:"/code-of-conduct",component:"app-coc",action:async()=>{await T(()=>import("./app-coc.fe3cdd91.js"),[])}},{path:"/privacy",component:"app-privacy",action:async()=>{await T(()=>import("./app-privacy.66686455.js"),[])}}]}]),zn({immediate:!0})}render(){return O`
+    `}constructor(){super()}firstUpdated(){var e;new U((e=this.shadowRoot)==null?void 0:e.querySelector("#routerOutlet")).setRoutes([{path:"",animate:!0,children:[{path:"/",component:"app-home"},{path:"/2022",component:"app-2022",action:async()=>{await T(()=>import("./app-2022.f514784e.js"),[])}},{path:"/2021",children:[{path:"/",component:"app-2021",action:async()=>{await T(()=>import("./app-2021.2e77c95b.js"),[])}},{path:"/:topic",component:"app-2021",action:async()=>{await T(()=>import("./app-2021.2e77c95b.js"),[])}}]},{path:"/mp",component:"app-mediaplayer",action:async()=>{await T(()=>import("./app-mediaplayer.bd8b25e7.js"),[])}},{path:"/about",component:"app-about",action:async()=>{await T(()=>import("./app-about.5646b707.js"),[])}},{path:"/news",component:"app-news",action:async()=>{await T(()=>import("./app-news.b67c978b.js"),[])}},{path:"/sample",component:"app-sample",action:async()=>{await T(()=>import("./app-sample.a785a2ea.js"),[])}},{path:"/tutorial",component:"app-tutorial",action:async()=>{await T(()=>import("./app-tutorial.9846dcdd.js"),[])}},{path:"/code-of-conduct",component:"app-coc",action:async()=>{await T(()=>import("./app-coc.65ac9c38.js"),[])}},{path:"/privacy",component:"app-privacy",action:async()=>{await T(()=>import("./app-privacy.4cfe538a.js"),[])}}]}]),zn({immediate:!0})}render(){return O`
       <main id="routerOutlet">
       </main>
     `}};Vt=wr([V("app-index")],Vt);"serviceWorker"in navigator&&navigator.serviceWorker.register("/sw.js");export{O as $,R as e,V as n,Wn as o,I as r,L as s};
-//# sourceMappingURL=index.7ba2b8c9.js.map
+//# sourceMappingURL=index.e844b11a.js.map
