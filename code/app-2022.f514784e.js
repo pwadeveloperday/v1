@@ -1,4 +1,4 @@
-import{s as l,r as c,$ as n,o as g,e as s,n as h}from"./index.7ba2b8c9.js";var b=Object.defineProperty,m=Object.getOwnPropertyDescriptor,a=(t,e,r,o)=>{for(var i=o>1?void 0:o?m(e,r):e,p=t.length-1,d;p>=0;p--)(d=t[p])&&(i=(o?d(e,r,i):d(i))||i);return o&&i&&b(e,r,i),i};let u=class extends l{constructor(){super(),this.subtitle="\u7B2C\u4E8C\u5C4A",this.title="\u4E2D\u56FD PWA \u5F00\u53D1\u8005\u65E5",this.time="2022 \u5E74 8 \u6708 6 \u65E5 13:00 - 17:00",this.description=`
+import{s as l,r as c,$ as n,o as g,e as s,n as h}from"./index.e844b11a.js";var b=Object.defineProperty,m=Object.getOwnPropertyDescriptor,a=(t,e,r,o)=>{for(var i=o>1?void 0:o?m(e,r):e,p=t.length-1,d;p>=0;p--)(d=t[p])&&(i=(o?d(e,r,i):d(i))||i);return o&&i&&b(e,r,i),i};let u=class extends l{constructor(){super(),this.subtitle="\u7B2C\u4E8C\u5C4A",this.title="\u4E2D\u56FD PWA \u5F00\u53D1\u8005\u65E5",this.time="2022 \u5E74 8 \u6708 6 \u65E5 13:00 - 17:00",this.description=`
     \u4E3A\u52A0\u901F\u63A8\u52A8\u6E10\u8FDB\u5F0F Web \u5E94\u7528 (PWA) \u5728\u4E2D\u56FD\u7684\u53D1\u5C55\uFF0C\u5FAE\u8F6F\u4E0E\u82F1\u7279\u5C14\u643A\u624B\u4E3E\u529E\u201C\u7B2C\u4E8C\u5C4A\u4E2D\u56FD PWA \u5F00\u53D1\u8005\u65E5\u201D\u3002
     \u672C\u6B21\u6D3B\u52A8\u9080\u8BF7\u4E00\u4F17\u4E1A\u754C\u5927\u5496\u56F4\u7ED5 PWA \u5C55\u5F00\u5206\u4EAB\uFF0C\u63A2\u8BA8\u6700\u65B0\u6280\u672F\u8FDB\u5C55\uFF0C\u53CA PWA \u751F\u6001\u7684\u5B9E\u8DF5\u4E0E\u843D\u5730\u3002
     
@@ -230,4 +230,4 @@ import{s as l,r as c,$ as n,o as g,e as s,n as h}from"./index.7ba2b8c9.js";var b
           <app-footer-home></app-footer-home>
         </div>
       `}else return n`<div>No data</div>`}};a([s({type:String})],u.prototype,"subtitle",2);a([s({type:String})],u.prototype,"title",2);a([s({type:String})],u.prototype,"time",2);a([s({type:String})],u.prototype,"description",2);a([s({type:Object})],u.prototype,"jsondata",2);u=a([h("app-2022")],u);export{u as App2022};
-//# sourceMappingURL=app-2022.cf459f99.js.map
+//# sourceMappingURL=app-2022.f514784e.js.map
