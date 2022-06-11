@@ -1,4 +1,4 @@
-import{s as i,r as l,$ as p,n as g}from"./index.85852cc5.js";var d=Object.defineProperty,f=Object.getOwnPropertyDescriptor,b=(c,t,o,s)=>{for(var e=s>1?void 0:s?f(t,o):t,a=c.length-1,r;a>=0;a--)(r=c[a])&&(e=(s?r(t,o,e):r(e))||e);return s&&e&&d(t,o,e),e};let n=class extends i{static get styles(){return l`
+import{s as i,r as l,$ as p,n as g}from"./index.09372719.js";var d=Object.defineProperty,f=Object.getOwnPropertyDescriptor,b=(c,t,o,s)=>{for(var e=s>1?void 0:s?f(t,o):t,a=c.length-1,r;a>=0;a--)(r=c[a])&&(e=(s?r(t,o,e):r(e))||e);return s&&e&&d(t,o,e),e};let n=class extends i{static get styles(){return l`
     .scroll-container {
       height: 100vh;
       overflow-y: scroll;
@@ -35,4 +35,4 @@ import{s as i,r as l,$ as p,n as g}from"./index.85852cc5.js";var d=Object.define
         <img class="section" src="https://d3i5xkfad89fac.cloudfront.net/pwa/image/bg/bg.jpg">
        </div>
     `}};n=b([g("app-sample")],n);export{n as AppSample};
-//# sourceMappingURL=app-sample.f251e8a4.js.map
+//# sourceMappingURL=app-sample.7f5b5d68.js.map
