@@ -1,4 +1,4 @@
-import{s,r as i,$ as c,n as m}from"./index.03c72ab4.js";var u=Object.defineProperty,l=Object.getOwnPropertyDescriptor,f=(n,e,p,a)=>{for(var r=a>1?void 0:a?l(e,p):e,t=n.length-1,o;t>=0;t--)(o=n[t])&&(r=(a?o(e,p,r):o(r))||r);return a&&r&&u(e,p,r),r};let d=class extends s{static get styles(){return i`
+import{s,r as i,$ as c,n as m}from"./index.27dea3c2.js";var u=Object.defineProperty,l=Object.getOwnPropertyDescriptor,f=(n,e,p,a)=>{for(var r=a>1?void 0:a?l(e,p):e,t=n.length-1,o;t>=0;t--)(o=n[t])&&(r=(a?o(e,p,r):o(r))||r);return a&&r&&u(e,p,r),r};let d=class extends s{static get styles(){return i`
     .about {
       padding: 0 16px;
       margin: 2rem 0 0rem 0;
@@ -39,4 +39,4 @@ import{s,r as i,$ as c,n as m}from"./index.03c72ab4.js";var u=Object.definePrope
       </div>
       <app-footer></app-footer>
     `}};d=f([m("app-privacy")],d);export{d as AppPrivacy};
-//# sourceMappingURL=app-privacy.01027045.js.map
+//# sourceMappingURL=app-privacy.d9cce42c.js.map

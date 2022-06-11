@@ -373,9 +373,7 @@ found at http://polymer.github.io/PATENTS.txt
         `;return R`
         <div>
           <div id="superhero">
-            <video playsinline loop muted autoplay poster="/assets/img/vbg.png" id="herovideo">
-              <source src="/assets/img/vbg.mp4" type="video/mp4">
-            </video>
+            <video playsinline loop muted autoplay="autoplay" poster="/assets/img/vbg.png" src="/assets/img/vbg.mp4" id="herovideo"></video>
             <div class="overlay"></div>
           </div>
           <app-header-home></app-header-home>
@@ -1004,8 +1002,8 @@ found at http://polymer.github.io/PATENTS.txt
           opacity: 1;
         }
       }
-    `}constructor(){super()}firstUpdated(){var e;new U((e=this.shadowRoot)==null?void 0:e.querySelector("#routerOutlet")).setRoutes([{path:"",animate:!0,children:[{path:"/",component:"app-home"},{path:"/2022",component:"app-2022",action:async()=>{await O(()=>import("./app-2022.084f06c9.js"),[])}},{path:"/2021",children:[{path:"/",component:"app-2021",action:async()=>{await O(()=>import("./app-2021.3c5973c0.js"),[])}},{path:"/:topic",component:"app-2021",action:async()=>{await O(()=>import("./app-2021.3c5973c0.js"),[])}}]},{path:"/mp",component:"app-mediaplayer",action:async()=>{await O(()=>import("./app-mediaplayer.d8ee07d7.js"),[])}},{path:"/about",component:"app-about",action:async()=>{await O(()=>import("./app-about.be58214f.js"),[])}},{path:"/news",component:"app-news",action:async()=>{await O(()=>import("./app-news.fd6f9984.js"),[])}},{path:"/sample",component:"app-sample",action:async()=>{await O(()=>import("./app-sample.e5a17f69.js"),[])}},{path:"/tutorial",component:"app-tutorial",action:async()=>{await O(()=>import("./app-tutorial.fc88cd4c.js"),[])}},{path:"/code-of-conduct",component:"app-coc",action:async()=>{await O(()=>import("./app-coc.3d6e04f4.js"),[])}},{path:"/privacy",component:"app-privacy",action:async()=>{await O(()=>import("./app-privacy.01027045.js"),[])}}]}]),In({immediate:!0})}render(){return R`
+    `}constructor(){super()}firstUpdated(){var e;new U((e=this.shadowRoot)==null?void 0:e.querySelector("#routerOutlet")).setRoutes([{path:"",animate:!0,children:[{path:"/",component:"app-home"},{path:"/2022",component:"app-2022",action:async()=>{await O(()=>import("./app-2022.203d5445.js"),[])}},{path:"/2021",children:[{path:"/",component:"app-2021",action:async()=>{await O(()=>import("./app-2021.af363306.js"),[])}},{path:"/:topic",component:"app-2021",action:async()=>{await O(()=>import("./app-2021.af363306.js"),[])}}]},{path:"/mp",component:"app-mediaplayer",action:async()=>{await O(()=>import("./app-mediaplayer.9acbd9fb.js"),[])}},{path:"/about",component:"app-about",action:async()=>{await O(()=>import("./app-about.b8fd0e5f.js"),[])}},{path:"/news",component:"app-news",action:async()=>{await O(()=>import("./app-news.3a52e7bb.js"),[])}},{path:"/sample",component:"app-sample",action:async()=>{await O(()=>import("./app-sample.9a3230ae.js"),[])}},{path:"/tutorial",component:"app-tutorial",action:async()=>{await O(()=>import("./app-tutorial.e335d44c.js"),[])}},{path:"/code-of-conduct",component:"app-coc",action:async()=>{await O(()=>import("./app-coc.05b94bcb.js"),[])}},{path:"/privacy",component:"app-privacy",action:async()=>{await O(()=>import("./app-privacy.d9cce42c.js"),[])}}]}]),In({immediate:!0})}render(){return R`
       <main id="routerOutlet">
       </main>
     `}};It=$r([H("app-index")],It);"serviceWorker"in navigator&&navigator.serviceWorker.register("/sw.js");export{R as $,T as e,H as n,Zn as o,I as r,L as s};
-//# sourceMappingURL=index.03c72ab4.js.map
+//# sourceMappingURL=index.27dea3c2.js.map
