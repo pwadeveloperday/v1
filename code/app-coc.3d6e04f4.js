@@ -1,4 +1,4 @@
-import{s as c,r as s,$ as h,n as l}from"./index.e844b11a.js";var i=Object.defineProperty,m=Object.getOwnPropertyDescriptor,u=(d,e,a,p)=>{for(var r=p>1?void 0:p?m(e,a):e,t=d.length-1,o;t>=0;t--)(o=d[t])&&(r=(p?o(e,a,r):o(r))||r);return p&&r&&i(e,a,r),r};let n=class extends c{static get styles(){return s`
+import{s as c,r as s,$ as h,n as l}from"./index.03c72ab4.js";var i=Object.defineProperty,m=Object.getOwnPropertyDescriptor,u=(d,e,a,p)=>{for(var r=p>1?void 0:p?m(e,a):e,t=d.length-1,o;t>=0;t--)(o=d[t])&&(r=(p?o(e,a,r):o(r))||r);return p&&r&&i(e,a,r),r};let n=class extends c{static get styles(){return s`
     .about {
       padding: 0 16px;
       margin: 2rem 0 0rem 0;
@@ -73,4 +73,4 @@ import{s as c,r as s,$ as h,n as l}from"./index.e844b11a.js";var i=Object.define
       </div>
       <app-footer></app-footer>
     `}};n=u([l("app-coc")],n);export{n as AppCoC};
-//# sourceMappingURL=app-coc.65ac9c38.js.map
+//# sourceMappingURL=app-coc.3d6e04f4.js.map
