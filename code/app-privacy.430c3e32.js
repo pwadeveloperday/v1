@@ -1,4 +1,4 @@
-import{s,r as i,$ as c,n as m}from"./index.09372719.js";var u=Object.defineProperty,l=Object.getOwnPropertyDescriptor,f=(n,e,p,a)=>{for(var r=a>1?void 0:a?l(e,p):e,t=n.length-1,o;t>=0;t--)(o=n[t])&&(r=(a?o(e,p,r):o(r))||r);return a&&r&&u(e,p,r),r};let d=class extends s{static get styles(){return i`
+import{s as c,r as s,$ as i,n as u}from"./index.e832ed51.js";var l=Object.defineProperty,m=Object.getOwnPropertyDescriptor,f=(n,e,p,a)=>{for(var r=a>1?void 0:a?m(e,p):e,o=n.length-1,t;o>=0;o--)(t=n[o])&&(r=(a?t(e,p,r):t(r))||r);return a&&r&&l(e,p,r),r};let d=class extends c{static get styles(){return s`
     .about {
       padding: 0 16px;
       margin: 2rem 0 0rem 0;
@@ -9,6 +9,12 @@ import{s,r as i,$ as c,n as m}from"./index.09372719.js";var u=Object.definePrope
       margin-bottom: 1rem;
       border-radius: 0px;
       box-shadow: none;
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    fluent-card:hover {
+      background: rgba(255, 255, 255, 0.4);
+      color: #000;
     }
 
     fluent-card h3 {
@@ -27,7 +33,7 @@ import{s,r as i,$ as c,n as m}from"./index.09372719.js";var u=Object.definePrope
 
     @media (min-width: 1024px) {
     }
-    `}constructor(){super()}render(){return c`
+    `}constructor(){super()}render(){return i`
       <app-header ?enableBack="${!0}"></app-header>
       <div class="about">
         <h2>隐私条款</h2>
@@ -38,5 +44,5 @@ import{s,r as i,$ as c,n as m}from"./index.09372719.js";var u=Object.definePrope
         </fluent-card>
       </div>
       <app-footer></app-footer>
-    `}};d=f([m("app-privacy")],d);export{d as AppPrivacy};
-//# sourceMappingURL=app-privacy.107694db.js.map
+    `}};d=f([u("app-privacy")],d);export{d as AppPrivacy};
+//# sourceMappingURL=app-privacy.430c3e32.js.map

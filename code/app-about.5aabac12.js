@@ -1,7 +1,8 @@
-import{s,r as u,$ as c,n as l}from"./index.09372719.js";var f=Object.defineProperty,i=Object.getOwnPropertyDescriptor,m=(n,r,a,p)=>{for(var e=p>1?void 0:p?i(r,a):r,t=n.length-1,o;t>=0;t--)(o=n[t])&&(e=(p?o(r,a,e):o(e))||e);return p&&e&&f(r,a,e),e};let d=class extends s{static get styles(){return u`
+import{s as c,r as u,$ as l,n as s}from"./index.e832ed51.js";var b=Object.defineProperty,f=Object.getOwnPropertyDescriptor,i=(d,e,p,a)=>{for(var r=a>1?void 0:a?f(e,p):e,t=d.length-1,o;t>=0;t--)(o=d[t])&&(r=(a?o(e,p,r):o(r))||r);return a&&r&&b(e,p,r),r};let n=class extends c{static get styles(){return u`
     .about {
       padding: 0 16px;
       margin: 2rem 0 0rem 0;
+      color: #3d3d3d;
     }
 
     fluent-card {
@@ -9,6 +10,12 @@ import{s,r as u,$ as c,n as l}from"./index.09372719.js";var f=Object.definePrope
       margin-bottom: 1rem;
       border-radius: 0px;
       box-shadow: none;
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    fluent-card:hover {
+      background: rgba(255, 255, 255, 0.4);
+      color: #000;
     }
 
     fluent-card h3 {
@@ -27,7 +34,7 @@ import{s,r as u,$ as c,n as l}from"./index.09372719.js";var f=Object.definePrope
 
     @media (min-width: 1024px) {
     }
-    `}constructor(){super()}render(){return c`
+    `}constructor(){super()}render(){return l`
       <app-header ?enableBack="${!0}"></app-header>
       <div class="about">
         <h2>关于中国 PWA 开发者日</h2>
@@ -46,5 +53,5 @@ import{s,r as u,$ as c,n as l}from"./index.09372719.js";var f=Object.definePrope
           </fluent-card>
       </div>
       <app-footer></app-footer>
-    `}};d=m([l("app-about")],d);export{d as AppAbout};
-//# sourceMappingURL=app-about.78a20f95.js.map
+    `}};n=i([s("app-about")],n);export{n as AppAbout};
+//# sourceMappingURL=app-about.5aabac12.js.map

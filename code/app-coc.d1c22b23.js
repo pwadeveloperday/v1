@@ -1,4 +1,4 @@
-import{s as c,r as s,$ as h,n as l}from"./index.09372719.js";var i=Object.defineProperty,m=Object.getOwnPropertyDescriptor,u=(d,e,a,p)=>{for(var r=p>1?void 0:p?m(e,a):e,t=d.length-1,o;t>=0;t--)(o=d[t])&&(r=(p?o(e,a,r):o(r))||r);return p&&r&&i(e,a,r),r};let n=class extends c{static get styles(){return s`
+import{s as c,r as s,$ as l,n as u}from"./index.e832ed51.js";var h=Object.defineProperty,i=Object.getOwnPropertyDescriptor,m=(d,e,p,a)=>{for(var r=a>1?void 0:a?i(e,p):e,t=d.length-1,o;t>=0;t--)(o=d[t])&&(r=(a?o(e,p,r):o(r))||r);return a&&r&&h(e,p,r),r};let n=class extends c{static get styles(){return s`
     .about {
       padding: 0 16px;
       margin: 2rem 0 0rem 0;
@@ -9,6 +9,12 @@ import{s as c,r as s,$ as h,n as l}from"./index.09372719.js";var i=Object.define
       margin-bottom: 1rem;
       border-radius: 0px;
       box-shadow: none;
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    fluent-card:hover {
+      background: rgba(255, 255, 255, 0.4);
+      color: #000;
     }
 
     fluent-card h3 {
@@ -44,7 +50,7 @@ import{s as c,r as s,$ as h,n as l}from"./index.09372719.js";var i=Object.define
 
     @media (min-width: 1024px) {
     }
-    `}constructor(){super()}render(){return h`
+    `}constructor(){super()}render(){return l`
       <app-header ?enableBack="${!0}"></app-header>
       <div class="about">
         <h2>行为准则</h2>
@@ -72,5 +78,5 @@ import{s as c,r as s,$ as h,n as l}from"./index.09372719.js";var i=Object.define
           </fluent-card>
       </div>
       <app-footer></app-footer>
-    `}};n=u([l("app-coc")],n);export{n as AppCoC};
-//# sourceMappingURL=app-coc.86119cd7.js.map
+    `}};n=m([u("app-coc")],n);export{n as AppCoC};
+//# sourceMappingURL=app-coc.d1c22b23.js.map
