@@ -1,12 +1,16 @@
-import{s as c,r as d,$ as n,o as h,e as o,n as g}from"./index.e832ed51.js";var b=Object.defineProperty,m=Object.getOwnPropertyDescriptor,a=(r,t,e,u)=>{for(var s=u>1?void 0:u?m(t,e):t,l=r.length-1,p;l>=0;l--)(p=r[l])&&(s=(u?p(t,e,s):p(s))||s);return u&&s&&b(t,e,s),s};let i=class extends c{constructor(){super(),this.subtitle="\u7B2C\u4E8C\u5C4A",this.title="\u4E2D\u56FD PWA \u5F00\u53D1\u8005\u65E5",this.time="2022 \u5E74 8 \u6708 6 \u65E5 13:00 - 17:00",this.description=`
+import{s as c,r as d,$ as p,o as h,e as o,n as g}from"./index.f6265752.js";var b=Object.defineProperty,m=Object.getOwnPropertyDescriptor,a=(r,t,e,u)=>{for(var s=u>1?void 0:u?m(t,e):t,n=r.length-1,l;n>=0;n--)(l=r[n])&&(s=(u?l(t,e,s):l(s))||s);return u&&s&&b(t,e,s),s};let i=class extends c{constructor(){super(),this.subtitle="\u7B2C\u4E8C\u5C4A",this.title="\u4E2D\u56FD PWA \u5F00\u53D1\u8005\u65E5",this.time="2022 \u5E74 8 \u6708 6 \u65E5 13:00 - 17:00",this.description=`
     \u4E3A\u52A0\u901F\u63A8\u52A8\u6E10\u8FDB\u5F0F Web \u5E94\u7528 (PWA) \u5728\u4E2D\u56FD\u7684\u53D1\u5C55\uFF0C\u5FAE\u8F6F\u4E0E\u82F1\u7279\u5C14\u643A\u624B\u4E3E\u529E\u201C\u7B2C\u4E8C\u5C4A\u4E2D\u56FD PWA \u5F00\u53D1\u8005\u65E5\u201D\u3002
     \u672C\u6B21\u6D3B\u52A8\u9080\u8BF7\u4E00\u4F17\u4E1A\u754C\u5927\u5496\u56F4\u7ED5 PWA \u5C55\u5F00\u5206\u4EAB\uFF0C\u63A2\u8BA8\u6700\u65B0\u6280\u672F\u8FDB\u5C55\uFF0C\u53CA PWA \u751F\u6001\u7684\u5B9E\u8DF5\u4E0E\u843D\u5730\u3002
     
     \u671F\u5F85\u4E0E\u60A8\u7EBF\u4E0A\u76F8\u805A\u3002
     `,this.jsondata={name:"PWA Developer Day 2022",t2022:[{id:1,time:"13:00",tag:"",title:"\u5F00\u5E55\u81F4\u8F9E",des:"",speaker:"\u5F20\u7426",pos:"\u8D44\u6DF1\u6280\u672F\u603B\u76D1",com:"\u82F1\u7279\u5C14 SATG Web \u5E73\u53F0\u5DE5\u7A0B",iconid:"qi",icon:"assets/2022/people/120/qi.png",icon5:"assets/2022/people/500/qi.png",bio:"",pdf:"",bilibili:"https://www.bilibili.com/video/BV1Kv4y1G7L8",aid:"554870624",cid:"741436422",youtube:"https://youtu.be/npMpZHMizUc"}],t2021:[{id:1,tag:"opening",title:"Web \u5F00\u53D1\u7684\u73B0\u72B6\u4E0E\u672A\u6765\uFF08\u5F00\u573A\u4ECB\u7ECD\uFF09",des:"",speaker:"\u5F20\u7426",pos:"\u8D44\u6DF1\u6280\u672F\u603B\u76D1",com:"\u8F6F\u4EF6\u4E0E\u5148\u8FDB\u6280\u672F\u4E8B\u4E1A\u90E8 Web \u5E73\u53F0\u5DE5\u7A0B",icon:"",icon5:"assets/2022/people/500/qi.png",bio:"",pdf:"https://d3i5xkfad89fac.cloudfront.net/pwa/2021/slides/02.pdf",bilibili:"https://www.bilibili.com/video/BV1Kv4y1G7L8",aid:"554870624",cid:"741436422",youtube:"https://youtu.be/npMpZHMizUc"}]},this.screenwidth="",this.screenheight=""}screenres(){let t=screen.availWidth-32,e=t*9/16;this.screenwidth=t.toString(),this.screenheight=e.toString()}async connectedCallback(){super.connectedCallback(),this.screenres(),await this.fetchData()}async fetchData(){await fetch("/data.json");const r=await fetch("/data.json");this.jsondata=await r.json()}static get styles(){return d`
-    .section {
-      color: #3d3d3d;
-    }
+      .p2022 {
+        background-image: linear-gradient(180deg, #ffffff 5%, #E3FDF5 10%, #FFE6FA 100%);
+        height: 100%;
+      }
+      .section {
+        color: #3d3d3d;
+      }
 
       pwa-install {
         position: fixed;
@@ -25,7 +29,7 @@ import{s as c,r as d,$ as n,o as h,e as o,n as g}from"./index.e832ed51.js";var b
       }
 
       pwa-install svg {
-        fill: rgba(255, 255, 255, 0.8);
+        fill: rgba(255, 255, 255, 0.95);
         width: 20px;
         height: 20px;
         margin: 4px 0px -2px 0px;
@@ -35,7 +39,6 @@ import{s as c,r as d,$ as n,o as h,e as o,n as g}from"./index.e832ed51.js";var b
         margin-top: -6rem;
         padding: 0rem 0px 6rem;
         text-align: center;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
       }
 
       .hero h1 {
@@ -70,26 +73,15 @@ import{s as c,r as d,$ as n,o as h,e as o,n as g}from"./index.e832ed51.js";var b
         letter-spacing: 2px;
       }
 
-      .scroll100 {
-        height: 100vh;
-        overflow-y: scroll;
-        scroll-snap-type: y mandatory;
-      }
-
       .section {
         display: flex;
         height: 100vh;
-        scroll-snap-align: start;
-        scroll-snap-stop: always;
-        object-fit: cover;
-        object-position: center;
-        width: 100%;
         flex-direction: column;
         justify-content: center;
       }
 
       .box {
-        background: rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.8);
         padding: 32px;
         height: auto;
       }
@@ -100,11 +92,11 @@ import{s as c,r as d,$ as n,o as h,e as o,n as g}from"./index.e832ed51.js";var b
         border: 0px;
         border-radius: 0px;
         box-shadow: none;
-        background: rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.8);
       }
 
       fluent-card:hover {
-        background: rgba(255, 255, 255, 0.4);
+        background: rgba(255, 255, 255, 0.95);
         color: #000;
       }
  
@@ -152,6 +144,29 @@ import{s as c,r as d,$ as n,o as h,e as o,n as g}from"./index.e832ed51.js";var b
         letter-spacing: 2px;
         max-height: 30vh;
         overflow-y: auto;
+      }
+
+      @media (max-width: 1024px) {
+        .p2022 {
+          background-image: none;
+          height: 100%;
+        }
+
+        .scroll100 {
+          height: 100vh;
+          overflow-y: scroll;
+          scroll-snap-type: y mandatory;
+        }
+
+        .section {
+          scroll-snap-align: start;
+          scroll-snap-stop: always;
+          object-fit: cover;
+          object-position: center;
+          width: 100%;
+          background-image: linear-gradient(180deg, #ffffff 0%, #E3FDF5 10%, #FFE6FA 100%);
+        }
+  
       }
 
       .avatar_ {
@@ -210,11 +225,11 @@ import{s as c,r as d,$ as n,o as h,e as o,n as g}from"./index.e832ed51.js";var b
 
      `}async firstUpdated(){console.log("\u6B22\u8FCE\u60A8!")}render(){if(this.jsondata){let r="",t="";for(let e of this.jsondata.t2022)t=`
           <fluent-card class="section">
-            <div class="bili">
-              <iframe width="${this.screenwidth}" height="${this.screenheight}" src="https://player.bilibili.com/player.html?cid=${e.cid}&aid=${e.aid}&page=1&as_wide=1&high_quality=1&danmaku=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-            </div>
             <div class="topic">
               <div class="title">${e.title}</div>
+              <div class="bili">
+                <iframe width="${this.screenwidth}" height="${this.screenheight}" src="https://player.bilibili.com/player.html?cid=${e.cid}&aid=${e.aid}&page=1&as_wide=1&high_quality=1&danmaku=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+              </div>
               <div class="des">${e.des.replace(/\n/g,"<br>")}</div>
               <div class="details">
                 <div class="avatar" id="icon_${e.iconid}"></div>
@@ -225,7 +240,7 @@ import{s as c,r as d,$ as n,o as h,e as o,n as g}from"./index.e832ed51.js";var b
               </div>
             </div>
           </fluent-card>
-        `,r+=t;return n`
+        `,r+=t;return p`
         <app-header ?enableBack="${!0}"></app-header>
         <div class="scroll100">
           <div class="p2022 section">
@@ -245,5 +260,5 @@ import{s as c,r as d,$ as n,o as h,e as o,n as g}from"./index.e832ed51.js";var b
             />
           </svg>
         </pwa-install>
-      `}else return n`<div>No data</div>`}};a([o({type:String})],i.prototype,"subtitle",2);a([o({type:String})],i.prototype,"title",2);a([o({type:String})],i.prototype,"time",2);a([o({type:String})],i.prototype,"description",2);a([o({type:Object})],i.prototype,"jsondata",2);a([o({type:String})],i.prototype,"screenwidth",2);a([o({type:String})],i.prototype,"screenheight",2);i=a([g("app-2022")],i);export{i as App2022};
-//# sourceMappingURL=app-2022.3bd6d9f5.js.map
+      `}else return p`<div>No data</div>`}};a([o({type:String})],i.prototype,"subtitle",2);a([o({type:String})],i.prototype,"title",2);a([o({type:String})],i.prototype,"time",2);a([o({type:String})],i.prototype,"description",2);a([o({type:Object})],i.prototype,"jsondata",2);a([o({type:String})],i.prototype,"screenwidth",2);a([o({type:String})],i.prototype,"screenheight",2);i=a([g("app-2022")],i);export{i as App2022};
+//# sourceMappingURL=app-2022.2f20fc7b.js.map

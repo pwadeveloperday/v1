@@ -1,4 +1,4 @@
-import{s as c,r as s,$ as l,n as u}from"./index.e832ed51.js";var h=Object.defineProperty,i=Object.getOwnPropertyDescriptor,m=(d,e,p,a)=>{for(var r=a>1?void 0:a?i(e,p):e,t=d.length-1,o;t>=0;t--)(o=d[t])&&(r=(a?o(e,p,r):o(r))||r);return a&&r&&h(e,p,r),r};let n=class extends c{static get styles(){return s`
+import{s as c,r as s,$ as l,n as u}from"./index.f6265752.js";var h=Object.defineProperty,i=Object.getOwnPropertyDescriptor,m=(d,e,p,a)=>{for(var r=a>1?void 0:a?i(e,p):e,t=d.length-1,o;t>=0;t--)(o=d[t])&&(r=(a?o(e,p,r):o(r))||r);return a&&r&&h(e,p,r),r};let n=class extends c{static get styles(){return s`
     .about {
       padding: 0 16px;
       margin: 2rem 0 0rem 0;
@@ -9,11 +9,11 @@ import{s as c,r as s,$ as l,n as u}from"./index.e832ed51.js";var h=Object.define
       margin-bottom: 1rem;
       border-radius: 0px;
       box-shadow: none;
-      background: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.8);
     }
 
     fluent-card:hover {
-      background: rgba(255, 255, 255, 0.4);
+      background: rgba(255, 255, 255, 0.95);
       color: #000;
     }
 
@@ -76,7 +76,7 @@ import{s as c,r as s,$ as l,n as u}from"./index.e832ed51.js";var h=Object.define
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M256 64C256 46.33 270.3 32 288 32H415.1C415.1 32 415.1 32 415.1 32C420.3 32 424.5 32.86 428.2 34.43C431.1 35.98 435.5 38.27 438.6 41.3C438.6 41.35 438.6 41.4 438.7 41.44C444.9 47.66 447.1 55.78 448 63.9C448 63.94 448 63.97 448 64V192C448 209.7 433.7 224 416 224C398.3 224 384 209.7 384 192V141.3L214.6 310.6C202.1 323.1 181.9 323.1 169.4 310.6C156.9 298.1 156.9 277.9 169.4 265.4L338.7 96H288C270.3 96 256 81.67 256 64V64zM0 128C0 92.65 28.65 64 64 64H160C177.7 64 192 78.33 192 96C192 113.7 177.7 128 160 128H64V416H352V320C352 302.3 366.3 288 384 288C401.7 288 416 302.3 416 320V416C416 451.3 387.3 480 352 480H64C28.65 480 0 451.3 0 416V128z"/></svg>
           的影响。</p>
           </fluent-card>
+          <app-footer></app-footer>
       </div>
-      <app-footer></app-footer>
     `}};n=m([u("app-coc")],n);export{n as AppCoC};
-//# sourceMappingURL=app-coc.d1c22b23.js.map
+//# sourceMappingURL=app-coc.c7441306.js.map
