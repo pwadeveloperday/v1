@@ -1,4 +1,4 @@
-import{s as c,r as d,$ as p,o as h,e as o,n as g}from"./index.f6265752.js";var b=Object.defineProperty,m=Object.getOwnPropertyDescriptor,a=(r,t,e,u)=>{for(var s=u>1?void 0:u?m(t,e):t,n=r.length-1,l;n>=0;n--)(l=r[n])&&(s=(u?l(t,e,s):l(s))||s);return u&&s&&b(t,e,s),s};let i=class extends c{constructor(){super(),this.subtitle="\u7B2C\u4E8C\u5C4A",this.title="\u4E2D\u56FD PWA \u5F00\u53D1\u8005\u65E5",this.time="2022 \u5E74 8 \u6708 6 \u65E5 13:00 - 17:00",this.description=`
+import{s as c,r as d,$ as p,o as h,e as s,n as g}from"./index.128d0315.js";var b=Object.defineProperty,m=Object.getOwnPropertyDescriptor,a=(r,t,e,u)=>{for(var o=u>1?void 0:u?m(t,e):t,n=r.length-1,l;n>=0;n--)(l=r[n])&&(o=(u?l(t,e,o):l(o))||o);return u&&o&&b(t,e,o),o};let i=class extends c{constructor(){super(),this.subtitle="\u7B2C\u4E8C\u5C4A",this.title="\u4E2D\u56FD PWA \u5F00\u53D1\u8005\u65E5",this.time="2022 \u5E74 8 \u6708 6 \u65E5 13:00 - 17:00",this.description=`
     \u4E3A\u52A0\u901F\u63A8\u52A8\u6E10\u8FDB\u5F0F Web \u5E94\u7528 (PWA) \u5728\u4E2D\u56FD\u7684\u53D1\u5C55\uFF0C\u5FAE\u8F6F\u4E0E\u82F1\u7279\u5C14\u643A\u624B\u4E3E\u529E\u201C\u7B2C\u4E8C\u5C4A\u4E2D\u56FD PWA \u5F00\u53D1\u8005\u65E5\u201D\u3002
     \u672C\u6B21\u6D3B\u52A8\u9080\u8BF7\u4E00\u4F17\u4E1A\u754C\u5927\u5496\u56F4\u7ED5 PWA \u5C55\u5F00\u5206\u4EAB\uFF0C\u63A2\u8BA8\u6700\u65B0\u6280\u672F\u8FDB\u5C55\uFF0C\u53CA PWA \u751F\u6001\u7684\u5B9E\u8DF5\u4E0E\u843D\u5730\u3002
     
@@ -81,7 +81,6 @@ import{s as c,r as d,$ as p,o as h,e as o,n as g}from"./index.f6265752.js";var b
       }
 
       .box {
-        background: rgba(255, 255, 255, 0.8);
         padding: 32px;
         height: auto;
       }
@@ -101,6 +100,56 @@ import{s as c,r as d,$ as p,o as h,e as o,n as g}from"./index.f6265752.js";var b
       }
  
       @media (min-width: 1024px) {
+        .hero {
+          margin: 1rem auto;
+          padding: 0rem 0px 1rem;
+        }
+
+        .title {
+          margin: 1rem auto;
+          text-align: center;
+        }
+        
+        .section {
+          height: auto;
+          background: transparent;
+        }
+
+        fluent-card {
+          background: transparent;
+        }
+
+        fluent-card:hover {
+          background: transparent;
+        }
+
+        .topic {
+          display: grid !important;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: 1fr;
+          grid-column-gap: 16px;
+          grid-row-gap: 0px;
+          flex-direction: none;
+        }
+
+        * {
+          scrollbar-width: thin;
+          scrollbar-color: rgba(0, 0, 0, 0.2) #ffffff;
+        }
+     
+        *::-webkit-scrollbar {
+          width: 5px;
+        }
+    
+        *::-webkit-scrollbar-track {
+          background: transparent;
+        }
+    
+        *::-webkit-scrollbar-thumb {
+          background-color: rgba(0, 0, 0, 0.2);
+          border-radius: 3px;
+          border: 0px solid transparent;
+        }
       }
 
       @media (horizontal-viewport-segments: 2) {
@@ -225,17 +274,19 @@ import{s as c,r as d,$ as p,o as h,e as o,n as g}from"./index.f6265752.js";var b
 
      `}async firstUpdated(){console.log("\u6B22\u8FCE\u60A8!")}render(){if(this.jsondata){let r="",t="";for(let e of this.jsondata.t2022)t=`
           <fluent-card class="section">
+            <div class="title">${e.title}</div>
             <div class="topic">
-              <div class="title">${e.title}</div>
               <div class="bili">
                 <iframe width="${this.screenwidth}" height="${this.screenheight}" src="https://player.bilibili.com/player.html?cid=${e.cid}&aid=${e.aid}&page=1&as_wide=1&high_quality=1&danmaku=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
               </div>
-              <div class="des">${e.des.replace(/\n/g,"<br>")}</div>
-              <div class="details">
-                <div class="avatar" id="icon_${e.iconid}"></div>
-                <div class="description">
-                  <div class="nametitle">${e.speaker} / ${e.pos}</div>
-                  <div class="team">${e.com}</div>
+              <div>
+                <div class="des">${e.des.replace(/\n/g,"<br>")}</div>
+                <div class="details">
+                  <div class="avatar" id="icon_${e.iconid}"></div>
+                  <div class="description">
+                    <div class="nametitle">${e.speaker} / ${e.pos}</div>
+                    <div class="team">${e.com}</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -260,5 +311,5 @@ import{s as c,r as d,$ as p,o as h,e as o,n as g}from"./index.f6265752.js";var b
             />
           </svg>
         </pwa-install>
-      `}else return p`<div>No data</div>`}};a([o({type:String})],i.prototype,"subtitle",2);a([o({type:String})],i.prototype,"title",2);a([o({type:String})],i.prototype,"time",2);a([o({type:String})],i.prototype,"description",2);a([o({type:Object})],i.prototype,"jsondata",2);a([o({type:String})],i.prototype,"screenwidth",2);a([o({type:String})],i.prototype,"screenheight",2);i=a([g("app-2022")],i);export{i as App2022};
-//# sourceMappingURL=app-2022.2f20fc7b.js.map
+      `}else return p`<div>No data</div>`}};a([s({type:String})],i.prototype,"subtitle",2);a([s({type:String})],i.prototype,"title",2);a([s({type:String})],i.prototype,"time",2);a([s({type:String})],i.prototype,"description",2);a([s({type:Object})],i.prototype,"jsondata",2);a([s({type:String})],i.prototype,"screenwidth",2);a([s({type:String})],i.prototype,"screenheight",2);i=a([g("app-2022")],i);export{i as App2022};
+//# sourceMappingURL=app-2022.06d8b480.js.map

@@ -1823,7 +1823,10 @@ void main(void)
     \u672C\u6B21\u6D3B\u52A8\u9080\u8BF7\u4E00\u4F17\u4E1A\u754C\u5927\u5496\u56F4\u7ED5 PWA \u5C55\u5F00\u5206\u4EAB\uFF0C\u63A2\u8BA8\u6700\u65B0\u6280\u672F\u8FDB\u5C55\uFF0C\u53CA PWA \u751F\u6001\u7684\u5B9E\u8DF5\u4E0E\u843D\u5730\u3002
     
     \u671F\u5F85\u4E0E\u60A8\u7EBF\u4E0A\u76F8\u805A\u3002
-    `,this.jsondata={name:"PWA Developer Day 2022",t2022:[{id:1,time:"13:00",tag:"",title:"\u5F00\u5E55\u81F4\u8F9E",des:"",speaker:"\u5F20\u7426",pos:"\u8D44\u6DF1\u6280\u672F\u603B\u76D1",com:"\u82F1\u7279\u5C14 SATG Web \u5E73\u53F0\u5DE5\u7A0B",iconid:"qi",icon:"assets/2022/people/120/qi.png",icon5:"assets/2022/people/500/qi.png",bio:"",pdf:"",bilibili:"",aid:"",cid:"",youtube:""}],t2021:[{id:1,tag:"opening",title:"Web \u5F00\u53D1\u7684\u73B0\u72B6\u4E0E\u672A\u6765\uFF08\u5F00\u573A\u4ECB\u7ECD\uFF09",des:"",speaker:"\u5F20\u7426",pos:"\u8D44\u6DF1\u6280\u672F\u603B\u76D1",com:"\u8F6F\u4EF6\u4E0E\u5148\u8FDB\u6280\u672F\u4E8B\u4E1A\u90E8 Web \u5E73\u53F0\u5DE5\u7A0B",icon:"",icon5:"assets/2022/people/500/qi.png",bio:"",pdf:"https://d3i5xkfad89fac.cloudfront.net/pwa/2021/slides/02.pdf",bilibili:"https://www.bilibili.com/video/BV1Kv4y1G7L8",aid:"554870624",cid:"741436422",youtube:"https://youtu.be/npMpZHMizUc"}]},this.playpromise="",this._showCanvas=()=>{console.log(this.canvas);const t=new yn({view:this.canvas,resizeTo:window,backgroundAlpha:!0}),r=new y2;t.stage.filters=[new r2(30,10,!0)];const e=[];for(let i=0;i<10;i++){const n=new b2(r.randomColor());t.stage.addChild(n.graphics),e.push(n)}window.matchMedia("(prefers-reduced-motion: reduce)").matches?e.forEach(i=>{i.update(),i.render()}):t.ticker.add(()=>{e.forEach(i=>{i.update(),i.render()})})}}_playHeroVideo(){this._herovideo.play()}_pauseHeroVideo(){this._herovideo.paused||this._herovideo.pause()}_checkVideoAutoPlay(){let t=this._herovideo.play();t!==void 0&&t.then(r=>{this.playpromise="Autoplay started!",console.log("+ Autoplay started!")}).catch(r=>{this.playpromise="Autoplay was prevented!",console.log("- Autoplay was prevented!")})}async connectedCallback(){super.connectedCallback(),await this.fetchData(),this._showCanvas()}async fetchData(){await fetch("/data.json");const t=await fetch("/data.json");this.jsondata=await t.json()}static get styles(){return Oe`
+    `,this.jsondata={name:"PWA Developer Day 2022",t2022:[{id:1,time:"13:00",tag:"",title:"\u5F00\u5E55\u81F4\u8F9E",des:"",speaker:"\u5F20\u7426",pos:"\u8D44\u6DF1\u6280\u672F\u603B\u76D1",com:"\u82F1\u7279\u5C14 SATG Web \u5E73\u53F0\u5DE5\u7A0B",iconid:"qi",icon:"assets/2022/people/120/qi.png",icon5:"assets/2022/people/500/qi.png",bio:"",pdf:"",bilibili:"",aid:"",cid:"",youtube:""}],t2021:[{id:1,tag:"opening",title:"Web \u5F00\u53D1\u7684\u73B0\u72B6\u4E0E\u672A\u6765\uFF08\u5F00\u573A\u4ECB\u7ECD\uFF09",des:"",speaker:"\u5F20\u7426",pos:"\u8D44\u6DF1\u6280\u672F\u603B\u76D1",com:"\u8F6F\u4EF6\u4E0E\u5148\u8FDB\u6280\u672F\u4E8B\u4E1A\u90E8 Web \u5E73\u53F0\u5DE5\u7A0B",icon:"",icon5:"assets/2022/people/500/qi.png",bio:"",pdf:"https://d3i5xkfad89fac.cloudfront.net/pwa/2021/slides/02.pdf",bilibili:"https://www.bilibili.com/video/BV1Kv4y1G7L8",aid:"554870624",cid:"741436422",youtube:"https://youtu.be/npMpZHMizUc"}]},this.playpromise="",this._showCanvas=()=>{const t=new yn({view:this.canvas,resizeTo:window,transparent:!0}),r=new y2;t.stage.filters=[new r2(30,10,!0)];const e=[];for(let i=0;i<10;i++){const n=new b2(r.randomColor());t.stage.addChild(n.graphics),e.push(n)}window.matchMedia("(prefers-reduced-motion: reduce)").matches?e.forEach(i=>{i.update(),i.render()}):t.ticker.add(()=>{e.forEach(i=>{i.update(),i.render()})})}}_playHeroVideo(){this._herovideo.play()}_pauseHeroVideo(){this._herovideo.paused||this._herovideo.pause()}_checkVideoAutoPlay(){let t=this._herovideo.play();t!==void 0&&t.then(r=>{this.playpromise="Autoplay started!",console.log("+ Autoplay started!")}).catch(r=>{this.playpromise="Autoplay was prevented!",console.log("- Autoplay was prevented!")})}async connectedCallback(){super.connectedCallback(),await this.fetchData(),this._showCanvas()}async fetchData(){await fetch("/data.json");const t=await fetch("/data.json");this.jsondata=await t.json()}static get styles(){return Oe`
+    #herohome {
+      background: var(--bg-gradient);
+    }
     .orb-canvas {
       height: 100vh;
       width: 100%;
@@ -2055,7 +2058,7 @@ void main(void)
             </div>
           </fluent-card>
         `;return Vt`
-        <div>
+        <div id="herohome">
           <canvas class="orb-canvas"></canvas>
           <app-header-home></app-header-home>
         </div>
@@ -2172,7 +2175,6 @@ void main(void)
      header {
       height: 100vh;
       width: 100%;
-      z-index: 1000;
      }
      
     .text-gradient {
@@ -2196,21 +2198,20 @@ void main(void)
         height: 40px;
         width: 60px;
         display: inline-flex;
-        z-index: 1000;
       }
 
       .hero {
         display: flex;
         text-align: center;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+        text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.1);
         color: rgba(255, 255, 255, 0.9);
-        height: 90vh;
+        height: calc(100vh - 56px);
         justify-content: center;
         align-items: center;
       }
 
       .hero:hover {
-        color: rgba(255, 255, 255, 1);
+        color: rgba(255, 255, 255, 1.0);
       }
 
       @media only screen and (max-width: 1024px) {
@@ -2235,6 +2236,10 @@ void main(void)
         font-weight: 900;
       }
 
+      .hero h2, .hero h3 {
+        text-shadow: 1px 1px 1px rgba(61, 20, 136, 0.5);
+      }
+
       .hero .h1b {
         margin-top: -2rem;
       }
@@ -2247,11 +2252,11 @@ void main(void)
       .hero h3 {
         margin: 0rem auto;
         font-size: clamp(20px, 3vw, 28px);
-        letter-spacing: 2px;
+        letter-spacing: 1px;
       }
 
       .super {
-        z-index: 2;
+        z-index: 1;
       }
 
       #sidepromote {
@@ -2383,6 +2388,35 @@ void main(void)
           height: 32px;
         }
       }
+
+      @media only screen and (max-width: 420px) and (orientation: portrait) {
+        .hero h1 {
+          font-size: clamp(26px, 4vw, 44px)
+        }
+      }
+
+      @media only screen and (max-height: 400px) and (orientation: landscape) {
+        .hero h1 {
+          display: none;
+        }
+      }
+
+      @media only screen and (max-width: 1024px) and (orientation: landscape) {
+        .hero {
+          height: calc(100vh - 56px);
+        }
+
+        .hero h2 {
+          font-size: clamp(20px, 3vw, 28px);
+        }
+        .hero h3 {
+          font-size: clamp(16px, 2.4vw, 22px)
+        }
+
+        .register {
+          margin: 1rem auto;
+        }
+      }
     `}updated(t){t.has("enableBack")&&console.log("enableBack",this.enableBack)}share(){navigator.share&&navigator.share({title:"\u4E2D\u56FD PWA \u5F00\u53D1\u8005\u65E5",text:"\u4E2D\u56FD PWA \u5F00\u53D1\u8005\u65E5",url:"https://pwadev.io"})}render(){return Vt`
       <header>
         <div id="back-button-block" class="topbar">
@@ -2406,13 +2440,13 @@ void main(void)
             <h2>${this.title}</h2>
             <h3 class="h3b">${this.time}</h3>
             <h1 class="text-gradient">在线 免费 分享</h1>
-            <h1 class="h1b text-gradient">助您使用 PWA 获得成功</h1>
+            <h1 class="h1b text-gradient">借助 PWA 获得成功</h1>
             <div class="register">
               <a href="" title="即刻预约" id="book">
                 即刻预约
               </a>
             </div>
-            <h3>联合主办</h3>
+            <h3 class="joint">联合主办</h3>
             <div class="coll">
               <div></div>
               <div id="intel"></div>
@@ -2915,8 +2949,8 @@ void main(void)
           opacity: 1;
         }
       }
-    `}constructor(){super()}firstUpdated(){var r;new Ie((r=this.shadowRoot)==null?void 0:r.querySelector("#routerOutlet")).setRoutes([{path:"",animate:!0,children:[{path:"/",component:"app-home"},{path:"/2022",component:"app-2022",action:async()=>{await ee(()=>import("./app-2022.2f20fc7b.js"),[])}},{path:"/2021",children:[{path:"/",component:"app-2021",action:async()=>{await ee(()=>import("./app-2021.114da473.js"),[])}},{path:"/:topic",component:"app-2021",action:async()=>{await ee(()=>import("./app-2021.114da473.js"),[])}}]},{path:"/about",component:"app-about",action:async()=>{await ee(()=>import("./app-about.4ac7553e.js"),[])}},{path:"/news",component:"app-news",action:async()=>{await ee(()=>import("./app-news.abd896c8.js"),[])}},{path:"/sample",component:"app-sample",action:async()=>{await ee(()=>import("./app-sample.61c1865a.js"),[])}},{path:"/tutorial",component:"app-tutorial",action:async()=>{await ee(()=>import("./app-tutorial.487d78ce.js"),[])}},{path:"/code-of-conduct",component:"app-coc",action:async()=>{await ee(()=>import("./app-coc.c7441306.js"),[])}},{path:"/privacy",component:"app-privacy",action:async()=>{await ee(()=>import("./app-privacy.1493f03d.js"),[])}}]}]),Fd({immediate:!0})}render(){return Vt`
+    `}constructor(){super()}firstUpdated(){var r;new Ie((r=this.shadowRoot)==null?void 0:r.querySelector("#routerOutlet")).setRoutes([{path:"",animate:!0,children:[{path:"/",component:"app-home"},{path:"/2022",component:"app-2022",action:async()=>{await ee(()=>import("./app-2022.06d8b480.js"),[])}},{path:"/2021",children:[{path:"/",component:"app-2021",action:async()=>{await ee(()=>import("./app-2021.1d61eccb.js"),[])}},{path:"/:topic",component:"app-2021",action:async()=>{await ee(()=>import("./app-2021.1d61eccb.js"),[])}}]},{path:"/about",component:"app-about",action:async()=>{await ee(()=>import("./app-about.4b65b339.js"),[])}},{path:"/news",component:"app-news",action:async()=>{await ee(()=>import("./app-news.0eb1576f.js"),[])}},{path:"/sample",component:"app-sample",action:async()=>{await ee(()=>import("./app-sample.00b36a21.js"),[])}},{path:"/tutorial",component:"app-tutorial",action:async()=>{await ee(()=>import("./app-tutorial.c0469e01.js"),[])}},{path:"/code-of-conduct",component:"app-coc",action:async()=>{await ee(()=>import("./app-coc.63d3e154.js"),[])}},{path:"/privacy",component:"app-privacy",action:async()=>{await ee(()=>import("./app-privacy.d73834b2.js"),[])}}]}]),Fd({immediate:!0})}render(){return Vt`
       <main id="routerOutlet">
       </main>
     `}};jl=F2([Ue("app-index")],jl);"serviceWorker"in navigator&&navigator.serviceWorker.register("/sw.js");export{Vt as $,Lt as e,Ue as n,kd as o,Oe as r,St as s};
-//# sourceMappingURL=index.f6265752.js.map
+//# sourceMappingURL=index.128d0315.js.map
