@@ -1,11 +1,11 @@
-import{s as c,r as d,$ as p,o as h,e as s,n as g}from"./index.05164cb3.js";var b=Object.defineProperty,m=Object.getOwnPropertyDescriptor,a=(r,t,e,u)=>{for(var o=u>1?void 0:u?m(t,e):t,n=r.length-1,l;n>=0;n--)(l=r[n])&&(o=(u?l(t,e,o):l(o))||o);return u&&o&&b(t,e,o),o};let i=class extends c{constructor(){super(),this.subtitle="\u7B2C\u4E8C\u5C4A",this.title="\u4E2D\u56FD PWA \u5F00\u53D1\u8005\u65E5",this.time="2022 \u5E74 8 \u6708 6 \u65E5 13:00 - 17:00",this.description=`
+import{s as c,r as d,$ as p,o as h,e as s,n as g}from"./index.070aa3c0.js";var b=Object.defineProperty,m=Object.getOwnPropertyDescriptor,a=(r,t,e,u)=>{for(var o=u>1?void 0:u?m(t,e):t,n=r.length-1,l;n>=0;n--)(l=r[n])&&(o=(u?l(t,e,o):l(o))||o);return u&&o&&b(t,e,o),o};let i=class extends c{constructor(){super(),this.subtitle="\u7B2C\u4E8C\u5C4A",this.title="\u4E2D\u56FD PWA \u5F00\u53D1\u8005\u65E5",this.time="2022 \u5E74 8 \u6708 6 \u65E5 13:00 - 17:00",this.description=`
     \u4E3A\u52A0\u901F\u63A8\u52A8\u6E10\u8FDB\u5F0F Web \u5E94\u7528 (PWA) \u5728\u4E2D\u56FD\u7684\u53D1\u5C55\uFF0C\u5FAE\u8F6F\u4E0E\u82F1\u7279\u5C14\u643A\u624B\u4E3E\u529E\u201C\u7B2C\u4E8C\u5C4A\u4E2D\u56FD PWA \u5F00\u53D1\u8005\u65E5\u201D\u3002
     \u672C\u6B21\u6D3B\u52A8\u9080\u8BF7\u4E00\u4F17\u4E1A\u754C\u5927\u5496\u56F4\u7ED5 PWA \u5C55\u5F00\u5206\u4EAB\uFF0C\u63A2\u8BA8\u6700\u65B0\u6280\u672F\u8FDB\u5C55\uFF0C\u53CA PWA \u751F\u6001\u7684\u5B9E\u8DF5\u4E0E\u843D\u5730\u3002
     
     \u671F\u5F85\u4E0E\u60A8\u7EBF\u4E0A\u76F8\u805A\u3002
     `,this.jsondata={name:"PWA Developer Day 2022",t2022:[{id:1,time:"13:00",tag:"",title:"\u5F00\u5E55\u81F4\u8F9E",des:"",speaker:"\u5F20\u7426",pos:"\u8D44\u6DF1\u6280\u672F\u603B\u76D1",com:"\u82F1\u7279\u5C14 SATG Web \u5E73\u53F0\u5DE5\u7A0B",iconid:"qi",icon:"assets/2022/people/120/qi.png",icon5:"assets/2022/people/500/qi.png",bio:"",pdf:"",bilibili:"https://www.bilibili.com/video/BV1Kv4y1G7L8",aid:"554870624",cid:"741436422",youtube:"https://youtu.be/npMpZHMizUc"}],t2021:[{id:1,tag:"opening",title:"Web \u5F00\u53D1\u7684\u73B0\u72B6\u4E0E\u672A\u6765\uFF08\u5F00\u573A\u4ECB\u7ECD\uFF09",des:"",speaker:"\u5F20\u7426",pos:"\u8D44\u6DF1\u6280\u672F\u603B\u76D1",com:"\u8F6F\u4EF6\u4E0E\u5148\u8FDB\u6280\u672F\u4E8B\u4E1A\u90E8 Web \u5E73\u53F0\u5DE5\u7A0B",icon:"",icon5:"assets/2022/people/500/qi.png",bio:"",pdf:"https://d3i5xkfad89fac.cloudfront.net/pwa/2021/slides/02.pdf",bilibili:"https://www.bilibili.com/video/BV1Kv4y1G7L8",aid:"554870624",cid:"741436422",youtube:"https://youtu.be/npMpZHMizUc"}]},this.screenwidth="",this.screenheight=""}screenres(){let t=screen.availWidth-32,e=t*9/16;this.screenwidth=t.toString(),this.screenheight=e.toString()}async connectedCallback(){super.connectedCallback(),this.screenres(),await this.fetchData()}async fetchData(){await fetch("/data.json");const r=await fetch("/data.json");this.jsondata=await r.json()}static get styles(){return d`
       .p2022 {
-        background-image: linear-gradient(180deg, #ffffff 5%, #E3FDF5 10%, #FFE6FA 100%);
+        background-image: linear-gradient(180deg, #ffffff 2%, #E3FDF5 8%, #FFE6FA 100%);
         height: 100%;
       }
       .section {
@@ -83,6 +83,8 @@ import{s as c,r as d,$ as p,o as h,e as s,n as g}from"./index.05164cb3.js";var b
       .box {
         padding: 32px;
         height: auto;
+        box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0);
+        background-color: rgba(255, 255, 255, 0.1);
       }
 
       fluent-card {
@@ -189,7 +191,7 @@ import{s as c,r as d,$ as p,o as h,e as s,n as g}from"./index.05164cb3.js";var b
 
       .des {
         margin: 16px auto;
-        font-size: 12px;
+        font-size: 13px;
         letter-spacing: 2px;
         max-height: 30vh;
         overflow-y: auto;
@@ -243,7 +245,7 @@ import{s as c,r as d,$ as p,o as h,e as s,n as g}from"./index.05164cb3.js";var b
       }
 
       .team {
-        font-size: 12px;
+        font-size: 13px;
       }
 
       #icon_qi {
@@ -312,4 +314,4 @@ import{s as c,r as d,$ as p,o as h,e as s,n as g}from"./index.05164cb3.js";var b
           </svg>
         </pwa-install>
       `}else return p`<div>No data</div>`}};a([s({type:String})],i.prototype,"subtitle",2);a([s({type:String})],i.prototype,"title",2);a([s({type:String})],i.prototype,"time",2);a([s({type:String})],i.prototype,"description",2);a([s({type:Object})],i.prototype,"jsondata",2);a([s({type:String})],i.prototype,"screenwidth",2);a([s({type:String})],i.prototype,"screenheight",2);i=a([g("app-2022")],i);export{i as App2022};
-//# sourceMappingURL=app-2022.fadf5f4f.js.map
+//# sourceMappingURL=app-2022.bc83c86b.js.map

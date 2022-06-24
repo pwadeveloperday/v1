@@ -1,4 +1,4 @@
-import{s as c,r as l,$ as p,o as C,e as d,n as h}from"./index.05164cb3.js";var g=Object.defineProperty,f=Object.getOwnPropertyDescriptor,r=(t,e,i,a)=>{for(var u=a>1?void 0:a?f(e,i):e,o=t.length-1,n;o>=0;o--)(n=t[o])&&(u=(a?n(e,i,u):n(u))||u);return a&&u&&g(e,i,u),u};let s=class extends c{constructor(){super(),this.description=`
+import{s as c,r as l,$ as p,o as C,e as d,n as h}from"./index.070aa3c0.js";var g=Object.defineProperty,f=Object.getOwnPropertyDescriptor,r=(t,e,i,a)=>{for(var u=a>1?void 0:a?f(e,i):e,o=t.length-1,n;o>=0;o--)(n=t[o])&&(u=(a?n(e,i,u):n(u))||u);return a&&u&&g(e,i,u),u};let s=class extends c{constructor(){super(),this.description=`
     \u968F\u7740 PWA \u6280\u672F\u5F15\u5165\u4EE5\u53CA\u591A\u79CD Web \u5E73\u53F0\u80FD\u529B\u7684\u589E\u5F3A\uFF0CPWA \u6280\u672F\u7684 Web \u5E94\u7528\u83B7\u5F97\u4E86\u4E0E\u4F20\u7EDF\u672C\u5730\u5E94\u7528\u51E0\u4E4E\u76F8\u540C\u7684\u7528\u6237\u4F53\u9A8C\u5E76\u4E14\u5F97\u5230\u4E86\u5E7F\u6CDB\u7684\u5E94\u7528\uFF0C\u4E5F\u4FC3\u8FDB\u4E86\u5C0F\u7A0B\u5E8F\u751F\u6001\u7684\u53D1\u5C55\u3002
   `,this.jsondata={name:"PWA Developer Day 2022",t2022:[{id:1,time:"13:00",tag:"",title:"\u5F00\u5E55\u81F4\u8F9E",des:"",speaker:"\u5F20\u7426",pos:"\u8D44\u6DF1\u6280\u672F\u603B\u76D1",com:"\u82F1\u7279\u5C14 SATG Web \u5E73\u53F0\u5DE5\u7A0B",iconid:"qi",icon:"assets/2022/people/120/qi.png",icon5:"assets/2022/people/500/qi.png",bio:"",pdf:"",bilibili:"",aid:"",cid:"",youtube:""}],t2021:[{id:1,tag:"opening",title:"Web \u5F00\u53D1\u7684\u73B0\u72B6\u4E0E\u672A\u6765\uFF08\u5F00\u573A\u4ECB\u7ECD\uFF09",des:"",speaker:"\u5F20\u7426",pos:"\u8D44\u6DF1\u6280\u672F\u603B\u76D1",com:"\u8F6F\u4EF6\u4E0E\u5148\u8FDB\u6280\u672F\u4E8B\u4E1A\u90E8 Web \u5E73\u53F0\u5DE5\u7A0B",icon:"",icon5:"assets/2022/people/500/qi.png",bio:"",pdf:"https://d3i5xkfad89fac.cloudfront.net/pwa/2021/slides/02.pdf",bilibili:"https://www.bilibili.com/video/BV1Kv4y1G7L8",aid:"554870624",cid:"741436422",youtube:"https://youtu.be/npMpZHMizUc"}]},this.screenwidth="",this.screenheight=""}screenres(){let e=screen.availWidth-64,i=e*9/16;this.screenwidth=e.toString(),this.screenheight=i.toString()}async connectedCallback(){super.connectedCallback(),this.screenres(),await this.fetchData()}async fetchData(){await fetch("/data.json");const t=await fetch("/data.json");this.jsondata=await t.json()}static get styles(){return l`
       canvas {
@@ -16,6 +16,7 @@ import{s as c,r as l,$ as p,o as C,e as d,n as h}from"./index.05164cb3.js";var g
         margin: 0;
         padding: 16px 0;
         text-align: center;
+        color: rgba(0, 113, 197, 0.9);
       }
 
       .desc {
@@ -27,7 +28,7 @@ import{s as c,r as l,$ as p,o as C,e as d,n as h}from"./index.05164cb3.js";var g
         margin-bottom: 1rem;
         border-radius: 0px;
         box-shadow: none;
-        background: rgba(255, 255, 255, 0.8);
+        background: rgba(255, 255, 255, 0.5);
         color: #3d3d3d;
       }
 
@@ -116,4 +117,4 @@ import{s as c,r as l,$ as p,o as C,e as d,n as h}from"./index.05164cb3.js";var g
           <app-footer-home></app-footer-home>
         </div>
       `}else return p`<div>No data</div>`}};r([d({type:String})],s.prototype,"description",2);r([d({type:Object})],s.prototype,"jsondata",2);r([d({type:String})],s.prototype,"screenwidth",2);r([d({type:String})],s.prototype,"screenheight",2);s=r([h("app-2021")],s);export{s as App2021};
-//# sourceMappingURL=app-2021.b730ba98.js.map
+//# sourceMappingURL=app-2021.e5849d90.js.map

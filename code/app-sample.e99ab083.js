@@ -1,4 +1,4 @@
-import{s as m,r as n,$ as f,n as s}from"./index.05164cb3.js";var c=Object.defineProperty,d=Object.getOwnPropertyDescriptor,i=(l,r,a,t)=>{for(var e=t>1?void 0:t?d(r,a):r,p=l.length-1,u;p>=0;p--)(u=l[p])&&(e=(t?u(r,a,e):u(e))||e);return t&&e&&c(r,a,e),e};let b=class extends m{static get styles(){return n`
+import{s as m,r as n,$ as f,n as s}from"./index.070aa3c0.js";var c=Object.defineProperty,d=Object.getOwnPropertyDescriptor,i=(l,r,a,t)=>{for(var e=t>1?void 0:t?d(r,a):r,p=l.length-1,u;p>=0;p--)(u=l[p])&&(e=(t?u(r,a,e):u(e))||e);return t&&e&&c(r,a,e),e};let b=class extends m{static get styles(){return n`
     `}constructor(){super()}render(){return f`
       <app-header ?enableBack="${!0}"></app-header>
       <fluent-breadcrumb>
@@ -10,4 +10,4 @@ import{s as m,r as n,$ as f,n as s}from"./index.05164cb3.js";var c=Object.define
         <h2>媒体播放器</h2>
       </div>
     `}};b=i([s("app-sample")],b);export{b as AppSample};
-//# sourceMappingURL=app-sample.2de32b73.js.map
+//# sourceMappingURL=app-sample.e99ab083.js.map
