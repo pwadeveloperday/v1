@@ -1,12 +1,18 @@
-import{s as o,r as i,$ as n,n as h}from"./index.070aa3c0.js";var c=Object.defineProperty,w=Object.getOwnPropertyDescriptor,f=(l,r,t,C)=>{for(var e=C>1?void 0:C?w(r,t):r,a=l.length-1,p;a>=0;a--)(p=l[a])&&(e=(C?p(r,t,e):p(e))||e);return C&&e&&c(r,t,e),e};let s=class extends o{static get styles(){return i`
+import{s,r as n,$ as i,n as h}from"./index.81f21d6b.js";var c=Object.defineProperty,w=Object.getOwnPropertyDescriptor,g=(o,e,a,C)=>{for(var r=C>1?void 0:C?w(e,a):e,t=o.length-1,p;t>=0;t--)(p=o[t])&&(r=(C?p(e,a,r):p(r))||r);return C&&r&&c(e,a,r),r};let l=class extends s{static get styles(){return n`
     .about {
       padding: 0 16px;
       margin: 2rem 0px 0rem;
+      min-height: calc(100vh - 174px);
     }
 
     fluent-card {
       border-radius: 0px;
       box-shadow: none;
+      background: rgba(255, 255, 255, 1);
+    }
+
+    .control[href]:hover {
+      background: rgba(255, 255, 255, 0.4);
     }
 
     fluent-anchor svg {
@@ -25,6 +31,7 @@ import{s as o,r as i,$ as n,n as h}from"./index.070aa3c0.js";var c=Object.define
       color: red;
       display: block;
       list-style: circle;
+      background: transparent !important;
     }
 
     @media(prefers-color-scheme: light) {
@@ -35,7 +42,7 @@ import{s as o,r as i,$ as n,n as h}from"./index.070aa3c0.js";var c=Object.define
 
     @media (min-width: 1024px) {
     }
-    `}constructor(){super()}render(){return n`
+    `}constructor(){super()}render(){return i`
       <app-header ?enableBack="${!0}"></app-header>
       <div class="about">
         <h2>PWA 教程</h2>
@@ -73,5 +80,5 @@ import{s as o,r as i,$ as n,n as h}from"./index.070aa3c0.js";var c=Object.define
         </fluent-card>
       </div>
       <app-footer></app-footer>
-    `}};s=f([h("app-tutorial")],s);export{s as AppTutorial};
-//# sourceMappingURL=app-tutorial.6483a070.js.map
+    `}};l=g([h("app-tutorial")],l);export{l as AppTutorial};
+//# sourceMappingURL=app-tutorial.66199252.js.map

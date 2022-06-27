@@ -1,4 +1,4 @@
-import{s as n,r as u,$ as i,n as c}from"./index.070aa3c0.js";var s=Object.defineProperty,h=Object.getOwnPropertyDescriptor,f=(o,e,p,a)=>{for(var r=a>1?void 0:a?h(e,p):e,t=o.length-1,l;t>=0;t--)(l=o[t])&&(r=(a?l(e,p,r):l(r))||r);return a&&r&&s(e,p,r),r};let d=class extends n{static get styles(){return u`
+import{s as t,r as d,$ as u,n as c}from"./index.81f21d6b.js";var i=Object.defineProperty,m=Object.getOwnPropertyDescriptor,h=(o,e,r,p)=>{for(var a=p>1?void 0:p?m(e,r):e,l=o.length-1,s;l>=0;l--)(s=o[l])&&(a=(p?s(e,r,a):s(a))||a);return p&&a&&i(e,r,a),a};let n=class extends t{static get styles(){return d`
     .about {
       padding: 0 16px;
       margin: 1rem 0 0rem 0;
@@ -35,7 +35,11 @@ import{s as n,r as u,$ as i,n as c}from"./index.070aa3c0.js";var s=Object.define
 
     @media (min-width: 1024px) {
     }
-    `}constructor(){super()}render(){return i`
+
+    .spam {
+      display: none;
+    }
+    `}constructor(){super()}render(){return u`
       <app-header ?enableBack="${!0}"></app-header>
       <div class="about">
         <h2>关于中国 PWA 开发者日</h2>
@@ -60,8 +64,13 @@ import{s as n,r as u,$ as i,n as c}from"./index.070aa3c0.js";var s=Object.define
               <li>张敏 英特尔软件技术经理</li>
             </ul>  
           </p>
+          <p>联系我们: 
+          <ul>
+              <li>pwadeveloperday<span class="spam">spam</span>@<span class="spam">spam</span>outlook<span class="spam">spam</span>.com</li>
+            </ul>  
+          </p>
           </fluent-card>
           <app-footer></app-footer>
       </div>
-    `}};d=f([c("app-about")],d);export{d as AppAbout};
-//# sourceMappingURL=app-about.48bc44ce.js.map
+    `}};n=h([c("app-about")],n);export{n as AppAbout};
+//# sourceMappingURL=app-about.2456ef00.js.map

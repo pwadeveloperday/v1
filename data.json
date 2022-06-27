@@ -15,10 +15,10 @@
       "icon5": "assets/2022/people/500/qi.png",
       "bio": "",
       "pdf": "",
-      "bilibili": "https://www.bilibili.com/video/BV1Kv4y1G7L8",
-      "aid": "554870624",
-      "cid": "741436422",
-      "youtube": "https://youtu.be/npMpZHMizUc" 
+      "bilibili": "https://www.bilibili.com/video/BV1qB4y1p7V6",
+      "aid": "600313490",
+      "cid": "756938241",
+      "youtube": "" 
     },
     {
       "id": 2,
@@ -34,10 +34,10 @@
       "icon5": "assets/2022/people/500/alex.png",
       "bio": "",
       "pdf": "",
-      "bilibili": "https://www.bilibili.com/video/BV1Kv4y1G7L8",
-      "aid": "554870624",
-      "cid": "741436422",
-      "youtube": "https://youtu.be/npMpZHMizUc" 
+      "bilibili": "https://www.bilibili.com/video/BV1qB4y1p7V6",
+      "aid": "600313490",
+      "cid": "756938241",
+      "youtube": "" 
     },
     {
       "id": 3,
@@ -53,10 +53,10 @@
       "icon5": "assets/2022/people/500/edwin.png",
       "bio": "从业 20 余年，历经软件开发到产品经理，前端应用到云计算之间的风云变幻。曾在英特尔工作了 14 年，主要从事与性能优化、GPU 驱动程序和 Chromium 内核优化相关的软件开发和团队管理。之后，受 Chromium 新架构/创新的启发，有一段短暂的 H5 WebOS 创业经历，2016 年加入微软云计算团队，在 Azure RDS for MySQL 和区块链 PaaS 服务上工作了4年多，作为 Chormium 忠粉，在微软 Edge 浏览器全面采用 Chromium 内核后，加入 Edge PWA 团队，为构建 WebOS 的梦想再出发！",
       "pdf": "",
-      "bilibili": "https://www.bilibili.com/video/BV1Kv4y1G7L8",
-      "aid": "554870624",
-      "cid": "741436422",
-      "youtube": "https://youtu.be/npMpZHMizUc" 
+      "bilibili": "https://www.bilibili.com/video/BV1qB4y1p7V6",
+      "aid": "600313490",
+      "cid": "756938241",
+      "youtube": "" 
     },
     {
       "id": 4,
@@ -72,10 +72,10 @@
       "icon5": "assets/2022/people/500/alex.png",
       "bio": "",
       "pdf": "",
-      "bilibili": "https://www.bilibili.com/video/BV1Kv4y1G7L8",
-      "aid": "554870624",
-      "cid": "741436422",
-      "youtube": "https://youtu.be/npMpZHMizUc" 
+      "bilibili": "https://www.bilibili.com/video/BV1qB4y1p7V6",
+      "aid": "600313490",
+      "cid": "756938241",
+      "youtube": "" 
     },
     {
       "id": 5,
@@ -91,29 +91,29 @@
       "icon5": "assets/2022/people/500/harry.png",
       "bio": "",
       "pdf": "",
-      "bilibili": "https://www.bilibili.com/video/BV1Kv4y1G7L8",
-      "aid": "554870624",
-      "cid": "741436422",
-      "youtube": "https://youtu.be/npMpZHMizUc" 
+      "bilibili": "https://www.bilibili.com/video/BV1qB4y1p7V6",
+      "aid": "600313490",
+      "cid": "756938241",
+      "youtube": "" 
     },
     {
       "id": 6,
       "time": "16:10",
       "tag": "",
       "title": "新兴 Web 技术助力 PWA",
-      "des": "",
+      "des": "2022年，很多新兴的 Web API 加入到了 Chromium 中，使得渐进式 Web 应用 (Progressive Web Apps, PWA) 如虎添翼。功能上，File System Access API，Shared Storage API，Web Share API，Notifications API 等等简化了 PWA 应用对系统的访问和使用，极大地降低了前端的开发成本；性能上, 英特尔 Web 团队参与甚至领导的 Web Assembly / SIMD, WebGPU 以及 WebNN 等等项目，充分地利用 了 Intel XPU 的能力，并将 PWA 的性能极大地提高到和原生应用接近的水平。让我们快速了解新兴的 Web 技术在哪些方面助力了 PWA，并且帮助我们获得成功。",
       "speaker": "张敏",
       "pos": "软件技术经理",
       "com": "英特尔 SATG Web 平台工程",
       "iconid": "belem",
       "icon": "assets/2022/people/120/belem.png",
       "icon5": "assets/2022/people/500/belem.png",
-      "bio": "",
+      "bio": "张敏，2013 年加入英特尔 Web 平台工程团队，参与了 Crosswork、<a href='https://webnn.dev/' target='_blank'>Web Neural Network (WebNN)</a>、渐进式 Web 应用 （PWA）等 Web 项目。 在 2007 年之前，他是 Opera Software 的软件工程经理并领导了客户端运营和关键数据产品团队。 Belem 在浏览器产品及质量、网站兼容性、Web API 及应用等方面有多年经验，张敏正和团队一起努力将英特尔 XPU 的强大功能引入到 Web，并且推动 PWA 技术在国内的发展和落地。",
       "pdf": "",
-      "bilibili": "https://www.bilibili.com/video/BV1Kv4y1G7L8",
-      "aid": "554870624",
-      "cid": "741436422",
-      "youtube": "https://youtu.be/npMpZHMizUc" 
+      "bilibili": "https://www.bilibili.com/video/BV1qB4y1p7V6",
+      "aid": "600313490",
+      "cid": "756938241",
+      "youtube": "" 
     },
     {
       "id": 7,
@@ -129,10 +129,10 @@
       "icon5": "assets/2022/people/500/alex.png",
       "bio": "",
       "pdf": "",
-      "bilibili": "https://www.bilibili.com/video/BV1Kv4y1G7L8",
-      "aid": "554870624",
-      "cid": "741436422",
-      "youtube": "https://youtu.be/npMpZHMizUc" 
+      "bilibili": "https://www.bilibili.com/video/BV1qB4y1p7V6",
+      "aid": "600313490",
+      "cid": "756938241",
+      "youtube": "" 
     },
     {
       "id": 8,
@@ -148,10 +148,10 @@
       "icon5": "assets/2022/people/500/alex.png",
       "bio": "",
       "pdf": "",
-      "bilibili": "https://www.bilibili.com/video/BV1Kv4y1G7L8",
-      "aid": "554870624",
-      "cid": "741436422",
-      "youtube": "https://youtu.be/npMpZHMizUc" 
+      "bilibili": "https://www.bilibili.com/video/BV1qB4y1p7V6",
+      "aid": "600313490",
+      "cid": "756938241",
+      "youtube": "" 
     }
   ],
   "t2021": [
@@ -159,7 +159,7 @@
       "id": 1,
       "tag": "opening",
       "title": "Web 开发的现状与未来（开场介绍）",
-      "des": "渐进式网页应用 (Progressive Web Application) 技术的诞生让网页程序提供比拟原生应用的用户体验和功能，随着“瞬时应用安装”、“离线工作模式”、“本地文件访问”、“高性能 WebAssembly” 等新能力逐步引入，PWA 正在在技术演进的路上狂飙。",
+      "des": "渐进式 Web 应用 (Progressive Web Apps) 技术的诞生让网页程序提供比拟原生应用的用户体验和功能，随着“瞬时应用安装”、“离线工作模式”、“本地文件访问”、“高性能 WebAssembly” 等新能力逐步引入，PWA 正在在技术演进的路上狂飙。",
       "speaker": "张琦",
       "pos": "资深技术总监",
       "com": "软件与先进技术事业部 Web 平台工程",

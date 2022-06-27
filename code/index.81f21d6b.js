@@ -2270,7 +2270,7 @@ void main(void)
       }
 
       .super {
-        z-index: 1;
+        z-index: 0;
       }
 
       #sidepromote {
@@ -2279,7 +2279,7 @@ void main(void)
 
       .hf {
         align-self: center;
-        z-index: 1;
+        z-index: 0;
       }
 
       .share {
@@ -2466,6 +2466,18 @@ void main(void)
         .hero h1 {
           font-size: clamp(26px, 4vw, 44px)
         }
+
+        .hero h2 {
+          margin: 0.5rem auto;
+        }
+        
+        .hero .h3b {
+          font-size: clamp(14px, 2.2vw, 18px)
+        }
+
+        .hero .h1b {
+          margin-top: -1.5rem;
+        }
       }
 
       @media only screen and (max-height: 400px) and (orientation: landscape) {
@@ -2519,6 +2531,7 @@ void main(void)
                 即刻预约
               </a>
             </div>
+            <!--
             <h3 class="joint">联合主办</h3>
             <div class="coll">
               <div></div>
@@ -2528,6 +2541,7 @@ void main(void)
               </div>
               <div></div>
             </div>
+            -->
           </div>
           <div id="sidepromote" class="super">
  
@@ -2704,6 +2718,7 @@ void main(void)
       flex-direction: column;
       justify-content: center;
       box-shadow: 0px 1px 9px -2px rgba(0,0,0,0.75);
+      z-index: 1;
     }
 
     #menu div {
@@ -2792,8 +2807,6 @@ void main(void)
       height: 18px;
       width: 18px;
       
-      z-index: 3;
-      
       -webkit-user-select: none;
       user-select: none;
     }
@@ -2810,7 +2823,6 @@ void main(void)
       cursor: pointer;
       
       opacity: 0;
-      z-index: 2;
       
       -webkit-touch-callout: none;
     }
@@ -2825,8 +2837,6 @@ void main(void)
       
       background: rgba(0, 113, 197, 0.9);
       border-radius: 3px;
-      
-      z-index: 1;
       
       transform-origin: 4px 0px;
       
@@ -2894,6 +2904,7 @@ void main(void)
       flex-direction: column;
       justify-content: center;
       box-shadow: 0px 1px 9px -2px rgba(0,0,0,0.75);
+      z-index: 1;
     }
 
     #menu div {
@@ -3078,8 +3089,8 @@ void main(void)
           opacity: 1;
         }
       }
-    `}constructor(){super()}firstUpdated(){var r;new Ie((r=this.shadowRoot)==null?void 0:r.querySelector("#routerOutlet")).setRoutes([{path:"",animate:!0,children:[{path:"/",component:"app-home"},{path:"/2022",component:"app-2022",action:async()=>{await ee(()=>import("./app-2022.bc83c86b.js"),[])}},{path:"/2021",children:[{path:"/",component:"app-2021",action:async()=>{await ee(()=>import("./app-2021.e5849d90.js"),[])}},{path:"/:topic",component:"app-2021",action:async()=>{await ee(()=>import("./app-2021.e5849d90.js"),[])}}]},{path:"/about",component:"app-about",action:async()=>{await ee(()=>import("./app-about.48bc44ce.js"),[])}},{path:"/news",component:"app-news",action:async()=>{await ee(()=>import("./app-news.58244383.js"),[])}},{path:"/sample",component:"app-sample",action:async()=>{await ee(()=>import("./app-sample.e99ab083.js"),[])}},{path:"/tutorial",component:"app-tutorial",action:async()=>{await ee(()=>import("./app-tutorial.6483a070.js"),[])}},{path:"/code-of-conduct",component:"app-coc",action:async()=>{await ee(()=>import("./app-coc.bc29efc1.js"),[])}},{path:"/privacy",component:"app-privacy",action:async()=>{await ee(()=>import("./app-privacy.98ffa87b.js"),[])}}]}]),Fd({immediate:!0})}render(){return Vt`
+    `}constructor(){super()}firstUpdated(){var r;new Ie((r=this.shadowRoot)==null?void 0:r.querySelector("#routerOutlet")).setRoutes([{path:"",animate:!0,children:[{path:"/",component:"app-home"},{path:"/2022",component:"app-2022",action:async()=>{await ee(()=>import("./app-2022.08675a32.js"),[])}},{path:"/2021",children:[{path:"/",component:"app-2021",action:async()=>{await ee(()=>import("./app-2021.4d30f046.js"),[])}},{path:"/:topic",component:"app-2021",action:async()=>{await ee(()=>import("./app-2021.4d30f046.js"),[])}}]},{path:"/about",component:"app-about",action:async()=>{await ee(()=>import("./app-about.2456ef00.js"),[])}},{path:"/news",component:"app-news",action:async()=>{await ee(()=>import("./app-news.f8e7742f.js"),[])}},{path:"/sample",component:"app-sample",action:async()=>{await ee(()=>import("./app-sample.ae614ffc.js"),[])}},{path:"/tutorial",component:"app-tutorial",action:async()=>{await ee(()=>import("./app-tutorial.66199252.js"),[])}},{path:"/code-of-conduct",component:"app-coc",action:async()=>{await ee(()=>import("./app-coc.5678c5ab.js"),[])}},{path:"/privacy",component:"app-privacy",action:async()=>{await ee(()=>import("./app-privacy.1067f698.js"),[])}}]}]),Fd({immediate:!0})}render(){return Vt`
       <main id="routerOutlet">
       </main>
     `}};jl=F2([Ue("app-index")],jl);"serviceWorker"in navigator&&navigator.serviceWorker.register("/sw.js");export{Vt as $,Lt as e,Ue as n,kd as o,Oe as r,St as s};
-//# sourceMappingURL=index.070aa3c0.js.map
+//# sourceMappingURL=index.81f21d6b.js.map
