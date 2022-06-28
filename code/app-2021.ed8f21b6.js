@@ -1,6 +1,10 @@
-import{s as c,r as l,$ as p,o as C,e as o,n as h}from"./index.81f21d6b.js";var g=Object.defineProperty,f=Object.getOwnPropertyDescriptor,a=(t,e,i,r)=>{for(var u=r>1?void 0:r?f(e,i):e,d=t.length-1,n;d>=0;d--)(n=t[d])&&(u=(r?n(e,i,u):n(u))||u);return r&&u&&g(e,i,u),u};let s=class extends c{constructor(){super(),this.description=`
+import{a as l,s as c,r as h,$ as p,o as C,e as a,n as g}from"./index.eab98fae.js";/**
+ * @license
+ * Copyright 2017 Google LLC
+ * SPDX-License-Identifier: BSD-3-Clause
+ */function f(t){return l({descriptor:e=>({get(){var i,s;return(s=(i=this.renderRoot)===null||i===void 0?void 0:i.querySelectorAll(t))!==null&&s!==void 0?s:[]},enumerable:!0,configurable:!0})})}var v=Object.defineProperty,m=Object.getOwnPropertyDescriptor,o=(t,e,i,s)=>{for(var u=s>1?void 0:s?m(e,i):e,d=t.length-1,n;d>=0;d--)(n=t[d])&&(u=(s?n(e,i,u):n(u))||u);return s&&u&&v(e,i,u),u};let r=class extends c{constructor(){super(),this.description=`
     \u968F\u7740 PWA \u6280\u672F\u5F15\u5165\u4EE5\u53CA\u591A\u79CD Web \u5E73\u53F0\u80FD\u529B\u7684\u589E\u5F3A\uFF0CPWA \u6280\u672F\u7684 Web \u5E94\u7528\u83B7\u5F97\u4E86\u4E0E\u4F20\u7EDF\u672C\u5730\u5E94\u7528\u51E0\u4E4E\u76F8\u540C\u7684\u7528\u6237\u4F53\u9A8C\u5E76\u4E14\u5F97\u5230\u4E86\u5E7F\u6CDB\u7684\u5E94\u7528\uFF0C\u4E5F\u4FC3\u8FDB\u4E86\u5C0F\u7A0B\u5E8F\u751F\u6001\u7684\u53D1\u5C55\u3002
-  `,this.jsondata={name:"PWA Developer Day 2022",t2022:[{id:1,time:"13:00",tag:"",title:"\u5F00\u5E55\u81F4\u8F9E",des:"",speaker:"\u5F20\u7426",pos:"\u8D44\u6DF1\u6280\u672F\u603B\u76D1",com:"\u82F1\u7279\u5C14 SATG Web \u5E73\u53F0\u5DE5\u7A0B",iconid:"qi",icon:"assets/2022/people/120/qi.png",icon5:"assets/2022/people/500/qi.png",bio:"",pdf:"",bilibili:"",aid:"",cid:"",youtube:""}],t2021:[{id:1,tag:"opening",title:"Web \u5F00\u53D1\u7684\u73B0\u72B6\u4E0E\u672A\u6765\uFF08\u5F00\u573A\u4ECB\u7ECD\uFF09",des:"",speaker:"\u5F20\u7426",pos:"\u8D44\u6DF1\u6280\u672F\u603B\u76D1",com:"\u8F6F\u4EF6\u4E0E\u5148\u8FDB\u6280\u672F\u4E8B\u4E1A\u90E8 Web \u5E73\u53F0\u5DE5\u7A0B",icon:"",icon5:"assets/2022/people/500/qi.png",bio:"",pdf:"https://d3i5xkfad89fac.cloudfront.net/pwa/2021/slides/02.pdf",bilibili:"https://www.bilibili.com/video/BV1Kv4y1G7L8",aid:"554870624",cid:"741436422",youtube:"https://youtu.be/npMpZHMizUc"}]},this.screenwidth="",this.screenheight="",this.topic=""}screenres(){let e=screen.availWidth-64,i=e*9/16;this.screenwidth=e.toString(),this.screenheight=i.toString()}async scrollToId(){var e;const t=location.pathname.replace("/2021/","");console.log(t),console.log(document.getElementById(`#id_${t}`)),(e=document.querySelector(`#id_${t}`))==null||e.scrollIntoView()}async connectedCallback(){super.connectedCallback(),this.screenres(),await this.fetchData(),await this.scrollToId()}async fetchData(){await fetch("/data.json");const t=await fetch("/data.json");this.jsondata=await t.json()}static get styles(){return l`
+  `,this.jsondata={name:"PWA Developer Day 2022",t2022:[{id:1,time:"13:00",tag:"",title:"\u5F00\u5E55\u81F4\u8F9E",des:"",speaker:"\u5F20\u7426",pos:"\u8D44\u6DF1\u6280\u672F\u603B\u76D1",com:"\u82F1\u7279\u5C14 SATG Web \u5E73\u53F0\u5DE5\u7A0B",iconid:"qi",icon:"assets/2022/people/120/qi.png",icon5:"assets/2022/people/500/qi.png",bio:"",pdf:"",bilibili:"",aid:"",cid:"",youtube:""}],t2021:[{id:1,tag:"opening",title:"Web \u5F00\u53D1\u7684\u73B0\u72B6\u4E0E\u672A\u6765\uFF08\u5F00\u573A\u4ECB\u7ECD\uFF09",des:"",speaker:"\u5F20\u7426",pos:"\u8D44\u6DF1\u6280\u672F\u603B\u76D1",com:"\u8F6F\u4EF6\u4E0E\u5148\u8FDB\u6280\u672F\u4E8B\u4E1A\u90E8 Web \u5E73\u53F0\u5DE5\u7A0B",icon:"",icon5:"assets/2022/people/500/qi.png",bio:"",pdf:"https://d3i5xkfad89fac.cloudfront.net/pwa/2021/slides/02.pdf",bilibili:"https://www.bilibili.com/video/BV1Kv4y1G7L8",aid:"554870624",cid:"741436422",youtube:"https://youtu.be/npMpZHMizUc"}]},this.screenwidth="",this.screenheight="",this.topic=""}screenres(){let e=screen.availWidth-64,i=e*9/16;this.screenwidth=e.toString(),this.screenheight=i.toString()}async scrollToId(){const t=location.pathname.replace("/2021/","");console.log(t),console.log("----------------"),console.log(this.ids);for(let e of this.ids)e.id==="id_"+t&&(console.log(e),e.scrollIntoView({block:"end",behavior:"smooth"}))}async connectedCallback(){super.connectedCallback(),this.screenres(),await this.fetchData(),await this.scrollToId()}async fetchData(){await fetch("/data.json");const t=await fetch("/data.json");this.jsondata=await t.json()}static get styles(){return h`
       canvas {
         display: none;
       }
@@ -20,7 +24,7 @@ import{s as c,r as l,$ as p,o as C,e as o,n as h}from"./index.81f21d6b.js";var g
       }
 
       .desc {
-        margin: 16px auto;
+        margin: 16px 16px 32px 16px;
       }
 
       fluent-card {
@@ -69,8 +73,36 @@ import{s as c,r as l,$ as p,o as C,e as o,n as h}from"./index.81f21d6b.js";var g
       }
 
       iframe {
-        max-width: 720px;
-        max-height: 480px; 
+        max-width: 420px;
+        max-height: 240px; 
+      }
+
+      @media only screen and (min-width: 1024px) {
+        .p2021 {
+          padding-left: 32px;
+        }
+
+        #schedule {
+          display: grid;
+          align-items: center;
+          justify-items: center;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(4, 1fr);
+          grid-column-gap: 16px;
+          grid-row-gap: 16px;
+        }
+
+        .des {
+          min-height: 80px;
+        }
+
+        .bio {
+          min-height: 40px;
+        }
+
+        fluent-card {
+          margin-bottom: 0rem;
+        }
       }
 
     `}render(){if(this.jsondata){let t="";for(let e of this.jsondata.t2021){let i="";e.pdf&&(i=`
@@ -78,16 +110,16 @@ import{s as c,r as l,$ as p,o as C,e as o,n as h}from"./index.81f21d6b.js";var g
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M88 304H80V256H88C101.3 256 112 266.7 112 280C112 293.3 101.3 304 88 304zM192 256H200C208.8 256 216 263.2 216 272V336C216 344.8 208.8 352 200 352H192V256zM224 0V128C224 145.7 238.3 160 256 160H384V448C384 483.3 355.3 512 320 512H64C28.65 512 0 483.3 0 448V64C0 28.65 28.65 0 64 0H224zM64 224C55.16 224 48 231.2 48 240V368C48 376.8 55.16 384 64 384C72.84 384 80 376.8 80 368V336H88C118.9 336 144 310.9 144 280C144 249.1 118.9 224 88 224H64zM160 368C160 376.8 167.2 384 176 384H200C226.5 384 248 362.5 248 336V272C248 245.5 226.5 224 200 224H176C167.2 224 160 231.2 160 240V368zM288 224C279.2 224 272 231.2 272 240V368C272 376.8 279.2 384 288 384C296.8 384 304 376.8 304 368V320H336C344.8 320 352 312.8 352 304C352 295.2 344.8 288 336 288H304V256H336C344.8 256 352 248.8 352 240C352 231.2 344.8 224 336 224H288zM256 0L384 128H256V0z"/></svg>
             </a>
           `),t+=`
-          <fluent-card id="id_${e.id}">
+          <fluent-card id="id_${e.id}" class="ids">
             <h2> ${e.title}</h2>
-            <div> ${e.des} </div>
+            <div class="des"> ${e.des} </div>
 
             <div class="bili">
               <iframe width="${this.screenwidth}" height="${this.screenheight}" src="https://player.bilibili.com/player.html?cid=${e.cid}&aid=${e.aid}&page=1&as_wide=1&high_quality=1&danmaku=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
             </div>
             <div class="description">
-              <div class="nametitle"><strong>${e.speaker}</strong> ${e.pos} ${e.com}</div>
-              <div> ${e.bio} </div>
+              <div class="nametitle"><strong>${e.speaker}</strong> ${e.com}${e.pos}</div>
+              <div class="bio"> ${e.bio} </div>
             </div>
 
             <div class="resources">
@@ -116,5 +148,5 @@ import{s as c,r as l,$ as p,o as C,e as o,n as h}from"./index.81f21d6b.js";var g
           </div>
           <app-footer-home></app-footer-home>
         </div>
-      `}else return p`<div>No data</div>`}};a([o({type:String})],s.prototype,"description",2);a([o({type:Object})],s.prototype,"jsondata",2);a([o({type:String})],s.prototype,"screenwidth",2);a([o({type:String})],s.prototype,"screenheight",2);a([o({type:String})],s.prototype,"topic",2);s=a([h("app-2021")],s);export{s as App2021};
-//# sourceMappingURL=app-2021.4d30f046.js.map
+      `}else return p`<div>No data</div>`}};o([a({type:String})],r.prototype,"description",2);o([a({type:Object})],r.prototype,"jsondata",2);o([a({type:String})],r.prototype,"screenwidth",2);o([a({type:String})],r.prototype,"screenheight",2);o([a({type:String})],r.prototype,"topic",2);o([f(".ids")],r.prototype,"ids",2);r=o([g("app-2021")],r);export{r as App2021};
+//# sourceMappingURL=app-2021.ed8f21b6.js.map
