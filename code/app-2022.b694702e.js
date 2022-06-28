@@ -1,4 +1,4 @@
-import{s as c,r as d,$ as u,o as g,e as s,n as h}from"./index.eab98fae.js";var b=Object.defineProperty,m=Object.getOwnPropertyDescriptor,a=(r,i,e,n)=>{for(var o=n>1?void 0:n?m(i,e):i,l=r.length-1,p;l>=0;l--)(p=r[l])&&(o=(n?p(i,e,o):p(o))||o);return n&&o&&b(i,e,o),o};let t=class extends c{constructor(){super(),this.subtitle="\u7B2C\u4E8C\u5C4A",this.title="\u4E2D\u56FD PWA \u5F00\u53D1\u8005\u65E5",this.time="2022 \u5E74 8 \u6708 6 \u65E5 13:00 - 17:00",this.description=`
+import{s as c,r as d,$ as u,o as g,e as s,n as h}from"./index.124f0479.js";var b=Object.defineProperty,m=Object.getOwnPropertyDescriptor,a=(r,i,e,n)=>{for(var o=n>1?void 0:n?m(i,e):i,l=r.length-1,p;l>=0;l--)(p=r[l])&&(o=(n?p(i,e,o):p(o))||o);return n&&o&&b(i,e,o),o};let t=class extends c{constructor(){super(),this.subtitle="\u7B2C\u4E8C\u5C4A",this.title="\u4E2D\u56FD PWA \u5F00\u53D1\u8005\u65E5",this.time="2022 \u5E74 8 \u6708 6 \u65E5 13:00 - 17:00",this.description=`
     \u4E3A\u52A0\u901F\u63A8\u52A8\u6E10\u8FDB\u5F0F Web \u5E94\u7528 (PWA) \u5728\u4E2D\u56FD\u7684\u53D1\u5C55\uFF0C\u5FAE\u8F6F\u4E0E\u82F1\u7279\u5C14\u643A\u624B\u4E3E\u529E\u201C\u7B2C\u4E8C\u5C4A\u4E2D\u56FD PWA \u5F00\u53D1\u8005\u65E5\u201D\u3002
     \u672C\u6B21\u6D3B\u52A8\u9080\u8BF7\u4E00\u4F17\u4E1A\u754C\u5927\u5496\u56F4\u7ED5 PWA \u5C55\u5F00\u5206\u4EAB\uFF0C\u63A2\u8BA8\u6700\u65B0\u6280\u672F\u8FDB\u5C55\uFF0C\u53CA PWA \u751F\u6001\u7684\u5B9E\u8DF5\u4E0E\u843D\u5730\u3002
     
@@ -381,6 +381,10 @@ import{s as c,r as d,$ as u,o as g,e as s,n as h}from"./index.eab98fae.js";var b
           max-height: 10vh;
         }
       }
+      
+      .bio a, .des a {
+        color: rgba(255, 255, 255, 0.8);
+      }
 
      `}async firstUpdated(){console.log("\u6B22\u8FCE\u60A8!")}render(){if(this.jsondata){let r="",i="";for(let e of this.jsondata.t2022)i=`
           <fluent-card class="section">
@@ -428,4 +432,4 @@ import{s as c,r as d,$ as u,o as g,e as s,n as h}from"./index.eab98fae.js";var b
           </svg>
         </pwa-install>
       `}else return u`<div>No data</div>`}};a([s({type:String})],t.prototype,"subtitle",2);a([s({type:String})],t.prototype,"title",2);a([s({type:String})],t.prototype,"time",2);a([s({type:String})],t.prototype,"description",2);a([s({type:Object})],t.prototype,"jsondata",2);a([s({type:String})],t.prototype,"screenwidth",2);a([s({type:String})],t.prototype,"screenheight",2);t=a([h("app-2022")],t);export{t as App2022};
-//# sourceMappingURL=app-2022.66c591e0.js.map
+//# sourceMappingURL=app-2022.b694702e.js.map
