@@ -1,9 +1,9 @@
-import{s as c,r as d,$ as u,o as g,e as s,n as h}from"./index.124f0479.js";var b=Object.defineProperty,m=Object.getOwnPropertyDescriptor,a=(r,i,e,n)=>{for(var o=n>1?void 0:n?m(i,e):i,l=r.length-1,p;l>=0;l--)(p=r[l])&&(o=(n?p(i,e,o):p(o))||o);return n&&o&&b(i,e,o),o};let t=class extends c{constructor(){super(),this.subtitle="\u7B2C\u4E8C\u5C4A",this.title="\u4E2D\u56FD PWA \u5F00\u53D1\u8005\u65E5",this.time="2022 \u5E74 8 \u6708 6 \u65E5 13:00 - 17:00",this.description=`
+import{s as d,r as c,$ as u,o as h,e as n,n as g}from"./index.1f7d22cf.js";var b=Object.defineProperty,m=Object.getOwnPropertyDescriptor,r=(a,i,e,s)=>{for(var o=s>1?void 0:s?m(i,e):i,l=a.length-1,p;l>=0;l--)(p=a[l])&&(o=(s?p(i,e,o):p(o))||o);return s&&o&&b(i,e,o),o};let t=class extends d{constructor(){super(),this.subtitle="\u7B2C\u4E8C\u5C4A",this.title="\u4E2D\u56FD PWA \u5F00\u53D1\u8005\u65E5",this.time="2022 \u5E74 8 \u6708 6 \u65E5 13:00 - 17:00",this.description=`
     \u4E3A\u52A0\u901F\u63A8\u52A8\u6E10\u8FDB\u5F0F Web \u5E94\u7528 (PWA) \u5728\u4E2D\u56FD\u7684\u53D1\u5C55\uFF0C\u5FAE\u8F6F\u4E0E\u82F1\u7279\u5C14\u643A\u624B\u4E3E\u529E\u201C\u7B2C\u4E8C\u5C4A\u4E2D\u56FD PWA \u5F00\u53D1\u8005\u65E5\u201D\u3002
     \u672C\u6B21\u6D3B\u52A8\u9080\u8BF7\u4E00\u4F17\u4E1A\u754C\u5927\u5496\u56F4\u7ED5 PWA \u5C55\u5F00\u5206\u4EAB\uFF0C\u63A2\u8BA8\u6700\u65B0\u6280\u672F\u8FDB\u5C55\uFF0C\u53CA PWA \u751F\u6001\u7684\u5B9E\u8DF5\u4E0E\u843D\u5730\u3002
     
     \u671F\u5F85\u4E0E\u60A8\u7EBF\u4E0A\u76F8\u805A\u3002
-    `,this.jsondata={name:"PWA Developer Day 2022",t2022:[{id:1,time:"13:00",tag:"",title:"\u5F00\u5E55\u81F4\u8F9E",des:"",speaker:"\u5F20\u7426",pos:"\u8D44\u6DF1\u6280\u672F\u603B\u76D1",com:"\u82F1\u7279\u5C14 SATG Web \u5E73\u53F0\u5DE5\u7A0B",iconid:"qi",icon:"assets/2022/people/120/qi.png",icon5:"assets/2022/people/500/qi.png",bio:"",pdf:"",bilibili:"https://www.bilibili.com/video/BV1Kv4y1G7L8",aid:"554870624",cid:"741436422",youtube:"https://youtu.be/npMpZHMizUc"}],t2021:[{id:1,tag:"opening",title:"Web \u5F00\u53D1\u7684\u73B0\u72B6\u4E0E\u672A\u6765\uFF08\u5F00\u573A\u4ECB\u7ECD\uFF09",des:"",speaker:"\u5F20\u7426",pos:"\u8D44\u6DF1\u6280\u672F\u603B\u76D1",com:"\u8F6F\u4EF6\u4E0E\u5148\u8FDB\u6280\u672F\u4E8B\u4E1A\u90E8 Web \u5E73\u53F0\u5DE5\u7A0B",icon:"",icon5:"assets/2022/people/500/qi.png",bio:"",pdf:"https://d3i5xkfad89fac.cloudfront.net/pwa/2021/slides/02.pdf",bilibili:"https://www.bilibili.com/video/BV1Kv4y1G7L8",aid:"554870624",cid:"741436422",youtube:"https://youtu.be/npMpZHMizUc"}]},this.screenwidth="",this.screenheight=""}screenres(){let i=screen.availWidth-32,e=i*9/16;this.screenwidth=i.toString(),this.screenheight=e.toString()}async connectedCallback(){super.connectedCallback(),this.screenres(),await this.fetchData()}async fetchData(){await fetch("/data.json");const r=await fetch("/data.json");this.jsondata=await r.json()}static get styles(){return d`
+    `,this.jsondata={name:"PWA Developer Day 2022",t2022:[{id:1,time:"13:00",tag:"",title:"\u5F00\u5E55\u81F4\u8F9E",des:"",speaker:"\u5F20\u7426",pos:"\u8D44\u6DF1\u6280\u672F\u603B\u76D1",com:"\u82F1\u7279\u5C14 SATG Web \u5E73\u53F0\u5DE5\u7A0B",iconid:"qi",icon:"assets/2022/people/120/qi.png",icon5:"assets/2022/people/500/qi.png",bio:"",pdf:"",bilibili:"https://www.bilibili.com/video/BV1Kv4y1G7L8",aid:"554870624",cid:"741436422",youtube:"https://youtu.be/npMpZHMizUc"}],t2021:[{id:1,tag:"opening",title:"Web \u5F00\u53D1\u7684\u73B0\u72B6\u4E0E\u672A\u6765\uFF08\u5F00\u573A\u4ECB\u7ECD\uFF09",des:"",speaker:"\u5F20\u7426",pos:"\u8D44\u6DF1\u6280\u672F\u603B\u76D1",com:"\u8F6F\u4EF6\u4E0E\u5148\u8FDB\u6280\u672F\u4E8B\u4E1A\u90E8 Web \u5E73\u53F0\u5DE5\u7A0B",icon:"",icon5:"assets/2022/people/500/qi.png",bio:"",pdf:"https://d3i5xkfad89fac.cloudfront.net/pwa/2021/slides/02.pdf",bilibili:"https://www.bilibili.com/video/BV1Kv4y1G7L8",aid:"554870624",cid:"741436422",youtube:"https://youtu.be/npMpZHMizUc"}]},this.screenwidth="",this.screenheight=""}screenres(){let i=screen.availWidth-32,e=i*9/16;this.screenwidth=i.toString(),this.screenheight=e.toString()}async connectedCallback(){super.connectedCallback(),this.screenres(),await this.fetchData()}async fetchData(){await fetch("/data.json");const a=await fetch("/data.json");this.jsondata=await a.json()}static get styles(){return c`
       .section {
         color: #3d3d3d;
       }
@@ -80,7 +80,11 @@ import{s as c,r as d,$ as u,o as g,e as s,n as h}from"./index.124f0479.js";var b
         padding: 32px;
         height: auto;
         box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0);
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      .box:hover {
+        background: rgba(255, 255, 255, 0.4);
       }
 
       fluent-card {
@@ -125,7 +129,6 @@ import{s as c,r as d,$ as u,o as g,e as s,n as h}from"./index.124f0479.js";var b
           display: grid !important;
           grid-template-columns: repeat(2, 1fr);
           grid-template-rows: 1fr;
-          grid-column-gap: 16px;
           grid-row-gap: 0px;
           flex-direction: none;
           align-items: center;
@@ -210,7 +213,6 @@ import{s as c,r as d,$ as u,o as g,e as s,n as h}from"./index.124f0479.js";var b
       @media (max-width: 1024px) {
         .p2022 {
           background-image: none;
-          height: 100%;
         }
 
         .scroll100 {
@@ -294,7 +296,7 @@ import{s as c,r as d,$ as u,o as g,e as s,n as h}from"./index.124f0479.js";var b
         100% { opacity:1; }
       }
 
-      @media only screen and (max-height: 400px) and (orientation: landscape) {
+      @media only screen and (max-height: 415px) and (orientation: landscape) {
         .p2022 {
           height: calc(100vh - 56px);
         }
@@ -317,10 +319,10 @@ import{s as c,r as d,$ as u,o as g,e as s,n as h}from"./index.124f0479.js";var b
           animation: flickerAnimation 2s infinite;
         }
         #scrollicon svg path {
-          fill: rgba(255, 255, 255, 0.8);
+          fill: rgba(0, 113, 197, 0.8);
         }
         #scrollicon:hover svg path {
-          fill: rgba(255, 255, 255, 1.0);
+          fill: rgba(0, 113, 197, 1);
         }
 
         .topic {
@@ -335,6 +337,11 @@ import{s as c,r as d,$ as u,o as g,e as s,n as h}from"./index.124f0479.js";var b
         iframe {
           max-width: 288px;
           max-height: calc((100vh - 56px)*0.6);
+        }
+
+        .box {
+          padding: 16px;
+          margin: 16px auto;
         }
 
         .bili {
@@ -365,17 +372,29 @@ import{s as c,r as d,$ as u,o as g,e as s,n as h}from"./index.124f0479.js";var b
           animation: flickerAnimation 2s infinite;
         }
         #scrollicon svg path {
-          fill: rgba(255, 255, 255, 0.8);
+          fill: rgba(0, 113, 197, 0.8);
         }
         #scrollicon:hover svg path {
-          fill: rgba(255, 255, 255, 1.0);
+          fill: rgba(0, 113, 197, 1);
         }
 
         .bili {
-          margin: 6px auto;
+          margin: 16px auto;
         }
+      }
+
+      @media only screen and (max-width: 420px) and (max-height: 668px) and (orientation: portrait) {
         .des {
+          max-height: 14vh;
+        }
+        .bio {
           max-height: 10vh;
+        }
+      }
+
+      @media only screen and (max-width: 420px) and (min-height: 669px) and (orientation: portrait) {
+        .des {
+          max-height: 24vh;
         }
         .bio {
           max-height: 10vh;
@@ -383,10 +402,18 @@ import{s as c,r as d,$ as u,o as g,e as s,n as h}from"./index.124f0479.js";var b
       }
       
       .bio a, .des a {
-        color: rgba(255, 255, 255, 0.8);
+        color: rgba(0, 113, 197, 0.8);
+        text-decoration: none;
+        border-bottom: 1px dashed rgba(0, 113, 197, 1);;
       }
 
-     `}async firstUpdated(){console.log("\u6B22\u8FCE\u60A8!")}render(){if(this.jsondata){let r="",i="";for(let e of this.jsondata.t2022)i=`
+      .bio a:hover, .des a:hover {
+        color: rgba(0,113,197, 1);
+        text-decoration: none;
+        border-bottom: 1px dashed rgba(0,113,197, 1);
+      }
+
+     `}async firstUpdated(){console.log("\u6B22\u8FCE\u60A8!")}render(){if(this.jsondata){let a="",i="";for(let e of this.jsondata.t2022)i=`
           <fluent-card class="section">
             <div class="title">${e.title}</div>
             <div class="topic">
@@ -406,13 +433,13 @@ import{s as c,r as d,$ as u,o as g,e as s,n as h}from"./index.124f0479.js";var b
               </div>
             </div>
           </fluent-card>
-        `,r+=i;return u`
+        `,a+=i;return u`
         <app-header ?enableBack="${!0}"></app-header>
         <div class="scroll100">
           <div class="p2022 section">
             <div class="hero">
               <h3>${this.subtitle}</h3>
-              <h2>${this.title}</h2>
+              <h2>中国 <pwa-logo></pwa-logo> 开发者日</h2>
               <h3 class="h3b">${this.time}</h3>
             </div>
             <fluent-card class="box"> ${this.description}</fluent-card>
@@ -422,7 +449,7 @@ import{s as c,r as d,$ as u,o as g,e as s,n as h}from"./index.124f0479.js";var b
               </svg>
             </div>
           </div>
-          ${g(r)}
+          ${h(a)}
         </div>
         <pwa-install title="安装 中国 PWA 开发者日">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -431,5 +458,5 @@ import{s as c,r as d,$ as u,o as g,e as s,n as h}from"./index.124f0479.js";var b
             />
           </svg>
         </pwa-install>
-      `}else return u`<div>No data</div>`}};a([s({type:String})],t.prototype,"subtitle",2);a([s({type:String})],t.prototype,"title",2);a([s({type:String})],t.prototype,"time",2);a([s({type:String})],t.prototype,"description",2);a([s({type:Object})],t.prototype,"jsondata",2);a([s({type:String})],t.prototype,"screenwidth",2);a([s({type:String})],t.prototype,"screenheight",2);t=a([h("app-2022")],t);export{t as App2022};
-//# sourceMappingURL=app-2022.b694702e.js.map
+      `}else return u`<div>No data</div>`}};r([n({type:String})],t.prototype,"subtitle",2);r([n({type:String})],t.prototype,"title",2);r([n({type:String})],t.prototype,"time",2);r([n({type:String})],t.prototype,"description",2);r([n({type:Object})],t.prototype,"jsondata",2);r([n({type:String})],t.prototype,"screenwidth",2);r([n({type:String})],t.prototype,"screenheight",2);t=r([g("app-2022")],t);export{t as App2022};
+//# sourceMappingURL=app-2022.a802c236.js.map
