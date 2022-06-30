@@ -1,4 +1,4 @@
-import{s,r as p,$ as u,i as d,n as g}from"./index.0add0ff8.js";import"./lit-video.6fc33520.js";var m=Object.defineProperty,b=Object.getOwnPropertyDescriptor,c=(a,e,o,r)=>{for(var i=r>1?void 0:r?b(e,o):e,l=a.length-1,n;l>=0;l--)(n=a[l])&&(i=(r?n(e,o,i):n(i))||i);return r&&i&&m(e,o,i),i};let t=class extends s{constructor(){super()}async _playFileHandlerVideo(){"launchQueue"in window&&"files"in LaunchParams.prototype&&(console.log("\u60A8\u7684\u6D4F\u89C8\u5668\u652F\u6301\u6587\u4EF6\u5904\u7406 API"),launchQueue.setConsumer(async a=>{if(!a.files.length){this.msg.innerHTML="\u6CA1\u6709\u4ECE\u89C6\u9891\u6587\u4EF6\u90AE\u4EF6\u83DC\u5355\u6253\u5F00\u672C\u9875\u9762";return}for(let e of a.files){[e]=await showOpenFilePicker();const o=await e.getFile();this.video.src=URL.createObjectURL(o)}}))}async connectedCallback(){super.connectedCallback(),this._playFileHandlerVideo()}static get styles(){return p`
+import{s,r as p,$ as u,i as d,n as g}from"./index.9a5aebf5.js";import"./lit-video.6fc33520.js";var m=Object.defineProperty,b=Object.getOwnPropertyDescriptor,c=(o,e,a,r)=>{for(var i=r>1?void 0:r?b(e,a):e,l=o.length-1,n;l>=0;l--)(n=o[l])&&(i=(r?n(e,a,i):n(i))||i);return r&&i&&m(e,a,i),i};let t=class extends s{constructor(){super()}async _playFileHandlerVideo(){"launchQueue"in window&&"files"in LaunchParams.prototype&&(console.log("\u60A8\u7684\u6D4F\u89C8\u5668\u652F\u6301\u6587\u4EF6\u5904\u7406 API"),launchQueue.setConsumer(async o=>{if(!o.files.length){this.msg.innerHTML="\u6CA1\u6709\u4ECE\u89C6\u9891\u6587\u4EF6\u90AE\u4EF6\u83DC\u5355\u6253\u5F00\u672C\u9875\u9762";return}for(let e of o.files){console.log(e);const a=await e.getFile();console.log(a),this.video.src=URL.createObjectURL(a)}}))}async connectedCallback(){super.connectedCallback(),this._playFileHandlerVideo()}static get styles(){return p`
     .about {
       padding: 0 16px;
       margin: 1rem 0 0rem 0;
@@ -253,4 +253,4 @@ import{s,r as p,$ as u,i as d,n as g}from"./index.0add0ff8.js";import"./lit-vide
         <app-footer></app-footer>
       </div>
     `}};c([d("#first-video")],t.prototype,"video",2);c([d("#msg")],t.prototype,"msg",2);t=c([g("sample-fh")],t);export{t as SampleFH};
-//# sourceMappingURL=sample-fh.f6d9b7e0.js.map
+//# sourceMappingURL=sample-fh.ee3ec3ea.js.map
