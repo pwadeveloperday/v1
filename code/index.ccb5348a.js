@@ -2032,6 +2032,13 @@ void main(void)
         background-image: url('assets/2022/people/120/belem.png');
       }
 
+      #icon_haoyu {
+        background-image: url('assets/2022/people/120/haoyu.png');
+      }
+      #icon_pwabuilder {
+        background-image: url('assets/2022/people/120/pwabuilder.png');
+      }
+
       .home {
         padding: 16px;
       }
@@ -2195,7 +2202,7 @@ void main(void)
           <app-nav></app-nav>
         </div>
       </header>
-    `}};Jc([H({type:Boolean})],Za.prototype,"enableBack",2);Za=Jc([ct("app-header")],Za);var i3=Object.defineProperty,n3=Object.getOwnPropertyDescriptor,bi=(t,r,e,i)=>{for(var n=i>1?void 0:i?n3(r,e):r,s=t.length-1,a;s>=0;s--)(a=t[s])&&(n=(i?a(r,e,n):a(n))||n);return i&&n&&i3(r,e,n),n};let Tr=class extends it{constructor(){super(),this.enableBack=!1,this.subtitle="\u7B2C\u4E8C\u5C4A",this.title="",this.time="8 \u6708 6 \u65E5 (\u5468\u516D) 13:00 - 17:00"}static get styles(){return ft`
+    `}};Jc([H({type:Boolean})],Za.prototype,"enableBack",2);Za=Jc([ct("app-header")],Za);var i3=Object.defineProperty,n3=Object.getOwnPropertyDescriptor,bi=(t,r,e,i)=>{for(var n=i>1?void 0:i?n3(r,e):r,s=t.length-1,a;s>=0;s--)(a=t[s])&&(n=(i?a(r,e,n):a(n))||n);return i&&n&&i3(r,e,n),n};let Tr=class extends it{constructor(){super(),this.enableBack=!1,this.subtitle="\u7B2C\u4E8C\u5C4A",this.title="",this.time="8 \u6708 6 \u65E5 (\u5468\u516D) 09:00 - 17:00"}static get styles(){return ft`
      header {
       height: 100vh;
       width: 100%;
@@ -3344,8 +3351,8 @@ void main(void)
           opacity: 1;
         }
       }
-    `}constructor(){super()}firstUpdated(){var r;new Pe((r=this.shadowRoot)==null?void 0:r.querySelector("#routerOutlet")).setRoutes([{path:"",animate:!0,children:[{path:"/",component:"app-home"},{path:"/2022",component:"app-2022",action:async()=>{await Mt(()=>import("./app-2022.f3f0e8e2.js"),[])}},{path:"/2021",children:[{path:"/",component:"app-2021",action:async()=>{await Mt(()=>import("./app-2021.0373295e.js"),[])}},{path:"/:topic",component:"app-2021",action:async()=>{await Mt(()=>import("./app-2021.0373295e.js"),[])}}]},{path:"/about",component:"app-about",action:async()=>{await Mt(()=>import("./app-about.42ba212c.js"),[])}},{path:"/news",component:"app-news",action:async()=>{await Mt(()=>import("./app-news.66af0bfa.js"),[])}},{path:"/sample",component:"app-sample",action:async()=>{await Mt(()=>import("./app-sample.91b25a9f.js"),[])}},{path:"/sample/local-font-access",component:"sample-lfa",action:async()=>{await Mt(()=>import("./sample-lfa.567db214.js"),[])}},{path:"/sample/file-handling",component:"sample-fh",action:async()=>{await Mt(()=>import("./sample-fh.ee3ec3ea.js"),["code/sample-fh.ee3ec3ea.js","code/lit-video.6fc33520.js"])}},{path:"/sample/file-system-access",component:"sample-video",action:async()=>{await Mt(()=>import("./sample-video.d8ee05d2.js"),["code/sample-video.d8ee05d2.js","code/lit-video.6fc33520.js"])}},{path:"/tutorial",component:"app-tutorial",action:async()=>{await Mt(()=>import("./app-tutorial.f47dc610.js"),[])}},{path:"/code-of-conduct",component:"app-coc",action:async()=>{await Mt(()=>import("./app-coc.8d1b1caa.js"),[])}},{path:"/privacy",component:"app-privacy",action:async()=>{await Mt(()=>import("./app-privacy.98e1d547.js"),[])}}]}]),_p({immediate:!0})}render(){return st`
+    `}constructor(){super()}firstUpdated(){var r;new Pe((r=this.shadowRoot)==null?void 0:r.querySelector("#routerOutlet")).setRoutes([{path:"",animate:!0,children:[{path:"/",component:"app-home"},{path:"/2022",component:"app-2022",action:async()=>{await Mt(()=>import("./app-2022.166ae865.js"),[])}},{path:"/2021",children:[{path:"/",component:"app-2021",action:async()=>{await Mt(()=>import("./app-2021.445a17b7.js"),[])}},{path:"/:topic",component:"app-2021",action:async()=>{await Mt(()=>import("./app-2021.445a17b7.js"),[])}}]},{path:"/about",component:"app-about",action:async()=>{await Mt(()=>import("./app-about.24ca19eb.js"),[])}},{path:"/news",component:"app-news",action:async()=>{await Mt(()=>import("./app-news.901c41e2.js"),[])}},{path:"/sample",component:"app-sample",action:async()=>{await Mt(()=>import("./app-sample.3be978ca.js"),[])}},{path:"/sample/local-font-access",component:"sample-lfa",action:async()=>{await Mt(()=>import("./sample-lfa.1cf17e33.js"),[])}},{path:"/sample/file-handling",component:"sample-fh",action:async()=>{await Mt(()=>import("./sample-fh.57730369.js"),["code/sample-fh.57730369.js","code/lit-video.6fc33520.js"])}},{path:"/sample/file-system-access",component:"sample-video",action:async()=>{await Mt(()=>import("./sample-video.f90afb83.js"),["code/sample-video.f90afb83.js","code/lit-video.6fc33520.js"])}},{path:"/tutorial",component:"app-tutorial",action:async()=>{await Mt(()=>import("./app-tutorial.5e5b6d3b.js"),[])}},{path:"/code-of-conduct",component:"app-coc",action:async()=>{await Mt(()=>import("./app-coc.b1d71a29.js"),[])}},{path:"/privacy",component:"app-privacy",action:async()=>{await Mt(()=>import("./app-privacy.f9a115dc.js"),[])}}]}]),_p({immediate:!0})}render(){return st`
       <main id="routerOutlet">
       </main>
     `}};Rf=q3([ct("app-index")],Rf);"serviceWorker"in navigator&&navigator.serviceWorker.register("/sw.js");export{st as $,Cd as a,H as e,On as i,ct as n,Ut as o,ft as r,it as s};
-//# sourceMappingURL=index.9a5aebf5.js.map
+//# sourceMappingURL=index.ccb5348a.js.map

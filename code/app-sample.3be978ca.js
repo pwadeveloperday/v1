@@ -1,4 +1,4 @@
-import{s as p,r as i,$ as d,n as s}from"./index.9a5aebf5.js";var u=Object.defineProperty,m=Object.getOwnPropertyDescriptor,b=(n,r,l,a)=>{for(var e=a>1?void 0:a?m(r,l):r,t=n.length-1,c;t>=0;t--)(c=n[t])&&(e=(a?c(r,l,e):c(e))||e);return a&&e&&u(r,l,e),e};let o=class extends p{static get styles(){return i`
+import{s as p,r as i,$ as d,n as s}from"./index.ccb5348a.js";var u=Object.defineProperty,m=Object.getOwnPropertyDescriptor,b=(c,r,l,a)=>{for(var e=a>1?void 0:a?m(r,l):r,t=c.length-1,n;t>=0;t--)(n=c[t])&&(e=(a?n(r,l,e):n(e))||e);return a&&e&&u(r,l,e),e};let o=class extends p{static get styles(){return i`
     .about {
       padding: 0 16px;
       margin: 2rem 0px 0rem;
@@ -31,6 +31,7 @@ import{s as p,r as i,$ as d,n as s}from"./index.9a5aebf5.js";var u=Object.define
     fluent-card ul li {
       display: block;
       list-style: circle;
+      margin: 8px auto;
     }
 
     fluent-card ul li a {
@@ -79,4 +80,4 @@ import{s as p,r as i,$ as d,n as s}from"./index.9a5aebf5.js";var u=Object.define
     </div>
     <app-footer></app-footer>
     `}};o=b([s("app-sample")],o);export{o as AppSample};
-//# sourceMappingURL=app-sample.91b25a9f.js.map
+//# sourceMappingURL=app-sample.3be978ca.js.map
