@@ -1,4 +1,4 @@
-import{s as d,r as p,$ as u,n as b}from"./index.8aff652c.js";var i=Object.defineProperty,s=Object.getOwnPropertyDescriptor,m=(c,r,t,a)=>{for(var e=a>1?void 0:a?s(r,t):r,l=c.length-1,o;l>=0;l--)(o=c[l])&&(e=(a?o(r,t,e):o(e))||e);return a&&e&&i(r,t,e),e};let n=class extends d{static get styles(){return p`
+import{s as p,r as i,$ as d,n as s}from"./index.0add0ff8.js";var u=Object.defineProperty,m=Object.getOwnPropertyDescriptor,b=(n,r,l,a)=>{for(var e=a>1?void 0:a?m(r,l):r,t=n.length-1,c;t>=0;t--)(c=n[t])&&(e=(a?c(r,l,e):c(e))||e);return a&&e&&u(r,l,e),e};let o=class extends p{static get styles(){return i`
     .about {
       padding: 0 16px;
       margin: 2rem 0px 0rem;
@@ -45,7 +45,7 @@ import{s as d,r as p,$ as u,n as b}from"./index.8aff652c.js";var i=Object.define
       border-bottom: 1px dashed rgba(0, 113, 197, 1);
     }
 
-    `}constructor(){super()}render(){return u`
+    `}constructor(){super()}render(){return d`
     <app-header ?enableBack="${!0}"></app-header>
     <div class="about">  
       <fluent-breadcrumb>
@@ -56,15 +56,27 @@ import{s as d,r as p,$ as u,n as b}from"./index.8aff652c.js";var i=Object.define
       <fluent-card>
         <ul>
           <li>
-            🐡 M103
-            <a href="/sample/local-font-access" appearance="primary">
-              本地字体访问 (Local Font Access)
+            🐡 M89
+            <a href="/sample/file-system-access" appearance="primary">
+              文件系统访问 (File System Access) API
             </a>
           </li>
+          <li>
+          🐡 M102
+          <a href="/sample/file-handling" appearance="primary">
+            文件处理 (File Handling) API
+          </a>
+        </li>
+          <li>
+          🐡 M103
+          <a href="/sample/local-font-access" appearance="primary">
+            本地字体访问 (Local Font Access) API
+          </a>
+        </li>
         </ul>
       </fluent-card>
  
     </div>
     <app-footer></app-footer>
-    `}};n=m([b("app-sample")],n);export{n as AppSample};
-//# sourceMappingURL=app-sample.c77bc6b8.js.map
+    `}};o=b([s("app-sample")],o);export{o as AppSample};
+//# sourceMappingURL=app-sample.6bcf6c8a.js.map

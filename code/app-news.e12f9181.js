@@ -1,4 +1,4 @@
-import{s as d,r as c,$ as l,n as u}from"./index.8aff652c.js";var i=Object.defineProperty,m=Object.getOwnPropertyDescriptor,f=(n,e,o,a)=>{for(var r=a>1?void 0:a?m(e,o):e,p=n.length-1,t;p>=0;p--)(t=n[p])&&(r=(a?t(e,o,r):t(r))||r);return a&&r&&i(e,o,r),r};let s=class extends d{static get styles(){return c`
+import{s as d,r as c,$ as l,n as u}from"./index.0add0ff8.js";var i=Object.defineProperty,m=Object.getOwnPropertyDescriptor,f=(n,e,o,a)=>{for(var r=a>1?void 0:a?m(e,o):e,p=n.length-1,t;p>=0;p--)(t=n[p])&&(r=(a?t(e,o,r):t(r))||r);return a&&r&&i(e,o,r),r};let s=class extends d{static get styles(){return c`
     .about {
       padding: 0 16px;
       margin: 2rem 0px 0rem;
@@ -35,4 +35,4 @@ import{s as d,r as c,$ as l,n as u}from"./index.8aff652c.js";var i=Object.define
       </div>
       <app-footer></app-footer>
     `}};s=f([u("app-news")],s);export{s as AppNews};
-//# sourceMappingURL=app-news.b28f4929.js.map
+//# sourceMappingURL=app-news.e12f9181.js.map

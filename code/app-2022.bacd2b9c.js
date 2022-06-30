@@ -1,9 +1,9 @@
-import{s as u,r as c,$ as d,o as h,e as n,n as g}from"./index.8aff652c.js";var b=Object.defineProperty,m=Object.getOwnPropertyDescriptor,r=(a,i,e,s)=>{for(var o=s>1?void 0:s?m(i,e):i,l=a.length-1,p;l>=0;l--)(p=a[l])&&(o=(s?p(i,e,o):p(o))||o);return s&&o&&b(i,e,o),o};let t=class extends u{constructor(){super(),this.subtitle="\u7B2C\u4E8C\u5C4A",this.title="\u4E2D\u56FD PWA \u5F00\u53D1\u8005\u65E5",this.time="2022 \u5E74 8 \u6708 6 \u65E5 13:00 - 17:00",this.description=`
+import{s as c,r as d,$ as u,o as g,e as n,n as h}from"./index.0add0ff8.js";var b=Object.defineProperty,m=Object.getOwnPropertyDescriptor,r=(a,t,e,s)=>{for(var o=s>1?void 0:s?m(t,e):t,l=a.length-1,p;l>=0;l--)(p=a[l])&&(o=(s?p(t,e,o):p(o))||o);return s&&o&&b(t,e,o),o};let i=class extends c{constructor(){super(),this.subtitle="\u7B2C\u4E8C\u5C4A",this.title="\u4E2D\u56FD PWA \u5F00\u53D1\u8005\u65E5",this.time="2022 \u5E74 8 \u6708 6 \u65E5 13:00 - 17:00",this.description=`
     \u4E3A\u52A0\u901F\u63A8\u52A8\u6E10\u8FDB\u5F0F Web \u5E94\u7528 (PWA) \u5728\u4E2D\u56FD\u7684\u53D1\u5C55\uFF0C\u5FAE\u8F6F\u4E0E\u82F1\u7279\u5C14\u643A\u624B\u4E3E\u529E\u201C\u7B2C\u4E8C\u5C4A\u4E2D\u56FD PWA \u5F00\u53D1\u8005\u65E5\u201D\u3002
     \u672C\u6B21\u6D3B\u52A8\u9080\u8BF7\u4E00\u4F17\u4E1A\u754C\u5927\u5496\u56F4\u7ED5 PWA \u5C55\u5F00\u5206\u4EAB\uFF0C\u63A2\u8BA8\u6700\u65B0\u6280\u672F\u8FDB\u5C55\uFF0C\u53CA PWA \u751F\u6001\u7684\u5B9E\u8DF5\u4E0E\u843D\u5730\u3002
     
     \u671F\u5F85\u4E0E\u60A8\u7EBF\u4E0A\u76F8\u805A\u3002
-    `,this.jsondata={name:"PWA Developer Day 2022",t2022:[{id:1,time:"13:00",tag:"",title:"\u5F00\u5E55\u81F4\u8F9E",des:"",speaker:"\u5F20\u7426",pos:"\u8D44\u6DF1\u6280\u672F\u603B\u76D1",com:"\u82F1\u7279\u5C14 SATG Web \u5E73\u53F0\u5DE5\u7A0B",iconid:"qi",icon:"assets/2022/people/120/qi.png",icon5:"assets/2022/people/500/qi.png",bio:"",pdf:"",bilibili:"https://www.bilibili.com/video/BV1Kv4y1G7L8",aid:"554870624",cid:"741436422",youtube:"https://youtu.be/npMpZHMizUc"}],t2021:[{id:1,tag:"opening",title:"Web \u5F00\u53D1\u7684\u73B0\u72B6\u4E0E\u672A\u6765\uFF08\u5F00\u573A\u4ECB\u7ECD\uFF09",des:"",speaker:"\u5F20\u7426",pos:"\u8D44\u6DF1\u6280\u672F\u603B\u76D1",com:"\u8F6F\u4EF6\u4E0E\u5148\u8FDB\u6280\u672F\u4E8B\u4E1A\u90E8 Web \u5E73\u53F0\u5DE5\u7A0B",icon:"",icon5:"assets/2022/people/500/qi.png",bio:"",pdf:"https://d3i5xkfad89fac.cloudfront.net/pwa/2021/slides/02.pdf",bilibili:"https://www.bilibili.com/video/BV1Kv4y1G7L8",aid:"554870624",cid:"741436422",youtube:"https://youtu.be/npMpZHMizUc"}]},this.screenwidth="",this.screenheight=""}screenres(){let i=screen.availWidth-32,e=i*9/16;this.screenwidth=i.toString(),this.screenheight=e.toString()}async connectedCallback(){super.connectedCallback(),this.screenres(),await this.fetchData()}async fetchData(){await fetch("/data.json");const a=await fetch("/data.json");this.jsondata=await a.json()}static get styles(){return c`
+    `,this.jsondata={name:"PWA Developer Day 2022",t2022:[{id:1,time:"13:00",tag:"",title:"\u5F00\u5E55\u81F4\u8F9E",des:"",speaker:"\u5F20\u7426",pos:"\u8D44\u6DF1\u6280\u672F\u603B\u76D1",com:"\u82F1\u7279\u5C14 SATG Web \u5E73\u53F0\u5DE5\u7A0B",iconid:"qi",icon:"assets/2022/people/120/qi.png",icon5:"assets/2022/people/500/qi.png",bio:"",pdf:"",bilibili:"https://www.bilibili.com/video/BV1Kv4y1G7L8",aid:"554870624",cid:"741436422",youtube:"https://youtu.be/npMpZHMizUc"}],t2021:[{id:1,tag:"opening",title:"Web \u5F00\u53D1\u7684\u73B0\u72B6\u4E0E\u672A\u6765\uFF08\u5F00\u573A\u4ECB\u7ECD\uFF09",des:"",speaker:"\u5F20\u7426",pos:"\u8D44\u6DF1\u6280\u672F\u603B\u76D1",com:"\u8F6F\u4EF6\u4E0E\u5148\u8FDB\u6280\u672F\u4E8B\u4E1A\u90E8 Web \u5E73\u53F0\u5DE5\u7A0B",icon:"",icon5:"assets/2022/people/500/qi.png",bio:"",pdf:"https://d3i5xkfad89fac.cloudfront.net/pwa/2021/slides/02.pdf",bilibili:"https://www.bilibili.com/video/BV1Kv4y1G7L8",aid:"554870624",cid:"741436422",youtube:"https://youtu.be/npMpZHMizUc"}]},this.screenwidth="",this.screenheight=""}screenres(){let t=screen.availWidth-32,e=t*9/16;this.screenwidth=t.toString(),this.screenheight=e.toString()}async connectedCallback(){super.connectedCallback(),this.screenres(),await this.fetchData()}async fetchData(){await fetch("/data.json");const a=await fetch("/data.json");this.jsondata=await a.json()}static get styles(){return d`
       .section {
         color: #3d3d3d;
       }
@@ -347,11 +347,9 @@ import{s as u,r as c,$ as d,o as h,e as n,n as g}from"./index.8aff652c.js";var b
         .bili {
           margin: 6px auto;
         }
+
         .des {
-          max-height: 10vh;
-        }
-        .bio {
-          max-height: 10vh;
+          max-height: 20vh;
         }
  
       }
@@ -381,23 +379,9 @@ import{s as u,r as c,$ as d,o as h,e as n,n as g}from"./index.8aff652c.js";var b
         .bili {
           margin: 16px auto;
         }
-      }
 
-      @media only screen and (max-width: 420px) and (max-height: 668px) and (orientation: portrait) {
         .des {
-          max-height: 14vh;
-        }
-        .bio {
-          max-height: 10vh;
-        }
-      }
-
-      @media only screen and (max-width: 420px) and (min-height: 669px) and (orientation: portrait) {
-        .des {
-          max-height: 18vh;
-        }
-        .bio {
-          max-height: 10vh;
+          max-height: 20vh;
         }
       }
       
@@ -413,7 +397,7 @@ import{s as u,r as c,$ as d,o as h,e as n,n as g}from"./index.8aff652c.js";var b
         border-bottom: 1px dashed rgba(0,113,197, 1);
       }
 
-     `}async firstUpdated(){console.log("\u6B22\u8FCE\u60A8!")}render(){if(this.jsondata){let a="",i="";for(let e of this.jsondata.t2022)i=`
+     `}async firstUpdated(){console.log("\u6B22\u8FCE\u60A8!")}render(){if(this.jsondata){let a="",t="";for(let e of this.jsondata.t2022)t=`
           <fluent-card class="section">
             <div class="title">${e.title}</div>
             <div class="topic">
@@ -421,8 +405,17 @@ import{s as u,r as c,$ as d,o as h,e as n,n as g}from"./index.8aff652c.js";var b
                 <iframe width="${this.screenwidth}" height="${this.screenheight}" src="https://player.bilibili.com/player.html?cid=${e.cid}&aid=${e.aid}&page=1&as_wide=1&high_quality=1&danmaku=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
               </div>
               <div>
-                <div class="des">${e.des.replace(/\n/g,"<br>")}</div>
-                <div class="bio">${e.bio}</div>
+                <fluent-tabs activeid="entrees">
+                  <fluent-tab id="apps">\u4E3B\u9898\u6982\u8981</fluent-tab>
+                  <fluent-tab id="entrees">\u5609\u5BBE\u4ECB\u7ECD</fluent-tab>
+                  <fluent-tab-panel id="appsPanel" class="des">
+                    ${e.des.replace(/\n/g,"<br>")}
+                  </fluent-tab-panel>
+                  <fluent-tab-panel id="entreesPanel" class="des">
+                    ${e.bio}
+                  </fluent-tab-panel>
+                </fluent-tabs>
+
                 <div class="details">
                   <div class="avatar" id="icon_${e.iconid}"></div>
                   <div class="description">
@@ -434,7 +427,7 @@ import{s as u,r as c,$ as d,o as h,e as n,n as g}from"./index.8aff652c.js";var b
               </div>
             </div>
           </fluent-card>
-        `,a+=i;return d`
+        `,a+=t;return u`
         <app-header ?enableBack="${!0}"></app-header>
         <div class="scroll100">
           <div class="p2022 section">
@@ -450,7 +443,7 @@ import{s as u,r as c,$ as d,o as h,e as n,n as g}from"./index.8aff652c.js";var b
               </svg>
             </div>
           </div>
-          ${h(a)}
+          ${g(a)}
         </div>
         <pwa-install title="安装 中国 PWA 开发者日">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -459,5 +452,5 @@ import{s as u,r as c,$ as d,o as h,e as n,n as g}from"./index.8aff652c.js";var b
             />
           </svg>
         </pwa-install>
-      `}else return d`<div>No data</div>`}};r([n({type:String})],t.prototype,"subtitle",2);r([n({type:String})],t.prototype,"title",2);r([n({type:String})],t.prototype,"time",2);r([n({type:String})],t.prototype,"description",2);r([n({type:Object})],t.prototype,"jsondata",2);r([n({type:String})],t.prototype,"screenwidth",2);r([n({type:String})],t.prototype,"screenheight",2);t=r([g("app-2022")],t);export{t as App2022};
-//# sourceMappingURL=app-2022.b9fecd30.js.map
+      `}else return u`<div>No data</div>`}};r([n({type:String})],i.prototype,"subtitle",2);r([n({type:String})],i.prototype,"title",2);r([n({type:String})],i.prototype,"time",2);r([n({type:String})],i.prototype,"description",2);r([n({type:Object})],i.prototype,"jsondata",2);r([n({type:String})],i.prototype,"screenwidth",2);r([n({type:String})],i.prototype,"screenheight",2);i=r([h("app-2022")],i);export{i as App2022};
+//# sourceMappingURL=app-2022.bacd2b9c.js.map
