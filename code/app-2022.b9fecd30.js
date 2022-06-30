@@ -1,4 +1,4 @@
-import{s as d,r as c,$ as u,o as h,e as n,n as g}from"./index.1f7d22cf.js";var b=Object.defineProperty,m=Object.getOwnPropertyDescriptor,r=(a,i,e,s)=>{for(var o=s>1?void 0:s?m(i,e):i,l=a.length-1,p;l>=0;l--)(p=a[l])&&(o=(s?p(i,e,o):p(o))||o);return s&&o&&b(i,e,o),o};let t=class extends d{constructor(){super(),this.subtitle="\u7B2C\u4E8C\u5C4A",this.title="\u4E2D\u56FD PWA \u5F00\u53D1\u8005\u65E5",this.time="2022 \u5E74 8 \u6708 6 \u65E5 13:00 - 17:00",this.description=`
+import{s as u,r as c,$ as d,o as h,e as n,n as g}from"./index.8aff652c.js";var b=Object.defineProperty,m=Object.getOwnPropertyDescriptor,r=(a,i,e,s)=>{for(var o=s>1?void 0:s?m(i,e):i,l=a.length-1,p;l>=0;l--)(p=a[l])&&(o=(s?p(i,e,o):p(o))||o);return s&&o&&b(i,e,o),o};let t=class extends u{constructor(){super(),this.subtitle="\u7B2C\u4E8C\u5C4A",this.title="\u4E2D\u56FD PWA \u5F00\u53D1\u8005\u65E5",this.time="2022 \u5E74 8 \u6708 6 \u65E5 13:00 - 17:00",this.description=`
     \u4E3A\u52A0\u901F\u63A8\u52A8\u6E10\u8FDB\u5F0F Web \u5E94\u7528 (PWA) \u5728\u4E2D\u56FD\u7684\u53D1\u5C55\uFF0C\u5FAE\u8F6F\u4E0E\u82F1\u7279\u5C14\u643A\u624B\u4E3E\u529E\u201C\u7B2C\u4E8C\u5C4A\u4E2D\u56FD PWA \u5F00\u53D1\u8005\u65E5\u201D\u3002
     \u672C\u6B21\u6D3B\u52A8\u9080\u8BF7\u4E00\u4F17\u4E1A\u754C\u5927\u5496\u56F4\u7ED5 PWA \u5C55\u5F00\u5206\u4EAB\uFF0C\u63A2\u8BA8\u6700\u65B0\u6280\u672F\u8FDB\u5C55\uFF0C\u53CA PWA \u751F\u6001\u7684\u5B9E\u8DF5\u4E0E\u843D\u5730\u3002
     
@@ -394,7 +394,7 @@ import{s as d,r as c,$ as u,o as h,e as n,n as g}from"./index.1f7d22cf.js";var b
 
       @media only screen and (max-width: 420px) and (min-height: 669px) and (orientation: portrait) {
         .des {
-          max-height: 24vh;
+          max-height: 18vh;
         }
         .bio {
           max-height: 10vh;
@@ -426,14 +426,15 @@ import{s as d,r as c,$ as u,o as h,e as n,n as g}from"./index.1f7d22cf.js";var b
                 <div class="details">
                   <div class="avatar" id="icon_${e.iconid}"></div>
                   <div class="description">
-                    <div class="nametitle">${e.speaker} / ${e.pos}</div>
+                    <div class="nametitle">${e.speaker}</div>
+                    <div class="team">${e.pos}</div>
                     <div class="team">${e.com}</div>
                   </div>
                 </div>
               </div>
             </div>
           </fluent-card>
-        `,a+=i;return u`
+        `,a+=i;return d`
         <app-header ?enableBack="${!0}"></app-header>
         <div class="scroll100">
           <div class="p2022 section">
@@ -458,5 +459,5 @@ import{s as d,r as c,$ as u,o as h,e as n,n as g}from"./index.1f7d22cf.js";var b
             />
           </svg>
         </pwa-install>
-      `}else return u`<div>No data</div>`}};r([n({type:String})],t.prototype,"subtitle",2);r([n({type:String})],t.prototype,"title",2);r([n({type:String})],t.prototype,"time",2);r([n({type:String})],t.prototype,"description",2);r([n({type:Object})],t.prototype,"jsondata",2);r([n({type:String})],t.prototype,"screenwidth",2);r([n({type:String})],t.prototype,"screenheight",2);t=r([g("app-2022")],t);export{t as App2022};
-//# sourceMappingURL=app-2022.a802c236.js.map
+      `}else return d`<div>No data</div>`}};r([n({type:String})],t.prototype,"subtitle",2);r([n({type:String})],t.prototype,"title",2);r([n({type:String})],t.prototype,"time",2);r([n({type:String})],t.prototype,"description",2);r([n({type:Object})],t.prototype,"jsondata",2);r([n({type:String})],t.prototype,"screenwidth",2);r([n({type:String})],t.prototype,"screenheight",2);t=r([g("app-2022")],t);export{t as App2022};
+//# sourceMappingURL=app-2022.b9fecd30.js.map
