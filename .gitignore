@@ -5,3 +5,5 @@ dev-dist
 build
 .idea
 .github
+.cert/cert.pem
+.cert/key.pem
