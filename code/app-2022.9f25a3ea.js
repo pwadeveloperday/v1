@@ -1,4 +1,4 @@
-import{s as c,r as d,$ as p,o as g,e as n,n as h}from"./index.b442bc5f.js";var b=Object.defineProperty,m=Object.getOwnPropertyDescriptor,r=(a,t,e,s)=>{for(var o=s>1?void 0:s?m(t,e):t,l=a.length-1,u;l>=0;l--)(u=a[l])&&(o=(s?u(t,e,o):u(o))||o);return s&&o&&b(t,e,o),o};let i=class extends c{constructor(){super(),this.subtitle="\u7B2C\u4E8C\u5C4A",this.title="\u4E2D\u56FD PWA \u5F00\u53D1\u8005\u65E5",this.time="8 \u6708 6 \u65E5 (\u5468\u516D) 09:00 - 17:00",this.description=`
+import{s as c,r as d,$ as p,o as g,e as n,n as h}from"./index.4ac3a314.js";var b=Object.defineProperty,m=Object.getOwnPropertyDescriptor,r=(a,t,e,s)=>{for(var o=s>1?void 0:s?m(t,e):t,l=a.length-1,u;l>=0;l--)(u=a[l])&&(o=(s?u(t,e,o):u(o))||o);return s&&o&&b(t,e,o),o};let i=class extends c{constructor(){super(),this.subtitle="\u7B2C\u4E8C\u5C4A",this.title="\u4E2D\u56FD PWA \u5F00\u53D1\u8005\u65E5",this.time="8 \u6708 6 \u65E5 (\u5468\u516D) 09:00 - 17:00",this.description=`
     \u4E3A\u52A0\u901F\u63A8\u52A8\u6E10\u8FDB\u5F0F Web \u5E94\u7528 (PWA) \u5728\u4E2D\u56FD\u7684\u53D1\u5C55\uFF0C\u5FAE\u8F6F\u4E0E\u82F1\u7279\u5C14\u643A\u624B\u4E3E\u529E\u201C\u7B2C\u4E8C\u5C4A\u4E2D\u56FD PWA \u5F00\u53D1\u8005\u65E5\u201D\u3002
     \u672C\u6B21\u6D3B\u52A8\u9080\u8BF7\u4E00\u4F17\u4E1A\u754C\u5927\u5496\u56F4\u7ED5 PWA \u5C55\u5F00\u5206\u4EAB\uFF0C\u63A2\u8BA8\u6700\u65B0\u6280\u672F\u8FDB\u5C55\uFF0C\u53CA PWA \u751F\u6001\u7684\u5B9E\u8DF5\u4E0E\u843D\u5730\u3002
     
@@ -471,4 +471,4 @@ import{s as c,r as d,$ as p,o as g,e as n,n as h}from"./index.b442bc5f.js";var b
           </svg>
         </pwa-install>
       `}else return p`<div>No data</div>`}};r([n({type:String})],i.prototype,"subtitle",2);r([n({type:String})],i.prototype,"title",2);r([n({type:String})],i.prototype,"time",2);r([n({type:String})],i.prototype,"description",2);r([n({type:Object})],i.prototype,"jsondata",2);r([n({type:String})],i.prototype,"screenwidth",2);r([n({type:String})],i.prototype,"screenheight",2);i=r([h("app-2022")],i);export{i as App2022};
-//# sourceMappingURL=app-2022.54da66e8.js.map
+//# sourceMappingURL=app-2022.9f25a3ea.js.map
