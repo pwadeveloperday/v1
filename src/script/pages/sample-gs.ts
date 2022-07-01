@@ -30,9 +30,9 @@ export class SampleGS extends LitElement {
  
       accelerometer.addEventListener('reading', () => {
         this._a.innerHTML = `
-          Acceleration along the X-axis ${accelerometer.x} <br>
-          Acceleration along the Y-axis ${accelerometer.y} <br>
-          Acceleration along the Z-axis ${accelerometer.z} <br>
+          X-轴 ${accelerometer.x} <br>
+          Y-轴 ${accelerometer.y} <br>
+          Z-轴 ${accelerometer.z} <br>
         `
       });
       accelerometer.start();
