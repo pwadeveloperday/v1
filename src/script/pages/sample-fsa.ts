@@ -2,33 +2,19 @@ import { LitElement, css, html } from 'lit';
 import 'lit-video/lit-video.js';
 import { customElement, query } from 'lit/decorators.js';
 
-@customElement('sample-fh')
-export class SampleFH extends LitElement {
+@customElement('sample-fsa')
+export class SampleFSA extends LitElement {
   @query('#first-video') video: HTMLVideoElement;
-  @query('#msg') msg: HTMLDivElement;
 
-  private async _playFileHandlerVideo() {
-    if ('launchQueue' in window && 'files' in LaunchParams.prototype) {
-      console.log('您的浏览器支持文件处理 API');
-      
-      launchQueue.setConsumer(async (launchParams) => {
-        if (!launchParams.files.length) {
-          this.msg.innerHTML = '没有从视频文件邮件菜单打开本页面'
-          return;
-        }
-        for (let fileHandle of launchParams.files) {
-          console.log(fileHandle);
-          const file = await fileHandle.getFile();
-          console.log(file);
-          this.video.src = URL.createObjectURL(file);
-        }
-      });
-    }
+  private async _playLocalVideo() {
+    let fileHandle;
+    [fileHandle] = await showOpenFilePicker();
+    const file = await fileHandle.getFile(); 
+    this.video.src = URL.createObjectURL(file)
   }
 
   async connectedCallback() {
     super.connectedCallback();
-    this._playFileHandlerVideo();
   }
 
   static get styles() {
@@ -212,19 +198,12 @@ export class SampleFH extends LitElement {
       margin-right: 6px;
     }
 
-    .act div {
+    .act {
+      text-align: center;
+    }
+
+    .act button {
       margin-top: 16px;
-    }
-
-    .act a {
-      color: rgba(0, 113, 197, 0.9);
-      text-decoration: none;
-      border-bottom: 1px dashed rgba(0, 113, 197, 0.6);
-    }
-
-    .act a:hover {
-      color: rgba(0, 113, 197, 1);
-      border-bottom: 1px dashed rgba(0, 113, 197, 0.9);
     }
 
     `;
@@ -242,38 +221,30 @@ export class SampleFH extends LitElement {
           <fluent-breadcrumb-item href="/">首页</fluent-breadcrumb-item>
           <fluent-breadcrumb-item href="/sample">示例</fluent-breadcrumb-item>
         </fluent-breadcrumb>
-        <h2>文件处理 (File Handling) API</h2>
+        <h2>文件系统访问 (File System Access) API</h2>
         <fluent-card class="act">
           <lit-video 
             id="first-video"
             intervalreproduction="#t=1,5" 
             option="simple" 
-            src="" 
+            src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4" 
             type="video/mp4">
           </lit-video>
-          <div>
-            <div id="msg"></div>
-            将“中国 PWA 开发者日”应用注册为视频文件的默认播放器
-            <ul>
-              <li>浏览器启用 chrome://flags#file-handling-api</li>
-              <li>访问 <a href="https://pwadev.io">https://pwadev.io</a></li>
-              <li>安装为本地 PWA 应用</li>
-              <li>在本地电脑右键点击一个视频文件</li>
-              <li>右键菜单选择“打开方式” -&gt; 选择“中国 PWA 开发者日”打开</li>
-            </ul>
-          </div>
+          <button @click="${this._playLocalVideo}">
+            播放本地视频
+          </button>
         </fluent-card>
         <fluent-card id="st">
           <div class="tut">
             <icon-webdev></icon-webdev> 
-            <a href="https://web.dev/i18n/zh/file-handling/" title="The File System Access API: simplifying access to local files">
-              教程：注册应用到系统的文件处理
+            <a href="https://web.dev/file-system-access/" title="The File System Access API: simplifying access to local files">
+              教程：简化对本地文件的访问
             </a>
           </div>
-          <div class="w3c"><icon-w3c class="w3clogo"></icon-w3c> <a href="https://wicg.github.io/manifest-incubations/index.html#file_handlers-member" title="File Handling">File Handling</a></div>
+          <div class="w3c"><icon-w3c class="w3clogo"></icon-w3c> <a href="https://wicg.github.io/file-system-access/" title="File System Access">File System Access API</a></div>
           <div class="imp">
             <div class="des">
-              <a href="https://chromestatus.com/feature/5721776357113856" title="在 Chromium 102 版本支持">🐡 M102</a>
+              <a href="https://chromestatus.com/feature/6284708426022912" title="在 Chromium 86 版本支持">🐡 M86</a>
             </div>
             <div class="des">
               <div class="det">

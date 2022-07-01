@@ -395,8 +395,15 @@ export class SampleLFA extends LitElement {
                   <h3>滕王阁序</h3>
                   <h4>王勃</h4>
                   <div>
-                    云销雨霁，<br>彩彻区明。<br>落霞与孤鹜齐飞，<br>秋水共长天一色。
-                  </div>  
+                    落霞与孤鹜齐飞，<br>秋水共长天一色。<br>
+                    渔舟唱晚，<br>响穷彭蠡之滨；<br>雁阵惊寒，<br>声断衡阳之浦。<br><br>
+                  </div>
+                  <h3>滕王閣序</h3>
+                  <h4>王勃</h4>
+                  <div>
+                    落霞與孤鶩齊飛，<br>秋水共長天一色。<br>
+                    漁舟唱晚，<br>響窮彭蠡之濱，<br>雁陣驚寒，<br>聲斷衡陽之浦。
+                  </div>
                 </div>
                 <div class="preview" contenteditable="true">
                   <div>

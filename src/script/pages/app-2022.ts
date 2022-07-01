@@ -12,7 +12,7 @@ export class App2022 extends LitElement {
 
   @property({ type: String }) subtitle = '第二届';
   @property({ type: String }) title = '中国 PWA 开发者日';
-  @property({ type: String }) time = '2022 年 8 月 6 日 13:00 - 17:00';
+  @property({ type: String }) time = '8 月 6 日 (周六) 09:00 - 17:00';
   @property({ type: String }) description = `
     为加速推动渐进式 Web 应用 (PWA) 在中国的发展，微软与英特尔携手举办“第二届中国 PWA 开发者日”。
     本次活动邀请一众业界大咖围绕 PWA 展开分享，探讨最新技术进展，及 PWA 生态的实践与落地。
@@ -351,6 +351,9 @@ export class App2022 extends LitElement {
       #icon_alex {
         background-image: url('assets/2022/people/120/alex.png');
       }
+      #icon_cecilia {
+        background-image: url('assets/2022/people/120/cecilia.png');
+      }
       #icon_harry {
         background-image: url('assets/2022/people/120/harry.png');
       }
@@ -359,6 +362,15 @@ export class App2022 extends LitElement {
       }
       #icon_belem {
         background-image: url('assets/2022/people/120/belem.png');
+      }
+      #icon_yuanhong {
+        background-image: url('assets/2022/people/120/yuanhong.png');
+      }
+      #icon_haoyu {
+        background-image: url('assets/2022/people/120/haoyu.png');
+      }
+      #icon_pwabuilder {
+        background-image: url('assets/2022/people/120/pwabuilder.png');
       }
 
       .bili {
@@ -481,6 +493,12 @@ export class App2022 extends LitElement {
         text-decoration: none;
         border-bottom: 1px dashed rgba(0,113,197, 1);
       }
+
+      @media only screen and (max-width: 420px) and (orientation: portrait) {
+        .hero h2 {
+          margin: 0rem auto 0.5rem auto;
+        }
+      }  
 
      `;
   }

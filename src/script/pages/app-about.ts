@@ -60,7 +60,7 @@ export class AppAbout extends LitElement {
         <fluent-card>
           <h3>为什么要参加？</h3>
           <p>中国 PWA 开发者日的使命是助您使用渐进式 Web 应用（PWA）取得成功。</p>
-          <p>创建此活动是为了帮助传播有关 PWA 的技术及实践，包括如何成功构建 PWA 以及如何将 PWA 技术集成到您现有的 Web 应用中。我们不专注于推销特定的 Web 框架或技术栈。</p>
+          <p>创建此活动是为了分享国内和国际厂商的 PWA 的成功案例，传播有关 PWA 的技术及实践，包括如何成功构建 PWA 以及将 PWA 技术集成到您现有的 Web 应用中。我们不专注于推销特定的 Web 框架或技术栈。</p>
           <p>该活动免费。</p>
         </fluent-card>
         <fluent-card>
@@ -74,8 +74,8 @@ export class AppAbout extends LitElement {
           </p>
           <p>2022 年主办方成员：
             <ul>
-              <li>宋青见 微软首席产品经理</li>
               <li>张敏 英特尔软件技术经理</li>
+              <li>宋青见 微软首席产品经理</li>
             </ul>  
           </p>
           <p>联系我们: 

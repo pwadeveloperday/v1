@@ -340,6 +340,9 @@ export class AppHome extends LitElement {
       #icon_alex {
         background-image: url('assets/2022/people/120/alex.png');
       }
+      #icon_cecilia {
+        background-image: url('assets/2022/people/120/cecilia.png');
+      }
       #icon_harry {
         background-image: url('assets/2022/people/120/harry.png');
       }
@@ -349,7 +352,9 @@ export class AppHome extends LitElement {
       #icon_belem {
         background-image: url('assets/2022/people/120/belem.png');
       }
-
+      #icon_yuanhong {
+        background-image: url('assets/2022/people/120/yuanhong.png');
+      }
       #icon_haoyu {
         background-image: url('assets/2022/people/120/haoyu.png');
       }

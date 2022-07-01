@@ -1,20 +1,52 @@
 import { LitElement, css, html } from 'lit';
-import 'lit-video/lit-video.js';
-import { customElement, property, query } from 'lit/decorators.js';
+import { customElement, query } from 'lit/decorators.js';
 
-@customElement('sample-video')
-export class SampleVideo extends LitElement {
-  @query('#first-video') video: HTMLVideoElement;
+@customElement('sample-ws')
+export class SampleWS extends LitElement {
 
-  private async _playLocalVideo() {
-    let fileHandle;
-    [fileHandle] = await showOpenFilePicker();
-    const file = await fileHandle.getFile(); 
-    this.video.src = URL.createObjectURL(file)
-  }
-
+  @query('#title') _title: HTMLInputElement;
+  @query('#text') _text: HTMLTextAreaElement;
+  @query('#url') _url: HTMLInputElement;
+  @query('#files') _files: HTMLInputElement;
+  @query('#output') _output:HTMLDivElement;
+ 
   async connectedCallback() {
     super.connectedCallback();
+  }
+
+  _checkBasicFileShare() {
+    const txt = new Blob(['Hello, world!'], {type: 'text/plain'});
+    const file = new File([txt], "test.txt");
+    return navigator.canShare({ files: [file] });
+  }
+
+  async _share() {
+    if(this._checkBasicFileShare()) {
+      this._output.innerHTML = "您的浏览器支持文件分享"
+    }
+
+    let files:FileList | null = this._files.files;
+
+    if (files?.length === 0) {
+      this._output.innerHTML = '没有选择文件, 分享网址';
+
+      if ((navigator as any).share) {
+        await (navigator as any).share({
+          title: this._title.value,
+          text: this._text.value,
+          url: this._url.value
+        });
+      }
+    } else {
+      this._output.innerHTML = '文件已选, 分享文件';
+      if ((navigator as any).share) {
+        await (navigator as any).share({
+          files: files,
+          title: this._title.value,
+          text: this._text.value,
+        });
+      }
+    }
   }
 
   static get styles() {
@@ -198,12 +230,19 @@ export class SampleVideo extends LitElement {
       margin-right: 6px;
     }
 
-    .act {
-      text-align: center;
+    .act div {
+      margin-top: 16px;
     }
 
-    .act button {
-      margin-top: 16px;
+    .act a {
+      color: rgba(0, 113, 197, 0.9);
+      text-decoration: none;
+      border-bottom: 1px dashed rgba(0, 113, 197, 0.6);
+    }
+
+    .act a:hover {
+      color: rgba(0, 113, 197, 1);
+      border-bottom: 1px dashed rgba(0, 113, 197, 0.9);
     }
 
     `;
@@ -221,36 +260,65 @@ export class SampleVideo extends LitElement {
           <fluent-breadcrumb-item href="/">首页</fluent-breadcrumb-item>
           <fluent-breadcrumb-item href="/sample">示例</fluent-breadcrumb-item>
         </fluent-breadcrumb>
-        <h2>文件系统访问 (File System Access) API</h2>
+        <h2>Web 共享 (Web Share) API</h2>
         <fluent-card class="act">
-          <lit-video 
-            id="first-video"
-            intervalreproduction="#t=1,5" 
-            option="simple" 
-            src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4" 
-            type="video/mp4">
-          </lit-video>
-          <button @click="${this._playLocalVideo}">
-            播放本地视频
-          </button>
+        <table>
+          <tr>
+            <td>
+              标题:
+            </td>
+            <td>
+              <input id="title" value="中国 PWA 开发者日" size="34">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              内容:
+            </td>
+            <td>
+              <textarea id="text" name="text" cols="34" rows="3">欢迎参加 2022 第二届中国 PWA 开发者日，了解最新 PWA 技术。</textarea>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              URL:
+            </td>
+            <td>
+              <input id="url" value="https://pwadev.io" size="34">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              文件:
+            </td>
+            <td>
+              <input id="files" type="file" multiple>
+            </td>
+          </tr>
+        </table>
+        <p style="text-align: center">
+          <input id="share" type="button" value="分享" @click="${this._share}">
+        </p>
+        <div id="output"></div>
+ 
         </fluent-card>
         <fluent-card id="st">
           <div class="tut">
             <icon-webdev></icon-webdev> 
-            <a href="https://web.dev/file-system-access/" title="The File System Access API: simplifying access to local files">
-              教程：简化对本地文件的访问
+            <a href="https://web.dev/web-share/" title="Integrate with the OS sharing UI with the Web Share API">
+              教程：通过 Web Share API 与系统共享集成
             </a>
           </div>
-          <div class="w3c"><icon-w3c class="w3clogo"></icon-w3c> <a href="https://wicg.github.io/file-system-access/" title="File System Access">File System Access API</a></div>
+          <div class="w3c"><icon-w3c class="w3clogo"></icon-w3c> <a href="https://w3c.github.io/web-share/" title="Web Share">Web Share</a></div>
           <div class="imp">
             <div class="des">
-              <a href="https://chromestatus.com/feature/6284708426022912" title="在 Chromium 86 版本支持">🐡 M86</a>
+              <a href="https://chromestatus.com/feature/5668769141620736" title="在 Chromium 89 版本支持">🐡 M89</a>
             </div>
             <div class="des">
               <div class="det">
               <icon-chr class="yes" title="Google Chrome 浏览器"></icon-chr>
               <icon-edg class="yes" title="微软 Edge 浏览器"></icon-edg> <icon-ope class="yes" title="Opera 浏览器"></icon-ope> <icon-viv class="yes" title="Vivaldi 浏览器"></icon-viv>
-              <icon-saf class="no" title="Apple Safari 浏览器"></icon-saf> <icon-fir class="no" title="Mozilla Firefox 浏览器"></icon-fir>
+              <icon-saf class="yes" title="Apple Safari 浏览器"></icon-saf> <icon-fir class="no" title="Mozilla Firefox 浏览器"></icon-fir>
               </div>
             </div>
             <div class="des">
@@ -258,7 +326,7 @@ export class SampleVideo extends LitElement {
                 <icon-mac class="yes" title="Mac"></icon-mac> <icon-win class="yes" title="Windows"></icon-win> <icon-lin class="yes" title="Linux"></icon-lin> 
               </div>
               <div class="det">
-                <icon-and class="no" title="Android"></icon-and> <icon-ios class="no" title="iOS"></icon-ios>
+                <icon-and class="yes" title="Android"></icon-and> <icon-ios class="yes" title="iOS"></icon-ios>
               </div>
             </div>   
           </div>

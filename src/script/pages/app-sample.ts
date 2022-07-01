@@ -71,23 +71,53 @@ export class AppSample extends LitElement {
       <fluent-card>
         <ul>
           <li>
+            🐡 M81
+            徽章 (Badging) API
+          </li>
+          <li>
+            🐡 M85
+            应用快捷方式 (App Shortcuts)
+          </li>
+          <li>
+            🐡 M89
+            <a href="/sample/web-share" appearance="primary">
+              Web 共享 (Web Share) API
+            </a>
+          </li>
+          <li>
             🐡 M89
             <a href="/sample/file-system-access" appearance="primary">
               文件系统访问 (File System Access) API
             </a>
           </li>
           <li>
-          🐡 M102
-          <a href="/sample/file-handling" appearance="primary">
-            文件处理 (File Handling) API
-          </a>
-        </li>
+            🐡 M93
+            WebCodecs API
+          </li>
           <li>
-          🐡 M103
-          <a href="/sample/local-font-access" appearance="primary">
-            本地字体访问 (Local Font Access) API
-          </a>
-        </li>
+            🐡 M97
+            WebTransport (Perfectly supported Web-based Intelligent Collaboration)
+          </li>
+          <li>
+            🐡 M102
+            窗口控件覆盖 (Window Controls Overlay for Installed Desktop Web Apps)
+          </li>
+          <li>
+            🐡 M102
+            <a href="/sample/file-handling" appearance="primary">
+              文件处理 (File Handling) API
+            </a>
+          </li>
+          <li>
+            🐡 M103
+            <a href="/sample/local-font-access" appearance="primary">
+              本地字体访问 (Local Font Access) API
+            </a>
+          </li>
+          <li>
+            🐡 开发中
+            动态应用快捷方式 (Dynamic App Shortcuts)
+          </li>
         </ul>
       </fluent-card>
  

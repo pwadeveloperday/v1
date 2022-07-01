@@ -309,7 +309,7 @@ export class AppHeaderHome extends LitElement {
         }
 
         .hero h2 {
-          margin: 0.5rem auto;
+          margin: 0rem auto 0.5rem auto;
         }
         
         .hero .h3b {
@@ -321,7 +321,7 @@ export class AppHeaderHome extends LitElement {
         }
       }
 
-      @media only screen and (max-height: 400px) and (orientation: landscape) {
+      @media only screen and (max-height: 415px) and (orientation: landscape) {
         .hero h1 {
           display: none;
         }

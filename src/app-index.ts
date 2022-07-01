@@ -130,6 +130,13 @@ export class AppIndex extends LitElement {
             },
           },
           {
+            path: '/sample/web-share',
+            component: 'sample-ws',
+            action: async () => {
+              await import('./script/pages/sample-ws.js');
+            },
+          },
+          {
             path: '/sample/local-font-access',
             component: 'sample-lfa',
             action: async () => {
@@ -144,10 +151,17 @@ export class AppIndex extends LitElement {
             },
           },
           {
-            path: '/sample/file-system-access',
-            component: 'sample-video',
+            path: '/sample/media-player',
+            component: 'sample-mp',
             action: async () => {
-              await import('./script/pages/sample-video.js');
+              await import('./script/pages/sample-mp.js');
+            },
+          },
+          {
+            path: '/sample/file-system-access',
+            component: 'sample-fsa',
+            action: async () => {
+              await import('./script/pages/sample-fsa.js');
             },
           },
           {
