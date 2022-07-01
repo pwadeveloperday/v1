@@ -1,4 +1,4 @@
-import{s,r as p,$ as u,i as d,n as g}from"./index.ccb5348a.js";import"./lit-video.6fc33520.js";var m=Object.defineProperty,b=Object.getOwnPropertyDescriptor,c=(o,e,a,r)=>{for(var i=r>1?void 0:r?b(e,a):e,l=o.length-1,n;l>=0;l--)(n=o[l])&&(i=(r?n(e,a,i):n(i))||i);return r&&i&&m(e,a,i),i};let t=class extends s{constructor(){super()}async _playFileHandlerVideo(){"launchQueue"in window&&"files"in LaunchParams.prototype&&(console.log("\u60A8\u7684\u6D4F\u89C8\u5668\u652F\u6301\u6587\u4EF6\u5904\u7406 API"),launchQueue.setConsumer(async o=>{if(!o.files.length){this.msg.innerHTML="\u6CA1\u6709\u4ECE\u89C6\u9891\u6587\u4EF6\u90AE\u4EF6\u83DC\u5355\u6253\u5F00\u672C\u9875\u9762";return}for(let e of o.files){console.log(e);const a=await e.getFile();console.log(a),this.video.src=URL.createObjectURL(a)}}))}async connectedCallback(){super.connectedCallback(),this._playFileHandlerVideo()}static get styles(){return p`
+import{s as l,r as d,$ as p,i as g,n as m}from"./index.78b2020d.js";import"./lit-video.6fc33520.js";var b=Object.defineProperty,u=Object.getOwnPropertyDescriptor,n=(t,i,o,a)=>{for(var e=a>1?void 0:a?u(i,o):i,r=t.length-1,c;r>=0;r--)(c=t[r])&&(e=(a?c(i,o,e):c(e))||e);return a&&e&&b(i,o,e),e};let s=class extends l{constructor(){super()}async _playLocalVideo(){let t;[t]=await showOpenFilePicker();const i=await t.getFile();this.video.src=URL.createObjectURL(i)}async connectedCallback(){super.connectedCallback()}static get styles(){return d`
     .about {
       padding: 0 16px;
       margin: 1rem 0 0rem 0;
@@ -178,60 +178,45 @@ import{s,r as p,$ as u,i as d,n as g}from"./index.ccb5348a.js";import"./lit-vide
       margin-right: 6px;
     }
 
-    .act div {
+    .act {
+      text-align: center;
+    }
+
+    .act button {
       margin-top: 16px;
     }
 
-    .act a {
-      color: rgba(0, 113, 197, 0.9);
-      text-decoration: none;
-      border-bottom: 1px dashed rgba(0, 113, 197, 0.6);
-    }
-
-    .act a:hover {
-      color: rgba(0, 113, 197, 1);
-      border-bottom: 1px dashed rgba(0, 113, 197, 0.9);
-    }
-
-    `}render(){return u`
+    `}render(){return p`
       <app-header ?enableBack="${!0}"></app-header>
       <div class="about">
         <fluent-breadcrumb>
           <fluent-breadcrumb-item href="/">首页</fluent-breadcrumb-item>
           <fluent-breadcrumb-item href="/sample">示例</fluent-breadcrumb-item>
         </fluent-breadcrumb>
-        <h2>文件处理 (File Handling) API</h2>
+        <h2>文件系统访问 (File System Access) API</h2>
         <fluent-card class="act">
           <lit-video 
             id="first-video"
             intervalreproduction="#t=1,5" 
             option="simple" 
-            src="" 
+            src="https://storage.googleapis.com/webfundamentals-assets/videos/chrome.mp4" 
             type="video/mp4">
           </lit-video>
-          <div>
-            <div id="msg"></div>
-            将“中国 PWA 开发者日”应用注册为视频文件的默认播放器
-            <ul>
-              <li>浏览器启用 chrome://flags#file-handling-api</li>
-              <li>访问 <a href="https://pwadev.io">https://pwadev.io</a></li>
-              <li>安装为本地 PWA 应用</li>
-              <li>在本地电脑右键点击一个视频文件</li>
-              <li>右键菜单选择“打开方式” -&gt; 选择“中国 PWA 开发者日”打开</li>
-            </ul>
-          </div>
+          <button @click="${this._playLocalVideo}">
+            播放本地视频
+          </button>
         </fluent-card>
         <fluent-card id="st">
           <div class="tut">
             <icon-webdev></icon-webdev> 
-            <a href="https://web.dev/i18n/zh/file-handling/" title="The File System Access API: simplifying access to local files">
-              教程：注册应用到系统的文件处理
+            <a href="https://web.dev/file-system-access/" title="The File System Access API: simplifying access to local files">
+              教程：简化对本地文件的访问
             </a>
           </div>
-          <div class="w3c"><icon-w3c class="w3clogo"></icon-w3c> <a href="https://wicg.github.io/manifest-incubations/index.html#file_handlers-member" title="File Handling">File Handling</a></div>
+          <div class="w3c"><icon-w3c class="w3clogo"></icon-w3c> <a href="https://wicg.github.io/file-system-access/" title="File System Access">File System Access API</a></div>
           <div class="imp">
             <div class="des">
-              <a href="https://chromestatus.com/feature/5721776357113856" title="在 Chromium 102 版本支持">🐡 M102</a>
+              <a href="https://chromestatus.com/feature/6284708426022912" title="在 Chromium 86 版本支持">🐡 M86</a>
             </div>
             <div class="des">
               <div class="det">
@@ -252,5 +237,5 @@ import{s,r as p,$ as u,i as d,n as g}from"./index.ccb5348a.js";import"./lit-vide
         </fluent-card>
         <app-footer></app-footer>
       </div>
-    `}};c([d("#first-video")],t.prototype,"video",2);c([d("#msg")],t.prototype,"msg",2);t=c([g("sample-fh")],t);export{t as SampleFH};
-//# sourceMappingURL=sample-fh.57730369.js.map
+    `}};n([g("#first-video")],s.prototype,"video",2);s=n([m("sample-fsa")],s);export{s as SampleFSA};
+//# sourceMappingURL=sample-fsa.221c4e77.js.map

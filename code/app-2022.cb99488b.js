@@ -1,4 +1,4 @@
-import{s as c,r as d,$ as u,o as g,e as n,n as h}from"./index.ccb5348a.js";var b=Object.defineProperty,m=Object.getOwnPropertyDescriptor,r=(a,t,e,s)=>{for(var o=s>1?void 0:s?m(t,e):t,l=a.length-1,p;l>=0;l--)(p=a[l])&&(o=(s?p(t,e,o):p(o))||o);return s&&o&&b(t,e,o),o};let i=class extends c{constructor(){super(),this.subtitle="\u7B2C\u4E8C\u5C4A",this.title="\u4E2D\u56FD PWA \u5F00\u53D1\u8005\u65E5",this.time="2022 \u5E74 8 \u6708 6 \u65E5 13:00 - 17:00",this.description=`
+import{s as c,r as d,$ as p,o as g,e as n,n as h}from"./index.78b2020d.js";var b=Object.defineProperty,m=Object.getOwnPropertyDescriptor,r=(a,t,e,s)=>{for(var o=s>1?void 0:s?m(t,e):t,l=a.length-1,u;l>=0;l--)(u=a[l])&&(o=(s?u(t,e,o):u(o))||o);return s&&o&&b(t,e,o),o};let i=class extends c{constructor(){super(),this.subtitle="\u7B2C\u4E8C\u5C4A",this.title="\u4E2D\u56FD PWA \u5F00\u53D1\u8005\u65E5",this.time="8 \u6708 6 \u65E5 (\u5468\u516D) 09:00 - 17:00",this.description=`
     \u4E3A\u52A0\u901F\u63A8\u52A8\u6E10\u8FDB\u5F0F Web \u5E94\u7528 (PWA) \u5728\u4E2D\u56FD\u7684\u53D1\u5C55\uFF0C\u5FAE\u8F6F\u4E0E\u82F1\u7279\u5C14\u643A\u624B\u4E3E\u529E\u201C\u7B2C\u4E8C\u5C4A\u4E2D\u56FD PWA \u5F00\u53D1\u8005\u65E5\u201D\u3002
     \u672C\u6B21\u6D3B\u52A8\u9080\u8BF7\u4E00\u4F17\u4E1A\u754C\u5927\u5496\u56F4\u7ED5 PWA \u5C55\u5F00\u5206\u4EAB\uFF0C\u63A2\u8BA8\u6700\u65B0\u6280\u672F\u8FDB\u5C55\uFF0C\u53CA PWA \u751F\u6001\u7684\u5B9E\u8DF5\u4E0E\u843D\u5730\u3002
     
@@ -266,6 +266,9 @@ import{s as c,r as d,$ as u,o as g,e as n,n as h}from"./index.ccb5348a.js";var b
       #icon_alex {
         background-image: url('assets/2022/people/120/alex.png');
       }
+      #icon_cecilia {
+        background-image: url('assets/2022/people/120/cecilia.png');
+      }
       #icon_harry {
         background-image: url('assets/2022/people/120/harry.png');
       }
@@ -274,6 +277,15 @@ import{s as c,r as d,$ as u,o as g,e as n,n as h}from"./index.ccb5348a.js";var b
       }
       #icon_belem {
         background-image: url('assets/2022/people/120/belem.png');
+      }
+      #icon_yuanhong {
+        background-image: url('assets/2022/people/120/yuanhong.png');
+      }
+      #icon_haoyu {
+        background-image: url('assets/2022/people/120/haoyu.png');
+      }
+      #icon_pwabuilder {
+        background-image: url('assets/2022/people/120/pwabuilder.png');
       }
 
       .bili {
@@ -397,6 +409,12 @@ import{s as c,r as d,$ as u,o as g,e as n,n as h}from"./index.ccb5348a.js";var b
         border-bottom: 1px dashed rgba(0,113,197, 1);
       }
 
+      @media only screen and (max-width: 420px) and (orientation: portrait) {
+        .hero h2 {
+          margin: 0rem auto 0.5rem auto;
+        }
+      }  
+
      `}async firstUpdated(){console.log("\u6B22\u8FCE\u60A8!")}render(){if(this.jsondata){let a="",t="";for(let e of this.jsondata.t2022)t=`
           <fluent-card class="section">
             <div class="title">${e.title}</div>
@@ -427,7 +445,7 @@ import{s as c,r as d,$ as u,o as g,e as n,n as h}from"./index.ccb5348a.js";var b
               </div>
             </div>
           </fluent-card>
-        `,a+=t;return u`
+        `,a+=t;return p`
         <app-header ?enableBack="${!0}"></app-header>
         <div class="scroll100">
           <div class="p2022 section">
@@ -452,5 +470,5 @@ import{s as c,r as d,$ as u,o as g,e as n,n as h}from"./index.ccb5348a.js";var b
             />
           </svg>
         </pwa-install>
-      `}else return u`<div>No data</div>`}};r([n({type:String})],i.prototype,"subtitle",2);r([n({type:String})],i.prototype,"title",2);r([n({type:String})],i.prototype,"time",2);r([n({type:String})],i.prototype,"description",2);r([n({type:Object})],i.prototype,"jsondata",2);r([n({type:String})],i.prototype,"screenwidth",2);r([n({type:String})],i.prototype,"screenheight",2);i=r([h("app-2022")],i);export{i as App2022};
-//# sourceMappingURL=app-2022.166ae865.js.map
+      `}else return p`<div>No data</div>`}};r([n({type:String})],i.prototype,"subtitle",2);r([n({type:String})],i.prototype,"title",2);r([n({type:String})],i.prototype,"time",2);r([n({type:String})],i.prototype,"description",2);r([n({type:Object})],i.prototype,"jsondata",2);r([n({type:String})],i.prototype,"screenwidth",2);r([n({type:String})],i.prototype,"screenheight",2);i=r([h("app-2022")],i);export{i as App2022};
+//# sourceMappingURL=app-2022.cb99488b.js.map
