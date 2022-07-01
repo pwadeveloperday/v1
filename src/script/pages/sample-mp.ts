@@ -89,7 +89,6 @@ export class SampleMP extends LitElement {
       <fluent-card class="act">
         <lit-video 
           id="first-video"
-          intervalreproduction="#t=1,5" 
           option="simple" 
           src="" 
           type="video/mp4">

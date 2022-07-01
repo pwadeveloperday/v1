@@ -130,6 +130,13 @@ export class AppIndex extends LitElement {
             },
           },
           {
+            path: '/sample/generic-sensor',
+            component: 'sample-gs',
+            action: async () => {
+              await import('./script/pages/sample-gs.js');
+            },
+          },
+          {
             path: '/sample/web-share',
             component: 'sample-ws',
             action: async () => {

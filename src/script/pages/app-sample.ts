@@ -71,6 +71,10 @@ export class AppSample extends LitElement {
       <fluent-card>
         <ul>
           <li>
+            🐡 M
+            <a href="/sample/generic-sensor" appearance="primary">通用传感器 (Generic Sensor) API</a>
+          </li>
+          <li>
             🐡 M81
             徽章 (Badging) API
           </li>
@@ -109,14 +113,32 @@ export class AppSample extends LitElement {
             </a>
           </li>
           <li>
+            🐡 M102
+            <a href="/sample/media-player" appearance="primary">
+              文件处理 (File Handling) API - 媒体播放器
+            </a>
+          </li>
+          <li>
             🐡 M103
             <a href="/sample/local-font-access" appearance="primary">
               本地字体访问 (Local Font Access) API
             </a>
           </li>
           <li>
-            🐡 开发中
+            🚧 🐡 [开发中]
+            计算压力 (Compute Pressure) API
+          </li>
+          <li>
+            🚧 [开发中]
+            WebGPU API
+          </li>
+          <li>
+            🚧 🐡 [开发中]
             动态应用快捷方式 (Dynamic App Shortcuts)
+          </li>
+          <li>
+            🚧 [开发中]
+            Web 神经网络 (Web Neural Network, WebNN) API
           </li>
         </ul>
       </fluent-card>
