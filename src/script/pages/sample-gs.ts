@@ -15,7 +15,7 @@ export class SampleGS extends LitElement {
   _accelerometer() {
     let accelerometer = null;
     try {
-      accelerometer = new Accelerometer({ frequency: 10 });
+      accelerometer = new Accelerometer({ frequency: 60 });
       accelerometer.onerror = (event) => {
         // Handle runtime errors.
         if (event.error.name === 'NotAllowedError') {
@@ -27,6 +27,14 @@ export class SampleGS extends LitElement {
       accelerometer.onreading = (e) => {
         this._a.innerHTML = e;
       };
+ 
+      accelerometer.addEventListener('reading', () => {
+        this._a.innerHTML = `
+          Acceleration along the X-axis ${accelerometer.x} <br>
+          Acceleration along the Y-axis ${accelerometer.y} <br>
+          Acceleration along the Z-axis ${accelerometer.z} <br>
+        `
+      });
       accelerometer.start();
     } catch (error) {
       // Handle construction errors.
