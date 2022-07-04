@@ -125,20 +125,24 @@ export class AppSample extends LitElement {
             </a>
           </li>
           <li>
-            🚧 🐡 [开发中]
-            计算压力 (Compute Pressure) API
-          </li>
+            🌐 🚧 M104
+              共享存储 (Shared Storage) API
+          </li>       
           <li>
-            🚧 [开发中]
-            WebGPU API
-          </li>
-          <li>
-            🚧 🐡 [开发中]
+            🐡 🚧 M104
             动态应用快捷方式 (Dynamic App Shortcuts)
           </li>
           <li>
-            🚧 [开发中]
-            Web 神经网络 (Web Neural Network, WebNN) API
+            🌐 🚧
+            WebGPU API (Origin Trial: 94 to 105)
+          </li>
+          <li>
+            🐡 🚧
+            计算压力 (Compute Pressure) API
+          </li>
+          <li>
+            🌐 🚧
+            Web 神经网络 (WebNN) API
           </li>
         </ul>
       </fluent-card>

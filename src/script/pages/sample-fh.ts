@@ -6,6 +6,7 @@ import { customElement, query } from 'lit/decorators.js';
 export class SampleFH extends LitElement {
   @query('#first-video') video: HTMLVideoElement;
   @query('#msg') msg: HTMLDivElement;
+  @query('#show') show: HTMLDivElement;
 
   private async _playFileHandlerVideo() {
     if ('launchQueue' in window && 'files' in LaunchParams.prototype) {
@@ -20,7 +21,11 @@ export class SampleFH extends LitElement {
           console.log(fileHandle);
           const file = await fileHandle.getFile();
           console.log(file);
-          this.video.src = URL.createObjectURL(file);
+          // this.video.src = URL.createObjectURL(file);
+          this.show.setAttribute('style', 'display: block;');
+          this.show.innerHTML = `
+            <img src="${file}">
+          `
         }
       });
     }
@@ -227,6 +232,10 @@ export class SampleFH extends LitElement {
       border-bottom: 1px dashed rgba(0, 113, 197, 0.9);
     }
 
+    #show {
+      display: none;
+    }
+
     `;
   }
 
@@ -244,22 +253,16 @@ export class SampleFH extends LitElement {
         </fluent-breadcrumb>
         <h2>文件处理 (File Handling) API</h2>
         <fluent-card class="act">
-          <lit-video 
-            id="first-video"
-            intervalreproduction="#t=1,5" 
-            option="simple" 
-            src="" 
-            type="video/mp4">
-          </lit-video>
+          <div id="show"></div>
           <div>
             <div id="msg"></div>
-            将“中国 PWA 开发者日”应用注册为视频文件的默认播放器
+            将“中国 PWA 开发者日”注册为默认图片查看器
             <ul>
               <li>浏览器启用 chrome://flags#file-handling-api</li>
               <li>访问 <a href="https://pwadev.io">https://pwadev.io</a></li>
               <li>安装为本地 PWA 应用</li>
-              <li>在本地电脑右键点击一个视频文件</li>
-              <li>右键菜单选择“打开方式” -&gt; 选择“中国 PWA 开发者日”打开</li>
+              <li>右键点击电脑中的图片文件 (.png, .jpg, .jpeg)</li>
+              <li>选择“打开方式” -&gt; 选择“中国 PWA 开发者日”</li>
             </ul>
           </div>
         </fluent-card>

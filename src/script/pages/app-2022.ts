@@ -528,7 +528,7 @@ export class App2022 extends LitElement {
                 <iframe width="${this.screenwidth}" height="${this.screenheight}" src="https://player.bilibili.com/player.html?cid=${i.cid}&aid=${i.aid}&page=1&as_wide=1&high_quality=1&danmaku=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
               </div>
               <div>
-                <fluent-tabs activeid="entrees">
+                <fluent-tabs activeid="apps">
                   <fluent-tab id="apps">主题概要</fluent-tab>
                   <fluent-tab id="entrees">嘉宾介绍</fluent-tab>
                   <fluent-tab-panel id="appsPanel" class="des">
