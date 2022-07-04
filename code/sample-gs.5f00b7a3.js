@@ -1,4 +1,4 @@
-import{s as u,r as l,$ as p,i as s,n as g}from"./index.7983c3e0.js";var m=Object.defineProperty,b=Object.getOwnPropertyDescriptor,o=(e,r,c,i)=>{for(var n=i>1?void 0:i?b(r,c):r,d=e.length-1,a;d>=0;d--)(a=e[d])&&(n=(i?a(r,c,n):a(n))||n);return i&&n&&m(r,c,n),n};let t=class extends u{constructor(){super()}_accelerometer(){let e=null;try{e=new Accelerometer({frequency:60}),e.onerror=r=>{r.error.name==="NotAllowedError"?this._a.innerHTML="Permission to access sensor was denied.":r.error.name==="NotReadableError"&&(this._a.innerHTML="Cannot connect to the sensor.")},e.onreading=r=>{this._a.innerHTML=r},e.addEventListener("reading",()=>{this._a.innerHTML=`
+import{s as u,r as l,$ as p,i as s,n as g}from"./index.15bad300.js";var m=Object.defineProperty,b=Object.getOwnPropertyDescriptor,o=(e,r,c,i)=>{for(var n=i>1?void 0:i?b(r,c):r,d=e.length-1,a;d>=0;d--)(a=e[d])&&(n=(i?a(r,c,n):a(n))||n);return i&&n&&m(r,c,n),n};let t=class extends u{constructor(){super()}_accelerometer(){let e=null;try{e=new Accelerometer({frequency:60}),e.onerror=r=>{r.error.name==="NotAllowedError"?this._a.innerHTML="Permission to access sensor was denied.":r.error.name==="NotReadableError"&&(this._a.innerHTML="Cannot connect to the sensor.")},e.onreading=r=>{this._a.innerHTML=r},e.addEventListener("reading",()=>{this._a.innerHTML=`
           X-\u8F74 ${e.x} <br>
           Y-\u8F74 ${e.y} <br>
           Z-\u8F74 ${e.z} <br>
@@ -317,4 +317,4 @@ import{s as u,r as l,$ as p,i as s,n as g}from"./index.7983c3e0.js";var m=Object
         <app-footer></app-footer>
       </div>
     `}};o([s("#a div")],t.prototype,"_a",2);o([s("#g div")],t.prototype,"_g",2);o([s("#as div")],t.prototype,"_as",2);o([s("#os div")],t.prototype,"_os",2);o([s("#gs div")],t.prototype,"_gs",2);o([s("#als div")],t.prototype,"_als",2);o([s("#m div")],t.prototype,"_m",2);o([s("#compass")],t.prototype,"_c",2);t=o([g("sample-gs")],t);export{t as SampleGS};
-//# sourceMappingURL=sample-gs.9708ad01.js.map
+//# sourceMappingURL=sample-gs.5f00b7a3.js.map

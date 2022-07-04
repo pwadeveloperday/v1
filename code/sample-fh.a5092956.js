@@ -1,5 +1,5 @@
-import{s as d,r as p,$ as u,i as c,n as g}from"./index.7983c3e0.js";import"./lit-video.6fc33520.js";var b=Object.defineProperty,m=Object.getOwnPropertyDescriptor,l=(o,e,a,t)=>{for(var i=t>1?void 0:t?m(e,a):e,n=o.length-1,s;n>=0;n--)(s=o[n])&&(i=(t?s(e,a,i):s(i))||i);return t&&i&&b(e,a,i),i};let r=class extends d{constructor(){super()}async _playFileHandlerVideo(){"launchQueue"in window&&"files"in LaunchParams.prototype&&(console.log("\u60A8\u7684\u6D4F\u89C8\u5668\u652F\u6301\u6587\u4EF6\u5904\u7406 API"),launchQueue.setConsumer(async o=>{if(!o.files.length){this.msg.innerHTML="\u6CA1\u6709\u4ECE\u89C6\u9891\u6587\u4EF6\u90AE\u4EF6\u83DC\u5355\u6253\u5F00\u672C\u9875\u9762";return}for(let e of o.files){console.log(e);const a=await e.getFile();console.log(a),this.show.setAttribute("style","display: block;"),this.show.innerHTML=`
-            <img src="${a}">
+import{s as d,r as p,$ as u,i as c,n as g}from"./index.15bad300.js";import"./lit-video.6fc33520.js";var b=Object.defineProperty,m=Object.getOwnPropertyDescriptor,l=(o,e,a,t)=>{for(var i=t>1?void 0:t?m(e,a):e,n=o.length-1,s;n>=0;n--)(s=o[n])&&(i=(t?s(e,a,i):s(i))||i);return t&&i&&b(e,a,i),i};let r=class extends d{constructor(){super()}async _playFileHandlerVideo(){"launchQueue"in window&&"files"in LaunchParams.prototype&&(console.log("\u60A8\u7684\u6D4F\u89C8\u5668\u652F\u6301\u6587\u4EF6\u5904\u7406 API"),launchQueue.setConsumer(async o=>{if(!o.files.length){this.msg.innerHTML="\u6CA1\u6709\u4ECE\u89C6\u9891\u6587\u4EF6\u90AE\u4EF6\u83DC\u5355\u6253\u5F00\u672C\u9875\u9762";return}for(let e of o.files){console.log(e);const a=await e.getFile();console.log(a),this.show.setAttribute("style","display: block;"),this.show.innerHTML=`
+            <img src="${URL.createObjectURL(a)}">
           `}}))}async connectedCallback(){super.connectedCallback(),this._playFileHandlerVideo()}static get styles(){return p`
     .about {
       padding: 0 16px;
@@ -253,4 +253,4 @@ import{s as d,r as p,$ as u,i as c,n as g}from"./index.7983c3e0.js";import"./lit
         <app-footer></app-footer>
       </div>
     `}};l([c("#first-video")],r.prototype,"video",2);l([c("#msg")],r.prototype,"msg",2);l([c("#show")],r.prototype,"show",2);r=l([g("sample-fh")],r);export{r as SampleFH};
-//# sourceMappingURL=sample-fh.87d9d38e.js.map
+//# sourceMappingURL=sample-fh.a5092956.js.map
