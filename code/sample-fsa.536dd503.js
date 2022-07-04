@@ -1,4 +1,4 @@
-import{s as l,r as d,$ as p,i as g,n as m}from"./index.4ac3a314.js";import"./lit-video.6fc33520.js";var b=Object.defineProperty,u=Object.getOwnPropertyDescriptor,n=(t,i,o,a)=>{for(var e=a>1?void 0:a?u(i,o):i,r=t.length-1,c;r>=0;r--)(c=t[r])&&(e=(a?c(i,o,e):c(e))||e);return a&&e&&b(i,o,e),e};let s=class extends l{constructor(){super()}async _playLocalVideo(){let t;[t]=await showOpenFilePicker();const i=await t.getFile();this.video.src=URL.createObjectURL(i)}async connectedCallback(){super.connectedCallback()}static get styles(){return d`
+import{s as l,r as d,$ as p,i as g,n as m}from"./index.370b9822.js";import"./lit-video.6fc33520.js";var b=Object.defineProperty,u=Object.getOwnPropertyDescriptor,n=(t,i,o,a)=>{for(var e=a>1?void 0:a?u(i,o):i,r=t.length-1,c;r>=0;r--)(c=t[r])&&(e=(a?c(i,o,e):c(e))||e);return a&&e&&b(i,o,e),e};let s=class extends l{constructor(){super()}async _playLocalVideo(){let t;[t]=await showOpenFilePicker();const i=await t.getFile();this.video.src=URL.createObjectURL(i)}async connectedCallback(){super.connectedCallback()}static get styles(){return d`
     .about {
       padding: 0 16px;
       margin: 1rem 0 0rem 0;
@@ -238,4 +238,4 @@ import{s as l,r as d,$ as p,i as g,n as m}from"./index.4ac3a314.js";import"./lit
         <app-footer></app-footer>
       </div>
     `}};n([g("#first-video")],s.prototype,"video",2);s=n([m("sample-fsa")],s);export{s as SampleFSA};
-//# sourceMappingURL=sample-fsa.4dca4e2e.js.map
+//# sourceMappingURL=sample-fsa.536dd503.js.map

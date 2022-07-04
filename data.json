@@ -177,7 +177,7 @@
       "time": "16:20",
       "tag": "",
       "title": "新兴 Web 技术助力 PWA",
-      "des": "2022 年，很多新兴的 Web API 加入到了 Chromium 中，使得渐进式 Web 应用 (Progressive Web Apps, PWA) 如虎添翼。功能上，Shared Storage、Web Share、File System Access、File Handling 以及 Local Font Access 等等 API 简化了 PWA 应用对系统的访问和使用，极大地降低了前端的开发成本；性能上, 英特尔 Web 团队参与甚至领导的 Web Assembly / SIMD, WebGPU 以及 WebNN 等等项目，充分地利用 了 Intel XPU 的能力，并将 PWA 的性能极大地提高到和原生应用接近的水平。让我们快速了解新兴的 Web 技术在哪些方面助力了 PWA，并且帮助我们获得成功。",
+      "des": "2022 年，很多新兴的 Web API 加入到了 Chromium 中，使得渐进式 Web 应用 (Progressive Web Apps, PWA) 如虎添翼。功能上，Shared Storage、Web Share、File System Access、File Handling 以及 Local Font Access 等等 API 简化了 PWA 应用对系统的访问和使用，极大地降低了前端的开发成本；性能上, 英特尔 Web 团队参与甚至领导的 Web Assembly / SIMD, WebGPU 以及 WebNN 等等项目，充分地利用 了 Intel XPU 的能力，并将 PWA 的性能极大地提高到和原生应用接近的水平。让我们快速了解新兴的 Web 技术在哪些方面助力了 PWA，提升开发效率。",
       "speaker": "张敏",
       "pos": "软件技术经理",
       "com": "英特尔 SATG Web 平台工程",

@@ -1,4 +1,4 @@
-import{s as o,r as c,$ as s,n as d}from"./index.4ac3a314.js";var b=Object.defineProperty,m=Object.getOwnPropertyDescriptor,u=(p,r,l,a)=>{for(var e=a>1?void 0:a?m(r,l):r,i=p.length-1,t;i>=0;i--)(t=p[i])&&(e=(a?t(r,l,e):t(e))||e);return a&&e&&b(r,l,e),e};let n=class extends o{static get styles(){return c`
+import{s as o,r as c,$ as s,n as d}from"./index.370b9822.js";var b=Object.defineProperty,m=Object.getOwnPropertyDescriptor,u=(p,r,l,a)=>{for(var e=a>1?void 0:a?m(r,l):r,i=p.length-1,t;i>=0;i--)(t=p[i])&&(e=(a?t(r,l,e):t(e))||e);return a&&e&&b(r,l,e),e};let n=class extends o{static get styles(){return c`
     .about {
       padding: 0 16px;
       margin: 2rem 0px 0rem;
@@ -111,20 +111,24 @@ import{s as o,r as c,$ as s,n as d}from"./index.4ac3a314.js";var b=Object.define
             </a>
           </li>
           <li>
-            🚧 🐡 [开发中]
-            计算压力 (Compute Pressure) API
-          </li>
+            🌐 🚧 M104
+              共享存储 (Shared Storage) API
+          </li>       
           <li>
-            🚧 [开发中]
-            WebGPU API
-          </li>
-          <li>
-            🚧 🐡 [开发中]
+            🐡 🚧 M104
             动态应用快捷方式 (Dynamic App Shortcuts)
           </li>
           <li>
-            🚧 [开发中]
-            Web 神经网络 (Web Neural Network, WebNN) API
+            🌐 🚧
+            WebGPU API (Origin Trial: 94 to 105)
+          </li>
+          <li>
+            🐡 🚧
+            计算压力 (Compute Pressure) API
+          </li>
+          <li>
+            🌐 🚧
+            Web 神经网络 (WebNN) API
           </li>
         </ul>
       </fluent-card>
@@ -132,4 +136,4 @@ import{s as o,r as c,$ as s,n as d}from"./index.4ac3a314.js";var b=Object.define
     </div>
     <app-footer></app-footer>
     `}};n=u([d("app-sample")],n);export{n as AppSample};
-//# sourceMappingURL=app-sample.364cd266.js.map
+//# sourceMappingURL=app-sample.616e3ea0.js.map

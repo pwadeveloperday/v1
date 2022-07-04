@@ -1,4 +1,4 @@
-import{s,r as p,$ as u,i as d,n as g}from"./index.4ac3a314.js";import"./lit-video.6fc33520.js";var m=Object.defineProperty,b=Object.getOwnPropertyDescriptor,c=(o,e,a,r)=>{for(var i=r>1?void 0:r?b(e,a):e,l=o.length-1,n;l>=0;l--)(n=o[l])&&(i=(r?n(e,a,i):n(i))||i);return r&&i&&m(e,a,i),i};let t=class extends s{constructor(){super()}async _playFileHandlerVideo(){"launchQueue"in window&&"files"in LaunchParams.prototype&&(console.log("\u60A8\u7684\u6D4F\u89C8\u5668\u652F\u6301\u6587\u4EF6\u5904\u7406 API"),launchQueue.setConsumer(async o=>{if(!o.files.length){this.msg.innerHTML="\u6CA1\u6709\u4ECE\u89C6\u9891\u6587\u4EF6\u90AE\u4EF6\u83DC\u5355\u6253\u5F00\u672C\u9875\u9762";return}for(let e of o.files){console.log(e);const a=await e.getFile();console.log(a),this.video.src=URL.createObjectURL(a)}}))}async connectedCallback(){super.connectedCallback(),this._playFileHandlerVideo()}static get styles(){return p`
+import{s as c,r as p,$ as u,i as o,n as b}from"./index.370b9822.js";var h=Object.defineProperty,g=Object.getOwnPropertyDescriptor,i=(e,r,n,l)=>{for(var t=l>1?void 0:l?g(r,n):r,s=e.length-1,d;s>=0;s--)(d=e[s])&&(t=(l?d(r,n,t):d(t))||t);return l&&t&&h(r,n,t),t};let a=class extends c{constructor(){super()}async connectedCallback(){super.connectedCallback()}_checkBasicFileShare(){const e=new Blob(["Hello, world!"],{type:"text/plain"}),r=new File([e],"test.txt");return navigator.canShare({files:[r]})}async _share(){this._checkBasicFileShare()&&(this._output.innerHTML="\u60A8\u7684\u6D4F\u89C8\u5668\u652F\u6301\u6587\u4EF6\u5206\u4EAB");let e=this._files.files;(e==null?void 0:e.length)===0?(this._output.innerHTML="\u6CA1\u6709\u9009\u62E9\u6587\u4EF6, \u5206\u4EAB\u7F51\u5740",navigator.share&&await navigator.share({title:this._title.value,text:this._text.value,url:this._url.value})):(this._output.innerHTML="\u6587\u4EF6\u5DF2\u9009, \u5206\u4EAB\u6587\u4EF6",navigator.share&&await navigator.share({files:e,title:this._title.value,text:this._text.value}))}static get styles(){return p`
     .about {
       padding: 0 16px;
       margin: 1rem 0 0rem 0;
@@ -200,44 +200,65 @@ import{s,r as p,$ as u,i as d,n as g}from"./index.4ac3a314.js";import"./lit-vide
           <fluent-breadcrumb-item href="/">首页</fluent-breadcrumb-item>
           <fluent-breadcrumb-item href="/sample">示例</fluent-breadcrumb-item>
         </fluent-breadcrumb>
-        <h2>文件处理 (File Handling) API</h2>
+        <h2>Web 共享 (Web Share) API</h2>
         <fluent-card class="act">
-          <lit-video 
-            id="first-video"
-            intervalreproduction="#t=1,5" 
-            option="simple" 
-            src="" 
-            type="video/mp4">
-          </lit-video>
-          <div>
-            <div id="msg"></div>
-            将“中国 PWA 开发者日”应用注册为视频文件的默认播放器
-            <ul>
-              <li>浏览器启用 chrome://flags#file-handling-api</li>
-              <li>访问 <a href="https://pwadev.io">https://pwadev.io</a></li>
-              <li>安装为本地 PWA 应用</li>
-              <li>在本地电脑右键点击一个视频文件</li>
-              <li>右键菜单选择“打开方式” -&gt; 选择“中国 PWA 开发者日”打开</li>
-            </ul>
-          </div>
+        <table>
+          <tr>
+            <td>
+              标题:
+            </td>
+            <td>
+              <input id="title" value="中国 PWA 开发者日" size="34">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              内容:
+            </td>
+            <td>
+              <textarea id="text" name="text" cols="34" rows="3">欢迎参加 2022 第二届中国 PWA 开发者日，了解最新 PWA 技术。</textarea>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              URL:
+            </td>
+            <td>
+              <input id="url" value="https://pwadev.io" size="34">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              文件:
+            </td>
+            <td>
+              <input id="files" type="file" multiple>
+            </td>
+          </tr>
+        </table>
+        <p style="text-align: center">
+          <input id="share" type="button" value="分享" @click="${this._share}">
+        </p>
+        <div id="output"></div>
+ 
         </fluent-card>
         <fluent-card id="st">
           <div class="tut">
             <icon-webdev></icon-webdev> 
-            <a href="https://web.dev/i18n/zh/file-handling/" title="The File System Access API: simplifying access to local files">
-              教程：注册应用到系统的文件处理
+            <a href="https://web.dev/web-share/" title="Integrate with the OS sharing UI with the Web Share API">
+              教程：通过 Web Share API 与系统共享集成
             </a>
           </div>
-          <div class="w3c"><icon-w3c class="w3clogo"></icon-w3c> <a href="https://wicg.github.io/manifest-incubations/index.html#file_handlers-member" title="File Handling">File Handling</a></div>
+          <div class="w3c"><icon-w3c class="w3clogo"></icon-w3c> <a href="https://w3c.github.io/web-share/" title="Web Share">Web Share</a></div>
           <div class="imp">
             <div class="des">
-              <a href="https://chromestatus.com/feature/5721776357113856" title="在 Chromium 102 版本支持">🐡 M102</a>
+              <a href="https://chromestatus.com/feature/5668769141620736" title="在 Chromium 89 版本支持">🐡 M89</a>
             </div>
             <div class="des">
               <div class="det">
               <icon-chr class="yes" title="Google Chrome 浏览器"></icon-chr>
               <icon-edg class="yes" title="微软 Edge 浏览器"></icon-edg> <icon-ope class="yes" title="Opera 浏览器"></icon-ope> <icon-viv class="yes" title="Vivaldi 浏览器"></icon-viv>
-              <icon-saf class="no" title="Apple Safari 浏览器"></icon-saf> <icon-fir class="no" title="Mozilla Firefox 浏览器"></icon-fir>
+              <icon-saf class="yes" title="Apple Safari 浏览器"></icon-saf> <icon-fir class="no" title="Mozilla Firefox 浏览器"></icon-fir>
               </div>
             </div>
             <div class="des">
@@ -245,12 +266,12 @@ import{s,r as p,$ as u,i as d,n as g}from"./index.4ac3a314.js";import"./lit-vide
                 <icon-mac class="yes" title="Mac"></icon-mac> <icon-win class="yes" title="Windows"></icon-win> <icon-lin class="yes" title="Linux"></icon-lin> 
               </div>
               <div class="det">
-                <icon-and class="no" title="Android"></icon-and> <icon-ios class="no" title="iOS"></icon-ios>
+                <icon-and class="yes" title="Android"></icon-and> <icon-ios class="yes" title="iOS"></icon-ios>
               </div>
             </div>   
           </div>
         </fluent-card>
         <app-footer></app-footer>
       </div>
-    `}};c([d("#first-video")],t.prototype,"video",2);c([d("#msg")],t.prototype,"msg",2);t=c([g("sample-fh")],t);export{t as SampleFH};
-//# sourceMappingURL=sample-fh.47394aa2.js.map
+    `}};i([o("#title")],a.prototype,"_title",2);i([o("#text")],a.prototype,"_text",2);i([o("#url")],a.prototype,"_url",2);i([o("#files")],a.prototype,"_files",2);i([o("#output")],a.prototype,"_output",2);a=i([b("sample-ws")],a);export{a as SampleWS};
+//# sourceMappingURL=sample-ws.a8462b80.js.map
