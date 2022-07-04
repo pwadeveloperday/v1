@@ -8,6 +8,7 @@ export class SampleGS extends LitElement {
   @query('#g div') _g: HTMLDivElement;
   @query('#as div') _as: HTMLDivElement;
   @query('#os div') _os: HTMLDivElement;
+  @query('#osr div') _osr: HTMLDivElement;
   @query('#gs div') _gs: HTMLDivElement;
   @query('#als div') _als: HTMLDivElement;
   @query('#m div') _m: HTMLDivElement;
@@ -31,9 +32,9 @@ export class SampleGS extends LitElement {
  
       accelerometer.addEventListener('reading', () => {
         this._a.innerHTML = `
-          X-轴 ${accelerometer.x} <br>
-          Y-轴 ${accelerometer.y} <br>
-          Z-轴 ${accelerometer.z} <br>
+          X 轴 ${accelerometer.x} <br>
+          Y 轴 ${accelerometer.y} <br>
+          Z 轴 ${accelerometer.z} <br>
         `
       });
       accelerometer.start();
@@ -93,7 +94,7 @@ export class SampleGS extends LitElement {
     }
   }
 
-  _orientationsensor() {
+  _absoluteorientationsensor() {
     if ( 'AbsoluteOrientationSensor' in window ) {
       this._os.innerHTML = '支持绝对方向传感器';
 
@@ -103,9 +104,10 @@ export class SampleGS extends LitElement {
         let q = e.target.quaternion;
         let heading = Math.atan2(2*q[0]*q[1] + 2*q[2]*q[3], 1 - 2*q[1]*q[1] - 2*q[2]*q[2])*(180/Math.PI);
 
-        let html =  '以度为单位: ' + heading;
+        let html =  '当前角度: ' + heading;
         //if(heading < 0) heading = 360 + heading;
-        let headingAdjusted = 270 + heading;
+        // let headingAdjusted = 270 + heading;
+        let headingAdjusted = 0 + heading;
         
         //heading - 90;
         console.log('adjusted heading Before: ' + headingAdjusted);
@@ -114,13 +116,34 @@ export class SampleGS extends LitElement {
         console.log('adjusted heading After: ' + headingAdjusted);
         //var test = 90 + headingAdjusted;
         //var test = 80;
-        html += '<br>调整: ' + headingAdjusted;
+        html += '<br>校正角度: ' + headingAdjusted;
         this._os.innerHTML = html;
-        this._c.style.Transform = 'rotate(' + headingAdjusted + 'deg)';
-        this._c.style.WebkitTransform = 'rotate('+ headingAdjusted + 'deg)';
+        this._c.style.display = 'block';
+        this._c.style.transform = 'rotate(' + headingAdjusted + 'deg)';
       });
       sensor.start();
 
+    }
+  }
+
+  _relativeorientationsensor() {
+    if ( 'RelativeOrientationSensor' in window ) {
+      this._osr.innerHTML = '支持相对方向传感器';
+
+      const options = { frequency: 60, referenceFrame: 'device' };
+      const sensor = new RelativeOrientationSensor(options);
+
+      sensor.addEventListener('reading', () => {
+        // model is a Three.js object instantiated elsewhere.
+        // model.quaternion.fromArray(sensor.quaternion).inverse();
+        this._osr.innerHTML = sensor.quaternion.toString();
+      });
+      sensor.addEventListener('error', error => {
+        if (error.name == 'NotReadableError') {
+          console.log("Sensor is not available.");
+        }
+      });
+      sensor.start();
     }
   }
 
@@ -392,7 +415,7 @@ export class SampleGS extends LitElement {
           <div id="a">
             加速度计 (Accelerometer)
             <a @click="${this._accelerometer}">启用</a><br>
-            <span>测量设备在 X, Y, Z 轴的加速度</span>
+            <span>测量设备沿 X, Y, Z 轴的加速度</span>
             <div></div>
           </div>
           <div id="g">
@@ -409,8 +432,12 @@ export class SampleGS extends LitElement {
           </div>
           <div id="os">
             <img src="https://purepng.com/public/uploads/large/purepng.com-compasscompassinstrumentnavigationcardinal-directionspointsdiagram-1701527842316onq7x.png" id="compass" hidden/>
-            绝对/相对方向传感器 (Orientation Sensor) <a @click="${this._orientationsensor}">启用</a><br>
+            绝对方向传感器 (Absolute Orientation Sensor) <a @click="${this._absoluteorientationsensor}">启用</a><br>
             <span>测量设备相对于相对于地球参考坐标系的物理方向</span>
+            <div></div>
+          </div>
+          <div id="osr">
+            相对方向传感器 (Relative Orientation Sensor) <a @click="${this._relativeorientationsensor}">启用</a><br>
             <span>测量设备相对于固定的参考坐标系统的旋转数据</span><br>
             <div></div>
           </div>
