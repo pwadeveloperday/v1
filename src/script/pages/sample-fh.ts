@@ -24,7 +24,7 @@ export class SampleFH extends LitElement {
           // this.video.src = URL.createObjectURL(file);
           this.show.setAttribute('style', 'display: block;');
           this.show.innerHTML = `
-            <img src="${file}">
+            <img src="${URL.createObjectURL(file)}">
           `
         }
       });
