@@ -95,12 +95,16 @@ export class AppSample extends LitElement {
             </a>
           </li>
           <li>
-            🐡 M93
+            🌐 M93
             WebCodecs API
           </li>
           <li>
-            🐡 M97
-            WebTransport (Perfectly supported Web-based Intelligent Collaboration)
+            🌐 M97
+            WebTransport (v.s. WebSockets)
+          </li>
+          <li>
+            🌐 M102
+            导航 (Navigation) API (替代 History API)
           </li>
           <li>
             🐡 M102

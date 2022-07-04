@@ -11,6 +11,7 @@ export class SampleGS extends LitElement {
   @query('#gs div') _gs: HTMLDivElement;
   @query('#als div') _als: HTMLDivElement;
   @query('#m div') _m: HTMLDivElement;
+  @query('#compass') _c: HTMLImageElement;
 
   _accelerometer() {
     let accelerometer = null;
@@ -39,25 +40,121 @@ export class SampleGS extends LitElement {
     } catch (error) {
       // Handle construction errors.
       if (error.name === 'SecurityError') {
-        this._a.innerHTML = 'Sensor construction was blocked by the Permissions Policy.';
+        this._a.innerHTML = '加速度计被权限策略限制';
       } else if (error.name === 'ReferenceError') {
-        this._a.innerHTML = 'Sensor is not supported by the User Agent.';
+        this._a.innerHTML = '不支持加速度计';
       } else {
         throw error;
       }
     }
   }
 
+  _linearaccelerationsensor() {
+    if ( 'LinearAccelerationSensor' in window ) {
+      this._as.innerHTML = '支持线性加速度传感器';
+      let laSensor = new LinearAccelerationSensor({frequency: 60});
+      laSensor.addEventListener('reading', (e) => {
+        this._as.innerHTML = `
+          X 轴线性加速度: ${laSensor.x} <br>
+          Y 轴线性加速度: ${laSensor.y} <br>
+          Z 轴线性加速度: ${laSensor.z} <br>
+        `;
+      });
+      laSensor.start();
+    }
+  }
+
   _ambientlightsensor() {
     if ( 'AmbientLightSensor' in window ) {
+      this._als.innerHTML = '支持环境光传感器';
       const sensor = new AmbientLightSensor();
       sensor.addEventListener('reading', event => {
-        this._als.innerHTML = 'Current light level:', sensor.illuminance;
+        this._als.innerHTML = '当前亮度: ' + sensor.illuminance;
       });
       sensor.addEventListener('error', event => {
-        this._als.innerHTML =event.error.name, event.error.message;
+        this._als.innerHTML = event.error.name + ' ' + event.error.message;
       });
       sensor.start();
+    }
+  }
+
+  _gyroscope () {
+    if ( 'Gyroscope' in window ) {
+      this._g.innerHTML = '支持陀螺仪';
+      let gyroscope = new Gyroscope({frequency: 60});
+      gyroscope.addEventListener('reading', () => {
+        this._g.innerHTML = `
+          X 轴角速度: ${gyroscope.x} <br>
+          Y 轴角速度: ${gyroscope.y} <br>
+          Z 轴角速度: ${gyroscope.z}
+        `;
+      });
+      gyroscope.start();
+    }
+  }
+
+  _orientationsensor() {
+    if ( 'AbsoluteOrientationSensor' in window ) {
+      this._os.innerHTML = '支持绝对方向传感器';
+
+      const options = { frequency: 60, referenceFrame: 'device' };
+      const sensor = new AbsoluteOrientationSensor(options);
+      sensor.addEventListener('reading', (e) => {
+        let q = e.target.quaternion;
+        let heading = Math.atan2(2*q[0]*q[1] + 2*q[2]*q[3], 1 - 2*q[1]*q[1] - 2*q[2]*q[2])*(180/Math.PI);
+
+        let html =  '以度为单位: ' + heading;
+        //if(heading < 0) heading = 360 + heading;
+        let headingAdjusted = 270 + heading;
+        
+        //heading - 90;
+        console.log('adjusted heading Before: ' + headingAdjusted);
+        //headingAdjusted + 90;
+        //if(headingAdjusted > 360) headingAdjusted = headingAdjusted - 90;
+        console.log('adjusted heading After: ' + headingAdjusted);
+        //var test = 90 + headingAdjusted;
+        //var test = 80;
+        html += '<br>调整: ' + headingAdjusted;
+        this._os.innerHTML = html;
+        this._c.style.Transform = 'rotate(' + headingAdjusted + 'deg)';
+        this._c.style.WebkitTransform = 'rotate('+ headingAdjusted + 'deg)';
+      });
+      sensor.start();
+
+    }
+  }
+
+  _gravity() {
+    if ( 'GravitySensor' in window ) {
+      this._gs.innerHTML = '支持重力感应器';
+      let gravitySensor = new GravitySensor({frequency: 60});
+      gravitySensor.addEventListener("reading", () => {
+        this._gs.innerHTML = `
+          X 轴重力: ${gravitySensor.x} <br>
+          Y 轴重力: ${gravitySensor.y} <br>
+          Z 轴重力: ${gravitySensor.z}
+        `;
+      });
+
+      gravitySensor.start();
+    }
+  }
+
+  _magnetometer() {
+    if ( 'Magnetometer' in window ) {
+      this._m.innerHTML = '支持磁力计';
+      let magSensor = new Magnetometer({frequency: 60});
+      magSensor.addEventListener('reading', () => {
+        this._m.innerHTML = `
+          X 轴的磁场: ${magSensor.x} <br>
+          Y 轴的磁场: ${magSensor.y} <br>
+          Z 轴的磁场: ${magSensor.z}
+        `
+      })
+      magSensor.addEventListener('error', event => {
+        this._m.innerHTML = event.error.name + ' ' + event.error.message;
+      })
+      magSensor.start();
     }
   }
  
@@ -266,6 +363,15 @@ export class SampleGS extends LitElement {
       padding: 8px 16px;
     }
 
+    .act div span {
+      font-size: 0.8rem;
+    }
+
+    #compass {
+      width:100%;
+      max-width:400px;
+    }
+
     `;
   }
 
@@ -285,32 +391,42 @@ export class SampleGS extends LitElement {
         <fluent-card class="act">
           <div id="a">
             加速度计 (Accelerometer)
-            <a @click="${this._accelerometer}">启用</a>
+            <a @click="${this._accelerometer}">启用</a><br>
+            <span>测量设备在 X, Y, Z 轴的加速度</span>
             <div></div>
           </div>
           <div id="g">
             陀螺仪 (Gyroscope)
+            <a @click="${this._gyroscope}">启用</a><br>
+            <span>测量设备在偏转、倾斜时相对于X，Y 和 Z 轴的角速度 (rad/s)</span>
             <div></div>
           </div>
           <div id="as">
             线性加速度传感器 (Linear Acceleration Sensor)
+            <a @click="${this._linearaccelerationsensor}">启用</a><br>
+            <span>测量设备的加速度（不含重力）</span>
             <div></div>
           </div>
           <div id="os">
-            方向传感器 (Orientation Sensor)
+            <img src="https://purepng.com/public/uploads/large/purepng.com-compasscompassinstrumentnavigationcardinal-directionspointsdiagram-1701527842316onq7x.png" id="compass" hidden/>
+            绝对/相对方向传感器 (Orientation Sensor) <a @click="${this._orientationsensor}">启用</a><br>
+            <span>测量设备相对于相对于地球参考坐标系的物理方向</span>
+            <span>测量设备相对于固定的参考坐标系统的旋转数据</span><br>
             <div></div>
           </div>
           <div id="gs">
-            重力感应器 (Gravity Sensor)
+            重力感应器 (Gravity Sensor) <a @click="${this._gravity}">启用</a><br>
+            <span>提供沿所有三个轴应用于设备的重力</span>
             <div></div>
           </div>
           <div id="als">
-            环境光传感器 (Ambient Light Sensor)
-            <a @click="${this._ambientlightsensor}">启用</a>
+            环境光传感器 (Ambient Light Sensor) <a @click="${this._ambientlightsensor}">启用</a><br>
+            <span>设备周围环境光的光照水平或光照强度</span>
             <div></div>
           </div>
           <div id="m">
-            磁力计 (Magnetometer)
+            磁力计 (Magnetometer) <a @click="${this._magnetometer}">启用</a><br>
+            <span>提供设备主磁力计检测到的磁场的信息</span>
             <div></div>
           </div>
         </fluent-card>
