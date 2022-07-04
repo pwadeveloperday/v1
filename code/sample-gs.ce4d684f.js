@@ -1,7 +1,7 @@
-import{s as u,r as l,$ as p,i as s,n as g}from"./index.15bad300.js";var m=Object.defineProperty,b=Object.getOwnPropertyDescriptor,o=(e,r,c,i)=>{for(var n=i>1?void 0:i?b(r,c):r,d=e.length-1,a;d>=0;d--)(a=e[d])&&(n=(i?a(r,c,n):a(n))||n);return i&&n&&m(r,c,n),n};let t=class extends u{constructor(){super()}_accelerometer(){let e=null;try{e=new Accelerometer({frequency:60}),e.onerror=r=>{r.error.name==="NotAllowedError"?this._a.innerHTML="Permission to access sensor was denied.":r.error.name==="NotReadableError"&&(this._a.innerHTML="Cannot connect to the sensor.")},e.onreading=r=>{this._a.innerHTML=r},e.addEventListener("reading",()=>{this._a.innerHTML=`
-          X-\u8F74 ${e.x} <br>
-          Y-\u8F74 ${e.y} <br>
-          Z-\u8F74 ${e.z} <br>
+import{s as u,r as l,$ as p,i as o,n as g}from"./index.75946b0c.js";var b=Object.defineProperty,v=Object.getOwnPropertyDescriptor,a=(e,r,d,i)=>{for(var t=i>1?void 0:i?v(r,d):r,c=e.length-1,s;c>=0;c--)(s=e[c])&&(t=(i?s(r,d,t):s(t))||t);return i&&t&&b(r,d,t),t};let n=class extends u{constructor(){super()}_accelerometer(){let e=null;try{e=new Accelerometer({frequency:60}),e.onerror=r=>{r.error.name==="NotAllowedError"?this._a.innerHTML="Permission to access sensor was denied.":r.error.name==="NotReadableError"&&(this._a.innerHTML="Cannot connect to the sensor.")},e.onreading=r=>{this._a.innerHTML=r},e.addEventListener("reading",()=>{this._a.innerHTML=`
+          X \u8F74 ${e.x} <br>
+          Y \u8F74 ${e.y} <br>
+          Z \u8F74 ${e.z} <br>
         `}),e.start()}catch(r){if(r.name==="SecurityError")this._a.innerHTML="\u52A0\u901F\u5EA6\u8BA1\u88AB\u6743\u9650\u7B56\u7565\u9650\u5236";else if(r.name==="ReferenceError")this._a.innerHTML="\u4E0D\u652F\u6301\u52A0\u901F\u5EA6\u8BA1";else throw r}}_linearaccelerationsensor(){if("LinearAccelerationSensor"in window){this._as.innerHTML="\u652F\u6301\u7EBF\u6027\u52A0\u901F\u5EA6\u4F20\u611F\u5668";let e=new LinearAccelerationSensor({frequency:60});e.addEventListener("reading",r=>{this._as.innerHTML=`
           X \u8F74\u7EBF\u6027\u52A0\u901F\u5EA6: ${e.x} <br>
           Y \u8F74\u7EBF\u6027\u52A0\u901F\u5EA6: ${e.y} <br>
@@ -10,7 +10,7 @@ import{s as u,r as l,$ as p,i as s,n as g}from"./index.15bad300.js";var m=Object
           X \u8F74\u89D2\u901F\u5EA6: ${e.x} <br>
           Y \u8F74\u89D2\u901F\u5EA6: ${e.y} <br>
           Z \u8F74\u89D2\u901F\u5EA6: ${e.z}
-        `}),e.start()}}_orientationsensor(){if("AbsoluteOrientationSensor"in window){this._os.innerHTML="\u652F\u6301\u7EDD\u5BF9\u65B9\u5411\u4F20\u611F\u5668";const e={frequency:60,referenceFrame:"device"},r=new AbsoluteOrientationSensor(e);r.addEventListener("reading",c=>{let i=c.target.quaternion,n=Math.atan2(2*i[0]*i[1]+2*i[2]*i[3],1-2*i[1]*i[1]-2*i[2]*i[2])*(180/Math.PI),d="\u4EE5\u5EA6\u4E3A\u5355\u4F4D: "+n,a=270+n;console.log("adjusted heading Before: "+a),console.log("adjusted heading After: "+a),d+="<br>\u8C03\u6574: "+a,this._os.innerHTML=d,this._c.style.Transform="rotate("+a+"deg)",this._c.style.WebkitTransform="rotate("+a+"deg)"}),r.start()}}_gravity(){if("GravitySensor"in window){this._gs.innerHTML="\u652F\u6301\u91CD\u529B\u611F\u5E94\u5668";let e=new GravitySensor({frequency:60});e.addEventListener("reading",()=>{this._gs.innerHTML=`
+        `}),e.start()}}_absoluteorientationsensor(){if("AbsoluteOrientationSensor"in window){this._os.innerHTML="\u652F\u6301\u7EDD\u5BF9\u65B9\u5411\u4F20\u611F\u5668";const e={frequency:60,referenceFrame:"device"},r=new AbsoluteOrientationSensor(e);r.addEventListener("reading",d=>{let i=d.target.quaternion,t=Math.atan2(2*i[0]*i[1]+2*i[2]*i[3],1-2*i[1]*i[1]-2*i[2]*i[2])*(180/Math.PI),c="\u5F53\u524D\u89D2\u5EA6: "+t,s=0+t;console.log("adjusted heading Before: "+s),console.log("adjusted heading After: "+s),c+="<br>\u6821\u6B63\u89D2\u5EA6: "+s,this._os.innerHTML=c,this._c.style.display="block",this._c.style.transform="rotate("+s+"deg)"}),r.start()}}_relativeorientationsensor(){if("RelativeOrientationSensor"in window){this._osr.innerHTML="\u652F\u6301\u76F8\u5BF9\u65B9\u5411\u4F20\u611F\u5668";const e={frequency:60,referenceFrame:"device"},r=new RelativeOrientationSensor(e);r.addEventListener("reading",()=>{this._osr.innerHTML=r.quaternion.toString()}),r.addEventListener("error",d=>{d.name=="NotReadableError"&&console.log("Sensor is not available.")}),r.start()}}_gravity(){if("GravitySensor"in window){this._gs.innerHTML="\u652F\u6301\u91CD\u529B\u611F\u5E94\u5668";let e=new GravitySensor({frequency:60});e.addEventListener("reading",()=>{this._gs.innerHTML=`
           X \u8F74\u91CD\u529B: ${e.x} <br>
           Y \u8F74\u91CD\u529B: ${e.y} <br>
           Z \u8F74\u91CD\u529B: ${e.z}
@@ -239,7 +239,7 @@ import{s as u,r as l,$ as p,i as s,n as g}from"./index.15bad300.js";var m=Object
           <div id="a">
             加速度计 (Accelerometer)
             <a @click="${this._accelerometer}">启用</a><br>
-            <span>测量设备在 X, Y, Z 轴的加速度</span>
+            <span>测量设备沿 X, Y, Z 轴的加速度</span>
             <div></div>
           </div>
           <div id="g">
@@ -256,8 +256,12 @@ import{s as u,r as l,$ as p,i as s,n as g}from"./index.15bad300.js";var m=Object
           </div>
           <div id="os">
             <img src="https://purepng.com/public/uploads/large/purepng.com-compasscompassinstrumentnavigationcardinal-directionspointsdiagram-1701527842316onq7x.png" id="compass" hidden/>
-            绝对/相对方向传感器 (Orientation Sensor) <a @click="${this._orientationsensor}">启用</a><br>
+            绝对方向传感器 (Absolute Orientation Sensor) <a @click="${this._absoluteorientationsensor}">启用</a><br>
             <span>测量设备相对于相对于地球参考坐标系的物理方向</span>
+            <div></div>
+          </div>
+          <div id="osr">
+            相对方向传感器 (Relative Orientation Sensor) <a @click="${this._relativeorientationsensor}">启用</a><br>
             <span>测量设备相对于固定的参考坐标系统的旋转数据</span><br>
             <div></div>
           </div>
@@ -316,5 +320,5 @@ import{s as u,r as l,$ as p,i as s,n as g}from"./index.15bad300.js";var m=Object
         </fluent-card>
         <app-footer></app-footer>
       </div>
-    `}};o([s("#a div")],t.prototype,"_a",2);o([s("#g div")],t.prototype,"_g",2);o([s("#as div")],t.prototype,"_as",2);o([s("#os div")],t.prototype,"_os",2);o([s("#gs div")],t.prototype,"_gs",2);o([s("#als div")],t.prototype,"_als",2);o([s("#m div")],t.prototype,"_m",2);o([s("#compass")],t.prototype,"_c",2);t=o([g("sample-gs")],t);export{t as SampleGS};
-//# sourceMappingURL=sample-gs.5f00b7a3.js.map
+    `}};a([o("#a div")],n.prototype,"_a",2);a([o("#g div")],n.prototype,"_g",2);a([o("#as div")],n.prototype,"_as",2);a([o("#os div")],n.prototype,"_os",2);a([o("#osr div")],n.prototype,"_osr",2);a([o("#gs div")],n.prototype,"_gs",2);a([o("#als div")],n.prototype,"_als",2);a([o("#m div")],n.prototype,"_m",2);a([o("#compass")],n.prototype,"_c",2);n=a([g("sample-gs")],n);export{n as SampleGS};
+//# sourceMappingURL=sample-gs.ce4d684f.js.map
