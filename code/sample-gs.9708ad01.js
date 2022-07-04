@@ -1,8 +1,24 @@
-import{s as l,r as p,$ as g,i as a,n as b}from"./index.370b9822.js";var v=Object.defineProperty,m=Object.getOwnPropertyDescriptor,o=(r,e,s,n)=>{for(var t=n>1?void 0:n?m(e,s):e,d=r.length-1,c;d>=0;d--)(c=r[d])&&(t=(n?c(e,s,t):c(t))||t);return n&&t&&v(e,s,t),t};let i=class extends l{constructor(){super()}_accelerometer(){let r=null;try{r=new Accelerometer({frequency:60}),r.onerror=e=>{e.error.name==="NotAllowedError"?this._a.innerHTML="Permission to access sensor was denied.":e.error.name==="NotReadableError"&&(this._a.innerHTML="Cannot connect to the sensor.")},r.onreading=e=>{this._a.innerHTML=e},r.addEventListener("reading",()=>{this._a.innerHTML=`
-          X-\u8F74 ${r.x} <br>
-          Y-\u8F74 ${r.y} <br>
-          Z-\u8F74 ${r.z} <br>
-        `}),r.start()}catch(e){if(e.name==="SecurityError")this._a.innerHTML="Sensor construction was blocked by the Permissions Policy.";else if(e.name==="ReferenceError")this._a.innerHTML="Sensor is not supported by the User Agent.";else throw e}}_ambientlightsensor(){if("AmbientLightSensor"in window){const r=new AmbientLightSensor;r.addEventListener("reading",e=>{this._als.innerHTML="Current light level:",r.illuminance}),r.addEventListener("error",e=>{this._als.innerHTML=e.error.name,e.error.message}),r.start()}}async connectedCallback(){super.connectedCallback()}static get styles(){return p`
+import{s as u,r as l,$ as p,i as s,n as g}from"./index.7983c3e0.js";var m=Object.defineProperty,b=Object.getOwnPropertyDescriptor,o=(e,r,c,i)=>{for(var n=i>1?void 0:i?b(r,c):r,d=e.length-1,a;d>=0;d--)(a=e[d])&&(n=(i?a(r,c,n):a(n))||n);return i&&n&&m(r,c,n),n};let t=class extends u{constructor(){super()}_accelerometer(){let e=null;try{e=new Accelerometer({frequency:60}),e.onerror=r=>{r.error.name==="NotAllowedError"?this._a.innerHTML="Permission to access sensor was denied.":r.error.name==="NotReadableError"&&(this._a.innerHTML="Cannot connect to the sensor.")},e.onreading=r=>{this._a.innerHTML=r},e.addEventListener("reading",()=>{this._a.innerHTML=`
+          X-\u8F74 ${e.x} <br>
+          Y-\u8F74 ${e.y} <br>
+          Z-\u8F74 ${e.z} <br>
+        `}),e.start()}catch(r){if(r.name==="SecurityError")this._a.innerHTML="\u52A0\u901F\u5EA6\u8BA1\u88AB\u6743\u9650\u7B56\u7565\u9650\u5236";else if(r.name==="ReferenceError")this._a.innerHTML="\u4E0D\u652F\u6301\u52A0\u901F\u5EA6\u8BA1";else throw r}}_linearaccelerationsensor(){if("LinearAccelerationSensor"in window){this._as.innerHTML="\u652F\u6301\u7EBF\u6027\u52A0\u901F\u5EA6\u4F20\u611F\u5668";let e=new LinearAccelerationSensor({frequency:60});e.addEventListener("reading",r=>{this._as.innerHTML=`
+          X \u8F74\u7EBF\u6027\u52A0\u901F\u5EA6: ${e.x} <br>
+          Y \u8F74\u7EBF\u6027\u52A0\u901F\u5EA6: ${e.y} <br>
+          Z \u8F74\u7EBF\u6027\u52A0\u901F\u5EA6: ${e.z} <br>
+        `}),e.start()}}_ambientlightsensor(){if("AmbientLightSensor"in window){this._als.innerHTML="\u652F\u6301\u73AF\u5883\u5149\u4F20\u611F\u5668";const e=new AmbientLightSensor;e.addEventListener("reading",r=>{this._als.innerHTML="\u5F53\u524D\u4EAE\u5EA6: "+e.illuminance}),e.addEventListener("error",r=>{this._als.innerHTML=r.error.name+" "+r.error.message}),e.start()}}_gyroscope(){if("Gyroscope"in window){this._g.innerHTML="\u652F\u6301\u9640\u87BA\u4EEA";let e=new Gyroscope({frequency:60});e.addEventListener("reading",()=>{this._g.innerHTML=`
+          X \u8F74\u89D2\u901F\u5EA6: ${e.x} <br>
+          Y \u8F74\u89D2\u901F\u5EA6: ${e.y} <br>
+          Z \u8F74\u89D2\u901F\u5EA6: ${e.z}
+        `}),e.start()}}_orientationsensor(){if("AbsoluteOrientationSensor"in window){this._os.innerHTML="\u652F\u6301\u7EDD\u5BF9\u65B9\u5411\u4F20\u611F\u5668";const e={frequency:60,referenceFrame:"device"},r=new AbsoluteOrientationSensor(e);r.addEventListener("reading",c=>{let i=c.target.quaternion,n=Math.atan2(2*i[0]*i[1]+2*i[2]*i[3],1-2*i[1]*i[1]-2*i[2]*i[2])*(180/Math.PI),d="\u4EE5\u5EA6\u4E3A\u5355\u4F4D: "+n,a=270+n;console.log("adjusted heading Before: "+a),console.log("adjusted heading After: "+a),d+="<br>\u8C03\u6574: "+a,this._os.innerHTML=d,this._c.style.Transform="rotate("+a+"deg)",this._c.style.WebkitTransform="rotate("+a+"deg)"}),r.start()}}_gravity(){if("GravitySensor"in window){this._gs.innerHTML="\u652F\u6301\u91CD\u529B\u611F\u5E94\u5668";let e=new GravitySensor({frequency:60});e.addEventListener("reading",()=>{this._gs.innerHTML=`
+          X \u8F74\u91CD\u529B: ${e.x} <br>
+          Y \u8F74\u91CD\u529B: ${e.y} <br>
+          Z \u8F74\u91CD\u529B: ${e.z}
+        `}),e.start()}}_magnetometer(){if("Magnetometer"in window){this._m.innerHTML="\u652F\u6301\u78C1\u529B\u8BA1";let e=new Magnetometer({frequency:60});e.addEventListener("reading",()=>{this._m.innerHTML=`
+          X \u8F74\u7684\u78C1\u573A: ${e.x} <br>
+          Y \u8F74\u7684\u78C1\u573A: ${e.y} <br>
+          Z \u8F74\u7684\u78C1\u573A: ${e.z}
+        `}),e.addEventListener("error",r=>{this._m.innerHTML=r.error.name+" "+r.error.message}),e.start()}}async connectedCallback(){super.connectedCallback()}static get styles(){return l`
     .about {
       padding: 0 16px;
       margin: 1rem 0 0rem 0;
@@ -202,7 +218,16 @@ import{s as l,r as p,$ as g,i as a,n as b}from"./index.370b9822.js";var v=Object
       padding: 8px 16px;
     }
 
-    `}render(){return g`
+    .act div span {
+      font-size: 0.8rem;
+    }
+
+    #compass {
+      width:100%;
+      max-width:400px;
+    }
+
+    `}render(){return p`
       <app-header ?enableBack="${!0}"></app-header>
       <div class="about">
         <fluent-breadcrumb>
@@ -213,32 +238,42 @@ import{s as l,r as p,$ as g,i as a,n as b}from"./index.370b9822.js";var v=Object
         <fluent-card class="act">
           <div id="a">
             加速度计 (Accelerometer)
-            <a @click="${this._accelerometer}">启用</a>
+            <a @click="${this._accelerometer}">启用</a><br>
+            <span>测量设备在 X, Y, Z 轴的加速度</span>
             <div></div>
           </div>
           <div id="g">
             陀螺仪 (Gyroscope)
+            <a @click="${this._gyroscope}">启用</a><br>
+            <span>测量设备在偏转、倾斜时相对于X，Y 和 Z 轴的角速度 (rad/s)</span>
             <div></div>
           </div>
           <div id="as">
             线性加速度传感器 (Linear Acceleration Sensor)
+            <a @click="${this._linearaccelerationsensor}">启用</a><br>
+            <span>测量设备的加速度（不含重力）</span>
             <div></div>
           </div>
           <div id="os">
-            方向传感器 (Orientation Sensor)
+            <img src="https://purepng.com/public/uploads/large/purepng.com-compasscompassinstrumentnavigationcardinal-directionspointsdiagram-1701527842316onq7x.png" id="compass" hidden/>
+            绝对/相对方向传感器 (Orientation Sensor) <a @click="${this._orientationsensor}">启用</a><br>
+            <span>测量设备相对于相对于地球参考坐标系的物理方向</span>
+            <span>测量设备相对于固定的参考坐标系统的旋转数据</span><br>
             <div></div>
           </div>
           <div id="gs">
-            重力感应器 (Gravity Sensor)
+            重力感应器 (Gravity Sensor) <a @click="${this._gravity}">启用</a><br>
+            <span>提供沿所有三个轴应用于设备的重力</span>
             <div></div>
           </div>
           <div id="als">
-            环境光传感器 (Ambient Light Sensor)
-            <a @click="${this._ambientlightsensor}">启用</a>
+            环境光传感器 (Ambient Light Sensor) <a @click="${this._ambientlightsensor}">启用</a><br>
+            <span>设备周围环境光的光照水平或光照强度</span>
             <div></div>
           </div>
           <div id="m">
-            磁力计 (Magnetometer)
+            磁力计 (Magnetometer) <a @click="${this._magnetometer}">启用</a><br>
+            <span>提供设备主磁力计检测到的磁场的信息</span>
             <div></div>
           </div>
         </fluent-card>
@@ -281,5 +316,5 @@ import{s as l,r as p,$ as g,i as a,n as b}from"./index.370b9822.js";var v=Object
         </fluent-card>
         <app-footer></app-footer>
       </div>
-    `}};o([a("#a div")],i.prototype,"_a",2);o([a("#g div")],i.prototype,"_g",2);o([a("#as div")],i.prototype,"_as",2);o([a("#os div")],i.prototype,"_os",2);o([a("#gs div")],i.prototype,"_gs",2);o([a("#als div")],i.prototype,"_als",2);o([a("#m div")],i.prototype,"_m",2);i=o([b("sample-gs")],i);export{i as SampleGS};
-//# sourceMappingURL=sample-gs.364d6b64.js.map
+    `}};o([s("#a div")],t.prototype,"_a",2);o([s("#g div")],t.prototype,"_g",2);o([s("#as div")],t.prototype,"_as",2);o([s("#os div")],t.prototype,"_os",2);o([s("#gs div")],t.prototype,"_gs",2);o([s("#als div")],t.prototype,"_als",2);o([s("#m div")],t.prototype,"_m",2);o([s("#compass")],t.prototype,"_c",2);t=o([g("sample-gs")],t);export{t as SampleGS};
+//# sourceMappingURL=sample-gs.9708ad01.js.map

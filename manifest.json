@@ -60,7 +60,7 @@
   ],
   "file_handlers": [
     {
-      "action": "/sample/sample-fh",
+      "action": "/sample/file-handling",
       "accept": {
         "image/webp": [".webp"],
         "image/jpeg": [".jpeg", ".jpg"],

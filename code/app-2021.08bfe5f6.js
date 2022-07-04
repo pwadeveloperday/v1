@@ -1,4 +1,4 @@
-import{a as l,s as c,r as h,$ as p,o as C,e as a,n as g}from"./index.370b9822.js";/**
+import{a as l,s as c,r as h,$ as p,o as C,e as a,n as g}from"./index.7983c3e0.js";/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
@@ -149,4 +149,4 @@ import{a as l,s as c,r as h,$ as p,o as C,e as a,n as g}from"./index.370b9822.js
           <app-footer-home></app-footer-home>
         </div>
       `}else return p`<div>No data</div>`}};o([a({type:String})],r.prototype,"description",2);o([a({type:Object})],r.prototype,"jsondata",2);o([a({type:String})],r.prototype,"screenwidth",2);o([a({type:String})],r.prototype,"screenheight",2);o([a({type:String})],r.prototype,"topic",2);o([f(".ids")],r.prototype,"ids",2);r=o([g("app-2021")],r);export{r as App2021};
-//# sourceMappingURL=app-2021.0f7a494d.js.map
+//# sourceMappingURL=app-2021.08bfe5f6.js.map
