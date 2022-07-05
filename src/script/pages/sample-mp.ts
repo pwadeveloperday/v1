@@ -20,7 +20,7 @@ export class SampleMP extends LitElement {
       
       launchQueue.setConsumer(async (launchParams) => {
         if (!launchParams.files.length) {
-          this.msg.innerHTML = '没有从视频文件邮件菜单打开本页面'
+          this.msg.innerHTML = '没有从视频文件右键菜单打开本页面'
           return;
         }
         for (let fileHandle of launchParams.files) {

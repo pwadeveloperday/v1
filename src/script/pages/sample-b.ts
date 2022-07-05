@@ -1,38 +1,30 @@
 import { LitElement, css, html } from 'lit';
-import { customElement, query } from 'lit/decorators.js';
+import { customElement } from 'lit/decorators.js';
 
-@customElement('sample-fh')
-export class SampleFH extends LitElement {
-  @query('#first-video') video: HTMLVideoElement;
-  @query('#msg') msg: HTMLDivElement;
-  @query('#show') show: HTMLDivElement;
+@customElement('sample-b')
+export class SampleB extends LitElement {
 
-  private async _playFileHandler() {
-    if ('launchQueue' in window && 'files' in LaunchParams.prototype) {
-      console.log('您的浏览器支持文件处理 API');
-      
-      launchQueue.setConsumer(async (launchParams) => {
-        if (!launchParams.files.length) {
-          this.msg.innerHTML = '没有从图片文件右键菜单打开本页面'
-          return;
-        }
-        for (let fileHandle of launchParams.files) {
-          console.log(fileHandle);
-          const file = await fileHandle.getFile();
-          console.log(file);
-          // this.video.src = URL.createObjectURL(file);
-          this.show.setAttribute('style', 'display: block;');
-          this.show.innerHTML = `
-            <img src="${URL.createObjectURL(file)}">
-          `
-        }
-      });
+  _randomIntFromInterval(min: number, max: number) { // min and max included 
+    return Math.floor(Math.random() * (max - min + 1) + min)
+  }
+
+  _unreadCountChanged(newUnreadCount: number) {
+    if (navigator.setAppBadge) {
+      navigator.setAppBadge(newUnreadCount);
     }
+  }
+
+  _b() {
+    let rndInt = this._randomIntFromInterval(1, 999)
+    this._unreadCountChanged(rndInt);
+  }
+
+  _bc() {
+    navigator.clearAppBadge();
   }
 
   async connectedCallback() {
     super.connectedCallback();
-    this._playFileHandler();
   }
 
   static get styles() {
@@ -109,6 +101,7 @@ export class SampleFH extends LitElement {
 
     a {
       color: rgba(255, 255, 255, 0.9);
+
       text-decoration: none;
       border-bottom: 0px dashed rgba(255, 255, 255, 0.6);;
     }
@@ -222,6 +215,7 @@ export class SampleFH extends LitElement {
 
     .act a {
       color: rgba(0, 113, 197, 0.9);
+      cursor: pointer;
       text-decoration: none;
       border-bottom: 1px dashed rgba(0, 113, 197, 0.6);
     }
@@ -250,38 +244,28 @@ export class SampleFH extends LitElement {
           <fluent-breadcrumb-item href="/">首页</fluent-breadcrumb-item>
           <fluent-breadcrumb-item href="/sample">示例</fluent-breadcrumb-item>
         </fluent-breadcrumb>
-        <h2>文件处理 (File Handling) API</h2>
+        <h2>徽章 (Badging) API</h2>
         <fluent-card class="act">
-          <div id="show"></div>
-          <div>
-            <div id="msg"></div>
-            将“中国 PWA 开发者日”注册为默认图片查看器
-            <ul>
-              <li>浏览器启用 chrome://flags#file-handling-api</li>
-              <li>访问 <a href="https://pwadev.io">https://pwadev.io</a></li>
-              <li>安装为本地 PWA 应用</li>
-              <li>右键点击电脑中的图片文件 (.png, .jpg, .jpeg)</li>
-              <li>选择“打开方式” -&gt; 选择“中国 PWA 开发者日”</li>
-            </ul>
-          </div>
+          <a @click="${this._b}">设置 Badge</a>
+          <a @click="${this._bc}">清除 Badge</a>
         </fluent-card>
         <fluent-card id="st">
           <div class="tut">
             <icon-webdev></icon-webdev> 
-            <a href="https://web.dev/i18n/zh/file-handling/" title="The File System Access API: simplifying access to local files">
-              教程：注册应用到系统的文件处理
+            <a href="https://web.dev/notifications/" title="Web Push and Notifications">
+              教程：网络推送和通知
             </a>
           </div>
-          <div class="w3c"><icon-w3c class="w3clogo"></icon-w3c> <a href="https://wicg.github.io/manifest-incubations/index.html#file_handlers-member" title="File Handling">File Handling</a></div>
+          <div class="w3c">whatwg <a href="https://notifications.spec.whatwg.org/" title="yestifications API">Notifications API</a></div>
           <div class="imp">
             <div class="des">
-              <a href="https://chromestatus.com/feature/5721776357113856" title="在 Chromium 102 版本支持">🐡 M102</a>
+              <a href="https://chromestatus.com/feature/5064350557536256" title="在 Chromium 102 版本支持">🌐 M20</a>
             </div>
             <div class="des">
               <div class="det">
               <icon-chr class="yes" title="Google Chrome 浏览器"></icon-chr>
               <icon-edg class="yes" title="微软 Edge 浏览器"></icon-edg> <icon-ope class="yes" title="Opera 浏览器"></icon-ope> <icon-viv class="yes" title="Vivaldi 浏览器"></icon-viv>
-              <icon-saf class="no" title="Apple Safari 浏览器"></icon-saf> <icon-fir class="no" title="Mozilla Firefox 浏览器"></icon-fir>
+              <icon-saf class="yes" title="Apple Safari 浏览器"></icon-saf> <icon-fir class="yes" title="Mozilla Firefox 浏览器"></icon-fir>
               </div>
             </div>
             <div class="des">
@@ -289,7 +273,7 @@ export class SampleFH extends LitElement {
                 <icon-mac class="yes" title="Mac"></icon-mac> <icon-win class="yes" title="Windows"></icon-win> <icon-lin class="yes" title="Linux"></icon-lin> 
               </div>
               <div class="det">
-                <icon-and class="no" title="Android"></icon-and> <icon-ios class="no" title="iOS"></icon-ios>
+                <icon-and class="yes" title="Android"></icon-and> <icon-ios class="yes" title="iOS"></icon-ios>
               </div>
             </div>   
           </div>

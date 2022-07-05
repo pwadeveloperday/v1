@@ -70,7 +70,7 @@ export class SampleGS extends LitElement {
       this._als.innerHTML = '支持环境光传感器';
       const sensor = new AmbientLightSensor();
       sensor.addEventListener('reading', event => {
-        this._als.innerHTML = '当前亮度: ' + sensor.illuminance;
+        this._als.innerHTML = '环境光照强度: ' + sensor.illuminance;
       });
       sensor.addEventListener('error', event => {
         this._als.innerHTML = event.error.name + ' ' + event.error.message;
@@ -104,7 +104,7 @@ export class SampleGS extends LitElement {
         let q = e.target.quaternion;
         let heading = Math.atan2(2*q[0]*q[1] + 2*q[2]*q[3], 1 - 2*q[1]*q[1] - 2*q[2]*q[2])*(180/Math.PI);
 
-        let html =  '当前角度: ' + heading;
+        let html =  '罗航向: ' + heading;
         //if(heading < 0) heading = 360 + heading;
         // let headingAdjusted = 270 + heading;
         let headingAdjusted = 0 + heading;
@@ -116,7 +116,7 @@ export class SampleGS extends LitElement {
         console.log('adjusted heading After: ' + headingAdjusted);
         //var test = 90 + headingAdjusted;
         //var test = 80;
-        html += '<br>校正角度: ' + headingAdjusted;
+        // html += '<br>校正角度: ' + headingAdjusted;
         this._os.innerHTML = html;
         this._c.style.display = 'block';
         this._c.style.transform = 'rotate(' + headingAdjusted + 'deg)';

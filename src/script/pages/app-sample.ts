@@ -71,12 +71,16 @@ export class AppSample extends LitElement {
       <fluent-card>
         <ul>
           <li>
-            🐡 M
+            🌐
+            <a href="/sample/notification" appearance="primary">通知 (Notification) API</a>
+          </li>
+          <li>
+            🐡
             <a href="/sample/generic-sensor" appearance="primary">通用传感器 (Generic Sensor) API</a>
           </li>
           <li>
             🐡 M81
-            徽章 (Badging) API
+            <a href="/sample/badging" appearance="primary">徽章 (Badging) API</a>
           </li>
           <li>
             🐡 M85
