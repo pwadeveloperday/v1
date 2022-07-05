@@ -71,11 +71,11 @@ export class AppSample extends LitElement {
       <fluent-card>
         <ul>
           <li>
-            🌐
+            🌐 M20
             <a href="/sample/notification" appearance="primary">通知 (Notification) API</a>
           </li>
           <li>
-            🐡
+            🐡 M63
             <a href="/sample/generic-sensor" appearance="primary">通用传感器 (Generic Sensor) API</a>
           </li>
           <li>
@@ -103,6 +103,16 @@ export class AppSample extends LitElement {
             WebCodecs API
           </li>
           <li>
+            🐡 M95
+            <a href="/sample/eyedropper" appearance="primary">
+              滴管 (EyeDropper) API
+            </a>  
+          </li>
+          <li>
+            🐡 M96
+            URL 协议处理 (URL protocol handler)
+          </li>
+          <li>
             🌐 M97
             WebTransport (v.s. WebSockets)
           </li>
@@ -112,7 +122,7 @@ export class AppSample extends LitElement {
           </li>
           <li>
             🐡 M102
-            窗口控件覆盖 (Window Controls Overlay for Installed Desktop Web Apps)
+            窗口控件覆盖 (Window Controls Overlay)
           </li>
           <li>
             🐡 M102

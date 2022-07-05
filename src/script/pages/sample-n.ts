@@ -12,16 +12,7 @@ export class SampleN extends LitElement {
       body: notifbody,
       icon: notifimg,
     };
-    const notification = new Notification(notiftitle, options);
-    
-    setTimeout(this._randomNotification, 3000);
-
-    notification.onshow = function(){
-      var self = this;
-      setTimeout(function(){
-        self.close();
-      }, 3000);
-    }
+    new Notification(notiftitle, options);
   }
 
   _n() {
@@ -255,7 +246,7 @@ export class SampleN extends LitElement {
         </fluent-breadcrumb>
         <h2>通知 (Notification) API</h2>
         <fluent-card class="act">
-          <a @click="${this._n}">显示通知</a>
+          <button @click="${this._n}">显示通知</button>
         </fluent-card>
         <fluent-card id="st">
           <div class="tut">

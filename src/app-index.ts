@@ -151,6 +151,13 @@ export class AppIndex extends LitElement {
             },
           },
           {
+            path: '/sample/eyedropper',
+            component: 'sample-ed',
+            action: async () => {
+              await import('./script/pages/sample-ed.js');
+            },
+          },
+          {
             path: '/sample/web-share',
             component: 'sample-ws',
             action: async () => {

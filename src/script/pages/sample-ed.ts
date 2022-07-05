@@ -1,35 +1,31 @@
 import { LitElement, css, html } from 'lit';
-import { customElement, query } from 'lit/decorators.js';
+import { customElement, property, query } from 'lit/decorators.js';
 
-@customElement('sample-b')
-export class SampleB extends LitElement {
+@customElement('sample-ed')
+export class SampleED extends LitElement {
 
   @query('#msg') _msg: HTMLDivElement;
+  @property({ type: Object }) abortController = new AbortController();
 
-  _randomIntFromInterval(min: number, max: number) { // min and max included 
-    return Math.floor(Math.random() * (max - min + 1) + min)
-  }
-
-  _unreadCountChanged(newUnreadCount: number) {
-    if (navigator.setAppBadge) {
-      this._msg.innerHTML = '支持 Badging API';
-      navigator.setAppBadge(newUnreadCount).then(() => {
-        this._msg.innerHTML = 'Badge 添加成功';
-      }).catch((error) => {
-        this._msg.innerHTML = error.name + ' ' + error.message;
-      });
+  async _sampleColorFromScreen() {
+    this.abortController = new AbortController();
+    const eyeDropper = new EyeDropper();
+    try {
+      const result = await eyeDropper.open({signal: this.abortController.signal});
+      this._msg.innerHTML = result.sRGBHex;
+      this._msg.setAttribute('style', 'background: ' + result.sRGBHex);
+      
+      // return result.sRGBHex;
+    } catch (e) {
+      // return null;
+      this._msg.innerHTML = e.message;
     }
   }
-
-  _b() {
-    let rndInt = this._randomIntFromInterval(1, 999)
-    this._unreadCountChanged(rndInt);
-  }
-
-  _bc() {
-    navigator.clearAppBadge().catch((error) => {
-      this._msg.innerHTML = error.name + ' ' + error.message;
-    });
+ 
+  _abort() {
+    this._msg.innerHTML = '已取消';
+    this._msg.setAttribute('style', 'background: none');
+    this.abortController.abort();
   }
 
   async connectedCallback() {
@@ -258,23 +254,23 @@ export class SampleB extends LitElement {
           <fluent-breadcrumb-item href="/">首页</fluent-breadcrumb-item>
           <fluent-breadcrumb-item href="/sample">示例</fluent-breadcrumb-item>
         </fluent-breadcrumb>
-        <h2>徽章 (Badging) API</h2>
+        <h2>Eyedropper API</h2>
         <fluent-card class="act">
-          <button @click="${this._b}">设置 Badge</button>
-          <button @click="${this._bc}">清除 Badge</button>
+          <button @click="${this._sampleColorFromScreen}">启用 Eyedropper</button>
+          <button @click="${this._abort}">中止 Eyedropper</button>
           <div id="msg"></div>
         </fluent-card>
         <fluent-card id="st">
           <div class="tut">
             <icon-webdev></icon-webdev> 
-            <a href="https://web.dev/badging-api/" title="What is the App Badging API? ">
-              教程：什么是应用徽章 API
+            <a href="https://web.dev/eyedropper/" title="Picking colors of any pixel on the screen with the EyeDropper API ">
+              教程：选择屏幕上任意像素的颜色
             </a>
           </div>
-          <div class="w3c"><icon-w3c class="w3clogo"></icon-w3c> <a href="https://w3c.github.io/badging/" title="Badging API">Badging API</a></div>
+          <div class="w3c"><icon-w3c class="w3clogo"></icon-w3c> <a href="https://wicg.github.io/eyedropper-api/" title="EyeDropper API">EyeDropper API</a></div>
           <div class="imp">
             <div class="des">
-              <a href="https://www.chromestatus.com/feature/6068482055602176" title="在 Chromium 81 版本支持">🐡 M81</a>
+              <a href="https://chromestatus.com/feature/6304275594477568" title="在 Chromium 95 版本支持">🐡 M95</a>
             </div>
             <div class="des">
               <div class="det">
@@ -288,7 +284,7 @@ export class SampleB extends LitElement {
                 <icon-mac class="yes" title="Mac"></icon-mac> <icon-win class="yes" title="Windows"></icon-win> <icon-lin class="yes" title="Linux"></icon-lin> 
               </div>
               <div class="det">
-                <icon-and class="yes" title="Android"></icon-and> <icon-ios class="no" title="iOS"></icon-ios>
+                <icon-and class="no" title="Android"></icon-and> <icon-ios class="no" title="iOS"></icon-ios>
               </div>
             </div>   
           </div>

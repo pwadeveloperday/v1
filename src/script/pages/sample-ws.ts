@@ -276,7 +276,7 @@ export class SampleWS extends LitElement {
               内容:
             </td>
             <td>
-              <textarea id="text" name="text" cols="34" rows="3">欢迎参加 2022 第二届中国 PWA 开发者日，了解最新 PWA 技术。</textarea>
+              <textarea id="text" name="text" cols="33" rows="3">欢迎参加 2022 第二届中国 PWA 开发者日，了解最新 PWA 技术。</textarea>
             </td>
           </tr>
           <tr>
