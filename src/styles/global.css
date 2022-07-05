@@ -26,6 +26,15 @@
   );
 }
 
+#title-bar {
+  position: absolute;
+  left: env(titlebar-area-x);
+  top: env(titlebar-area-y);
+  height: env(titlebar-area-height);
+  width: env(titlebar-area-width);
+  -webkit-app-region: drag;
+}
+
 html {
   scroll-behavior: smooth;
 }
