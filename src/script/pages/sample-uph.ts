@@ -7,11 +7,11 @@ export class SampleUPH extends LitElement {
   @query('#msg') _msg: HTMLDivElement;
 
   _showUrlParameters() {
-    const param = location.pathname;
+    const param = location.search;
     console.log(param);
-    if(param.trim().indexOf('great') > -1) {
+    if(param.trim().indexOf('pwadevday') > -1) {
       this._msg.innerHTML = `
-        pathname: ${param}, 成功调用
+        search: ${param}, 成功调用
       `;
     }
   }
@@ -252,7 +252,7 @@ export class SampleUPH extends LitElement {
             <li>访问 <a href="https://pwadev.io">https://pwadev.io</a></li>
             <li>安装为本地 PWA 应用</li>
             <li>回到浏览器，访问 <a href="https://pwadev.io/sample/url-protocol-handler">https://pwadev.io/sample/url-protocol-handler</a> </li>
-            <li>点击 <a href="web+pwa://great">web+pwa://great</a></li>
+            <li>点击 <a href="web+pwa://great">web+pwa://pwadevday</a></li>
             <li>"中国 PWA 开发者日" 被成功调用</li>
           </ul>
           <div id="msg"></div>
