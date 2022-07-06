@@ -282,7 +282,7 @@ export class AppBlog extends LitElement {
         <app-header ?enableBack="${true}"></app-header>
         <div class="about">
           <h2><a href="/blog" title="博客">Blog</a></h2>
-          <div class="desc">我们为您准备的关于 PWA 及 Fugu API 的更新和故事</div>
+          <div class="desc">为您准备的关于 PWA 及 Fugu API 的更新和故事</div>
           <div id="schedule">
             ${unsafeHTML(fluentdata)}
           </div>
@@ -293,7 +293,7 @@ export class AppBlog extends LitElement {
       return html`<app-header ?enableBack="${true}"></app-header>
       <div class="about">
         <h2>Blog</h2>
-        <div class="desc">我们为开发者准备的最新消息、更新和故事</div>
+        <div class="desc">为您准备的关于 PWA 及 Fugu API 的更新和故事</div>
         <fluent-card>
         </fluent-card>
       </div>

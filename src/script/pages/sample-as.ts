@@ -1,27 +1,8 @@
 import { LitElement, css, html } from 'lit';
 import { customElement } from 'lit/decorators.js';
 
-@customElement('sample-wco')
-export class SampleWCO extends LitElement {
-
-  _randomNotification() {
-    const notiftitle = '中国 PWA 开发者日';
-    const notifbody = `为加速推动渐进式 Web 应用 (PWA) 在中国的发展，微软与英特尔携手举办“第二届中国 PWA 开发者日”。`;
-    const notifimg = `assets/icons/icon_96.png`;
-    const options = {
-      body: notifbody,
-      icon: notifimg,
-    };
-    new Notification(notiftitle, options);
-  }
-
-  _n() {
-    Notification.requestPermission().then((result) => {
-      if (result === 'granted') {
-        this._randomNotification();
-      }
-    });
-  }
+@customElement('sample-as')
+export class SampleAS extends LitElement {
 
   async connectedCallback() {
     super.connectedCallback();
@@ -229,36 +210,11 @@ export class SampleWCO extends LitElement {
       display: none;
     }
 
-    #titleBarContainer {
-      position: absolute;
-      top: env(titlebar-area-y, 0);
-      height: env(titlebar-area-height, var(--fallback-title-bar-height));
-      width: 100%;
-      background-color:rgb(61, 61, 61);
+    .act div {
+      background-color: rgba(0, 0, 0, 0.02);
+      padding: 8px 16px;
     }
-    
-    #titleBar {
-      position: absolute;
-      top: 0;
-      display: flex;
-      user-select: none;
-      height: 100%;
-      color: #FFFFFF;
-      left: env(titlebar-area-x, 0);
-      width: env(titlebar-area-width, 100%);
-      text-align: center;
-    }
-    
-    #titleBar > span {
-      margin: auto;
-      padding: 0px 16px 0px 16px;
-    }
-    
-    #titleBar > div {
-      flex: 1;
-      margin-top: 3px;
-      border: none;
-    }
+
     `;
   }
 
@@ -268,37 +224,34 @@ export class SampleWCO extends LitElement {
 
   render() {
     return html`
-      <div id="titleBarContainer">
-        <div id="titleBar" class=" draggable">
-          <span class="draggable">今日天气</span>
-          <div class="nonDraggable">北京 27℃ 上海 36℃ 漠河 27℃ 三沙 31℃</div>
-        </div>
-      </div>
       <app-header ?enableBack="${true}"></app-header>
       <div class="about">
         <fluent-breadcrumb>
           <fluent-breadcrumb-item href="/">首页</fluent-breadcrumb-item>
           <fluent-breadcrumb-item href="/sample">示例</fluent-breadcrumb-item>
         </fluent-breadcrumb>
-        <h2>窗口控件叠加 (Window Controls Overlay)</h2>
+        <h2>应用快捷方式 (App Shortcuts)</h2>
         <fluent-card class="act">
-          标题栏区域是指窗口控件（即最小化、最大化、关闭等按钮）左侧或右侧的空间，通常包含应用程序的标题。Window Controls Overlay 让渐进式 Web 应用程序 (PWA) 允许开发人员将自定义内容放置在由浏览器控制的标题栏区域中。
-           <ul>
-             <li>访问 <a href="https://pwadev.io">https://pwadev.io</a></li>
-             <li>安装为本地 PWA 应用</li>
-             <li>在 PWA 应用中进入该页面查看标题栏效果</li>
-           </ul>
+        利用应用程序的快捷方式可快速访问用户经常需要的一些常见操作。
+          <ul>
+            <li>访问 <a href="https://pwadev.io">https://pwadev.io</a></li>
+            <li>安装为本地 PWA 应用</li>
+            <li>触发 PWA 应用 快捷方式</li>
+          </ul>
+          📱 Android：长按 PWA 应用图标触发快捷方式<br>
+          💻 Windows：任务栏或开始菜单中右键点击 PWA 应用图标
         </fluent-card>
         <fluent-card id="st">
           <div class="tut">
             <icon-webdev></icon-webdev> 
-            <a href="https://web.dev/window-controls-overlay/" title="Customize the window controls overlay of your PWA's title bar">
-              教程：自定义 PWA 标题栏的窗口控件叠加
+            <a href="https://web.dev/app-shortcuts/" title="Get things done quickly with app shortcuts">
+              教程：使用快捷方式快速完成任务
             </a>
           </div>
+          <div class="w3c"><icon-w3c class="w3clogo"></icon-w3c> <a href="https://w3c.github.io/manifest/#shortcuts-member" title="Web Application Manifest: Shortcuts">Web Application Manifest: Shortcuts</a></div>
           <div class="imp">
             <div class="des">
-              <a href="https://chromestatus.com/feature/5741247866077184" title="在 Chromium 102 版本支持">🐡 M102</a>
+              <a href="https://chromestatus.com/feature/5706099464339456" title="在 Chromium 85 版本支持">🐡 M85</a>
             </div>
             <div class="des">
               <div class="det">
@@ -312,7 +265,7 @@ export class SampleWCO extends LitElement {
                 <icon-mac class="yes" title="Mac"></icon-mac> <icon-win class="yes" title="Windows"></icon-win> <icon-lin class="yes" title="Linux"></icon-lin> 
               </div>
               <div class="det">
-                <icon-and class="no" title="Android"></icon-and> <icon-ios class="no" title="iOS"></icon-ios>
+                <icon-and class="yes" title="Android"></icon-and> <icon-ios class="no" title="iOS"></icon-ios>
               </div>
             </div>   
           </div>

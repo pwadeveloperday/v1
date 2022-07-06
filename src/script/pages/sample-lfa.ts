@@ -386,11 +386,6 @@ export class SampleLFA extends LitElement {
             <div id="error-message" class="error"></div>
             <div id="result" class="result">
               <div id="font-info" class="font-info">
-                <div id="font-info-postscript-name" class="font-info-item"></div>
-                <div id="font-info-full-name" class="font-info-item"></div>
-                <div id="font-info-style" class="font-info-item"></div>
-                <div id="font-info-family" class="font-info-item"></div>
-                <div id="font-info-outline-format" class="font-info-item"></div>
                 <div class="previewv" contenteditable="true">
                   <h3>滕王阁序</h3>
                   <h4>王勃</h4>
@@ -405,19 +400,11 @@ export class SampleLFA extends LitElement {
                     漁舟唱晚，<br>響窮彭蠡之濱，<br>雁陣驚寒，<br>聲斷衡陽之浦。
                   </div>
                 </div>
-                <div class="preview" contenteditable="true">
-                  <div>
-                    中国 PWA 开发者日 PWA 的特点
-                    可发现 (Discoverable) 
-                    可安装 (Installable) 
-                    可链接 (Linkable) 
-                    独立于网络 (Network independent) 
-                    渐进式 (Progressive) 
-                    可重入 (Re-engageable) 
-                    响应式 (Responsive) 
-                    安全 (Safe) 
-                  </div>
-                </div>
+                <div id="font-info-postscript-name" class="font-info-item"></div>
+                <div id="font-info-full-name" class="font-info-item"></div>
+                <div id="font-info-style" class="font-info-item"></div>
+                <div id="font-info-family" class="font-info-item"></div>
+                <div id="font-info-outline-format" class="font-info-item"></div>
               </div>
             </div>
           </div>

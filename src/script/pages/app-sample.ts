@@ -84,7 +84,9 @@ export class AppSample extends LitElement {
           </li>
           <li>
             🐡 M85
-            应用快捷方式 (App Shortcuts)
+              <a href="/sample/app-shortcuts" appearance="primary">
+              应用快捷方式 (App Shortcuts)
+            </a>
           </li>
           <li>
             🐡 M89
@@ -110,7 +112,9 @@ export class AppSample extends LitElement {
           </li>
           <li>
             🐡 M96
+            <a href="/sample/url-protocol-handler" appearance="primary">
             URL 协议处理 (URL protocol handler)
+            </a>
           </li>
           <li>
             🌐 M97

@@ -147,10 +147,24 @@ export class AppIndex extends LitElement {
             },
           },
           {
+            path: '/sample/url-protocol-handler',
+            component: 'sample-uph',
+            action: async () => {
+              await import('./script/pages/sample-uph.js');
+            },
+          },
+          {
             path: '/sample/generic-sensor',
             component: 'sample-gs',
             action: async () => {
               await import('./script/pages/sample-gs.js');
+            },
+          },
+          {
+            path: '/sample/app-shortcuts',
+            component: 'sample-as',
+            action: async () => {
+              await import('./script/pages/sample-as.js');
             },
           },
           {

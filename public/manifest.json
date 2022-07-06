@@ -59,6 +59,10 @@
       "type": "image/png"
     }
   ],
+  "protocol_handlers": [{
+    "protocol": "web+pwa",
+    "url": "/sample/url-protocol-handler?icon=%s"
+  }],
   "file_handlers": [
     {
       "action": "/sample/file-handling",
@@ -98,10 +102,31 @@
   ],
   "shortcuts": [
     {
-      "name": "Open Home",
+      "name": "打开首页",
       "short_name": "Home",
-      "description": "Open the Home page",
+      "description": "打开首页",
       "url": "/",
+      "icons": [{ "src": "assets/icons/icon_192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "2022",
+      "short_name": "2022",
+      "description": "2022年 PWA 开发者日视频",
+      "url": "/2022",
+      "icons": [{ "src": "assets/icons/icon_192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "2021",
+      "short_name": "2021",
+      "description": "2021年 PWA 开发者日视频回顾",
+      "url": "/2021",
+      "icons": [{ "src": "assets/icons/icon_192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "博客",
+      "short_name": "Blog",
+      "description": "打开博客页面",
+      "url": "/blog",
       "icons": [{ "src": "assets/icons/icon_192.png", "sizes": "192x192" }]
     }
   ]
