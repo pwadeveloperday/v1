@@ -263,9 +263,7 @@ export class SampleUPH extends LitElement {
           </ul>
           <div id="msg"></div>
         </fluent-card>
-        <fluent-card>
-          <div id="container"></div>
-        </fluent-card>
+        <div id="container"></div>
         <fluent-card id="st">
           <div class="tut">
             <icon-webdev></icon-webdev> 
