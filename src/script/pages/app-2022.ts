@@ -82,7 +82,6 @@ export class App2022 extends LitElement {
   }
 
   async fetchData() {
-    await fetch('/data.json');
     const response = await fetch('/data.json');
     this.jsondata = await response.json();
   }

@@ -122,7 +122,9 @@ export class AppSample extends LitElement {
           </li>
           <li>
             🐡 M102
-            窗口控件覆盖 (Window Controls Overlay)
+            <a href="/sample/window-controls-overlay" appearance="primary">
+              窗口控件覆盖 (Window Controls Overlay)
+            </a>
           </li>
           <li>
             🐡 M102

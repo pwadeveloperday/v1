@@ -12,6 +12,12 @@ export class AppPrivacy extends LitElement {
       min-height: calc(100vh - 76px);
     }
 
+    h2 {
+      margin: 0;
+      padding: 16px 0;
+      color: rgba(0, 113, 197, 0.9);
+    }
+
     fluent-card {
       padding: 1rem;
       margin-bottom: 1rem;

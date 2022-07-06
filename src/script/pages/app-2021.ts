@@ -1,5 +1,5 @@
 import { LitElement, css, html } from 'lit';
-import { property, customElement, query, queryAll } from 'lit/decorators.js';
+import { property, customElement, queryAll } from 'lit/decorators.js';
 import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
 
 @customElement('app-2021')
@@ -39,7 +39,7 @@ export class App2021 extends LitElement {
         "des": "",
         "speaker": "张琦",
         "pos": "资深技术总监",
-        "com": "软件与先进技术事业部 Web 平台工程",
+        "com": "英特尔 SATG Web 平台工程",
         "icon": "",
         "icon5": "assets/2022/people/500/qi.png",
         "bio": "",
@@ -88,7 +88,6 @@ export class App2021 extends LitElement {
   }
 
   async fetchData() {
-    await fetch('/data.json');
     const response = await fetch('/data.json');
     this.jsondata = await response.json();
   }

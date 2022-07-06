@@ -116,11 +116,21 @@ export class AppIndex extends LitElement {
             },
           },
           {
-            path: '/news',
-            component: 'app-news',
-            action: async () => {
-              await import('./script/pages/app-news.js');
-            },
+            path: '/blog',
+            children: [
+              { path: '/', 
+                component: 'app-blog',
+                action: async () => {
+                  await import('./script/pages/app-blog.js');
+                }
+              },
+              { path: '/:article',
+                component: 'app-blog',
+                action: async () => {
+                await import('./script/pages/app-blog.js');
+                }
+              }
+            ]
           },
           {
             path: '/sample',
@@ -155,6 +165,13 @@ export class AppIndex extends LitElement {
             component: 'sample-ed',
             action: async () => {
               await import('./script/pages/sample-ed.js');
+            },
+          },
+          {
+            path: '/sample/window-controls-overlay',
+            component: 'sample-wco',
+            action: async () => {
+              await import('./script/pages/sample-wco.js');
             },
           },
           {
