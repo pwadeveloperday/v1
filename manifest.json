@@ -61,7 +61,7 @@
   ],
   "protocol_handlers": [{
     "protocol": "web+pwa",
-    "url": "/sample/url-protocol-handler?icon=%s"
+    "url": "./?pwa=%s"
   }],
   "file_handlers": [
     {
@@ -102,7 +102,7 @@
   ],
   "shortcuts": [
     {
-      "name": "打开首页",
+      "name": "首页",
       "short_name": "Home",
       "description": "打开首页",
       "url": "/",
