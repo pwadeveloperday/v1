@@ -1,8 +1,10 @@
 import { LitElement, css, html } from 'lit';
-import { customElement } from 'lit/decorators.js';
+import { customElement, query } from 'lit/decorators.js';
 
 @customElement('sample-wco')
 export class SampleWCO extends LitElement {
+
+  @query('#weather') _weather: HTMLDivElement;
 
   _randomNotification() {
     const notiftitle = '中国 PWA 开发者日';
@@ -21,6 +23,24 @@ export class SampleWCO extends LitElement {
         this._randomNotification();
       }
     });
+  }
+
+  async _showWeather() {
+    const res = await fetch('https://restapi.amap.com/v3/weather/weatherInfo?city=110105&key=39a5a5f5239a28b739e6a79381afb97e');
+    const beijing = await res.json();
+    let lives = beijing.lives;
+    let city = lives[0].city;
+    city = city.replace('区', '');
+    const cy = `${lives[0].province}${city} ${lives[0].weather} ${lives[0].temperature}℃`;
+
+    const response = await fetch('https://restapi.amap.com/v3/weather/weatherInfo?city=310112&key=39a5a5f5239a28b739e6a79381afb97e');
+    const shanghai = await response.json();
+    lives = shanghai.lives;
+    city = lives[0].city;
+    city = city.replace('区', '');
+    const mh = `${lives[0].province}${city} ${lives[0].weather} ${lives[0].temperature}℃`
+
+    this._weather.innerHTML = `${cy} ${mh}`;
   }
 
   async connectedCallback() {
@@ -243,7 +263,7 @@ export class SampleWCO extends LitElement {
       display: flex;
       user-select: none;
       height: 100%;
-      color: #FFFFFF;
+      color: #fff;
       left: env(titlebar-area-x, 0);
       width: env(titlebar-area-width, 100%);
       text-align: center;
@@ -271,7 +291,7 @@ export class SampleWCO extends LitElement {
       <div id="titleBarContainer">
         <div id="titleBar" class=" draggable">
           <span class="draggable">今日天气</span>
-          <div class="nonDraggable">北京 27℃ 上海 36℃ 漠河 27℃ 三沙 31℃</div>
+          <div class="nonDraggable" id="weather">北京 27℃</div>
         </div>
       </div>
       <app-header ?enableBack="${true}"></app-header>
@@ -288,6 +308,9 @@ export class SampleWCO extends LitElement {
              <li>安装为本地 PWA 应用</li>
              <li>在 PWA 应用中进入该页面查看标题栏效果</li>
            </ul>
+           <button @click="${this._showWeather}">
+             天气预报
+           </button>
         </fluent-card>
         <fluent-card id="st">
           <div class="tut">

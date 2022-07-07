@@ -1,47 +1,29 @@
 import { LitElement, css, html } from 'lit';
 import { customElement, query } from 'lit/decorators.js';
 
-@customElement('sample-uph')
-export class SampleUPH extends LitElement {
+@customElement('sample-c')
+export class SampleC extends LitElement {
 
   @query('#msg') _msg: HTMLDivElement;
-  @query('#container') _container: HTMLDivElement;
-  @query('#uph') _uph: HTMLAnchorElement;
-  @query('#iuph') _iuph: HTMLInputElement;
-  @query('#geolocation') _geolocation: HTMLDivElement;
-  @query('#map') _map: HTMLDivElement;
-  
-  async _showUrlParameters() {
-    const param = location.search;
-    console.log(param);
-    if(param.trim()) {
-      this._msg.innerHTML = `
-        search: ${param}, 成功调用
-      `;
-      let address = param.split("://")[1];
-      const res = await fetch(`https://restapi.amap.com/v3/geocode/geo?address=${address}&output=JSON&key=39a5a5f5239a28b739e6a79381afb97e`);
-      const json = await res.json();
-      let geocodes = json.geocodes;
-      let location = geocodes[0].location;
-      this._geolocation.innerHTML = location;
-      const response = await fetch(`https://restapi.amap.com/v3/staticmap?location=${location}&zoom=10&size=375*250&markers=mid,,A:${location}&key=39a5a5f5239a28b739e6a79381afb97e`);
-      this._map.innerHTML = `<img src="${response}">`;
-    } else {
-      this._msg.innerHTML = `无 web+pwadev://* 调用`;
-    }
-  }
 
-  _updateUph() {
-    let uph = `web+pwadev://${this._iuph.value}`;
-    this._uph.innerHTML = uph;
-    this._uph.href = uph;
+  async _c() {
+    if("contacts" in navigator && "ContactsManager" in window) {
+      const props = ["name", "email", "tel"];
+      const opts = { multiple: true };
+
+      try {
+        const contacts = await navigator.contacts.select(props, opts);
+        this._msg.innerHTML = JSON.stringify(contacts);
+      } catch (err) {
+        this._msg.innerHTML = '';
+      }
+    } else {
+      this._msg.innerHTML = '';
+    }
   }
 
   async connectedCallback() {
     super.connectedCallback();
-    setTimeout(() => {
-      this._showUrlParameters();
-    }, 3000);
   }
 
   static get styles() {
@@ -251,14 +233,6 @@ export class SampleUPH extends LitElement {
       padding: 8px 16px;
     }
 
-    #container {
-      height: 60vw;
-    }
-
-    fluent-card h3 {
-      font-weight: 400;
-    }
-
     `;
   }
 
@@ -274,36 +248,23 @@ export class SampleUPH extends LitElement {
           <fluent-breadcrumb-item href="/">首页</fluent-breadcrumb-item>
           <fluent-breadcrumb-item href="/sample">示例</fluent-breadcrumb-item>
         </fluent-breadcrumb>
-        <h2>URL 协议处理 (URL protocol handler)</h2>
+        <h2>联系人选取器 (Contact Picker) API</h2>
         <fluent-card class="act">
-        使用特定协议的链接调用已安装的 PWA，获得更集成的体验。
-          <ul>
-            <li>访问 <a href="https://pwadev.io">https://pwadev.io</a></li>
-            <li>安装为本地 PWA 应用</li>
-            <li>回到浏览器，访问 <a href="https://pwadev.io/sample/url-protocol-handler">https://pwadev.io/sample/url-protocol-handler</a> </li>
-            <li>点击 <a href="web+pwadev://北京市西城区景山西街44号" id="uph">web+pwadev://北京市西城区景山西街44号</a></li>
-            <li>自动启动 "中国 PWA 开发者日"</li>
-            <li>显示浏览器中查询的地址经纬度及地图</li>
-          </ul>
-          <h3>经纬度及地图查询</h3>
-          <input id="iuph" value="上海市浦东新区迎宾大道6000号" size="20"> <input type="button" value="更新URL" @click="${this._updateUph}">
-
+          为网站提供一种请求用户联系人信息的方式<br><br>
+          <button @click="${this._c}">选择联系人</button>
           <div id="msg"></div>
-          <div id="geolocation"></div>
-          <div id="map"></div>
         </fluent-card>
-        <div id="container"></div>
         <fluent-card id="st">
           <div class="tut">
             <icon-webdev></icon-webdev> 
-            <a href="https://web.dev/url-protocol-handler/" title="URL protocol handler registration for PWAs">
-              教程：注册 PWA 的 URL 协议
+            <a href="https://web.dev/contact-picker/" title="Contact Picker API">
+              教程：Web 联系人选取器
             </a>
           </div>
-          <div class="w3c"><icon-w3c class="w3clogo"></icon-w3c> <a href="https://pr-preview.s3.amazonaws.com/w3c/manifest/pull/972.html#protocol_handlers-member" title="Web Application Manifest: URL Protocol Handler">Web Application Manifest: URL Protocol Handler</a></div>
+          <div class="w3c"><icon-w3c class="w3clogo"></icon-w3c> <a href="https://w3c.github.io/contact-api/spec/" title="Contact Picker API">Contact Picker API</a></div>
           <div class="imp">
             <div class="des">
-              <a href="https://chromestatus.com/feature/5151703944921088" title="在 Chromium 96 版本支持">🐡 M96</a>
+              <a href="https://www.chromestatus.com/feature/6511327140904960" title="在 Chromium 80 版本支持">🐡 M80</a>
             </div>
             <div class="des">
               <div class="det">
@@ -314,19 +275,16 @@ export class SampleUPH extends LitElement {
             </div>
             <div class="des">
               <div class="det">
-                <icon-mac class="yes" title="Mac"></icon-mac> <icon-win class="yes" title="Windows"></icon-win> <icon-lin class="yes" title="Linux"></icon-lin> 
+                <icon-mac class="no" title="Mac"></icon-mac> <icon-win class="no" title="Windows"></icon-win> <icon-lin class="no" title="Linux"></icon-lin> 
               </div>
               <div class="det">
-                <icon-and class="no" title="Android"></icon-and> <icon-ios class="no" title="iOS"></icon-ios>
+                <icon-and class="yes" title="Android"></icon-and> <icon-ios class="no" title="iOS"></icon-ios>
               </div>
             </div>   
           </div>
         </fluent-card>
         <app-footer></app-footer>
       </div>
-      <script type="text/javascript">
- 
-      </script> 
     `;
   }
 }

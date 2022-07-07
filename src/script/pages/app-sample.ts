@@ -79,6 +79,10 @@ export class AppSample extends LitElement {
             <a href="/sample/generic-sensor" appearance="primary">通用传感器 (Generic Sensor) API</a>
           </li>
           <li>
+            🐡 M80
+            <a href="/sample/contact-picker" appearance="primary">联系人选取器 (Contact Picker) API</a>
+          </li>
+          <li>
             🐡 M81
             <a href="/sample/badging" appearance="primary">徽章 (Badging) API</a>
           </li>

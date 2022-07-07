@@ -164,6 +164,13 @@ export class AppIndex extends LitElement {
             },
           },
           {
+            path: '/sample/contact-picker',
+            component: 'sample-c',
+            action: async () => {
+              await import('./script/pages/sample-c.js');
+            },
+          },
+          {
             path: '/sample/generic-sensor',
             component: 'sample-gs',
             action: async () => {
