@@ -25,6 +25,7 @@ export class AppHome extends LitElement {
           "id": 1,
           "time": "13:00",
           "tag": "",
+          "path" : "opening",
           "title": "开幕致辞",
           "des": "",
           "speaker": "张琦",
@@ -40,26 +41,7 @@ export class AppHome extends LitElement {
           "cid": "",
           "youtube": ""
         }
-      ],
-    "t2021": [
-      {
-        "id": 1,
-        "tag": "opening",
-        "title": "Web 开发的现状与未来（开场介绍）",
-        "des": "",
-        "speaker": "张琦",
-        "pos": "资深技术总监",
-        "com": "软件与先进技术事业部 Web 平台工程",
-        "icon": "",
-        "icon5": "assets/2022/people/500/qi.png",
-        "bio": "",
-        "pdf": "https://d3i5xkfad89fac.cloudfront.net/pwa/2021/slides/02.pdf",
-        "bilibili": "https://www.bilibili.com/video/BV1Kv4y1G7L8",
-        "aid": "554870624",
-        "cid": "741436422",
-        "youtube": "https://youtu.be/npMpZHMizUc" 
-      }
-    ]
+      ]
   };
 
   @query('.orb-canvas') canvas: HTMLCanvasElement;  
@@ -143,7 +125,7 @@ export class AppHome extends LitElement {
   static get styles() {
     return css`
     #herohome {
-      background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, hsl(0, 82, 57, 85%) 10%, hsl(252, 82, 57) 100%);
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, hsl(0, 82, 57) 10%, hsl(252, 82, 57) 100%);
     }
 
     .orb-canvas {
@@ -196,7 +178,7 @@ export class AppHome extends LitElement {
 
     .home {
       color: #3D3D3D;
-      background-image: linear-gradient(180deg, #ffffff 2%, #E3FDF5 8%, #FFE6FA 100%);
+      background-image: linear-gradient(180deg, #ffffff 2%, rgba(227, 253, 245, 0.4) 8%, rgba(255, 230, 250, 0.2) 100%);
       height: 100%;
     }
 
@@ -232,7 +214,7 @@ export class AppHome extends LitElement {
         color: #3D3D3D;
         border: 0;
         border-radius: 0px;
-        background: rgba(255, 255, 255, 0.8);
+        background: rgba(255, 255, 255, 0.4);
         box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.05);
       }
 
@@ -331,7 +313,7 @@ export class AppHome extends LitElement {
       }
 
       .team {
-        font-size: 13px;
+        font-size: 14px;
       }
 
       #icon_qi {
@@ -372,7 +354,7 @@ export class AppHome extends LitElement {
       }
 
       .promote div {
-        font-size: 13px;
+        font-size: 14px;
         height: 12px;
         font-weight: 500;
         padding: 0px !important;
@@ -390,6 +372,18 @@ export class AppHome extends LitElement {
           max-width: 158px;
           overflow: hidden;
         }
+      }
+
+      fluent-card a {
+        color: rgba(0, 113, 197, 0.9);
+        cursor: pointer;
+        text-decoration: none;
+        border-bottom: 0px dashed rgba(0, 113, 197, 0.6);
+      }
+  
+      fluent-card a:hover {
+        color: rgba(0, 113, 197, 1);
+        border-bottom: 1px dashed rgba(0, 113, 197, 0.9);
       }
 
      `;
@@ -418,7 +412,7 @@ export class AppHome extends LitElement {
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 512"><path d="M64 360C94.93 360 120 385.1 120 416C120 446.9 94.93 472 64 472C33.07 472 8 446.9 8 416C8 385.1 33.07 360 64 360zM64 200C94.93 200 120 225.1 120 256C120 286.9 94.93 312 64 312C33.07 312 8 286.9 8 256C8 225.1 33.07 200 64 200zM64 152C33.07 152 8 126.9 8 96C8 65.07 33.07 40 64 40C94.93 40 120 65.07 120 96C120 126.9 94.93 152 64 152z"/></svg>  
             </div>
             <div class="topic">
-              <div class="title">${i.title}</div>
+              <div class="title"><a href="/2022/${i.path}">${i.title}</a></div>
               <div class="details">
                 <div class="avatar" id="icon_${i.iconid}"></div>
                 <div class="description">

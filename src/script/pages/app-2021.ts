@@ -10,27 +10,6 @@ export class App2021 extends LitElement {
 
   @property({ type: Object }) jsondata = {
     "name": "PWA Developer Day 2022",
-    "t2022" : [
-    {
-        "id": 1,
-        "time": "13:00",
-        "tag": "",
-        "title": "开幕致辞",
-        "des": "",
-        "speaker": "张琦",
-        "pos": "资深技术总监",
-        "com": "英特尔 SATG Web 平台工程",
-        "iconid": "qi",
-        "icon": "assets/2022/people/120/qi.png",
-        "icon5": "assets/2022/people/500/qi.png",
-        "bio": "",
-        "pdf": "",
-        "bilibili": "",
-        "aid": "",
-        "cid": "",
-        "youtube": ""
-      }
-    ],
     "t2021": [
       {
         "id": 1,
@@ -101,7 +80,7 @@ export class App2021 extends LitElement {
       .p2021 {
         padding: 16px 16px;
         color: #3d3d3d;
-        background-image: linear-gradient(180deg, #ffffff 0%, #E3FDF5 10%, #FFE6FA 100%);
+        background-image: linear-gradient(180deg, #ffffff 0%, rgba(227, 253, 245, 0.4) 10%, rgba(255, 230, 250, 0.2) 100%);
         height: 100%;
       }
 

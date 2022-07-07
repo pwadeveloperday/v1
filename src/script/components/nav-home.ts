@@ -156,7 +156,7 @@ export class AppNavHome extends LitElement {
       }
     }
     .promote div {
-      font-size: 13px;
+      font-size: 14px;
       height: 12px;
       font-weight: 500;
       padding: 0px !important;

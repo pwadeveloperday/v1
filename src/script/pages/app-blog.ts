@@ -10,17 +10,29 @@ export class AppBlog extends LitElement {
     "blog": [
       {
         "id": 1,
-        "path" : "/china-pwa-developer-day-2022",
+        "path" : "china-pwa-developer-day-2022",
         "title": "第二届中国 PWA 开发者日",
-        "des": "第二届中国 PWA 开发者日将于 2022 年 8 月 6 日线上举行。",
-        "author": "张敏 (Belem Zhang)",
-        "pos": "软件技术经理",
-        "com": "英特尔 SATG Web 平台工程",
-        "iconid": "belem",
-        "icon": "assets/2022/people/120/belem.png",
-        "icon5": "assets/2022/people/500/belem.png",
-        "bio": "张敏，参与了 Crosswork、<a href='https://webnn.dev/' target='_blank'>Web Neural Network (WebNN)</a>、渐进式 Web 应用 （PWA）等 Web 项目。 在 2013 年之前，他是 Opera Software 的软件工程经理并领导了客户端运营和关键数据产品团队。 张敏在浏览器产品及质量、网站兼容性、Web API 及应用等方面有多年经验，张敏正和团队努力将英特尔 XPU 的强大功能引入到 Web，并与 Web 社区携手推动 PWA 技术在国内的发展和落地。",
-        "date": "2022-08-06"
+        "des": "第二届中国 PWA 开发者日 (China PWA Developer Day 2022) 即将于 2022 年 8 月 6 日线上举行。欢迎您的参与！",
+        "date": "2022-08-06",
+        "authors": [ {
+          "author": "宋青见 (Edwin Song)",
+          "pos": "首席产品经理",
+          "com": "微软 Edge · 开发者生态 Bio",
+          "iconid": "edwin",
+          "icon": "assets/2022/people/120/edwin.png",
+          "icon5": "assets/2022/people/500/edwin.png",
+          "bio": "从业 20 余年，历经软件开发到产品经理，前端应用到云计算之间的风云变幻。曾在英特尔工作了 14 年，主要从事与性能优化、GPU 驱动程序和 Chromium 内核优化相关的软件开发和团队管理。之后，受 Chromium 新架构/创新的启发，有一段短暂的 H5 WebOS 创业经历，2016 年加入微软云计算团队，在 Azure RDS for MySQL 和区块链 PaaS 服务上工作了4年多，作为 Chormium 忠粉，在微软 Edge 浏览器全面采用 Chromium 内核后，加入 Edge PWA 团队，为构建 WebOS 的梦想再出发！",
+          },
+          {
+            "author": "张敏 (Belem Zhang)",
+            "pos": "软件技术经理",
+            "com": "英特尔 SATG Web 平台工程",
+            "iconid": "belem",
+            "icon": "assets/2022/people/120/belem.png",
+            "icon5": "assets/2022/people/500/belem.png",
+            "bio": "张敏，参与了 Crosswork、<a href='https://webnn.dev/' target='_blank'>Web Neural Network (WebNN)</a>、渐进式 Web 应用 （PWA）等 Web 项目。 在 2013 年之前，他是 Opera Software 的软件工程经理并领导了客户端运营和关键数据产品团队。 张敏在浏览器产品及质量、网站兼容性、Web API 及应用等方面有多年经验，张敏正和团队努力将英特尔 XPU 的强大功能引入到 Web，并与 Web 社区携手推动 PWA 技术在国内的发展和落地。",
+          }
+        ]
       }
     ]
   };
@@ -41,13 +53,13 @@ export class AppBlog extends LitElement {
     }
 
     .desc {
-      margin: 16px 16px 32px 16px;
+      margin: 0px 0px 32px 0px;
       text-align: center;
     }
 
     fluent-card {
       padding: 1rem;
-      margin-bottom: 1rem;
+      margin: 1rem auto;
       border-radius: 0px;
       box-shadow: none;
       background: rgba(255, 255, 255, 0.5);
@@ -122,10 +134,22 @@ export class AppBlog extends LitElement {
     .details {
       display: flex;
       margin-top: 32px;
+      gap: 16px 32px;
+    }
+
+    .dessub {
+      display: flex;
+      gap: 16px 16px;
+    }
+
+    @media (max-width: 660px) {
+      .details {
+        flex-direction: column;
+      }  
     }
 
     .article {
-      font-size: 13px;
+      font-size: 14px;
       overflow-y: auto;
       background: rgba(255, 255, 255, 0.2);
       letter-spacing: 1px;
@@ -154,7 +178,7 @@ export class AppBlog extends LitElement {
     .bio {
       margin: 16px auto;
       padding: 16px;
-      font-size: 13px;
+      font-size: 14px;
       overflow-y: auto;
       background: rgba(255, 255, 255, 0.2);
     }
@@ -164,20 +188,25 @@ export class AppBlog extends LitElement {
     }
 
     .avatar {
-      width: 60px;
-      height: 60px;
-      background-size: 60px 60px;
+      width: 80px;
+      height: 80px;
+      background-size: 80px 80px;
       margin-right: 10px;
       border: 4px solid hsl(100 100% 60%);
-      border-radius: 50px;
+      border-radius: 60px;
     }
 
     .description {
       align-self: center;
     }
 
+    .nametitle {
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
     .team {
-      font-size: 13px;
+      font-size: 14px;
     }
 
 
@@ -187,6 +216,10 @@ export class AppBlog extends LitElement {
 
     #icon_wanming {
       background-image: url('assets/2022/people/120/wanming.png');
+    }
+
+    #icon_edwin {
+      background-image: url('assets/2022/people/120/edwin.png');
     }
 
     a {
@@ -256,6 +289,19 @@ export class AppBlog extends LitElement {
         for(let i of this.jsondata.blog) {
           if(this._getpath() === i.path) {
             let abstract = i.des.replace(/\n/g, '<br>');
+            let authorcontent = '';
+            for(let a of i.authors) {
+              authorcontent += `
+                <div class="dessub">
+                  <div class="avatar" id="icon_${a.iconid}"></div>
+                  <div class="description">
+                    <div class="nametitle">${a.author}</div>
+                    <div class="team">${a.pos}</div>
+                    <div class="team">${a.com}</div>
+                  </div>
+                </div>
+              `
+            }
             let fc = `
               <fluent-card id="id_${i.id}" class="ids">
                 <div class="title">${i.title}</div>
@@ -264,12 +310,7 @@ export class AppBlog extends LitElement {
                   ${abstract}
                 </div>
                 <div class="details">
-                  <div class="avatar" id="icon_${i.iconid}"></div>
-                  <div class="description">
-                    <div class="nametitle">${i.author}</div>
-                    <div class="team">${i.pos}</div>
-                    <div class="team">${i.com}</div>
-                  </div>
+                  ${authorcontent}
                 </div>
               </fluent-card>
             `;
@@ -278,11 +319,23 @@ export class AppBlog extends LitElement {
         } 
       }
 
+      let hero = '';
+
+      if(!this._getpath()) {
+        hero = `
+          <h2><a href="/blog" title="博客">Blog</a></h2>
+          <div class="desc">为您准备的关于 PWA 及 Fugu API 的更新和故事</div>
+        `;
+      }
+
       return html`
         <app-header ?enableBack="${true}"></app-header>
         <div class="about">
-          <h2><a href="/blog" title="博客">Blog</a></h2>
-          <div class="desc">为您准备的关于 PWA 及 Fugu API 的更新和故事</div>
+          <fluent-breadcrumb>
+          <fluent-breadcrumb-item href="/">首页</fluent-breadcrumb-item>
+          <fluent-breadcrumb-item href="/blog">Blog</fluent-breadcrumb-item>
+          </fluent-breadcrumb>
+            ${unsafeHTML(hero)}
           <div id="schedule">
             ${unsafeHTML(fluentdata)}
           </div>

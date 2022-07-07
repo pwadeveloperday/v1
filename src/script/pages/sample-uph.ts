@@ -296,18 +296,7 @@ export class SampleUPH extends LitElement {
         <app-footer></app-footer>
       </div>
       <script type="text/javascript">
-        var map = new BMapGL.Map('container');
-        //创建地址解析器实例
-        var myGeo = new BMapGL.Geocoder();
-        // 将地址解析结果显示在地图上，并调整地图视野
-        myGeo.getPoint('上海市人民广场', function(point){
-            if(point){
-                map.centerAndZoom(point, 16);
-                map.addOverlay(new BMapGL.Marker(point, {title: '上海市人民广场'}))
-            }else{
-                console.log('您选择的地址没有解析到结果！');
-            }
-        }, '上海市')
+ 
       </script> 
     `;
   }

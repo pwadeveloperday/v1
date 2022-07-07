@@ -27,7 +27,7 @@ export class AppCoC extends LitElement {
       margin-bottom: 1rem;
       border-radius: 0px;
       box-shadow: none;
-      background: rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.4);
     }
 
     fluent-card:hover {

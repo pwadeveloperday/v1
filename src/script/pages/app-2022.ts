@@ -2,13 +2,10 @@ import { LitElement, css, html } from 'lit';
 import { property, customElement } from 'lit/decorators.js';
 import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
 
-// For more info on the @pwabuilder/pwainstall component click here https://github.com/pwa-builder/pwa-install
 import '@pwabuilder/pwainstall';
 
 @customElement('app-2022')
 export class App2022 extends LitElement {
-  // For more information on using properties and state in lit
-  // check out this link https://lit.dev/docs/components/properties/
 
   @property({ type: String }) subtitle = '第二届';
   @property({ type: String }) title = '中国 PWA 开发者日';
@@ -27,6 +24,7 @@ export class App2022 extends LitElement {
             "id": 1,
             "time": "13:00",
             "tag": "",
+            "path" : "opening",
             "title": "开幕致辞",
             "des": "",
             "speaker": "张琦",
@@ -42,26 +40,7 @@ export class App2022 extends LitElement {
             "cid": "741436422",
             "youtube": "https://youtu.be/npMpZHMizUc" 
           }
-        ],
-      "t2021": [
-        {
-          "id": 1,
-          "tag": "opening",
-          "title": "Web 开发的现状与未来（开场介绍）",
-          "des": "",
-          "speaker": "张琦",
-          "pos": "资深技术总监",
-          "com": "软件与先进技术事业部 Web 平台工程",
-          "icon": "",
-          "icon5": "assets/2022/people/500/qi.png",
-          "bio": "",
-          "pdf": "https://d3i5xkfad89fac.cloudfront.net/pwa/2021/slides/02.pdf",
-          "bilibili": "https://www.bilibili.com/video/BV1Kv4y1G7L8",
-          "aid": "554870624",
-          "cid": "741436422",
-          "youtube": "https://youtu.be/npMpZHMizUc" 
-        }
-      ]
+        ]
     };
 
   @property({ type: String }) screenwidth = "";
@@ -75,15 +54,24 @@ export class App2022 extends LitElement {
     this.screenheight = rsh.toString();
   }
 
-  async connectedCallback() {
-    super.connectedCallback();
-    this.screenres();
-    await this.fetchData();
+  _getpath() {
+    console.log(location.pathname);
+    let path = location.pathname.replace('/2022/', '');
+    path = path.replace('/2022', '');
+    console.log(path.trim());
+    return path.trim();
   }
 
   async fetchData() {
     const response = await fetch('/data.json');
     this.jsondata = await response.json();
+  }
+
+  async connectedCallback() {
+    super.connectedCallback();
+    this.screenres();
+    await this._getpath();
+    await this.fetchData();
   }
 
   static get styles() {
@@ -160,6 +148,23 @@ export class App2022 extends LitElement {
         justify-content: center;
       }
 
+      .section-single {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 14px;
+      }
+
+      .section-single h3 {
+        padding-left: 16px;
+        margin-bottom: 16px;
+      }
+
+      .title {
+        margin: 1rem auto;
+        text-align: center;
+      }
+
       .box {
         padding: 32px;
         height: auto;
@@ -189,11 +194,6 @@ export class App2022 extends LitElement {
         .hero {
           margin: 1rem auto;
           padding: 0rem 0px 1rem;
-        }
-
-        .title {
-          margin: 1rem auto;
-          text-align: center;
         }
         
         .section {
@@ -274,10 +274,21 @@ export class App2022 extends LitElement {
         margin-top: 8px;
       }
 
+      .details-single {
+        display: flex;
+        margin-top: 8px;
+        gap: 16px 16px;
+      }
+
+      .nametitle {
+        margin-bottom: 8px;
+        font-weight: 600;
+      }
+
       .des {
         margin: 16px auto;
         padding: 16px;
-        font-size: 13px;
+        font-size: 14px;
         overflow-y: auto;
         background: rgba(255, 255, 255, 0.2);
       }
@@ -285,7 +296,7 @@ export class App2022 extends LitElement {
       .bio {
         margin: 16px auto;
         padding: 16px;
-        font-size: 13px;
+        font-size: 14px;
         overflow-y: auto;
         background: rgba(255, 255, 255, 0.2);
       }
@@ -311,7 +322,11 @@ export class App2022 extends LitElement {
           object-fit: cover;
           object-position: center;
           width: 100%;
-          background-image: linear-gradient(180deg,  rgba(227, 253, 245, 0.7) 5%, #E3FDF5 10%, #FFE6FA 100%);
+          background-image: linear-gradient(180deg,  rgba(227, 253, 245, 0.2) 5%, rgba(227, 253, 245, 0.4) 10%, rgba(255, 230, 250, 0.2) 100%);
+        }
+
+        .section-single h3 {
+          margin-top: 0px;
         }
   
       }
@@ -336,12 +351,21 @@ export class App2022 extends LitElement {
         border-radius: 50px;
       }
 
+      .avatar-single {
+        width: 80px;
+        height: 80px;
+        background-size: 80px 80px;
+        margin-right: 10px;
+        border: 4px solid hsl(100 100% 60%);
+        border-radius: 80px;
+      }
+
       .description {
         align-self: center;
       }
 
       .team {
-        font-size: 13px;
+        font-size: 14px;
       }
 
       #icon_qi {
@@ -497,7 +521,29 @@ export class App2022 extends LitElement {
         .hero h2 {
           margin: 0rem auto 0.5rem auto;
         }
-      }  
+      }
+
+      fluent-card a {
+        color: rgba(0, 113, 197, 0.9);
+        cursor: pointer;
+        text-decoration: none;
+        border-bottom: 0px dashed rgba(0, 113, 197, 0.6);
+      }
+  
+      fluent-card a:hover {
+        color: rgba(0, 113, 197, 1);
+        border-bottom: 1px dashed rgba(0, 113, 197, 0.9);
+      }
+
+      .card {
+        margin-bottom: 16px;
+        padding: 16px;
+        background-color: rgba(255, 255, 255, 0.4);
+      }
+
+      .card:hover {
+        background-color: rgba(255, 255, 255, 0.95);
+      }
 
      `;
   }
@@ -516,70 +562,124 @@ export class App2022 extends LitElement {
     if (this.jsondata) {
 
       let fluentcard = '';
-      let t = '';
+      let hero = `
+        <div class="p2022 section">
+          <div class="hero">
+            <h3>${this.subtitle}</h3>
+            <h2>中国 <pwa-logo></pwa-logo> 开发者日</h2>
+            <h3 class="h3b">${this.time}</h3>
+          </div>
+          <fluent-card class="box"> ${this.description}</fluent-card>
+          <div id="scrollicon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+              <path d="M169.4 278.6C175.6 284.9 183.8 288 192 288s16.38-3.125 22.62-9.375l160-160c12.5-12.5 12.5-32.75 0-45.25s-32.75-12.5-45.25 0L192 210.8L54.63 73.38c-12.5-12.5-32.75-12.5-45.25 0s-12.5 32.75 0 45.25L169.4 278.6zM329.4 265.4L192 402.8L54.63 265.4c-12.5-12.5-32.75-12.5-45.25 0s-12.5 32.75 0 45.25l160 160C175.6 476.9 183.8 480 192 480s16.38-3.125 22.62-9.375l160-160c12.5-12.5 12.5-32.75 0-45.25S341.9 252.9 329.4 265.4z"/>
+            </svg>
+          </div>
+        </div>
+      `;
 
-      for(let i of this.jsondata.t2022) {
-        t = `
-          <fluent-card class="section">
-            <div class="title">${i.title}</div>
-            <div class="topic">
-              <div class="bili">
-                <iframe width="${this.screenwidth}" height="${this.screenheight}" src="https://player.bilibili.com/player.html?cid=${i.cid}&aid=${i.aid}&page=1&as_wide=1&high_quality=1&danmaku=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-              </div>
-              <div>
-                <fluent-tabs activeid="apps">
-                  <fluent-tab id="apps">主题概要</fluent-tab>
-                  <fluent-tab id="entrees">嘉宾介绍</fluent-tab>
-                  <fluent-tab-panel id="appsPanel" class="des">
-                    ${i.des.replace(/\n/g, '<br>')}
-                  </fluent-tab-panel>
-                  <fluent-tab-panel id="entreesPanel" class="des">
-                    ${i.bio}
-                  </fluent-tab-panel>
-                </fluent-tabs>
+      if(!this._getpath()) {
+        for(let i of this.jsondata.t2022) {
+          let t = '';
+          t = `
+            <fluent-card class="section">
+              <div class="title">
+                <a href="/2022/${i.path}">${i.title}</a></div>
+              <div class="topic">
+                <div class="bili">
+                  <iframe width="${this.screenwidth}" height="${this.screenheight}" src="https://player.bilibili.com/player.html?cid=${i.cid}&aid=${i.aid}&page=1&as_wide=1&high_quality=1&danmaku=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+                </div>
+                <div>
+                  <fluent-tabs activeid="apps">
+                    <fluent-tab id="apps">主题概要</fluent-tab>
+                    <fluent-tab id="entrees">嘉宾简介</fluent-tab>
+                    <fluent-tab-panel id="appsPanel" class="des">
+                      ${i.des.replace(/\n/g, '<br>')}
+                    </fluent-tab-panel>
+                    <fluent-tab-panel id="entreesPanel" class="des">
+                      ${i.bio}
+                    </fluent-tab-panel>
+                  </fluent-tabs>
 
-                <div class="details">
-                  <div class="avatar" id="icon_${i.iconid}"></div>
-                  <div class="description">
-                    <div class="nametitle">${i.speaker}</div>
-                    <div class="team">${i.pos}</div>
-                    <div class="team">${i.com}</div>
+                  <div class="details">
+                    <div class="avatar" id="icon_${i.iconid}"></div>
+                    <div class="description">
+                      <div class="nametitle">${i.speaker}</div>
+                      <div class="team">${i.pos}</div>
+                      <div class="team">${i.com}</div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </fluent-card>
-        `;
+            </fluent-card>
+          `;
 
-        fluentcard += t;
+          fluentcard += t;
+        }
+      } else{
+        for(let i of this.jsondata.t2022) {
+          let t = '';
+          if(this._getpath() === i.path) {
+            t = `
+            <fluent-card class="section-single">
+              <div class="title">
+                ${i.title}
+              </div>
+              <div class="topic">
+                <div class="bili">
+                  <iframe width="${this.screenwidth}" height="${this.screenheight}" src="https://player.bilibili.com/player.html?cid=${i.cid}&aid=${i.aid}&page=1&as_wide=1&high_quality=1&danmaku=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+                </div>
+                <div class="des-single">
+                  <h3>主题概要</h3>
+                  <div class="card"> 
+                    ${i.des.replace(/\n/g, '<br>')}
+                  </div>  
+                </div>
+              </div>
+
+              <h3>嘉宾简介</h3>
+              <div class="card">
+                <div class="bio-single">${i.bio}</div>
+              </div>
+
+              <div class="details-single">
+                <div class="avatar-single" id="icon_${i.iconid}"></div>
+                
+                <div class="description">
+                  <div class="nametitle">${i.speaker}</div>
+                  <div class="team">${i.pos}</div>
+                  <div class="team">${i.com}</div>
+                </div>
+              </div>
+
+              <app-footer-home></app-footer-home>
+            </fluent-card>
+            `;
+            fluentcard += t;
+            hero = '';
+          }
+        }
       }
+      
+      let scrollstyle = '';
+      hero ? scrollstyle = 'scroll100' : scrollstyle = '';
+
 
       return html`
-        <app-header ?enableBack="${true}"></app-header>
-        <div class="scroll100">
-          <div class="p2022 section">
-            <div class="hero">
-              <h3>${this.subtitle}</h3>
-              <h2>中国 <pwa-logo></pwa-logo> 开发者日</h2>
-              <h3 class="h3b">${this.time}</h3>
-            </div>
-            <fluent-card class="box"> ${this.description}</fluent-card>
-            <div id="scrollicon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                <path d="M169.4 278.6C175.6 284.9 183.8 288 192 288s16.38-3.125 22.62-9.375l160-160c12.5-12.5 12.5-32.75 0-45.25s-32.75-12.5-45.25 0L192 210.8L54.63 73.38c-12.5-12.5-32.75-12.5-45.25 0s-12.5 32.75 0 45.25L169.4 278.6zM329.4 265.4L192 402.8L54.63 265.4c-12.5-12.5-32.75-12.5-45.25 0s-12.5 32.75 0 45.25l160 160C175.6 476.9 183.8 480 192 480s16.38-3.125 22.62-9.375l160-160c12.5-12.5 12.5-32.75 0-45.25S341.9 252.9 329.4 265.4z"/>
-              </svg>
-            </div>
-          </div>
-          ${unsafeHTML(fluentcard)}
-        </div>
-        <pwa-install title="安装 中国 PWA 开发者日">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-            <path
-              d="M480 352h-133.5l-45.25 45.25C289.2 409.3 273.1 416 256 416s-33.16-6.656-45.25-18.75L165.5 352H32c-17.67 0-32 14.33-32 32v96c0 17.67 14.33 32 32 32h448c17.67 0 32-14.33 32-32v-96C512 366.3 497.7 352 480 352zM432 456c-13.2 0-24-10.8-24-24c0-13.2 10.8-24 24-24s24 10.8 24 24C456 445.2 445.2 456 432 456zM233.4 374.6C239.6 380.9 247.8 384 256 384s16.38-3.125 22.62-9.375l128-128c12.49-12.5 12.49-32.75 0-45.25c-12.5-12.5-32.76-12.5-45.25 0L288 274.8V32c0-17.67-14.33-32-32-32C238.3 0 224 14.33 224 32v242.8L150.6 201.4c-12.49-12.5-32.75-12.5-45.25 0c-12.49 12.5-12.49 32.75 0 45.25L233.4 374.6z"
-            />
-          </svg>
-        </pwa-install>
+      <app-header ?enableBack="${true}"></app-header>
+      <div class="${scrollstyle}">
+        ${unsafeHTML(hero)}
+        ${unsafeHTML(fluentcard)}
+      </div>
+      <pwa-install title="安装 中国 PWA 开发者日">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path
+            d="M480 352h-133.5l-45.25 45.25C289.2 409.3 273.1 416 256 416s-33.16-6.656-45.25-18.75L165.5 352H32c-17.67 0-32 14.33-32 32v96c0 17.67 14.33 32 32 32h448c17.67 0 32-14.33 32-32v-96C512 366.3 497.7 352 480 352zM432 456c-13.2 0-24-10.8-24-24c0-13.2 10.8-24 24-24s24 10.8 24 24C456 445.2 445.2 456 432 456zM233.4 374.6C239.6 380.9 247.8 384 256 384s16.38-3.125 22.62-9.375l128-128c12.49-12.5 12.49-32.75 0-45.25c-12.5-12.5-32.76-12.5-45.25 0L288 274.8V32c0-17.67-14.33-32-32-32C238.3 0 224 14.33 224 32v242.8L150.6 201.4c-12.49-12.5-32.75-12.5-45.25 0c-12.49 12.5-12.49 32.75 0 45.25L233.4 374.6z"
+          />
+        </svg>
+      </pwa-install>
       `;
+
     } else {
       return html`<div>No data</div>`;
     }

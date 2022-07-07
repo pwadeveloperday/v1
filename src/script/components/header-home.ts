@@ -42,7 +42,7 @@ export class AppHeaderHome extends LitElement {
       .hero {
         display: flex;
         text-align: center;
-        text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.03);
+        text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.05);
         color: rgba(255, 255, 255, 0.9);
         height: calc(100vh - 56px);
         justify-content: center;
@@ -228,11 +228,25 @@ export class AppHeaderHome extends LitElement {
         height: 60px;
         width: 152px;
       }
+
       #intel {
         width: 98px;
         height: 38px;
         background: url('/assets/logo/intel-logo.png') no-repeat center center/cover;
         margin-top: -6px;
+      }
+
+      #intel, #msft svg {
+        filter: drop-shadow(0px 1px 1px rgba(0, 199, 253, 0.1));
+        transition: all 0.5s linear;
+      }
+
+      header:hover #intel, header:active #intel {
+        filter: drop-shadow(0px 0px 16px rgba(0, 199, 253, 0.9));
+      }
+
+      header:hover #msft svg, header:active #msft svg {
+        filter: drop-shadow(0px 0px 16px rgba(128, 204, 40, 0.6));
       }
 
       /*

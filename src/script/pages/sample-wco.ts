@@ -234,7 +234,7 @@ export class SampleWCO extends LitElement {
       top: env(titlebar-area-y, 0);
       height: env(titlebar-area-height, var(--fallback-title-bar-height));
       width: 100%;
-      background-color:rgb(61, 61, 61);
+      background-color:rgba(61, 20, 136, .9);
     }
     
     #titleBar {

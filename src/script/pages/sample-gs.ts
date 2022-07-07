@@ -71,6 +71,12 @@ export class SampleGS extends LitElement {
       const sensor = new AmbientLightSensor();
       sensor.addEventListener('reading', event => {
         this._als.innerHTML = '环境光照强度: ' + sensor.illuminance;
+
+        if(sensor.illuminance <= 100) {
+          document.body.setAttribute('style', 'filter: invert(1);');
+        } else {
+          document.body.removeAttribute('style');
+        }
       });
       sensor.addEventListener('error', event => {
         this._als.innerHTML = event.error.name + ' ' + event.error.message;
@@ -169,9 +175,9 @@ export class SampleGS extends LitElement {
       let magSensor = new Magnetometer({frequency: 60});
       magSensor.addEventListener('reading', () => {
         this._m.innerHTML = `
-          X 轴的磁场: ${magSensor.x} <br>
-          Y 轴的磁场: ${magSensor.y} <br>
-          Z 轴的磁场: ${magSensor.z}
+          X 轴磁场: ${magSensor.x} <br>
+          Y 轴磁场: ${magSensor.y} <br>
+          Z 轴磁场: ${magSensor.z}
         `
       })
       magSensor.addEventListener('error', event => {
