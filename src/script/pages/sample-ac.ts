@@ -1,46 +1,44 @@
 import { LitElement, css, html } from 'lit';
 import { customElement, query } from 'lit/decorators.js';
 
-@customElement('sample-uph')
-export class SampleUPH extends LitElement {
-
+@customElement('sample-ac')
+export class SampleAC extends LitElement {
   @query('#msg') _msg: HTMLDivElement;
-  @query('#uph') _uph: HTMLAnchorElement;
-  @query('#iuph') _iuph: HTMLInputElement;
-  @query('#geolocation') _geolocation: HTMLDivElement;
-  @query('#map') _map: HTMLDivElement;
-  
-  async _showUrlParameters() {
-    const param = location.search;
-    console.log(param);
-    if(param.trim()) {
-      this._msg.innerHTML = `
-        search: ${param}, 成功调用
-      `;
-      let address = param.split("://")[1];
-      const res = await fetch(`https://restapi.amap.com/v3/geocode/geo?address=${address}&output=JSON&key=39a5a5f5239a28b739e6a79381afb97e`);
-      const json = await res.json();
-      let geocodes = json.geocodes;
-      let location = geocodes[0].location;
-      this._geolocation.innerHTML = location;
-      const response = await fetch(`https://restapi.amap.com/v3/staticmap?location=${location}&zoom=10&size=375*250&markers=mid,,A:${location}&key=39a5a5f5239a28b739e6a79381afb97e`);
-      this._map.innerHTML = `<img src="${response}">`;
-    } else {
-      this._msg.innerHTML = `无 web+pwadev://* 调用`;
+  @query('#paste') _p: HTMLDivElement;
+
+  async _loadBlob(fileName: RequestInfo | URL) {
+    const fetched = await fetch(fileName);
+    return await fetched.blob();
+  }
+
+  async _copy() {
+    try {
+      const url = 'https://pwadev.io/assets/sample/pwa-fugu.png';
+      const blobInput = await this._loadBlob(url);
+      const clipboardItemInput = new ClipboardItem({'image/png' : blobInput});
+      await navigator.clipboard.write([clipboardItemInput]);
+      this._msg.innerHTML = '图片已复制';
+    } catch(e) {
+      this._msg.innerHTML = e.message;
     }
   }
 
-  _updateUph() {
-    let uph = `web+pwadev://${this._iuph.value}`;
-    this._uph.innerHTML = uph;
-    this._uph.href = uph;
+  async _paste() {
+    try {
+      const clipboardItems = await navigator.clipboard.read();
+      console.log(clipboardItems);
+      const blobOutput = await clipboardItems[0].getType('image/png');
+      this._p.innerHTML = `
+        <img src='${window.URL.createObjectURL(blobOutput)}'>
+      `;
+      this._msg.innerHTML = '图片异步粘贴成功';
+    } catch(e) {
+      this._msg.innerHTML = e.message + ' Failed to read clipboard';
+    }
   }
-
+ 
   async connectedCallback() {
     super.connectedCallback();
-    setTimeout(() => {
-      this._showUrlParameters();
-    }, 3000);
   }
 
   static get styles() {
@@ -250,8 +248,10 @@ export class SampleUPH extends LitElement {
       padding: 8px 16px;
     }
 
-    fluent-card h3 {
-      font-weight: 400;
+    #paste img {
+      display: inline-block;
+      width: 360px;
+      margin: 0 auto;
     }
 
     `;
@@ -269,41 +269,31 @@ export class SampleUPH extends LitElement {
           <fluent-breadcrumb-item href="/">首页</fluent-breadcrumb-item>
           <fluent-breadcrumb-item href="/sample">示例</fluent-breadcrumb-item>
         </fluent-breadcrumb>
-        <h2>URL 协议处理 (URL protocol handler)</h2>
+        <h2>异步剪贴板 (Async Clipboard) API</h2>
         <fluent-card class="act">
-        使用特定协议的链接调用已安装的 PWA，获得更集成的体验。
-          <ul>
-            <li>访问 <a href="https://pwadev.io">https://pwadev.io</a></li>
-            <li>安装为本地 PWA 应用</li>
-            <li>回到浏览器，访问 <a href="https://pwadev.io/sample/url-protocol-handler">https://pwadev.io/sample/url-protocol-handler</a> </li>
-            <li>点击 <a href="web+pwadev://北京市西城区景山西街44号" id="uph">web+pwadev://北京市西城区景山西街44号</a></li>
-            <li>自动启动 "中国 PWA 开发者日"</li>
-            <li>显示浏览器中查询的地址经纬度及地图</li>
-          </ul>
-          <h3>经纬度及地图查询</h3>
-          <input id="iuph" value="上海市浦东新区迎宾大道6000号" size="20"> <input type="button" value="更新URL" @click="${this._updateUph}">
-
+          提供了响应剪贴板命令（剪切、复制和粘贴）与异步读写系统剪贴板的能力，并取代使用 document.execCommand() 的剪贴板访问方式<br><br>
+          <button @click="${this._copy}">复制</button> 写入到剪贴板<br><br>
+          <button @click="${this._paste}">粘贴</button> 从剪贴板读出
+          <div id="paste"></div>
           <div id="msg"></div>
-          <div id="geolocation"></div>
-          <div id="map"></div>
         </fluent-card>
         <fluent-card id="st">
           <div class="tut">
             <icon-webdev></icon-webdev> 
-            <a href="https://web.dev/url-protocol-handler/" title="URL protocol handler registration for PWAs">
-              教程：注册 PWA 的 URL 协议
+            <a href="https://web.dev/async-clipboard/" title="Unblocking clipboard access ">
+              教程：解锁剪贴板访问
             </a>
           </div>
-          <div class="w3c"><icon-w3c class="w3clogo"></icon-w3c> <a href="https://pr-preview.s3.amazonaws.com/w3c/manifest/pull/972.html#protocol_handlers-member" title="Web Application Manifest: URL Protocol Handler">Web Application Manifest: URL Protocol Handler</a></div>
+          <div class="w3c"><icon-w3c class="w3clogo"></icon-w3c> <a href="https://www.w3.org/TR/clipboard-apis/#async-clipboard-api" title="Asynchronous Clipboard API">Asynchronous Clipboard API</a></div>
           <div class="imp">
             <div class="des">
-              <a href="https://chromestatus.com/feature/5151703944921088" title="在 Chromium 96 版本支持">🐡 M96</a>
+              <a href="https://chromestatus.com/feature/5074658793619456" title="在 Chromium 76 版本支持">🐡 M76</a>
             </div>
             <div class="des">
               <div class="det">
               <icon-chr class="yes" title="Google Chrome 浏览器"></icon-chr>
               <icon-edg class="yes" title="微软 Edge 浏览器"></icon-edg> <icon-ope class="yes" title="Opera 浏览器"></icon-ope> <icon-viv class="yes" title="Vivaldi 浏览器"></icon-viv>
-              <icon-saf class="no" title="Apple Safari 浏览器"></icon-saf> <icon-fir class="no" title="Mozilla Firefox 浏览器"></icon-fir>
+              <icon-saf class="yes" title="Apple Safari 浏览器"></icon-saf> <icon-fir class="yes" title="Mozilla Firefox 浏览器"></icon-fir>
               </div>
             </div>
             <div class="des">
@@ -311,7 +301,7 @@ export class SampleUPH extends LitElement {
                 <icon-mac class="yes" title="Mac"></icon-mac> <icon-win class="yes" title="Windows"></icon-win> <icon-lin class="yes" title="Linux"></icon-lin> 
               </div>
               <div class="det">
-                <icon-and class="no" title="Android"></icon-and> <icon-ios class="no" title="iOS"></icon-ios>
+                <icon-and class="yes" title="Android"></icon-and> <icon-ios class="yes" title="iOS"></icon-ios>
               </div>
             </div>   
           </div>

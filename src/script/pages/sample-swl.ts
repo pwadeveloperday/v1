@@ -1,46 +1,52 @@
 import { LitElement, css, html } from 'lit';
-import { customElement, query } from 'lit/decorators.js';
+import { customElement, query, property } from 'lit/decorators.js';
 
-@customElement('sample-uph')
-export class SampleUPH extends LitElement {
-
+@customElement('sample-swl')
+export class SampleSWL extends LitElement {
   @query('#msg') _msg: HTMLDivElement;
-  @query('#uph') _uph: HTMLAnchorElement;
-  @query('#iuph') _iuph: HTMLInputElement;
-  @query('#geolocation') _geolocation: HTMLDivElement;
-  @query('#map') _map: HTMLDivElement;
-  
-  async _showUrlParameters() {
-    const param = location.search;
-    console.log(param);
-    if(param.trim()) {
-      this._msg.innerHTML = `
-        search: ${param}, 成功调用
-      `;
-      let address = param.split("://")[1];
-      const res = await fetch(`https://restapi.amap.com/v3/geocode/geo?address=${address}&output=JSON&key=39a5a5f5239a28b739e6a79381afb97e`);
-      const json = await res.json();
-      let geocodes = json.geocodes;
-      let location = geocodes[0].location;
-      this._geolocation.innerHTML = location;
-      const response = await fetch(`https://restapi.amap.com/v3/staticmap?location=${location}&zoom=10&size=375*250&markers=mid,,A:${location}&key=39a5a5f5239a28b739e6a79381afb97e`);
-      this._map.innerHTML = `<img src="${response}">`;
-    } else {
-      this._msg.innerHTML = `无 web+pwadev://* 调用`;
-    }
+  @query('#screen') screen: HTMLInputElement;
+  @query('#screen_status') screen_status: HTMLSpanElement;
+  @property({ type: String }) _log = "";
+
+  _logMsg(msg) {
+    this._msg.innerHTML += `${new Date().toUTCString()} ${msg}<br>`;
   }
 
-  _updateUph() {
-    let uph = `web+pwadev://${this._iuph.value}`;
-    this._uph.innerHTML = uph;
-    this._uph.href = uph;
+  async _visibility() {
+
+    if ('wakeLock' in navigator) {
+      let lock;
+  
+      if (lock) {
+        this._logMsg(`Release "Screen" button pressed.`);
+        lock.release();
+        return;
+      }
+
+      try {
+        this._logMsg(`已点击获取屏幕唤醒锁按钮`);
+        lock = await navigator.wakeLock.request('screen');
+        this.screen_status.textContent = '已获取';
+        this._logMsg(`屏幕唤醒锁已获取`);
+
+        lock.addEventListener('release', () => {
+          this.screen_status.textContent = '已释放';
+          this._logMsg(`屏幕唤醒锁已获取`);
+          lock = null;
+        });
+      } catch (e) {
+        this.screen_status.textContent = `${e.name}: ${e.message}`;
+        this._logMsg(`Caught ${e.name} acquiring "Screen" lock: ${e.message}`);
+      }
+    } 
+  
+    document.addEventListener('visibilitychange', () => {
+      this._logMsg(`文档可见性（document visibility）变为 "${document.visibilityState}"`);
+    });
   }
 
   async connectedCallback() {
     super.connectedCallback();
-    setTimeout(() => {
-      this._showUrlParameters();
-    }, 3000);
   }
 
   static get styles() {
@@ -250,10 +256,15 @@ export class SampleUPH extends LitElement {
       padding: 8px 16px;
     }
 
-    fluent-card h3 {
-      font-weight: 400;
+    #paste img {
+      display: inline-block;
+      width: 360px;
+      margin: 0 auto;
     }
 
+    #msg {
+      font-size: 12px;
+    }
     `;
   }
 
@@ -269,35 +280,23 @@ export class SampleUPH extends LitElement {
           <fluent-breadcrumb-item href="/">首页</fluent-breadcrumb-item>
           <fluent-breadcrumb-item href="/sample">示例</fluent-breadcrumb-item>
         </fluent-breadcrumb>
-        <h2>URL 协议处理 (URL protocol handler)</h2>
+        <h2>屏幕唤醒锁定 (Screen Wake Lock) API</h2>
         <fluent-card class="act">
-        使用特定协议的链接调用已安装的 PWA，获得更集成的体验。
-          <ul>
-            <li>访问 <a href="https://pwadev.io">https://pwadev.io</a></li>
-            <li>安装为本地 PWA 应用</li>
-            <li>回到浏览器，访问 <a href="https://pwadev.io/sample/url-protocol-handler">https://pwadev.io/sample/url-protocol-handler</a> </li>
-            <li>点击 <a href="web+pwadev://北京市西城区景山西街44号" id="uph">web+pwadev://北京市西城区景山西街44号</a></li>
-            <li>自动启动 "中国 PWA 开发者日"</li>
-            <li>显示浏览器中查询的地址经纬度及地图</li>
-          </ul>
-          <h3>经纬度及地图查询</h3>
-          <input id="iuph" value="上海市浦东新区迎宾大道6000号" size="20"> <input type="button" value="更新URL" @click="${this._updateUph}">
-
+          某些应用需要保持屏幕唤醒才能完成它们的工作，例如扫码健康码<br><br>
+          <button id="screen" @click="${this._visibility}">屏幕唤醒锁</button> <span id="screen_status"></span>
           <div id="msg"></div>
-          <div id="geolocation"></div>
-          <div id="map"></div>
         </fluent-card>
         <fluent-card id="st">
           <div class="tut">
             <icon-webdev></icon-webdev> 
-            <a href="https://web.dev/url-protocol-handler/" title="URL protocol handler registration for PWAs">
-              教程：注册 PWA 的 URL 协议
+            <a href="https://web.dev/wake-lock/" title="Stay awake with the Screen Wake Lock API">
+              教程：使用 Screen Wake Lock API
             </a>
           </div>
-          <div class="w3c"><icon-w3c class="w3clogo"></icon-w3c> <a href="https://pr-preview.s3.amazonaws.com/w3c/manifest/pull/972.html#protocol_handlers-member" title="Web Application Manifest: URL Protocol Handler">Web Application Manifest: URL Protocol Handler</a></div>
+          <div class="w3c"><icon-w3c class="w3clogo"></icon-w3c> <a href="https://w3c.github.io/screen-wake-lock/" title="Screen Wake Lock API">Screen Wake Lock API</a></div>
           <div class="imp">
             <div class="des">
-              <a href="https://chromestatus.com/feature/5151703944921088" title="在 Chromium 96 版本支持">🐡 M96</a>
+              <a href="https://chromestatus.com/feature/4636879949398016" title="在 Chromium 84 版本支持">🐡 M84</a>
             </div>
             <div class="des">
               <div class="det">
@@ -311,7 +310,7 @@ export class SampleUPH extends LitElement {
                 <icon-mac class="yes" title="Mac"></icon-mac> <icon-win class="yes" title="Windows"></icon-win> <icon-lin class="yes" title="Linux"></icon-lin> 
               </div>
               <div class="det">
-                <icon-and class="no" title="Android"></icon-and> <icon-ios class="no" title="iOS"></icon-ios>
+                <icon-and class="yes" title="Android"></icon-and> <icon-ios class="no" title="iOS"></icon-ios>
               </div>
             </div>   
           </div>

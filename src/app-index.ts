@@ -164,6 +164,20 @@ export class AppIndex extends LitElement {
             },
           },
           {
+            path: '/sample/wake-lock',
+            component: 'sample-swl',
+            action: async () => {
+              await import('./script/pages/sample-swl.js');
+            },
+          },
+          {
+            path: '/sample/async-clipboard',
+            component: 'sample-ac',
+            action: async () => {
+              await import('./script/pages/sample-ac.js');
+            },
+          },
+          {
             path: '/sample/contact-picker',
             component: 'sample-c',
             action: async () => {
