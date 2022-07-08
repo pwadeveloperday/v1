@@ -17,7 +17,9 @@ export class SampleUPH extends LitElement {
       this._msg.innerHTML = `
         search: ${param}, 成功调用
       `;
-      let address = param.split("://")[1];
+      // ?pwadev=web%2Bpwadev%3A%2F%2F----%2F
+      let address = param.replace('?pwadev=web%2Bpwadev%3A%2F%2F', '');
+      address = address.slice(0, -2);
       const res = await fetch(`https://restapi.amap.com/v3/geocode/geo?address=${address}&output=JSON&key=39a5a5f5239a28b739e6a79381afb97e`);
       const json = await res.json();
       let geocodes = json.geocodes;
@@ -275,7 +277,7 @@ export class SampleUPH extends LitElement {
           <ul>
             <li>访问 <a href="https://pwadev.io">https://pwadev.io</a></li>
             <li>安装为本地 PWA 应用</li>
-            <li>回到浏览器，访问 <a href="https://pwadev.io/sample/url-protocol-handler">https://pwadev.io/sample/url-protocol-handler</a> </li>
+            <li>重启浏览器，访问 <a href="https://pwadev.io/sample/url-protocol-handler">https://pwadev.io/sample/url-protocol-handler</a> </li>
             <li>点击 <a href="web+pwadev://北京市西城区景山西街44号" id="uph">web+pwadev://北京市西城区景山西街44号</a></li>
             <li>自动启动 "中国 PWA 开发者日"</li>
             <li>显示浏览器中查询的地址经纬度及地图</li>

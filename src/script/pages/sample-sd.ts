@@ -24,12 +24,11 @@ export class SampleSD extends LitElement {
       if(this._stream) {
         try {
           let videoel = this._stream;
-          let supportedFormats = new BarcodeDetector.getSupportedFormats();
-          let barcodeDetector = new BarcodeDetector({formats: supportedFormats});
+          let barcodeDetector = new BarcodeDetector({formats: 'qr_code'});
           let barcodes = await barcodeDetector.detect(videoel);
           this._msg.innerHTML = barcodes.map(barcode => barcode.rawValue);
-        } catch (error) {
-          this._msg.innerHTML = error;
+        } catch (e) {
+          this._msg.innerHTML = e.message;
         }
 
         // this.interval = setInterval(async (barcodeDetector, videoel) => {

@@ -164,13 +164,6 @@ export class AppIndex extends LitElement {
             },
           },
           {
-            path: '/url-protocol-handler',
-            component: 'sample-uph',
-            action: async () => {
-              await import('./script/pages/sample-uph.js');
-            },
-          },
-          {
             path: '/sample/wake-lock',
             component: 'sample-swl',
             action: async () => {
