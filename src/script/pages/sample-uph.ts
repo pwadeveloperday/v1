@@ -26,12 +26,12 @@ export class SampleUPH extends LitElement {
       const response = await fetch(`https://restapi.amap.com/v3/staticmap?location=${location}&zoom=10&size=375*250&markers=mid,,A:${location}&key=39a5a5f5239a28b739e6a79381afb97e`);
       this._map.innerHTML = `<img src="${response}">`;
     } else {
-      this._msg.innerHTML = `无 web+coffee://* 调用`;
+      this._msg.innerHTML = `无 web+pwadev://* 调用`;
     }
   }
 
   _updateUph() {
-    let uph = `web+coffee://${this._iuph.value}`;
+    let uph = `web+pwadev://${this._iuph.value}`;
     this._uph.innerHTML = uph;
     this._uph.href = uph;
   }
@@ -276,7 +276,7 @@ export class SampleUPH extends LitElement {
             <li>访问 <a href="https://pwadev.io">https://pwadev.io</a></li>
             <li>安装为本地 PWA 应用</li>
             <li>回到浏览器，访问 <a href="https://pwadev.io/sample/url-protocol-handler">https://pwadev.io/sample/url-protocol-handler</a> </li>
-            <li>点击 <a href="web+coffee://北京市西城区景山西街44号" id="uph">web+coffee://北京市西城区景山西街44号</a></li>
+            <li>点击 <a href="web+pwadev://北京市西城区景山西街44号" id="uph">web+pwadev://北京市西城区景山西街44号</a></li>
             <li>自动启动 "中国 PWA 开发者日"</li>
             <li>显示浏览器中查询的地址经纬度及地图</li>
           </ul>

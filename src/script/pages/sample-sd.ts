@@ -35,11 +35,14 @@ export class SampleSD extends LitElement {
         'upc_a',
         'upc_e']});
       
-      this.interval = setInterval(async (barcodeDetector) => {
-        const barcodes = await barcodeDetector.detect(this._stream);
-        if (barcodes.length <= 0) return;
-        this._msg.innerHTML = barcodes.map(barcode => barcode.rawValue);
-      }, 500);
+      if(this._stream) {
+        let videoel = this._stream;
+        this.interval = setInterval(async (barcodeDetector, videoel) => {
+          const barcodes = await barcodeDetector.detect(videoel);
+          if (barcodes.length <= 0) return;
+          this._msg.innerHTML = barcodes.map(barcode => barcode.rawValue);
+        }, 500);
+      }
     }
   }
 
