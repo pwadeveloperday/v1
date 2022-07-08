@@ -21,19 +21,7 @@ export class SampleSD extends LitElement {
       this._stream.srcObject = stream;
       await this._stream.play();
 
-      const barcodeDetector = new BarcodeDetector({formats: ['aztec',
-        'code_128',
-        'code_39',
-        'code_93',
-        'codabar',
-        'data_matrix',
-        'ean_13',
-        'ean_8',
-        'itf',
-        'pdf417',
-        'qr_code',
-        'upc_a',
-        'upc_e']});
+      const barcodeDetector = new BarcodeDetector({formats: ['qr_code']});
       
       if(this._stream) {
         let videoel = this._stream;
@@ -264,7 +252,6 @@ export class SampleSD extends LitElement {
 
     #stream {
       width: 320px;
-      height: 180px;
     }
 
     .center {
