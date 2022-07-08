@@ -61,7 +61,7 @@
   ],
   "protocol_handlers": [{
     "protocol": "web+pwadev",
-    "url": "/url-protocol-handler?pwadev=%s"
+    "url": "/sample/url-protocol-handler?pwadev=%s"
   }],
   "file_handlers": [
     {
