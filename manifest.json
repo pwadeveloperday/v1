@@ -60,8 +60,8 @@
     }
   ],
   "protocol_handlers": [{
-    "protocol": "web+coffee",
-    "url": "/sample/url-protocol-handler?coffee=%s"
+    "protocol": "web+pwadev",
+    "url": "/url-protocol-handler?pwadev=%s"
   }],
   "file_handlers": [
     {
