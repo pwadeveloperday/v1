@@ -178,7 +178,7 @@ export class AppHome extends LitElement {
 
     .home {
       color: #3D3D3D;
-      background-image: linear-gradient(180deg, #ffffff 2%, rgba(227, 253, 245, 0.4) 8%, rgba(255, 230, 250, 0.2) 100%);
+      background-image: linear-gradient(180deg, #ffffff 2%, rgba(227, 253, 245, 0.4) 8%, rgba(255, 230, 250, 0.3) 100%);
       height: 100%;
     }
 

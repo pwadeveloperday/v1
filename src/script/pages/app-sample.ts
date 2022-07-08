@@ -91,6 +91,10 @@ export class AppSample extends LitElement {
             <a href="/sample/badging" appearance="primary">徽章 (Badging) API</a>
           </li>
           <li>
+            🐡 M83
+            <a href="/sample/shape-detection" appearance="primary">形状检测 (Shape Detection) API</a>
+          </li>
+          <li>
             🐡 M84
             <a href="/sample/wake-lock" appearance="primary">屏幕唤醒锁定 (Screen Wake Lock) API</a>
           </li>
@@ -131,6 +135,10 @@ export class AppSample extends LitElement {
           <li>
             🌐 M97
             WebTransport (v.s. WebSockets)
+          </li>
+          <li>
+            🐡 M100
+            多屏窗口放置 (Multi-Screen Window Placement)
           </li>
           <li>
             🌐 M102

@@ -192,6 +192,13 @@ export class AppIndex extends LitElement {
             },
           },
           {
+            path: '/sample/shape-detection',
+            component: 'sample-sd',
+            action: async () => {
+              await import('./script/pages/sample-sd.js');
+            },
+          },
+          {
             path: '/sample/app-shortcuts',
             component: 'sample-as',
             action: async () => {

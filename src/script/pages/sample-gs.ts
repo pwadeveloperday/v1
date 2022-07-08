@@ -72,7 +72,7 @@ export class SampleGS extends LitElement {
       sensor.addEventListener('reading', event => {
         this._als.innerHTML = '环境光照强度: ' + sensor.illuminance;
 
-        if(sensor.illuminance <= 100) {
+        if(sensor.illuminance <= 50) {
           document.body.setAttribute('style', 'filter: invert(1);');
         } else {
           document.body.removeAttribute('style');

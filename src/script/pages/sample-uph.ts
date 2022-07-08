@@ -270,8 +270,8 @@ export class SampleUPH extends LitElement {
           <fluent-breadcrumb-item href="/sample">示例</fluent-breadcrumb-item>
         </fluent-breadcrumb>
         <h2>URL 协议处理 (URL protocol handler)</h2>
+        使用特定协议的链接调用已安装的 PWA，获得更集成的体验。<br><br>
         <fluent-card class="act">
-        使用特定协议的链接调用已安装的 PWA，获得更集成的体验。
           <ul>
             <li>访问 <a href="https://pwadev.io">https://pwadev.io</a></li>
             <li>安装为本地 PWA 应用</li>

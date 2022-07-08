@@ -301,9 +301,9 @@ export class SampleWCO extends LitElement {
           <fluent-breadcrumb-item href="/sample">示例</fluent-breadcrumb-item>
         </fluent-breadcrumb>
         <h2>窗口控件叠加 (Window Controls Overlay)</h2>
+        标题栏区域是指窗口控件（即最小化、最大化、关闭等）左侧或右侧的空间，通常包含应用的标题。Window Controls Overlay 允许开发人员将自定义内容放置在由浏览器控制的标题栏区域。<br><br>
         <fluent-card class="act">
-          标题栏区域是指窗口控件（即最小化、最大化、关闭等按钮）左侧或右侧的空间，通常包含应用程序的标题。Window Controls Overlay 让渐进式 Web 应用程序 (PWA) 允许开发人员将自定义内容放置在由浏览器控制的标题栏区域中。
-           <ul>
+          <ul>
              <li>访问 <a href="https://pwadev.io">https://pwadev.io</a></li>
              <li>安装为本地 PWA 应用</li>
              <li>在 PWA 应用中进入该页面查看标题栏效果</li>

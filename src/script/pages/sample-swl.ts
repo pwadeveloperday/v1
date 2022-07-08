@@ -281,8 +281,8 @@ export class SampleSWL extends LitElement {
           <fluent-breadcrumb-item href="/sample">示例</fluent-breadcrumb-item>
         </fluent-breadcrumb>
         <h2>屏幕唤醒锁定 (Screen Wake Lock) API</h2>
+        某些应用需要保持屏幕唤醒才能完成它们的工作，例如扫码健康码<br><br>
         <fluent-card class="act">
-          某些应用需要保持屏幕唤醒才能完成它们的工作，例如扫码健康码<br><br>
           <button id="screen" @click="${this._visibility}">屏幕唤醒锁</button> <span id="screen_status"></span>
           <div id="msg"></div>
         </fluent-card>

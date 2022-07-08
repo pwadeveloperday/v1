@@ -365,6 +365,7 @@ export class SampleLFA extends LitElement {
           <fluent-breadcrumb-item href="/sample">示例</fluent-breadcrumb-item>
         </fluent-breadcrumb>
         <h2>本地字体访问 (Local Font Access) API</h2>
+        访问和使用设计师及其他用户在本地安装的各种专业开发的字体<br><br>
         <fluent-card>
           <div class="content">
             <div>

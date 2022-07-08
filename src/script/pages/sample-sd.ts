@@ -1,52 +1,63 @@
 import { LitElement, css, html } from 'lit';
-import { customElement, query } from 'lit/decorators.js';
+import { customElement, query, property } from 'lit/decorators.js';
 
-@customElement('sample-ac')
-export class SampleAC extends LitElement {
+@customElement('sample-sd')
+export class SampleSD extends LitElement {
+  @query('#stream') _stream: HTMLVideoElement;
   @query('#msg') _msg: HTMLDivElement;
-  @query('#paste') _p: HTMLDivElement;
+  @property({ type: Boolean }) _pause = false;
 
-  async _loadBlob(fileName: RequestInfo | URL) {
-    const fetched = await fetch(fileName);
-    return await fetched.blob();
+  async _barcode() {
+    const barcodes = await barcodeDetector.detect(this._stream);
+    if (barcodes.length <= 0) return;
+    this._msg.innerHTML = barcodes.map(barcode => barcode.rawValue);
   }
 
-  async _copy() {
-    try {
-      const url = 'https://pwadev.io/assets/sample/pwa-fugu.png';
-      const blobInput = await this._loadBlob(url);
-      const clipboardItemInput = new ClipboardItem({'image/png' : blobInput});
-      await navigator.clipboard.write([clipboardItemInput]);
-      this._msg.innerHTML = '图片已复制';
-    } catch(e) {
-      this._msg.innerHTML = e.message;
+  async _bc() {
+    if (!('BarcodeDetector' in window) || !((await BarcodeDetector.getSupportedFormats()).includes('qr_code'))) {
+      this._msg.innerHTML =  '浏览器不支持二维码检测';
+      return;
+    } else {
+      const stream = await navigator.mediaDevices.getUserMedia({
+        video: {
+          facingMode: { ideal: 'environment' }
+        },
+        audio: false
+      });
+      this._stream.srcObject = stream;
+      await this._stream.play();
+
+      let interval;
+      this._pause = false;
+
+      const barcodeDetector = new BarcodeDetector({formats: ['aztec',
+        'code_128',
+        'code_39',
+        'code_93',
+        'codabar',
+        'data_matrix',
+        'ean_13',
+        'ean_8',
+        'itf',
+        'pdf417',
+        'qr_code',
+        'upc_a',
+        'upc_e']});
+      if(!this._pause) {
+        interval = setInterval(this._barcode, 500);
+      } else {
+        clearInterval(interval);
+      }
     }
   }
 
-  async _paste() {
-    try {
-      const clipboardItems = await navigator.clipboard.read();
-      console.log(clipboardItems);
-      const blobOutput = await clipboardItems[0].getType('image/png');
-      this._p.innerHTML = `
-        <image src='${window.URL.createObjectURL(blobOutput)}'>
-      `;
-      this._msg.innerHTML = '图片异步粘贴成功';
-    } catch(e) {
-      this._msg.innerHTML = e.message + ' Failed to read clipboard';
-    }
-  }
- 
-  async _listener() {
-    navigator.clipboard.addEventListener('clipboardchange', async e => {
-      const text = await navigator.clipboard.getText();
-      this._msg.innerHTML = '剪切板更新: ' + text;
-    });
+  async _pausec() {
+    this._pause = true;
+    this._stream.pause();
   }
 
   async connectedCallback() {
     super.connectedCallback();
-    await this._listener();
   }
 
   static get styles() {
@@ -256,14 +267,19 @@ export class SampleAC extends LitElement {
       padding: 8px 16px;
     }
 
-    #paste img {
-      display: inline-block;
+    #stream {
       width: 320px;
-      margin: 0 auto;
+      height: 180px;
     }
 
-    fluent-card img {
-      margin: 8px 8px;
+    .center {
+      margin: 0px auto;
+      text-align: center;
+      background: transparent !important;
+    }
+
+    .center button {
+      margin-top: 16px;
     }
 
     `;
@@ -281,41 +297,36 @@ export class SampleAC extends LitElement {
           <fluent-breadcrumb-item href="/">首页</fluent-breadcrumb-item>
           <fluent-breadcrumb-item href="/sample">示例</fluent-breadcrumb-item>
         </fluent-breadcrumb>
-        <h2>异步剪贴板 (Async Clipboard) API</h2>
-        提供了响应剪贴板命令（剪切、复制和粘贴）与异步读写系统剪贴板的能力，并取代使用 document.execCommand() 的剪贴板访问方式<br><br>
+        <h2>形状检测 (Shape Detection) API</h2>
+        形状检测 API 检测图像中的人脸、条形码和文本<br><br>
         <fluent-card class="act">
-          <button @click="${this._copy}">复制</button> 写入到剪贴板<br><br>
-          <button @click="${this._paste}">粘贴</button> 从剪贴板读出
-          <div>
-            也可以复制这些图片后，点击粘贴按钮<br><br>
-            <image src="/assets/logo/chromium.png" width="50" height="50"></image>
-            <image src="/assets/logo/chrome.png" width="50" height="50"></image>
-            <image src="/assets/logo/edge.png" width="50" height="50"></image>
-            <image src="/assets/logo/safari.png" width="50" height="50"></image>
-            <image src="/assets/logo/firefox.png" width="50" height="50"></image>
-            <image src="/assets/logo/opera.png" width="50" height="50"></image>
-            <image src="/assets/logo/vivaldi.png" width="50" height="50"></image>
+          <div class="center">
+            <video id="stream" muted autoplay></video><br>
+            <button @click="${this._bc}">扫码二维码</button>
+            <button @click="${this._pausec}">暂停</button>
           </div>
-          <div id="paste"></div>
           <div id="msg"></div>
+        </fluent-card>
+        <fluent-card>
+          启用 chrome://flags#enable-experimental-web-platform-features
         </fluent-card>
         <fluent-card id="st">
           <div class="tut">
             <icon-webdev></icon-webdev> 
-            <a href="https://web.dev/async-clipboard/" title="Unblocking clipboard access ">
-              教程：解锁剪贴板访问
+            <a href="https://web.dev/shape-detection/" title="The Shape Detection API: a picture is worth a thousand words, faces, and barcodes">
+              教程：形状检测 API
             </a>
           </div>
-          <div class="w3c"><icon-w3c class="w3clogo"></icon-w3c> <a href="https://www.w3.org/TR/clipboard-apis/#async-clipboard-api" title="Asynchronous Clipboard API">Asynchronous Clipboard API</a></div>
+          <div class="w3c"><icon-w3c class="w3clogo"></icon-w3c> <a href="https://wicg.github.io/shape-detection-api/" title="Accelerated Shape Detection in Images">Accelerated Shape Detection in Images</a></div>
           <div class="imp">
             <div class="des">
-              <a href="https://chromestatus.com/feature/5074658793619456" title="在 Chromium 76 版本支持">🐡 M76</a>
+              <a href="https://chromestatus.com/feature/4757990523535360" title="在 Chromium 83 版本支持">🐡 M83</a>
             </div>
             <div class="des">
               <div class="det">
               <icon-chr class="yes" title="Google Chrome 浏览器"></icon-chr>
               <icon-edg class="yes" title="微软 Edge 浏览器"></icon-edg> <icon-ope class="yes" title="Opera 浏览器"></icon-ope> <icon-viv class="yes" title="Vivaldi 浏览器"></icon-viv>
-              <icon-saf class="yes" title="Apple Safari 浏览器"></icon-saf> <icon-fir class="yes" title="Mozilla Firefox 浏览器"></icon-fir>
+              <icon-saf class="no" title="Apple Safari 浏览器"></icon-saf> <icon-fir class="no" title="Mozilla Firefox 浏览器"></icon-fir>
               </div>
             </div>
             <div class="des">
@@ -323,7 +334,7 @@ export class SampleAC extends LitElement {
                 <icon-mac class="yes" title="Mac"></icon-mac> <icon-win class="yes" title="Windows"></icon-win> <icon-lin class="yes" title="Linux"></icon-lin> 
               </div>
               <div class="det">
-                <icon-and class="yes" title="Android"></icon-and> <icon-ios class="yes" title="iOS"></icon-ios>
+                <icon-and class="yes" title="Android"></icon-and> <icon-ios class="no" title="iOS"></icon-ios>
               </div>
             </div>   
           </div>

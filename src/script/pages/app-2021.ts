@@ -80,7 +80,7 @@ export class App2021 extends LitElement {
       .p2021 {
         padding: 16px 16px;
         color: #3d3d3d;
-        background-image: linear-gradient(180deg, #ffffff 0%, rgba(227, 253, 245, 0.4) 10%, rgba(255, 230, 250, 0.2) 100%);
+        background-image: linear-gradient(180deg, #ffffff 0%, rgba(227, 253, 245, 0.4) 10%, rgba(255, 230, 250, 0.3) 100%);
         height: 100%;
       }
 

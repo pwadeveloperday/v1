@@ -322,7 +322,7 @@ export class App2022 extends LitElement {
           object-fit: cover;
           object-position: center;
           width: 100%;
-          background-image: linear-gradient(180deg,  rgba(227, 253, 245, 0.2) 5%, rgba(227, 253, 245, 0.4) 10%, rgba(255, 230, 250, 0.2) 100%);
+          background-image: linear-gradient(180deg,  rgba(227, 253, 245, 0.2) 5%, rgba(227, 253, 245, 0.4) 10%, rgba(255, 230, 250, 0.3) 100%);
         }
 
         .section-single h3 {
