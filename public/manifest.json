@@ -1,10 +1,10 @@
 {
   "id": "pwadevday",
-  "scope": "./",
+  "scope": "/",
   "name": "中国 PWA 开发者日",
   "display": "standalone",
   "display_override": ["window-controls-overlay"],
-  "start_url": "./",
+  "start_url": "/",
   "short_name": "中国 PWA 开发者日",
   "theme_color": "#ffffff",
   "description": "2022 中国 PWA 开发者日，分享 PWA 技术进展及 PWA 生态的实践与落地。",
@@ -61,7 +61,7 @@
   ],
   "protocol_handlers": [{
     "protocol": "web+pwadev",
-    "url": "./url-protocol-handler?pwadev=%s"
+    "url": "/url-protocol-handler?pwadev=%s"
   }],
   "file_handlers": [
     {

@@ -20,22 +20,29 @@ export class SampleSD extends LitElement {
       });
       this._stream.srcObject = stream;
       await this._stream.play();
-
-      const barcodeDetector = new BarcodeDetector({formats: ['qr_code']});
       
       if(this._stream) {
-        let videoel = this._stream;
-        this.interval = setInterval(async (barcodeDetector, videoel) => {
-          const barcodes = await barcodeDetector.detect(videoel);
-          if (barcodes.length <= 0) return;
+        try {
+          let videoel = this._stream;
+          let supportedFormats = new BarcodeDetector.getSupportedFormats();
+          let barcodeDetector = new BarcodeDetector({formats: supportedFormats});
+          let barcodes = await barcodeDetector.detect(videoel);
           this._msg.innerHTML = barcodes.map(barcode => barcode.rawValue);
-        }, 500);
+        } catch (error) {
+          this._msg.innerHTML = error;
+        }
+
+        // this.interval = setInterval(async (barcodeDetector, videoel) => {
+        //   const barcodes = await barcodeDetector.detect(videoel);
+        //   if (barcodes.length <= 0) return;
+        //   this._msg.innerHTML = barcodes.map(barcode => barcode.rawValue);
+        // }, 500);
       }
     }
   }
 
   async _pausec() {
-    clearInterval(this.interval);
+    // clearInterval(this.interval);
     this._stream.pause();
   }
 
