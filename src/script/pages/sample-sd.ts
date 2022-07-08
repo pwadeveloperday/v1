@@ -5,17 +5,11 @@ import { customElement, query, property } from 'lit/decorators.js';
 export class SampleSD extends LitElement {
   @query('#stream') _stream: HTMLVideoElement;
   @query('#msg') _msg: HTMLDivElement;
-  @property({ type: Boolean }) _pause = false;
-
-  async _barcode() {
-    const barcodes = await barcodeDetector.detect(this._stream);
-    if (barcodes.length <= 0) return;
-    this._msg.innerHTML = barcodes.map(barcode => barcode.rawValue);
-  }
+  @property({ type: Function }) interval;  
 
   async _bc() {
     if (!('BarcodeDetector' in window) || !((await BarcodeDetector.getSupportedFormats()).includes('qr_code'))) {
-      this._msg.innerHTML =  '浏览器不支持二维码检测';
+      this._msg.innerHTML =  '浏览器在该系统不支持二维码检测';
       return;
     } else {
       const stream = await navigator.mediaDevices.getUserMedia({
@@ -26,9 +20,6 @@ export class SampleSD extends LitElement {
       });
       this._stream.srcObject = stream;
       await this._stream.play();
-
-      let interval;
-      this._pause = false;
 
       const barcodeDetector = new BarcodeDetector({formats: ['aztec',
         'code_128',
@@ -43,16 +34,17 @@ export class SampleSD extends LitElement {
         'qr_code',
         'upc_a',
         'upc_e']});
-      if(!this._pause) {
-        interval = setInterval(this._barcode, 500);
-      } else {
-        clearInterval(interval);
-      }
+      
+      this.interval = setInterval(async (barcodeDetector) => {
+        const barcodes = await barcodeDetector.detect(this._stream);
+        if (barcodes.length <= 0) return;
+        this._msg.innerHTML = barcodes.map(barcode => barcode.rawValue);
+      }, 500);
     }
   }
 
   async _pausec() {
-    this._pause = true;
+    clearInterval(this.interval);
     this._stream.pause();
   }
 
@@ -331,7 +323,7 @@ export class SampleSD extends LitElement {
             </div>
             <div class="des">
               <div class="det">
-                <icon-mac class="yes" title="Mac"></icon-mac> <icon-win class="yes" title="Windows"></icon-win> <icon-lin class="yes" title="Linux"></icon-lin> 
+                <icon-mac class="yes" title="Mac"></icon-mac> <icon-win class="no" title="Windows"></icon-win> <icon-lin class="no" title="Linux"></icon-lin> 
               </div>
               <div class="det">
                 <icon-and class="yes" title="Android"></icon-and> <icon-ios class="no" title="iOS"></icon-ios>

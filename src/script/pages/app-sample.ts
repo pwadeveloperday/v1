@@ -72,31 +72,31 @@ export class AppSample extends LitElement {
         <ul>
           <li>
             🌐 M20
-            <a href="/sample/notification" appearance="primary">通知 (Notification) API</a>
+            <a href="/sample/notification" appearance="primary">通知 (Notification)</a>
           </li>
           <li>
             🐡 M63
-            <a href="/sample/generic-sensor" appearance="primary">通用传感器 (Generic Sensor) API</a>
+            <a href="/sample/generic-sensor" appearance="primary">通用传感器 (Generic Sensor)</a>
           </li>
           <li>
             🐡 M76
-            <a href="/sample/async-clipboard" appearance="primary">异步剪贴板 (Async Clipboard) API</a>
+            <a href="/sample/async-clipboard" appearance="primary">异步剪贴板 (Async Clipboard)</a>
           </li>
           <li>
             🐡 M80
-            <a href="/sample/contact-picker" appearance="primary">联系人选取器 (Contact Picker) API</a>
+            <a href="/sample/contact-picker" appearance="primary">联系人选取器 (Contact Picker)</a>
           </li>
           <li>
             🐡 M81
-            <a href="/sample/badging" appearance="primary">徽章 (Badging) API</a>
+            <a href="/sample/badging" appearance="primary">徽章 (Badging)</a>
           </li>
           <li>
             🐡 M83
-            <a href="/sample/shape-detection" appearance="primary">形状检测 (Shape Detection) API</a>
+            <a href="/sample/shape-detection" appearance="primary">形状检测 (Shape Detection)</a>
           </li>
           <li>
             🐡 M84
-            <a href="/sample/wake-lock" appearance="primary">屏幕唤醒锁定 (Screen Wake Lock) API</a>
+            <a href="/sample/wake-lock" appearance="primary">屏幕唤醒锁定 (Screen Wake Lock)</a>
           </li>
           <li>
             🐡 M85
@@ -107,29 +107,29 @@ export class AppSample extends LitElement {
           <li>
             🐡 M89
             <a href="/sample/web-share" appearance="primary">
-              Web 共享 (Web Share) API
+              Web 共享 (Web Share)
             </a>
           </li>
           <li>
             🐡 M89
             <a href="/sample/file-system-access" appearance="primary">
-              文件系统访问 (File System Access) API
+              文件系统访问 (File System Access)
             </a>
           </li>
           <li>
             🌐 M93
-            WebCodecs API
+            WebCodecs
           </li>
           <li>
             🐡 M95
             <a href="/sample/eyedropper" appearance="primary">
-              滴管 (EyeDropper) API
+              滴管 (EyeDropper)
             </a>  
           </li>
           <li>
             🐡 M96
             <a href="/sample/url-protocol-handler" appearance="primary">
-            URL 协议处理 (URL protocol handler)
+            URL 协议处理 (URL Protocol Handler)
             </a>
           </li>
           <li>
@@ -142,7 +142,7 @@ export class AppSample extends LitElement {
           </li>
           <li>
             🌐 M102
-            导航 (Navigation) API (替代 History API)
+            导航 (Navigation) (替代 History API)
           </li>
           <li>
             🐡 M102
@@ -153,24 +153,24 @@ export class AppSample extends LitElement {
           <li>
             🐡 M102
             <a href="/sample/file-handling" appearance="primary">
-              文件处理 (File Handling) API
+              文件处理 (File Handling)
             </a>
           </li>
           <li>
             🐡 M102
             <a href="/sample/media-player" appearance="primary">
-              文件处理 (File Handling) API - 媒体播放器
+              文件处理 (File Handling) - 媒体播放器
             </a>
           </li>
           <li>
             🐡 M103
             <a href="/sample/local-font-access" appearance="primary">
-              本地字体访问 (Local Font Access) API
+              本地字体访问 (Local Font Access)
             </a>
           </li>
           <li>
             🌐 🚧 M104
-              共享存储 (Shared Storage) API
+              共享存储 (Shared Storage)
           </li>       
           <li>
             🐡 🚧 M104
@@ -178,15 +178,15 @@ export class AppSample extends LitElement {
           </li>
           <li>
             🌐 🚧
-            WebGPU API (Origin Trial: 94 to 105)
+            WebGPU (Origin Trial: 94 to 105)
           </li>
           <li>
             🐡 🚧
-            计算压力 (Compute Pressure) API
+            计算压力 (Compute Pressure)
           </li>
           <li>
             🌐 🚧
-            Web 神经网络 (WebNN) API
+            Web 神经网络 (WebNN)
           </li>
         </ul>
       </fluent-card>

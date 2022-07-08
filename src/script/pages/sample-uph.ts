@@ -26,12 +26,12 @@ export class SampleUPH extends LitElement {
       const response = await fetch(`https://restapi.amap.com/v3/staticmap?location=${location}&zoom=10&size=375*250&markers=mid,,A:${location}&key=39a5a5f5239a28b739e6a79381afb97e`);
       this._map.innerHTML = `<img src="${response}">`;
     } else {
-      this._msg.innerHTML = `无 web+pwadev://* 调用`;
+      this._msg.innerHTML = `无 web+coffee://* 调用`;
     }
   }
 
   _updateUph() {
-    let uph = `web+pwadev://${this._iuph.value}`;
+    let uph = `web+coffee://${this._iuph.value}`;
     this._uph.innerHTML = uph;
     this._uph.href = uph;
   }
@@ -269,14 +269,14 @@ export class SampleUPH extends LitElement {
           <fluent-breadcrumb-item href="/">首页</fluent-breadcrumb-item>
           <fluent-breadcrumb-item href="/sample">示例</fluent-breadcrumb-item>
         </fluent-breadcrumb>
-        <h2>URL 协议处理 (URL protocol handler)</h2>
+        <h2>URL 协议处理 (URL Protocol Handler)</h2>
         使用特定协议的链接调用已安装的 PWA，获得更集成的体验。<br><br>
         <fluent-card class="act">
           <ul>
             <li>访问 <a href="https://pwadev.io">https://pwadev.io</a></li>
             <li>安装为本地 PWA 应用</li>
             <li>回到浏览器，访问 <a href="https://pwadev.io/sample/url-protocol-handler">https://pwadev.io/sample/url-protocol-handler</a> </li>
-            <li>点击 <a href="web+pwadev://北京市西城区景山西街44号" id="uph">web+pwadev://北京市西城区景山西街44号</a></li>
+            <li>点击 <a href="web+coffee://北京市西城区景山西街44号" id="uph">web+coffee://北京市西城区景山西街44号</a></li>
             <li>自动启动 "中国 PWA 开发者日"</li>
             <li>显示浏览器中查询的地址经纬度及地图</li>
           </ul>
