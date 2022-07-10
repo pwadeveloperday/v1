@@ -24,7 +24,7 @@ export class SampleSD extends LitElement {
       if(this._stream) {
         try {
           let videoel = this._stream;
-          let barcodeDetector = new BarcodeDetector({formats: 'qr_code'});
+          let barcodeDetector = new BarcodeDetector({formats: ['qr_code']});
           let barcodes = await barcodeDetector.detect(videoel);
           this._msg.innerHTML = barcodes.map(barcode => barcode.rawValue);
         } catch (e) {
