@@ -12,7 +12,20 @@ export class SampleN extends LitElement {
       body: notifbody,
       icon: notifimg,
     };
-    self.registration.showNotification(notiftitle, options);
+
+    try {
+      const notification = new Notification(notiftitle, options);
+    } catch (ex) {
+
+    }
+
+    try {
+      self.registration.showNotification(notiftitle, options);
+    } catch (ex) {
+
+    }
+    
+    return;
   }
 
   _n() {

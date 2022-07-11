@@ -88,6 +88,18 @@
       navigator.serviceWorker.register(
         import.meta.env.MODE === 'production' ? '/sw.js' : '/sw.js?dev-sw'
       );
+
+      Notification.requestPermission(function(result) {
+        console.log('User Choice', result);
+        if (result !== 'granted') {
+          console.log('No notification permission granted!');
+        } else {
+            navigator.serviceWorker.ready
+            .then(function(swreg) {
+              swreg.showNotification('2022 中国 PWA 开发者日', { body: `为加速推动渐进式 Web 应用 (PWA) 在中国的发展，微软与英特尔携手举办“第二届中国 PWA 开发者日”。`});
+            });
+        }
+      });
     }
   </script>
 </body>
