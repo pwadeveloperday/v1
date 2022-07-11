@@ -128,6 +128,13 @@
       "description": "打开博客页面",
       "url": "/blog",
       "icons": [{ "src": "assets/icons/icon_192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "示例",
+      "short_name": "Sample",
+      "description": "打开示例页面",
+      "url": "/sample",
+      "icons": [{ "src": "assets/icons/icon_192.png", "sizes": "192x192" }]
     }
   ]
 }

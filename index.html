@@ -39,7 +39,7 @@
 
     gtag('config', 'G-QEPH34BB0N');
   </script>
-  <script type="module" crossorigin src="/code/index.87674f05.js"></script>
+  <script type="module" crossorigin src="/code/index.79d26c25.js"></script>
   <link rel="stylesheet" href="/code/index.3116cb10.css">
 </head>
 
@@ -72,6 +72,18 @@
             console.log(`The overlay is ${isOverlayVisible ? 'visible' : 'hidden'}, the title bar width is ${titleBarRect.width}px`);
         }, 200));
     }
+
+    navigation.addEventListener('navigate', (event) => {
+      console.log(event.formData);
+      switch (event.destination.url) {
+        case 'https://web.dev/':
+          console.log("访问 web.dev");
+          break;
+        case 'https://github.io':
+          console.log("访问 github.io");
+          break;
+      }
+    });
   </script>
   
 </body>
