@@ -254,7 +254,8 @@ export class SampleED extends LitElement {
           <fluent-breadcrumb-item href="/">首页</fluent-breadcrumb-item>
           <fluent-breadcrumb-item href="/sample">示例</fluent-breadcrumb-item>
         </fluent-breadcrumb>
-        <h2>Eyedropper API</h2>
+        <h2>滴管 (EyeDropper) API</h2>
+        用户可以通过 EyeDropper API 从屏幕上采样颜色，包括浏览器窗口之外的颜色。<br><br>
         <fluent-card class="act">
           <button @click="${this._sampleColorFromScreen}">启用 Eyedropper</button>
           <button @click="${this._abort}">中止 Eyedropper</button>

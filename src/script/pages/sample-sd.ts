@@ -3,46 +3,45 @@ import { customElement, query, property } from 'lit/decorators.js';
 
 @customElement('sample-sd')
 export class SampleSD extends LitElement {
-  @query('#stream') _stream: HTMLVideoElement;
+  @query('#stream') _video: HTMLVideoElement;
   @query('#msg') _msg: HTMLDivElement;
-  @property({ type: Function }) interval;  
+  @property({ type: Function }) interval; 
+  @property({ type: Function }) stream;   
 
   async _bc() {
     if (!('BarcodeDetector' in window) || !((await BarcodeDetector.getSupportedFormats()).includes('qr_code'))) {
-      this._msg.innerHTML =  '浏览器在该系统不支持二维码检测';
-      return;
-    } else {
-      const stream = await navigator.mediaDevices.getUserMedia({
+      this._msg.innerHTML =  '该系统不支持二维码检测';
+      // return;
+    } 
+    
+    // else {
+      this.stream = await navigator.mediaDevices.getUserMedia({
         video: {
           facingMode: { ideal: 'environment' }
         },
         audio: false
       });
-      this._stream.srcObject = stream;
-      await this._stream.play();
+      this._video.srcObject = this.stream;
+      await this._video.play();
       
-      if(this._stream) {
+      if(this._video) {
         try {
-          let videoel = this._stream;
           let barcodeDetector = new BarcodeDetector({formats: ['qr_code']});
-          let barcodes = await barcodeDetector.detect(videoel);
+          let barcodes = await barcodeDetector.detect(this._video);
           this._msg.innerHTML = barcodes.map(barcode => barcode.rawValue);
         } catch (e) {
           this._msg.innerHTML = e.message;
         }
-
-        // this.interval = setInterval(async (barcodeDetector, videoel) => {
-        //   const barcodes = await barcodeDetector.detect(videoel);
-        //   if (barcodes.length <= 0) return;
-        //   this._msg.innerHTML = barcodes.map(barcode => barcode.rawValue);
-        // }, 500);
       }
-    }
+    // }
   }
 
   async _pausec() {
     // clearInterval(this.interval);
-    this._stream.pause();
+    this._video.pause();
+    this.stream.getTracks().forEach(function(track) {
+      track.stop();
+    });
   }
 
   async connectedCallback() {

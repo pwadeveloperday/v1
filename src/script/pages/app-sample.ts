@@ -142,7 +142,9 @@ export class AppSample extends LitElement {
           </li>
           <li>
             🌐 M102
-            导航 (Navigation) (替代 History API)
+            <a href="/sample/navigation" appearance="primary">
+              导航 (Navigation) (替代 History API)
+            </a>
           </li>
           <li>
             🐡 M102

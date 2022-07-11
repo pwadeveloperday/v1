@@ -70,6 +70,18 @@
             console.log(`The overlay is ${isOverlayVisible ? 'visible' : 'hidden'}, the title bar width is ${titleBarRect.width}px`);
         }, 200));
     }
+
+    navigation.addEventListener('navigate', (event) => {
+      console.log(event.formData);
+      switch (event.destination.url) {
+        case 'https://web.dev/':
+          console.log("访问 web.dev");
+          break;
+        case 'https://github.io':
+          console.log("访问 github.io");
+          break;
+      }
+    });
   </script>
   <script type="module">
     if ('serviceWorker' in navigator) {

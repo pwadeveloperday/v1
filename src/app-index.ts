@@ -262,6 +262,13 @@ export class AppIndex extends LitElement {
             },
           },
           {
+            path: '/sample/navigation',
+            component: 'sample-na',
+            action: async () => {
+              await import('./script/pages/sample-na.js');
+            },
+          },
+          {
             path: '/tutorial',
             component: 'app-tutorial',
             action: async () => {

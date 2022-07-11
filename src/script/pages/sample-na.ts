@@ -1,35 +1,25 @@
 import { LitElement, css, html } from 'lit';
 import { customElement, query } from 'lit/decorators.js';
 
-@customElement('sample-b')
-export class SampleB extends LitElement {
+@customElement('sample-na')
+export class SampleNA extends LitElement {
 
   @query('#msg') _msg: HTMLDivElement;
 
-  _randomIntFromInterval(min: number, max: number) { // min and max included 
-    return Math.floor(Math.random() * (max - min + 1) + min)
-  }
-
-  _unreadCountChanged(newUnreadCount: number) {
-    if (navigator.setAppBadge) {
-      this._msg.innerHTML = '支持 Badging API';
-      navigator.setAppBadge(newUnreadCount).then(() => {
-        this._msg.innerHTML = '应用徽章（Badge）添加成功';
-      }).catch((error) => {
-        this._msg.innerHTML = error.name + ' ' + error.message;
-      });
-    }
-  }
-
-  _b() {
-    let rndInt = this._randomIntFromInterval(1, 999)
-    this._unreadCountChanged(rndInt);
-  }
-
-  _bc() {
-    navigator.clearAppBadge().catch((error) => {
-      this._msg.innerHTML = error.name + ' ' + error.message;
+  _na() {
+    const entries = navigation.entries();
+    console.log(entries);
+    let entrylist = '';
+    entries.forEach((e)=> {
+      entrylist += `${e.index} ${e.key} ${e.url} <br>`
     });
+
+    this._msg.innerHTML = entrylist;
+  }
+
+  _naa() {
+    const secondurl = navigation.entries()[1].key;
+    navigation.traverseTo(secondurl);
   }
 
   async connectedCallback() {
@@ -243,6 +233,10 @@ export class SampleB extends LitElement {
       padding: 8px 16px;
     }
 
+    #msg {
+      font-size: 12px;
+    }
+
     `;
   }
 
@@ -258,24 +252,24 @@ export class SampleB extends LitElement {
           <fluent-breadcrumb-item href="/">首页</fluent-breadcrumb-item>
           <fluent-breadcrumb-item href="/sample">示例</fluent-breadcrumb-item>
         </fluent-breadcrumb>
-        <h2>徽章 (Badging) API</h2>
-        在文档或应用程序上显示一个徽章，作为状态更新的通知。<br><br>
+        <h2>导航 (Navigation) API</h2>
+        通过全新的 Navigation API 标准化客户端路由，彻底革新了单页应用程序（SPA）的构建。<br>
         <fluent-card class="act">
-          <button @click="${this._b}">设置应用徽章（Badge）</button>
-          <button @click="${this._bc}">清除应用徽章（Badge）</button>
+          <button @click="${this._na}">显示</button>
+          <button @click="${this._naa}">访问第二个链接</button>
           <div id="msg"></div>
         </fluent-card>
         <fluent-card id="st">
           <div class="tut">
             <icon-webdev></icon-webdev> 
-            <a href="https://web.dev/badging-api/" title="What is the App Badging API? ">
-              教程：什么是应用徽章 API
+            <a href="https://developer.chrome.com/docs/web-platform/navigation-api/" title="Modern client-side routing: the Navigation API">
+              教程：现代客户端路由：导航 API
             </a>
           </div>
-          <div class="w3c"><icon-w3c class="w3clogo"></icon-w3c> <a href="https://w3c.github.io/badging/" title="Badging API">Badging API</a></div>
+          <div class="w3c"><icon-w3c class="w3clogo"></icon-w3c> <a href="https://wicg.github.io/navigation-api/" title="Navigation API">Navigation API</a></div>
           <div class="imp">
             <div class="des">
-              <a href="https://www.chromestatus.com/feature/6068482055602176" title="在 Chromium 81 版本支持">🐡 M81</a>
+              <a href="https://chromestatus.com/feature/6232287446302720" title="在 Chromium 102 版本支持">🐡 M102</a>
             </div>
             <div class="des">
               <div class="det">
