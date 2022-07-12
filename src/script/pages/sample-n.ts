@@ -259,11 +259,11 @@ export class SampleN extends LitElement {
         <fluent-card id="st">
           <div class="tut">
             <icon-webdev></icon-webdev> 
-            <a href="https://web.dev/ications/" title="Web Push and Notifications">
+            <a href="https://web.dev/notifications/" title="Web Push and Notifications">
               教程：网络推送和通知
             </a>
           </div>
-          <div class="w3c">whatwg <a href="https://ications.spec.whatwg.org/" title="yestifications API">Notifications API</a></div>
+          <div class="w3c">whatwg <a href="https://ications.spec.whatwg.org/" title="Notifications API">Notifications API</a></div>
           <div class="imp">
             <div class="des">
               <a href="https://chromestatus.com/feature/5064350557536256" title="在 Chromium 102 版本支持">🌐 M20</a>

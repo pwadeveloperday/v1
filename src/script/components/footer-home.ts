@@ -10,20 +10,23 @@ export class AppFooterHome extends LitElement {
     return css`
 
       footer {
-        padding: 0 0px 16px 0px;
+        padding: 16px 0px 16px 0px;
         font-size: 14px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
       }
 
       .suggest {
-        margin: 0px auto;
-        text-align: center;
-        padding: 16px;
+        justify-self: end;
       }
 
       footer a {
         color: rgba(61, 61, 61, 1);
         text-decoration: none;
-        margin: 0 4px;
+        margin: 0 2px;
       }
 
       footer a:hover {
@@ -49,12 +52,12 @@ export class AppFooterHome extends LitElement {
   render() {
     return html`
       <footer>
-        <div class="suggest">
-        <a href="/code-of-conduct" appearance="primary" title="行为准则">行为准则</a>
-        <a href="/privacy" appearance="primary" title="隐私">隐私</a>
-        <a href="/about" appearance="primary" title="关于">关于</a>  
-        </div>
         <div><a href="/sample">&copy;</a>2022 <a href="https://pwadev.io" title="中国 PWA 开发者日">中国 PWA 开发者日</a></div>
+        <div class="suggest">
+          <a href="/code-of-conduct" appearance="primary" title="行为准则">行为准则</a>
+          <a href="/privacy" appearance="primary" title="隐私">隐私</a>
+          <a href="/about" appearance="primary" title="关于">关于</a>  
+        </div>
       </footer>
     `;
   }

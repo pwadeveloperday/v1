@@ -9,7 +9,6 @@ export class AppPrivacy extends LitElement {
       padding: 0 16px;
       margin: 1rem 0 0rem 0;
       color: #3d3d3d;
-      min-height: calc(100vh - 76px);
     }
 
     h2 {
@@ -64,8 +63,8 @@ export class AppPrivacy extends LitElement {
           <p>我们不使用 Cookie 和类似的技术。</p>
           <p>我们不收集您的个人数据，更不会使用和共享您的个人数据。</p>
         </fluent-card>
-        <app-footer></app-footer>
       </div>
+      <app-footer></app-footer>
     `;
   }
 }

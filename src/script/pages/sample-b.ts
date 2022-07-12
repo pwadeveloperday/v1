@@ -14,7 +14,7 @@ export class SampleB extends LitElement {
     if (navigator.setAppBadge) {
       this._msg.innerHTML = '支持 Badging API';
       navigator.setAppBadge(newUnreadCount).then(() => {
-        this._msg.innerHTML = '应用徽章（Badge）添加成功';
+        this._msg.innerHTML = newUnreadCount + ' 应用徽章（Badge）添加成功';
       }).catch((error) => {
         this._msg.innerHTML = error.name + ' ' + error.message;
       });
@@ -27,7 +27,9 @@ export class SampleB extends LitElement {
   }
 
   _bc() {
-    navigator.clearAppBadge().catch((error) => {
+    navigator.clearAppBadge().then(() => {
+      this._msg.innerHTML = '应用徽章（Badge）已清除';
+    }).catch((error) => {
       this._msg.innerHTML = error.name + ' ' + error.message;
     });
   }
