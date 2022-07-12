@@ -4,8 +4,13 @@ import { customElement } from 'lit/decorators.js';
 @customElement('sample-n')
 export class SampleN extends LitElement {
 
+  _randomIntFromInterval(min: number, max: number) { // min and max included 
+    return Math.floor(Math.random() * (max - min + 1) + min)
+  }
+
   _n() {
-    const title = '2022 中国 PWA 开发者日';
+    let rndInt = this._randomIntFromInterval(1, 999)
+    let title = `第 ${rndInt.toString()} 届 中国 PWA 开发者日`;
     const body = `为加速推动渐进式 Web 应用 (PWA) 在中国的发展，微软与英特尔携手举办“第二届中国 PWA 开发者日”。`;
     const img = `assets/icons/icon_96.png`;
     const options = {
