@@ -4,34 +4,24 @@ import { customElement } from 'lit/decorators.js';
 @customElement('sample-n')
 export class SampleN extends LitElement {
 
-  _randomNotification() {
-    const notiftitle = '中国 PWA 开发者日';
-    const notifbody = `为加速推动渐进式 Web 应用 (PWA) 在中国的发展，微软与英特尔携手举办“第二届中国 PWA 开发者日”。`;
-    const notifimg = `assets/icons/icon_96.png`;
+  _n() {
+    const title = '2022 中国 PWA 开发者日';
+    const body = `为加速推动渐进式 Web 应用 (PWA) 在中国的发展，微软与英特尔携手举办“第二届中国 PWA 开发者日”。`;
+    const img = `assets/icons/icon_96.png`;
     const options = {
-      body: notifbody,
-      icon: notifimg,
+      body: body,
+      icon: img,
     };
 
-    try {
-      const notification = new Notification(notiftitle, options);
-    } catch (ex) {
-
-    }
-
-    try {
-      self.registration.showNotification(notiftitle, options);
-    } catch (ex) {
-
-    }
-    
-    return;
-  }
-
-  _n() {
-    Notification.requestPermission().then((result) => {
-      if (result === 'granted') {
-        this._randomNotification();
+    Notification.requestPermission(function(result) {
+      console.log('用户选择 ', result);
+      if (result !== 'granted') {
+        console.log('未获得通知权限!');
+      } else {
+          navigator.serviceWorker.ready
+          .then(function(swreg) {
+            swreg.showNotification(title,  options);
+          });
       }
     });
   }
@@ -264,11 +254,11 @@ export class SampleN extends LitElement {
         <fluent-card id="st">
           <div class="tut">
             <icon-webdev></icon-webdev> 
-            <a href="https://web.dev/notifications/" title="Web Push and Notifications">
+            <a href="https://web.dev/ications/" title="Web Push and Notifications">
               教程：网络推送和通知
             </a>
           </div>
-          <div class="w3c">whatwg <a href="https://notifications.spec.whatwg.org/" title="yestifications API">Notifications API</a></div>
+          <div class="w3c">whatwg <a href="https://ications.spec.whatwg.org/" title="yestifications API">Notifications API</a></div>
           <div class="imp">
             <div class="des">
               <a href="https://chromestatus.com/feature/5064350557536256" title="在 Chromium 102 版本支持">🌐 M20</a>
