@@ -10,8 +10,8 @@ export class SampleN extends LitElement {
 
   _n() {
     let rndInt = this._randomIntFromInterval(1, 999)
-    let title = `第 ${rndInt.toString()} 届 中国 PWA 开发者日`;
-    const body = `为加速推动渐进式 Web 应用 (PWA) 在中国的发展，微软与英特尔携手举办“第二届中国 PWA 开发者日”。`;
+    let title = `第 ${rndInt.toString()} 届中国 PWA 开发者日`;
+    const body = `为加速推动渐进式 Web 应用 (PWA) 在中国的发展，微软与英特尔携手举办“第 ${rndInt.toString()} 届中国 PWA 开发者日”。`;
     const img = `assets/icons/icon_96.png`;
     const options = {
       body: body,
