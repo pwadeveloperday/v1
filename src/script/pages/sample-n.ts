@@ -25,6 +25,7 @@ export class SampleN extends LitElement {
       } else {
           navigator.serviceWorker.ready
           .then(function(swreg) {
+            console.log('未获得通知权限!');
             swreg.showNotification(title,  options);
           });
       }
@@ -262,7 +263,7 @@ export class SampleN extends LitElement {
               教程：网络推送和通知
             </a>
           </div>
-          <div class="w3c">whatwg <a href="https://ications.spec.whatwg.org/" title="Notifications API">Notifications API</a></div>
+          <div class="w3c">whatwg <a href="https://notifications.spec.whatwg.org/" title="Notifications API">Notifications API</a></div>
           <div class="imp">
             <div class="des">
               <a href="https://chromestatus.com/feature/5064350557536256" title="在 Chromium 102 版本支持">🌐 M20</a>
