@@ -23,7 +23,6 @@ export class SampleFSA extends LitElement {
       padding: 0 16px;
       margin: 1rem 0 0rem 0;
       color: #3d3d3d;
-      min-height: calc(100vh - 76px);
     }
 
     h2 {
@@ -263,8 +262,8 @@ export class SampleFSA extends LitElement {
             </div>   
           </div>
         </fluent-card>
-        <app-footer></app-footer>
       </div>
+      <app-footer></app-footer>
     `;
   }
 }
