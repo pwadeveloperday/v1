@@ -117,8 +117,7 @@ export class AppHome extends LitElement {
   }
 
   async fetchData() {
-    await fetch('/data.json');
-    const response = await fetch('/data.json');
+    const response = await fetch('/assets/data/data.json');
     this.jsondata = await response.json();
   }
 

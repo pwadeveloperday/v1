@@ -8,7 +8,8 @@
     "dev-task": "vite",
     "build": "vite build",
     "start": "npm run build && vite preview --host",
-    "start-remote": "vite --host"
+    "start-remote": "vite --host",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
@@ -20,7 +21,7 @@
     "@vaadin/router": "^1.7.4",
     "debounce": "^1.2.1",
     "hsl-to-hex": "^1.0.0",
-    "lit": "^2.2.5",
+    "lit": "^2.2.7",
     "lit-video": "^1.0.0",
     "pixi.js": "^6.4.2",
     "simplex-noise": "^3.0.1",
@@ -30,9 +31,9 @@
   },
   "devDependencies": {
     "gh-pages": "^4.0.0",
-    "typescript": "^4.7.2",
-    "vite": "^2.9.9",
-    "vite-plugin-pwa": "^0.12.0"
+    "typescript": "^4.7.4",
+    "vite": "^3.0.0",
+    "vite-plugin-pwa": "^0.12.3"
   },
   "prettier": {
     "tabWidth": 2,

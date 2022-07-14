@@ -63,7 +63,7 @@ export class App2022 extends LitElement {
   }
 
   async fetchData() {
-    const response = await fetch('/data.json');
+    const response = await fetch('/assets/data/data.json');
     this.jsondata = await response.json();
   }
 
@@ -553,8 +553,6 @@ export class App2022 extends LitElement {
   }
 
   async firstUpdated() {
-    // this method is a lifecycle even in lit
-    // for more info check out the lit docs https://lit.dev/docs/components/lifecycle/
     console.log('欢迎您!');
   }
 

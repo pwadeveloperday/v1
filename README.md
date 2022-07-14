@@ -8,10 +8,4 @@
 
 ```
 mkdir -p .cert && mkcert -key-file ./.cert/key.pem -cert-file ./.cert/cert.pem 'localhost'
-npm run dev
-```
-
-```
-"build": "tsc && vite build",
-"deploy": "npm run build && gh-pages -d dist"
 ```

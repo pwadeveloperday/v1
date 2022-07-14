@@ -67,7 +67,7 @@ export class App2021 extends LitElement {
   }
 
   async fetchData() {
-    const response = await fetch('/data.json');
+    const response = await fetch('/assets/data/data.json');
     this.jsondata = await response.json();
   }
 
