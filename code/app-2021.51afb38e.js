@@ -1,8 +1,8 @@
-import{a as p,s as c,r as h,$ as l,o as C,e as d,n as g}from"./index.d9644d58.js";/**
+import{a as l,s as c,r as h,$ as p,o as C,e as d,n as g}from"./index.57790278.js";/**
  * @license
  * Copyright 2017 Google LLC
  * SPDX-License-Identifier: BSD-3-Clause
- */function f(t){return p({descriptor:e=>({get(){var i,r;return(r=(i=this.renderRoot)===null||i===void 0?void 0:i.querySelectorAll(t))!==null&&r!==void 0?r:[]},enumerable:!0,configurable:!0})})}var v=Object.defineProperty,m=Object.getOwnPropertyDescriptor,o=(t,e,i,r)=>{for(var a=r>1?void 0:r?m(e,i):e,u=t.length-1,n;u>=0;u--)(n=t[u])&&(a=(r?n(e,i,a):n(a))||a);return r&&a&&v(e,i,a),a};let s=class extends c{constructor(){super(),this.description=`
+ */function f(t){return l({descriptor:e=>({get(){var i,r;return(r=(i=this.renderRoot)===null||i===void 0?void 0:i.querySelectorAll(t))!==null&&r!==void 0?r:[]},enumerable:!0,configurable:!0})})}var v=Object.defineProperty,m=Object.getOwnPropertyDescriptor,o=(t,e,i,r)=>{for(var a=r>1?void 0:r?m(e,i):e,u=t.length-1,n;u>=0;u--)(n=t[u])&&(a=(r?n(e,i,a):n(a))||a);return r&&a&&v(e,i,a),a};let s=class extends c{constructor(){super(),this.description=`
     \u968F\u7740 PWA \u6280\u672F\u5F15\u5165\u4EE5\u53CA\u591A\u79CD Web \u5E73\u53F0\u80FD\u529B\u7684\u589E\u5F3A\uFF0CPWA \u6280\u672F\u7684 Web \u5E94\u7528\u83B7\u5F97\u4E86\u4E0E\u4F20\u7EDF\u672C\u5730\u5E94\u7528\u51E0\u4E4E\u76F8\u540C\u7684\u7528\u6237\u4F53\u9A8C\u5E76\u4E14\u5F97\u5230\u4E86\u5E7F\u6CDB\u7684\u5E94\u7528\uFF0C\u4E5F\u4FC3\u8FDB\u4E86\u5C0F\u7A0B\u5E8F\u751F\u6001\u7684\u53D1\u5C55\u3002
   `,this.jsondata={name:"PWA Developer Day 2022",t2021:[{id:1,tag:"opening",title:"Web \u5F00\u53D1\u7684\u73B0\u72B6\u4E0E\u672A\u6765\uFF08\u5F00\u573A\u4ECB\u7ECD\uFF09",des:"",speaker:"\u5F20\u7426",pos:"\u8D44\u6DF1\u6280\u672F\u603B\u76D1",com:"\u82F1\u7279\u5C14 SATG Web \u5E73\u53F0\u5DE5\u7A0B",icon:"",icon5:"assets/2022/people/500/qi.png",bio:"",pdf:"https://d3i5xkfad89fac.cloudfront.net/pwa/2021/slides/02.pdf",bilibili:"https://www.bilibili.com/video/BV1Kv4y1G7L8",aid:"554870624",cid:"741436422",youtube:"https://youtu.be/npMpZHMizUc"}]},this.screenwidth="",this.screenheight="",this.topic=""}screenres(){let e=screen.availWidth-64,i=e*9/16;this.screenwidth=e.toString(),this.screenheight=i.toString()}async scrollToId(){const t=location.pathname.replace("/2021/","");console.log(t),console.log("----------------"),console.log(this.ids);for(let e of this.ids)e.id==="id_"+t&&(console.log(e),e.scrollIntoView({block:"end",behavior:"smooth"}))}async connectedCallback(){super.connectedCallback(),this.screenres(),await this.fetchData(),await this.scrollToId()}async fetchData(){const t=await fetch("/assets/data/data.json");this.jsondata=await t.json()}static get styles(){return h`
       canvas {
@@ -77,6 +77,10 @@ import{a as p,s as c,r as h,$ as l,o as C,e as d,n as g}from"./index.d9644d58.js
         max-height: 240px; 
       }
 
+      .bio {
+        margin-top: 8px;
+      }
+
       @media only screen and (min-width: 1024px) {
         .p2021 {
           padding-left: 32px;
@@ -138,7 +142,7 @@ import{a as p,s as c,r as h,$ as l,o as C,e as d,n as g}from"./index.d9644d58.js
               </div>
             </div>
           </fluent-card>
-        `}return l`
+        `}return p`
         <app-header ?enableBack="${!0}"></app-header>
         <div class="p2021">
           <h2>2021 中国 PWA 开发者日</h2>
@@ -148,5 +152,5 @@ import{a as p,s as c,r as h,$ as l,o as C,e as d,n as g}from"./index.d9644d58.js
           </div>
           <app-footer-home></app-footer-home>
         </div>
-      `}else return l`<div>No data</div>`}};o([d({type:String})],s.prototype,"description",2);o([d({type:Object})],s.prototype,"jsondata",2);o([d({type:String})],s.prototype,"screenwidth",2);o([d({type:String})],s.prototype,"screenheight",2);o([d({type:String})],s.prototype,"topic",2);o([f(".ids")],s.prototype,"ids",2);s=o([g("app-2021")],s);export{s as App2021};
-//# sourceMappingURL=app-2021.2abf399b.js.map
+      `}else return p`<div>No data</div>`}};o([d({type:String})],s.prototype,"description",2);o([d({type:Object})],s.prototype,"jsondata",2);o([d({type:String})],s.prototype,"screenwidth",2);o([d({type:String})],s.prototype,"screenheight",2);o([d({type:String})],s.prototype,"topic",2);o([f(".ids")],s.prototype,"ids",2);s=o([g("app-2021")],s);export{s as App2021};
+//# sourceMappingURL=app-2021.51afb38e.js.map
