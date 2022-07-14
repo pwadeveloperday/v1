@@ -1,5 +1,5 @@
 import { LitElement, css, html } from 'lit';
-import { property, customElement, query } from 'lit/decorators.js';
+import { property, customElement, query, queryAll } from 'lit/decorators.js';
 import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
 import '@pwabuilder/pwainstall';
 import * as PIXI from "pixi.js";
@@ -48,31 +48,44 @@ export class AppHome extends LitElement {
   @query('#herovideo') _herovideo: HTMLVideoElement;
   @query('#manualplay') _manualplay: HTMLButtonElement;
   @query('#manualpause') _manualpause: HTMLButtonElement;
+  // @queryAll('.touch') _touch:any;
   @property({ type: String }) playpromise = ``
 
-  private _playHeroVideo() {
-    this._herovideo.play();
-  }
+  // _goDetails() {
+  //   this._touch.forEach((touch:any) => {
+  //     touch.addEventListener("click", (i) => {
+  //       if(i.target.id.trim()) {
+  //         console.log(i.target.id);
+  //         location.href = `/2022/${i.target.id}`;
+  //         i.preventDefault();
+  //       }
+  //     }, false);
+  //   });
+  // }
 
-  private _pauseHeroVideo() {
-    if (!this._herovideo.paused) {
-      this._herovideo.pause();
-    }
-  }
+  // private _playHeroVideo() {
+  //   this._herovideo.play();
+  // }
 
-  private _checkVideoAutoPlay() {
-    let promise = this._herovideo.play();
+  // private _pauseHeroVideo() {
+  //   if (!this._herovideo.paused) {
+  //     this._herovideo.pause();
+  //   }
+  // }
 
-    if (promise !== undefined) {
-      promise.then(_ => {
-        this.playpromise = 'Autoplay started!';
-        console.log("+ Autoplay started!");
-      }).catch(_ => {
-        this.playpromise = 'Autoplay was prevented!';
-        console.log("- Autoplay was prevented!");
-      });
-    }
-  }  
+  // private _checkVideoAutoPlay() {
+  //   let promise = this._herovideo.play();
+
+  //   if (promise !== undefined) {
+  //     promise.then(_ => {
+  //       this.playpromise = 'Autoplay started!';
+  //       console.log("+ Autoplay started!");
+  //     }).catch(_ => {
+  //       this.playpromise = 'Autoplay was prevented!';
+  //       console.log("- Autoplay was prevented!");
+  //     });
+  //   }
+  // }  
 
   private _showCanvas = () => {
     const app = new PIXI.Application({
@@ -113,6 +126,7 @@ export class AppHome extends LitElement {
     super.connectedCallback();
     await this.fetchData();
     this._showCanvas();
+    // this._goDetails();
     // this._checkVideoAutoPlay();
   }
 
@@ -272,10 +286,20 @@ export class AppHome extends LitElement {
         margin-bottom:-2px;
       }
 
-      .title {
+      #schedule a {
+        text-decoration: none;
+        display: block;
+      }
+
+      #schedule fluent-card:hover {
+        cursor: pointer;
+      }
+
+      #schedule fluent-card .title {
         font-weight: 500;
         font-size: clamp(20px, 3vw, 28px);
         color: rgba(0,113,197, 0.9);
+        text-decoration: none;
       }
 
       #schedule fluent-card:hover .title {
@@ -285,17 +309,6 @@ export class AppHome extends LitElement {
       .details {
         display: flex;
         margin-top: 8px;
-      }
-
-      .avatar_ {
-        border: 5px solid hsl(100 100% 60%);
-        border-image-slice: 1;
-        border-image-source: conic-gradient(
-          from var(--startDeg, 0deg),
-          hsl(100 100% 60%), 
-          hsl(200 100% 60%),
-          hsl(100 100% 60%)
-        );
       }
 
       .avatar {
@@ -375,19 +388,6 @@ export class AppHome extends LitElement {
           overflow: hidden;
         }
       }
-
-      fluent-card a {
-        color: rgba(0, 113, 197, 0.9);
-        cursor: pointer;
-        text-decoration: none;
-        border-bottom: 0px dashed rgba(0, 113, 197, 0.6);
-      }
-  
-      fluent-card a:hover {
-        color: rgba(0, 113, 197, 1);
-        border-bottom: 1px dashed rgba(0, 113, 197, 0.9);
-      }
-
      `;
   }
 
@@ -408,23 +408,25 @@ export class AppHome extends LitElement {
 
       for(let i of this.jsondata.t2022) {
         let t = `
-          <fluent-card>
-            <div class="time">${i.time}</div>
-            <div class="divider">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 512"><path d="M64 360C94.93 360 120 385.1 120 416C120 446.9 94.93 472 64 472C33.07 472 8 446.9 8 416C8 385.1 33.07 360 64 360zM64 200C94.93 200 120 225.1 120 256C120 286.9 94.93 312 64 312C33.07 312 8 286.9 8 256C8 225.1 33.07 200 64 200zM64 152C33.07 152 8 126.9 8 96C8 65.07 33.07 40 64 40C94.93 40 120 65.07 120 96C120 126.9 94.93 152 64 152z"/></svg>  
-            </div>
-            <div class="topic">
-              <div class="title"><a href="/2022/${i.path}">${i.title}</a></div>
-              <div class="details">
-                <div class="avatar" id="icon_${i.iconid}"></div>
-                <div class="description">
-                  <div class="nametitle">${i.speaker}</div>
-                  <div class="team">${i.pos}</div>
-                  <div class="team">${i.com}</div>
+          <a href="/2022/${i.path}">
+            <fluent-card id="${i.path}" class="touch">
+              <div class="time">${i.time}</div>
+              <div class="divider">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 512"><path d="M64 360C94.93 360 120 385.1 120 416C120 446.9 94.93 472 64 472C33.07 472 8 446.9 8 416C8 385.1 33.07 360 64 360zM64 200C94.93 200 120 225.1 120 256C120 286.9 94.93 312 64 312C33.07 312 8 286.9 8 256C8 225.1 33.07 200 64 200zM64 152C33.07 152 8 126.9 8 96C8 65.07 33.07 40 64 40C94.93 40 120 65.07 120 96C120 126.9 94.93 152 64 152z"/></svg>  
+              </div>
+              <div class="topic">
+                <div class="title">${i.title}</div>
+                <div class="details">
+                  <div class="avatar" id="icon_${i.iconid}"></div>
+                  <div class="description">
+                    <div class="nametitle">${i.speaker}</div>
+                    <div class="team">${i.pos}</div>
+                    <div class="team">${i.com}</div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </fluent-card>
+            </fluent-card>
+          </a>
         `;
 
         fluentcard += t;
