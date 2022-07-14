@@ -395,6 +395,9 @@ export class App2022 extends LitElement {
       #icon_pwabuilder {
         background-image: url('assets/2022/people/120/pwabuilder.png');
       }
+      #icon_tianjian {
+        background-image: url('assets/2022/people/120/tianjian.png');
+      }
 
       .bili {
         margin: 16px auto;

@@ -13,7 +13,7 @@ export class AppFooterHome extends LitElement {
         padding: 16px 0px 16px 0px;
         font-size: 14px;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 55fr 45fr;
         grid-template-rows: 1fr;
         grid-column-gap: 0px;
         grid-row-gap: 0px;

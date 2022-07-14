@@ -339,6 +339,9 @@ export class AppHome extends LitElement {
       #icon_haoyu {
         background-image: url('assets/2022/people/120/haoyu.png');
       }
+      #icon_tianjian {
+        background-image: url('assets/2022/people/120/tianjian.png');
+      }
       #icon_pwabuilder {
         background-image: url('assets/2022/people/120/pwabuilder.png');
       }
