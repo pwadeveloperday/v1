@@ -145,6 +145,10 @@ export class App2021 extends LitElement {
         max-height: 240px; 
       }
 
+      .bio {
+        margin-top: 8px;
+      }
+
       @media only screen and (min-width: 1024px) {
         .p2021 {
           padding-left: 32px;

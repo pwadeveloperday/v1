@@ -251,7 +251,7 @@ export class AppBlog extends LitElement {
   }
 
   async fetchData() {
-    const response = await fetch('/blog.json');
+    const response = await fetch('/assets/data/blog.json');
     this.jsondata = await response.json();
   }
 
