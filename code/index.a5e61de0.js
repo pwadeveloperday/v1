@@ -2040,6 +2040,9 @@ void main(void)
       #icon_haoyu {
         background-image: url('assets/2022/people/120/haoyu.png');
       }
+      #icon_tianjian {
+        background-image: url('assets/2022/people/120/tianjian.png');
+      }
       #icon_pwabuilder {
         background-image: url('assets/2022/people/120/pwabuilder.png');
       }
@@ -3082,7 +3085,7 @@ void main(void)
         font-size: 14px;
         background: transparent;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 55fr 45fr;
         grid-template-rows: 1fr;
         grid-column-gap: 0px;
         grid-row-gap: 0px;
@@ -3120,7 +3123,7 @@ void main(void)
         padding: 16px 0px 16px 0px;
         font-size: 14px;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 55fr 45fr;
         grid-template-rows: 1fr;
         grid-column-gap: 0px;
         grid-row-gap: 0px;
@@ -3184,8 +3187,8 @@ void main(void)
           opacity: 1;
         }
       }
-    `}constructor(){super()}firstUpdated(){var r;new Re((r=this.shadowRoot)==null?void 0:r.querySelector("#routerOutlet")).setRoutes([{path:"",animate:!0,children:[{path:"/",component:"app-home"},{path:"/2022",children:[{path:"/",component:"app-2022",action:async()=>{await Wt(()=>import("./app-2022.222ccbb2.js"),[])}},{path:"/:topic",component:"app-2022",action:async()=>{await Wt(()=>import("./app-2022.222ccbb2.js"),[])}}]},{path:"/2021",children:[{path:"/",component:"app-2021",action:async()=>{await Wt(()=>import("./app-2021.51afb38e.js"),[])}},{path:"/:topic",component:"app-2021",action:async()=>{await Wt(()=>import("./app-2021.51afb38e.js"),[])}}]},{path:"/about",component:"app-about",action:async()=>{await Wt(()=>import("./app-about.2b674777.js"),[])}},{path:"/blog",children:[{path:"/",component:"app-blog",action:async()=>{await Wt(()=>import("./app-blog.cbeb48b6.js"),[])}},{path:"/:article",component:"app-blog",action:async()=>{await Wt(()=>import("./app-blog.cbeb48b6.js"),[])}}]},{path:"/tutorial",component:"app-tutorial",action:async()=>{await Wt(()=>import("./app-tutorial.a6655830.js"),[])}},{path:"/code-of-conduct",component:"app-coc",action:async()=>{await Wt(()=>import("./app-coc.39c7b43c.js"),[])}},{path:"/privacy",component:"app-privacy",action:async()=>{await Wt(()=>import("./app-privacy.a12d6505.js"),[])}}]}]),Pd({immediate:!0})}render(){return Ft`
+    `}constructor(){super()}firstUpdated(){var r;new Re((r=this.shadowRoot)==null?void 0:r.querySelector("#routerOutlet")).setRoutes([{path:"",animate:!0,children:[{path:"/",component:"app-home"},{path:"/2022",children:[{path:"/",component:"app-2022",action:async()=>{await Wt(()=>import("./app-2022.fca8654a.js"),[])}},{path:"/:topic",component:"app-2022",action:async()=>{await Wt(()=>import("./app-2022.fca8654a.js"),[])}}]},{path:"/2021",children:[{path:"/",component:"app-2021",action:async()=>{await Wt(()=>import("./app-2021.cbfeb22c.js"),[])}},{path:"/:topic",component:"app-2021",action:async()=>{await Wt(()=>import("./app-2021.cbfeb22c.js"),[])}}]},{path:"/about",component:"app-about",action:async()=>{await Wt(()=>import("./app-about.68be3e35.js"),[])}},{path:"/blog",children:[{path:"/",component:"app-blog",action:async()=>{await Wt(()=>import("./app-blog.763ff9ff.js"),[])}},{path:"/:article",component:"app-blog",action:async()=>{await Wt(()=>import("./app-blog.763ff9ff.js"),[])}}]},{path:"/tutorial",component:"app-tutorial",action:async()=>{await Wt(()=>import("./app-tutorial.b2882f7a.js"),[])}},{path:"/code-of-conduct",component:"app-coc",action:async()=>{await Wt(()=>import("./app-coc.1a308bd8.js"),[])}},{path:"/privacy",component:"app-privacy",action:async()=>{await Wt(()=>import("./app-privacy.1969ae7d.js"),[])}}]}]),Pd({immediate:!0})}render(){return Ft`
       <main id="routerOutlet">
       </main>
     `}};$l=A2([_e("app-index")],$l);"serviceWorker"in navigator&&navigator.serviceWorker.register("/sw.js");export{Ft as $,Mc as a,Ut as e,_e as n,hf as o,ve as r,St as s};
-//# sourceMappingURL=index.57790278.js.map
+//# sourceMappingURL=index.a5e61de0.js.map
