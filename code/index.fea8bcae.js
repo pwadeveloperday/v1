@@ -1823,7 +1823,7 @@ void main(void)
     \u672C\u6B21\u6D3B\u52A8\u9080\u8BF7\u4E00\u4F17\u4E1A\u754C\u5927\u5496\u56F4\u7ED5 PWA \u5C55\u5F00\u5206\u4EAB\uFF0C\u63A2\u8BA8\u6700\u65B0\u6280\u672F\u8FDB\u5C55\uFF0C\u53CA PWA \u751F\u6001\u7684\u5B9E\u8DF5\u4E0E\u843D\u5730\u3002
     
     \u671F\u5F85\u4E0E\u60A8\u7EBF\u4E0A\u76F8\u805A\u3002
-    `,this.jsondata={name:"PWA Developer Day 2022",t2022:[{id:1,time:"13:00",tag:"",path:"opening",title:"\u5F00\u5E55\u81F4\u8F9E",des:"",speaker:"\u5F20\u7426",pos:"\u8D44\u6DF1\u6280\u672F\u603B\u76D1",com:"\u82F1\u7279\u5C14 SATG Web \u5E73\u53F0\u5DE5\u7A0B",iconid:"qi",icon:"assets/2022/people/120/qi.png",icon5:"assets/2022/people/500/qi.png",bio:"",pdf:"",bilibili:"",aid:"",cid:"",youtube:""}]},this.playpromise="",this._showCanvas=()=>{const t=new xn({view:this.canvas,resizeTo:window,transparent:!0}),r=new f2;t.stage.filters=[new Yy(30,10,!0)];const e=[];for(let i=0;i<10;i++){const n=new c2(r.randomColor());t.stage.addChild(n.graphics),e.push(n)}window.matchMedia("(prefers-reduced-motion: reduce)").matches?e.forEach(i=>{i.update(),i.render()}):t.ticker.add(()=>{e.forEach(i=>{i.update(),i.render()})})}}_playHeroVideo(){this._herovideo.play()}_pauseHeroVideo(){this._herovideo.paused||this._herovideo.pause()}_checkVideoAutoPlay(){let t=this._herovideo.play();t!==void 0&&t.then(r=>{this.playpromise="Autoplay started!",console.log("+ Autoplay started!")}).catch(r=>{this.playpromise="Autoplay was prevented!",console.log("- Autoplay was prevented!")})}async connectedCallback(){super.connectedCallback(),await this.fetchData(),this._showCanvas()}async fetchData(){const t=await fetch("/assets/data/data.json");this.jsondata=await t.json()}static get styles(){return ve`
+    `,this.jsondata={name:"PWA Developer Day 2022",t2022:[{id:1,time:"13:00",tag:"",path:"opening",title:"\u5F00\u5E55\u81F4\u8F9E",des:"",speaker:"\u5F20\u7426",pos:"\u8D44\u6DF1\u6280\u672F\u603B\u76D1",com:"\u82F1\u7279\u5C14 SATG Web \u5E73\u53F0\u5DE5\u7A0B",iconid:"qi",icon:"assets/2022/people/120/qi.png",icon5:"assets/2022/people/500/qi.png",bio:"",pdf:"",bilibili:"",aid:"",cid:"",youtube:""}]},this.playpromise="",this._showCanvas=()=>{const t=new xn({view:this.canvas,resizeTo:window,transparent:!0}),r=new f2;t.stage.filters=[new Yy(30,10,!0)];const e=[];for(let i=0;i<10;i++){const n=new c2(r.randomColor());t.stage.addChild(n.graphics),e.push(n)}window.matchMedia("(prefers-reduced-motion: reduce)").matches?e.forEach(i=>{i.update(),i.render()}):t.ticker.add(()=>{e.forEach(i=>{i.update(),i.render()})})}}async connectedCallback(){super.connectedCallback(),await this.fetchData(),this._showCanvas()}async fetchData(){const t=await fetch("/assets/data/data.json");this.jsondata=await t.json()}static get styles(){return ve`
     #herohome {
       background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, hsl(0, 82, 57) 10%, hsl(252, 82, 57) 100%);
     }
@@ -1973,10 +1973,20 @@ void main(void)
         margin-bottom:-2px;
       }
 
-      .title {
+      #schedule a {
+        text-decoration: none;
+        display: block;
+      }
+
+      #schedule fluent-card:hover {
+        cursor: pointer;
+      }
+
+      #schedule fluent-card .title {
         font-weight: 500;
         font-size: clamp(20px, 3vw, 28px);
         color: rgba(0,113,197, 0.9);
+        text-decoration: none;
       }
 
       #schedule fluent-card:hover .title {
@@ -1986,17 +1996,6 @@ void main(void)
       .details {
         display: flex;
         margin-top: 8px;
-      }
-
-      .avatar_ {
-        border: 5px solid hsl(100 100% 60%);
-        border-image-slice: 1;
-        border-image-source: conic-gradient(
-          from var(--startDeg, 0deg),
-          hsl(100 100% 60%), 
-          hsl(200 100% 60%),
-          hsl(100 100% 60%)
-        );
       }
 
       .avatar {
@@ -2076,37 +2075,26 @@ void main(void)
           overflow: hidden;
         }
       }
-
-      fluent-card a {
-        color: rgba(0, 113, 197, 0.9);
-        cursor: pointer;
-        text-decoration: none;
-        border-bottom: 0px dashed rgba(0, 113, 197, 0.6);
-      }
-  
-      fluent-card a:hover {
-        color: rgba(0, 113, 197, 1);
-        border-bottom: 1px dashed rgba(0, 113, 197, 0.9);
-      }
-
      `}async firstUpdated(){console.log("\u6B22\u8FCE\u60A8!")}render(){if(this.jsondata){let t="";for(let r of this.jsondata.t2022)t+=`
-          <fluent-card>
-            <div class="time">${r.time}</div>
-            <div class="divider">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 512"><path d="M64 360C94.93 360 120 385.1 120 416C120 446.9 94.93 472 64 472C33.07 472 8 446.9 8 416C8 385.1 33.07 360 64 360zM64 200C94.93 200 120 225.1 120 256C120 286.9 94.93 312 64 312C33.07 312 8 286.9 8 256C8 225.1 33.07 200 64 200zM64 152C33.07 152 8 126.9 8 96C8 65.07 33.07 40 64 40C94.93 40 120 65.07 120 96C120 126.9 94.93 152 64 152z"/></svg>  
-            </div>
-            <div class="topic">
-              <div class="title"><a href="/2022/${r.path}">${r.title}</a></div>
-              <div class="details">
-                <div class="avatar" id="icon_${r.iconid}"></div>
-                <div class="description">
-                  <div class="nametitle">${r.speaker}</div>
-                  <div class="team">${r.pos}</div>
-                  <div class="team">${r.com}</div>
+          <a href="/2022/${r.path}">
+            <fluent-card id="${r.path}" class="touch">
+              <div class="time">${r.time}</div>
+              <div class="divider">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 512"><path d="M64 360C94.93 360 120 385.1 120 416C120 446.9 94.93 472 64 472C33.07 472 8 446.9 8 416C8 385.1 33.07 360 64 360zM64 200C94.93 200 120 225.1 120 256C120 286.9 94.93 312 64 312C33.07 312 8 286.9 8 256C8 225.1 33.07 200 64 200zM64 152C33.07 152 8 126.9 8 96C8 65.07 33.07 40 64 40C94.93 40 120 65.07 120 96C120 126.9 94.93 152 64 152z"/></svg>  
+              </div>
+              <div class="topic">
+                <div class="title">${r.title}</div>
+                <div class="details">
+                  <div class="avatar" id="icon_${r.iconid}"></div>
+                  <div class="description">
+                    <div class="nametitle">${r.speaker}</div>
+                    <div class="team">${r.pos}</div>
+                    <div class="team">${r.com}</div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </fluent-card>
+            </fluent-card>
+          </a>
         `;return Ft`
         <div id="herohome">
           <canvas class="orb-canvas"></canvas>
@@ -3187,8 +3175,8 @@ void main(void)
           opacity: 1;
         }
       }
-    `}constructor(){super()}firstUpdated(){var r;new Re((r=this.shadowRoot)==null?void 0:r.querySelector("#routerOutlet")).setRoutes([{path:"",animate:!0,children:[{path:"/",component:"app-home"},{path:"/2022",children:[{path:"/",component:"app-2022",action:async()=>{await Wt(()=>import("./app-2022.fca8654a.js"),[])}},{path:"/:topic",component:"app-2022",action:async()=>{await Wt(()=>import("./app-2022.fca8654a.js"),[])}}]},{path:"/2021",children:[{path:"/",component:"app-2021",action:async()=>{await Wt(()=>import("./app-2021.cbfeb22c.js"),[])}},{path:"/:topic",component:"app-2021",action:async()=>{await Wt(()=>import("./app-2021.cbfeb22c.js"),[])}}]},{path:"/about",component:"app-about",action:async()=>{await Wt(()=>import("./app-about.68be3e35.js"),[])}},{path:"/blog",children:[{path:"/",component:"app-blog",action:async()=>{await Wt(()=>import("./app-blog.763ff9ff.js"),[])}},{path:"/:article",component:"app-blog",action:async()=>{await Wt(()=>import("./app-blog.763ff9ff.js"),[])}}]},{path:"/tutorial",component:"app-tutorial",action:async()=>{await Wt(()=>import("./app-tutorial.b2882f7a.js"),[])}},{path:"/code-of-conduct",component:"app-coc",action:async()=>{await Wt(()=>import("./app-coc.1a308bd8.js"),[])}},{path:"/privacy",component:"app-privacy",action:async()=>{await Wt(()=>import("./app-privacy.1969ae7d.js"),[])}}]}]),Pd({immediate:!0})}render(){return Ft`
+    `}constructor(){super()}firstUpdated(){var r;new Re((r=this.shadowRoot)==null?void 0:r.querySelector("#routerOutlet")).setRoutes([{path:"",animate:!0,children:[{path:"/",component:"app-home"},{path:"/2022",children:[{path:"/",component:"app-2022",action:async()=>{await Wt(()=>import("./app-2022.a72f5c7c.js"),[])}},{path:"/:topic",component:"app-2022",action:async()=>{await Wt(()=>import("./app-2022.a72f5c7c.js"),[])}}]},{path:"/2021",children:[{path:"/",component:"app-2021",action:async()=>{await Wt(()=>import("./app-2021.90156e46.js"),[])}},{path:"/:topic",component:"app-2021",action:async()=>{await Wt(()=>import("./app-2021.90156e46.js"),[])}}]},{path:"/about",component:"app-about",action:async()=>{await Wt(()=>import("./app-about.ff89fb3b.js"),[])}},{path:"/blog",children:[{path:"/",component:"app-blog",action:async()=>{await Wt(()=>import("./app-blog.98e7926f.js"),[])}},{path:"/:article",component:"app-blog",action:async()=>{await Wt(()=>import("./app-blog.98e7926f.js"),[])}}]},{path:"/tutorial",component:"app-tutorial",action:async()=>{await Wt(()=>import("./app-tutorial.2f52f5f6.js"),[])}},{path:"/code-of-conduct",component:"app-coc",action:async()=>{await Wt(()=>import("./app-coc.c81b4304.js"),[])}},{path:"/privacy",component:"app-privacy",action:async()=>{await Wt(()=>import("./app-privacy.afc80cda.js"),[])}}]}]),Pd({immediate:!0})}render(){return Ft`
       <main id="routerOutlet">
       </main>
     `}};$l=A2([_e("app-index")],$l);"serviceWorker"in navigator&&navigator.serviceWorker.register("/sw.js");export{Ft as $,Mc as a,Ut as e,_e as n,hf as o,ve as r,St as s};
-//# sourceMappingURL=index.a5e61de0.js.map
+//# sourceMappingURL=index.fea8bcae.js.map
