@@ -376,7 +376,7 @@ export class AppHeaderHome extends LitElement {
         width: 200%;
         height: 100%;
         position: relative;
-        animation: slide 10s infinite;
+        animation: slide 12s infinite;
       }
 
       .slider{
