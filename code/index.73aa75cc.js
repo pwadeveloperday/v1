@@ -3229,7 +3229,50 @@ void main(void)
 
       @media(prefers-color-scheme: light) {
       }
+
+      #slogan {
+        margin: 32px auto 0px auto;
+        text-align: center;
+      }
+
+      #engage {
+        background: linear-gradient(90deg, rgba(0, 113, 197, 1.0) 0%, rgba(0, 199, 253, 1.0) 100%);
+        background-repeat: no-repeat;
+        color: #fff;
+      }
+
+      #engage, #play {
+        padding: 2px 16px;
+        border: 1px solid rgba(255, 255, 255, 1);
+        display: inline-block;
+      }
+
+      #play {
+        margin-left: -4px;
+        color: #3D3D3D;
+      }
+
+      #slogan:hover {
+        transition: .3s;
+      }
+
+      #slogan:hover #engage {
+        background: none;
+        color: #3D3D3D;
+        box-shadow: rgb(0 0 0 / 10%) 0px 10px 15px 0px;
+      }
+
+      #slogan:hover #play {
+        background: linear-gradient(90deg, rgba(0, 199, 253, 1.0) 0%, rgba(0, 113, 197, 1.0) 100%);
+        color: #fff;
+        box-shadow: rgb(0 0 0 / 10%) 0px 10px 15px 0px;
+      }
+
     `}updated(t){t.has("enableBack")&&console.log("enableBack",this.enableBack)}render(){return Ft`
+      <div id="slogan">
+        <span id="engage">为 Web 赋能</span>
+        <span id="play">Play for Team Web</span>
+      </div>
       <footer>
         <div><a href="https://demos.pwadev.io">&copy;</a>2022 <a href="https://pwadev.io" title="中国 PWA 开发者日">中国 PWA 开发者日</a></div>
         <div class="suggest">
@@ -3270,8 +3313,8 @@ void main(void)
           opacity: 1;
         }
       }
-    `}constructor(){super()}firstUpdated(){var r;new Re((r=this.shadowRoot)==null?void 0:r.querySelector("#routerOutlet")).setRoutes([{path:"",animate:!0,children:[{path:"/",component:"app-home"},{path:"/2022",children:[{path:"/",component:"app-2022",action:async()=>{await Wt(()=>import("./app-2022.05bc3f96.js"),[])}},{path:"/:topic",component:"app-2022",action:async()=>{await Wt(()=>import("./app-2022.05bc3f96.js"),[])}}]},{path:"/2021",children:[{path:"/",component:"app-2021",action:async()=>{await Wt(()=>import("./app-2021.fc673748.js"),[])}},{path:"/:topic",component:"app-2021",action:async()=>{await Wt(()=>import("./app-2021.fc673748.js"),[])}}]},{path:"/about",component:"app-about",action:async()=>{await Wt(()=>import("./app-about.a5f2c44e.js"),[])}},{path:"/blog",children:[{path:"/",component:"app-blog",action:async()=>{await Wt(()=>import("./app-blog.eb9175f0.js"),[])}},{path:"/:article",component:"app-blog",action:async()=>{await Wt(()=>import("./app-blog.eb9175f0.js"),[])}}]},{path:"/tutorial",component:"app-tutorial",action:async()=>{await Wt(()=>import("./app-tutorial.0fe89ca0.js"),[])}},{path:"/code-of-conduct",component:"app-coc",action:async()=>{await Wt(()=>import("./app-coc.f438ca69.js"),[])}},{path:"/privacy",component:"app-privacy",action:async()=>{await Wt(()=>import("./app-privacy.19046aa3.js"),[])}}]}]),Pd({immediate:!0})}render(){return Ft`
+    `}constructor(){super()}firstUpdated(){var r;new Re((r=this.shadowRoot)==null?void 0:r.querySelector("#routerOutlet")).setRoutes([{path:"",animate:!0,children:[{path:"/",component:"app-home"},{path:"/2022",children:[{path:"/",component:"app-2022",action:async()=>{await Wt(()=>import("./app-2022.85ab95c7.js"),[])}},{path:"/:topic",component:"app-2022",action:async()=>{await Wt(()=>import("./app-2022.85ab95c7.js"),[])}}]},{path:"/2021",children:[{path:"/",component:"app-2021",action:async()=>{await Wt(()=>import("./app-2021.ae05dfe1.js"),[])}},{path:"/:topic",component:"app-2021",action:async()=>{await Wt(()=>import("./app-2021.ae05dfe1.js"),[])}}]},{path:"/about",component:"app-about",action:async()=>{await Wt(()=>import("./app-about.006af806.js"),[])}},{path:"/blog",children:[{path:"/",component:"app-blog",action:async()=>{await Wt(()=>import("./app-blog.5e6a10d3.js"),[])}},{path:"/:article",component:"app-blog",action:async()=>{await Wt(()=>import("./app-blog.5e6a10d3.js"),[])}}]},{path:"/tutorial",component:"app-tutorial",action:async()=>{await Wt(()=>import("./app-tutorial.99473a23.js"),[])}},{path:"/code-of-conduct",component:"app-coc",action:async()=>{await Wt(()=>import("./app-coc.d0160d60.js"),[])}},{path:"/privacy",component:"app-privacy",action:async()=>{await Wt(()=>import("./app-privacy.52a7e595.js"),[])}}]}]),Pd({immediate:!0})}render(){return Ft`
       <main id="routerOutlet">
       </main>
     `}};$l=A2([_e("app-index")],$l);"serviceWorker"in navigator&&navigator.serviceWorker.register("/sw.js");export{Ft as $,Mc as a,Ut as e,_e as n,hf as o,ve as r,St as s};
-//# sourceMappingURL=index.b0bd02e6.js.map
+//# sourceMappingURL=index.73aa75cc.js.map
