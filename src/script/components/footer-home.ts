@@ -38,7 +38,7 @@ export class AppFooterHome extends LitElement {
       }
 
       #slogan {
-        margin: 32px auto 0px auto;
+        margin: 16px auto 0px auto;
         text-align: center;
       }
 
@@ -50,7 +50,6 @@ export class AppFooterHome extends LitElement {
 
       #engage, #play {
         padding: 2px 16px;
-        border: 1px solid rgba(255, 255, 255, 1);
         display: inline-block;
       }
 
@@ -59,20 +58,66 @@ export class AppFooterHome extends LitElement {
         color: #3D3D3D;
       }
 
-      #slogan:hover {
-        transition: .3s;
+      #play
+      {
+        background-image: linear-gradient(
+          225deg,
+          #231557 0%,
+          #3d1488 29%,
+          rgba(0, 113, 197, 1.0) 67%,
+          rgba(0, 199, 253, 1.0) 100%
+        );
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        color: #fff;
+        background-clip: text;
+        text-fill-color: transparent;
+        animation: textclip 2s linear infinite;
+        display: inline-block;
+      }
+
+      @keyframes textclip {
+        to {
+          background-position: -200% center;
+        }
       }
 
       #slogan:hover #engage {
-        background: none;
-        color: #3D3D3D;
         box-shadow: rgb(0 0 0 / 10%) 0px 10px 15px 0px;
       }
 
       #slogan:hover #play {
-        background: linear-gradient(90deg, rgba(0, 199, 253, 1.0) 0%, rgba(0, 113, 197, 1.0) 100%);
-        color: #fff;
         box-shadow: rgb(0 0 0 / 10%) 0px 10px 15px 0px;
+      }
+
+      .wechat {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 16px;
+        grid-row-gap: 0px;
+        align-items: center;
+        justify-items: center;
+        margin: 16px auto;
+      }
+
+      #wechatg1 {
+        height: 160px;
+        width: 160px;
+        background: url('assets/2022/wechat_group_1.png') center center / 160px 160px no-repeat padding-box content-box
+      }
+
+      #wechatinvite {
+        height: 160px;
+        width: 160px;
+        background: url('assets/2022/wechat_admin_invite.png') center center / 160px 160px no-repeat padding-box content-box
+      }
+
+      .note {
+        margin-top: 8px;
+        text-align: center;
+        font-size: 12px;
       }
 
     `;
@@ -90,6 +135,16 @@ export class AppFooterHome extends LitElement {
 
   render() {
     return html`
+      <div class="wechat">
+        <div>
+          <div id="wechatg1"></div>
+          <div class="note">PWA 开发者交流群</div>
+        </div>
+        <div>
+          <div id="wechatinvite"></div>
+          <div class="note">加此微信邀请入群</div>
+        </div>
+      </div>
       <div id="slogan">
         <span id="engage">为 Web 赋能</span>
         <span id="play">Play for Team Web</span>
