@@ -36,6 +36,45 @@ export class AppFooterHome extends LitElement {
 
       @media(prefers-color-scheme: light) {
       }
+
+      #slogan {
+        margin: 32px auto 0px auto;
+        text-align: center;
+      }
+
+      #engage {
+        background: linear-gradient(90deg, rgba(0, 113, 197, 1.0) 0%, rgba(0, 199, 253, 1.0) 100%);
+        background-repeat: no-repeat;
+        color: #fff;
+      }
+
+      #engage, #play {
+        padding: 2px 16px;
+        border: 1px solid rgba(255, 255, 255, 1);
+        display: inline-block;
+      }
+
+      #play {
+        margin-left: -4px;
+        color: #3D3D3D;
+      }
+
+      #slogan:hover {
+        transition: .3s;
+      }
+
+      #slogan:hover #engage {
+        background: none;
+        color: #3D3D3D;
+        box-shadow: rgb(0 0 0 / 10%) 0px 10px 15px 0px;
+      }
+
+      #slogan:hover #play {
+        background: linear-gradient(90deg, rgba(0, 199, 253, 1.0) 0%, rgba(0, 113, 197, 1.0) 100%);
+        color: #fff;
+        box-shadow: rgb(0 0 0 / 10%) 0px 10px 15px 0px;
+      }
+
     `;
   }
 
@@ -51,6 +90,10 @@ export class AppFooterHome extends LitElement {
 
   render() {
     return html`
+      <div id="slogan">
+        <span id="engage">为 Web 赋能</span>
+        <span id="play">Play for Team Web</span>
+      </div>
       <footer>
         <div><a href="https://demos.pwadev.io">&copy;</a>2022 <a href="https://pwadev.io" title="中国 PWA 开发者日">中国 PWA 开发者日</a></div>
         <div class="suggest">
