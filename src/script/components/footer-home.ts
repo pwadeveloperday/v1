@@ -102,16 +102,16 @@ export class AppFooterHome extends LitElement {
         margin: 16px auto;
       }
 
-      #wechatg1 {
+      #wechatg1, #wechatg1 img {
         height: 160px;
         width: 160px;
-        background: url('assets/2022/wechat_group_1.png') center center / 160px 160px no-repeat padding-box content-box
+        /* background: url('assets/2022/wechat_group_1.png') center center / 160px 160px no-repeat padding-box content-box */
       }
 
-      #wechatinvite {
+      #wechatinvite, #wechatinvite img {
         height: 160px;
         width: 160px;
-        background: url('assets/2022/wechat_admin_invite.png') center center / 160px 160px no-repeat padding-box content-box
+        /* background: url('assets/2022/wechat_admin_invite.png') center center / 160px 160px no-repeat padding-box content-box */
       }
 
       .note {
@@ -137,11 +137,15 @@ export class AppFooterHome extends LitElement {
     return html`
       <div class="wechat">
         <div>
-          <div id="wechatg1"></div>
+          <div id="wechatg1">
+            <img src="assets/2022/wechat_group_1.png" alt="PWA 开发者交流群">
+          </div>
           <div class="note">PWA 开发者交流群</div>
         </div>
         <div>
-          <div id="wechatinvite"></div>
+          <div id="wechatinvite">
+            <img src="assets/2022/wechat_admin_invite.png" alt="加此微信邀请入群">
+          </div>
           <div class="note">加此微信邀请入群</div>
         </div>
       </div>
