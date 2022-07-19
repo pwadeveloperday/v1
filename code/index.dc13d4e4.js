@@ -3301,16 +3301,16 @@ void main(void)
         margin: 16px auto;
       }
 
-      #wechatg1 {
+      #wechatg1, #wechatg1 img {
         height: 160px;
         width: 160px;
-        background: url('assets/2022/wechat_group_1.png') center center / 160px 160px no-repeat padding-box content-box
+        /* background: url('assets/2022/wechat_group_1.png') center center / 160px 160px no-repeat padding-box content-box */
       }
 
-      #wechatinvite {
+      #wechatinvite, #wechatinvite img {
         height: 160px;
         width: 160px;
-        background: url('assets/2022/wechat_admin_invite.png') center center / 160px 160px no-repeat padding-box content-box
+        /* background: url('assets/2022/wechat_admin_invite.png') center center / 160px 160px no-repeat padding-box content-box */
       }
 
       .note {
@@ -3322,11 +3322,15 @@ void main(void)
     `}updated(t){t.has("enableBack")&&console.log("enableBack",this.enableBack)}render(){return Ft`
       <div class="wechat">
         <div>
-          <div id="wechatg1"></div>
+          <div id="wechatg1">
+            <img src="assets/2022/wechat_group_1.png" alt="PWA 开发者交流群">
+          </div>
           <div class="note">PWA 开发者交流群</div>
         </div>
         <div>
-          <div id="wechatinvite"></div>
+          <div id="wechatinvite">
+            <img src="assets/2022/wechat_admin_invite.png" alt="加此微信邀请入群">
+          </div>
           <div class="note">加此微信邀请入群</div>
         </div>
       </div>
@@ -3374,8 +3378,8 @@ void main(void)
           opacity: 1;
         }
       }
-    `}constructor(){super()}firstUpdated(){var r;new Re((r=this.shadowRoot)==null?void 0:r.querySelector("#routerOutlet")).setRoutes([{path:"",animate:!0,children:[{path:"/",component:"app-home"},{path:"/2022",children:[{path:"/",component:"app-2022",action:async()=>{await Wt(()=>import("./app-2022.a680b058.js"),[])}},{path:"/:topic",component:"app-2022",action:async()=>{await Wt(()=>import("./app-2022.a680b058.js"),[])}}]},{path:"/2021",children:[{path:"/",component:"app-2021",action:async()=>{await Wt(()=>import("./app-2021.76639696.js"),[])}},{path:"/:topic",component:"app-2021",action:async()=>{await Wt(()=>import("./app-2021.76639696.js"),[])}}]},{path:"/about",component:"app-about",action:async()=>{await Wt(()=>import("./app-about.e8718e00.js"),[])}},{path:"/blog",children:[{path:"/",component:"app-blog",action:async()=>{await Wt(()=>import("./app-blog.e04383fb.js"),[])}},{path:"/:article",component:"app-blog",action:async()=>{await Wt(()=>import("./app-blog.e04383fb.js"),[])}}]},{path:"/tutorial",component:"app-tutorial",action:async()=>{await Wt(()=>import("./app-tutorial.ccfb8411.js"),[])}},{path:"/code-of-conduct",component:"app-coc",action:async()=>{await Wt(()=>import("./app-coc.5ab5d1ce.js"),[])}},{path:"/privacy",component:"app-privacy",action:async()=>{await Wt(()=>import("./app-privacy.39abe4dc.js"),[])}}]}]),Pd({immediate:!0})}render(){return Ft`
+    `}constructor(){super()}firstUpdated(){var r;new Re((r=this.shadowRoot)==null?void 0:r.querySelector("#routerOutlet")).setRoutes([{path:"",animate:!0,children:[{path:"/",component:"app-home"},{path:"/2022",children:[{path:"/",component:"app-2022",action:async()=>{await Wt(()=>import("./app-2022.dededa86.js"),[])}},{path:"/:topic",component:"app-2022",action:async()=>{await Wt(()=>import("./app-2022.dededa86.js"),[])}}]},{path:"/2021",children:[{path:"/",component:"app-2021",action:async()=>{await Wt(()=>import("./app-2021.baee841d.js"),[])}},{path:"/:topic",component:"app-2021",action:async()=>{await Wt(()=>import("./app-2021.baee841d.js"),[])}}]},{path:"/about",component:"app-about",action:async()=>{await Wt(()=>import("./app-about.9d67c6b4.js"),[])}},{path:"/blog",children:[{path:"/",component:"app-blog",action:async()=>{await Wt(()=>import("./app-blog.aea340c3.js"),[])}},{path:"/:article",component:"app-blog",action:async()=>{await Wt(()=>import("./app-blog.aea340c3.js"),[])}}]},{path:"/tutorial",component:"app-tutorial",action:async()=>{await Wt(()=>import("./app-tutorial.884065f7.js"),[])}},{path:"/code-of-conduct",component:"app-coc",action:async()=>{await Wt(()=>import("./app-coc.a5c00c7a.js"),[])}},{path:"/privacy",component:"app-privacy",action:async()=>{await Wt(()=>import("./app-privacy.d88912f8.js"),[])}}]}]),Pd({immediate:!0})}render(){return Ft`
       <main id="routerOutlet">
       </main>
     `}};$l=A2([_e("app-index")],$l);"serviceWorker"in navigator&&navigator.serviceWorker.register("/sw.js");export{Ft as $,kc as a,Ut as e,_e as n,hf as o,ve as r,St as s};
-//# sourceMappingURL=index.6ddbb1b9.js.map
+//# sourceMappingURL=index.dc13d4e4.js.map
