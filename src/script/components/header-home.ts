@@ -174,15 +174,15 @@ export class AppHeaderHome extends LitElement {
       
 
       .register {
-        margin: 4rem auto;
+        margin: 3rem auto;
         text-align: center;
       }
 
       .register a {
-        display: inline-block;
+        display: inline-block !important;
         --startDeg: 0deg;
         box-shadow: 0 2px 18px rgba(0, 0, 0, 0.2);
-        border: 3px solid hsl(100 100% 60%);
+        border: 2px solid hsl(100 100% 60%);
         border-image-slice: 1;
         border-image-source: conic-gradient(
           from var(--startDeg, 0deg),
@@ -206,7 +206,6 @@ export class AppHeaderHome extends LitElement {
           hsl(100 100% 60%) 40%,
           hsl(200 100% 60%) 0
         );
-        letter-spacing: 8px;
       }
 
       .joint {
@@ -407,13 +406,10 @@ export class AppHeaderHome extends LitElement {
         91% {
           margin-left: -100%;
         }
-        95% {
-          margin-left: -200%;
-        }
-        98% {
-          margin-left: -200%;
-        }
         99% {
+          margin-left: -200%;
+        }
+        100% {
           margin-left: 0%;
         }
       }
@@ -492,6 +488,9 @@ export class AppHeaderHome extends LitElement {
                       <a href="" title="即刻预约" id="book">
                         即刻预约
                       </a>
+                      <a href="assets/2022/pwa_dev_day.ics" title="添加日历" id="calendar">
+                        添加日历
+                      </a>
                     </div>
                     <h3 class="joint">联合主办</h3>
                     <div class="coll">
@@ -509,11 +508,18 @@ export class AppHeaderHome extends LitElement {
               <div class="slider">
                 <div class="super">
                   <div class="superhero">
-                    <a href="https://pwasummit.org" title="PWA Summit 2022">
-                      <div id="pwasummit">
-                        <img id="banner" src="/assets/2022/pwasummit.png" >
-                      </div>
-                    </a>
+                    <h3>隆重推荐</h3>
+                    <h2>PWA Summit 2022</h2>
+                    <h2>2022 全球 PWA 峰会</h2>
+                    <h3 class="h3b">研讨会: 10 月 5 日 | 技术分享: 10 月 6 日</h3>
+                    <div class="register">
+                      <a href="https://pwasummit.org/" title="即刻预约" id="book">
+                        访问 Visit
+                      </a>
+                      <a href="https://pwasummit.org/pwa-summit.ics" title="添加日历" id="calendar">
+                        添加日历
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
