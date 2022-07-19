@@ -2374,15 +2374,15 @@ void main(void)
       
 
       .register {
-        margin: 4rem auto;
+        margin: 3rem auto;
         text-align: center;
       }
 
       .register a {
-        display: inline-block;
+        display: inline-block !important;
         --startDeg: 0deg;
         box-shadow: 0 2px 18px rgba(0, 0, 0, 0.2);
-        border: 3px solid hsl(100 100% 60%);
+        border: 2px solid hsl(100 100% 60%);
         border-image-slice: 1;
         border-image-source: conic-gradient(
           from var(--startDeg, 0deg),
@@ -2406,7 +2406,6 @@ void main(void)
           hsl(100 100% 60%) 40%,
           hsl(200 100% 60%) 0
         );
-        letter-spacing: 8px;
       }
 
       .joint {
@@ -2607,13 +2606,10 @@ void main(void)
         91% {
           margin-left: -100%;
         }
-        95% {
-          margin-left: -200%;
-        }
-        98% {
-          margin-left: -200%;
-        }
         99% {
+          margin-left: -200%;
+        }
+        100% {
           margin-left: 0%;
         }
       }
@@ -2668,6 +2664,9 @@ void main(void)
                       <a href="" title="即刻预约" id="book">
                         即刻预约
                       </a>
+                      <a href="assets/2022/pwa_dev_day.ics" title="添加日历" id="calendar">
+                        添加日历
+                      </a>
                     </div>
                     <h3 class="joint">联合主办</h3>
                     <div class="coll">
@@ -2685,11 +2684,18 @@ void main(void)
               <div class="slider">
                 <div class="super">
                   <div class="superhero">
-                    <a href="https://pwasummit.org" title="PWA Summit 2022">
-                      <div id="pwasummit">
-                        <img id="banner" src="/assets/2022/pwasummit.png" >
-                      </div>
-                    </a>
+                    <h3>隆重推荐</h3>
+                    <h2>PWA Summit 2022</h2>
+                    <h2>2022 全球 PWA 峰会</h2>
+                    <h3 class="h3b">研讨会: 10 月 5 日 | 技术分享: 10 月 6 日</h3>
+                    <div class="register">
+                      <a href="https://pwasummit.org/" title="即刻预约" id="book">
+                        访问 Visit
+                      </a>
+                      <a href="https://pwasummit.org/pwa-summit.ics" title="添加日历" id="calendar">
+                        添加日历
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -3368,8 +3374,8 @@ void main(void)
           opacity: 1;
         }
       }
-    `}constructor(){super()}firstUpdated(){var r;new Re((r=this.shadowRoot)==null?void 0:r.querySelector("#routerOutlet")).setRoutes([{path:"",animate:!0,children:[{path:"/",component:"app-home"},{path:"/2022",children:[{path:"/",component:"app-2022",action:async()=>{await Wt(()=>import("./app-2022.e0efd946.js"),[])}},{path:"/:topic",component:"app-2022",action:async()=>{await Wt(()=>import("./app-2022.e0efd946.js"),[])}}]},{path:"/2021",children:[{path:"/",component:"app-2021",action:async()=>{await Wt(()=>import("./app-2021.35a32138.js"),[])}},{path:"/:topic",component:"app-2021",action:async()=>{await Wt(()=>import("./app-2021.35a32138.js"),[])}}]},{path:"/about",component:"app-about",action:async()=>{await Wt(()=>import("./app-about.b569f40f.js"),[])}},{path:"/blog",children:[{path:"/",component:"app-blog",action:async()=>{await Wt(()=>import("./app-blog.05fcdf61.js"),[])}},{path:"/:article",component:"app-blog",action:async()=>{await Wt(()=>import("./app-blog.05fcdf61.js"),[])}}]},{path:"/tutorial",component:"app-tutorial",action:async()=>{await Wt(()=>import("./app-tutorial.7de39661.js"),[])}},{path:"/code-of-conduct",component:"app-coc",action:async()=>{await Wt(()=>import("./app-coc.d97f9463.js"),[])}},{path:"/privacy",component:"app-privacy",action:async()=>{await Wt(()=>import("./app-privacy.cb79a7dd.js"),[])}}]}]),Pd({immediate:!0})}render(){return Ft`
+    `}constructor(){super()}firstUpdated(){var r;new Re((r=this.shadowRoot)==null?void 0:r.querySelector("#routerOutlet")).setRoutes([{path:"",animate:!0,children:[{path:"/",component:"app-home"},{path:"/2022",children:[{path:"/",component:"app-2022",action:async()=>{await Wt(()=>import("./app-2022.a680b058.js"),[])}},{path:"/:topic",component:"app-2022",action:async()=>{await Wt(()=>import("./app-2022.a680b058.js"),[])}}]},{path:"/2021",children:[{path:"/",component:"app-2021",action:async()=>{await Wt(()=>import("./app-2021.76639696.js"),[])}},{path:"/:topic",component:"app-2021",action:async()=>{await Wt(()=>import("./app-2021.76639696.js"),[])}}]},{path:"/about",component:"app-about",action:async()=>{await Wt(()=>import("./app-about.e8718e00.js"),[])}},{path:"/blog",children:[{path:"/",component:"app-blog",action:async()=>{await Wt(()=>import("./app-blog.e04383fb.js"),[])}},{path:"/:article",component:"app-blog",action:async()=>{await Wt(()=>import("./app-blog.e04383fb.js"),[])}}]},{path:"/tutorial",component:"app-tutorial",action:async()=>{await Wt(()=>import("./app-tutorial.ccfb8411.js"),[])}},{path:"/code-of-conduct",component:"app-coc",action:async()=>{await Wt(()=>import("./app-coc.5ab5d1ce.js"),[])}},{path:"/privacy",component:"app-privacy",action:async()=>{await Wt(()=>import("./app-privacy.39abe4dc.js"),[])}}]}]),Pd({immediate:!0})}render(){return Ft`
       <main id="routerOutlet">
       </main>
     `}};$l=A2([_e("app-index")],$l);"serviceWorker"in navigator&&navigator.serviceWorker.register("/sw.js");export{Ft as $,kc as a,Ut as e,_e as n,hf as o,ve as r,St as s};
-//# sourceMappingURL=index.794fd4d1.js.map
+//# sourceMappingURL=index.6ddbb1b9.js.map
