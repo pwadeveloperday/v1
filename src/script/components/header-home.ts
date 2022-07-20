@@ -431,7 +431,7 @@ export class AppHeaderHome extends LitElement {
                       <a href="" title="即刻预约" id="book">
                         即刻预约
                       </a>
-                      <a href="assets/2022/pwa_dev_day.ics" title="添加日历, 下载到本地后请用 Outlook 打开并保存" id="calendar">
+                      <a href="https://data.pwadev.io/2022/calendar/pwa_dev_day.ics" title="添加日历, 下载到本地后请用 Outlook 打开并保存" id="calendar">
                         添加日历
                       </a>
                     </div>
