@@ -2607,7 +2607,7 @@ void main(void)
                       <a href="" title="即刻预约" id="book">
                         即刻预约
                       </a>
-                      <a href="assets/2022/pwa_dev_day.ics" title="添加日历, 下载到本地后请用 Outlook 打开并保存" id="calendar">
+                      <a href="https://data.pwadev.io/2022/calendar/pwa_dev_day.ics" title="添加日历, 下载到本地后请用 Outlook 打开并保存" id="calendar">
                         添加日历
                       </a>
                     </div>
@@ -3323,8 +3323,8 @@ void main(void)
           opacity: 1;
         }
       }
-    `}constructor(){super()}firstUpdated(){var r;new Re((r=this.shadowRoot)==null?void 0:r.querySelector("#routerOutlet")).setRoutes([{path:"",animate:!0,children:[{path:"/",component:"app-home"},{path:"/2022",children:[{path:"/",component:"app-2022",action:async()=>{await Wt(()=>import("./app-2022.0ea11921.js"),[])}},{path:"/:topic",component:"app-2022",action:async()=>{await Wt(()=>import("./app-2022.0ea11921.js"),[])}}]},{path:"/2021",children:[{path:"/",component:"app-2021",action:async()=>{await Wt(()=>import("./app-2021.74d1bac7.js"),[])}},{path:"/:topic",component:"app-2021",action:async()=>{await Wt(()=>import("./app-2021.74d1bac7.js"),[])}}]},{path:"/about",component:"app-about",action:async()=>{await Wt(()=>import("./app-about.79db2c5d.js"),[])}},{path:"/blog",children:[{path:"/",component:"app-blog",action:async()=>{await Wt(()=>import("./app-blog.45de741a.js"),[])}},{path:"/:article",component:"app-blog",action:async()=>{await Wt(()=>import("./app-blog.45de741a.js"),[])}}]},{path:"/tutorial",component:"app-tutorial",action:async()=>{await Wt(()=>import("./app-tutorial.69f26277.js"),[])}},{path:"/code-of-conduct",component:"app-coc",action:async()=>{await Wt(()=>import("./app-coc.c77f8a79.js"),[])}},{path:"/privacy",component:"app-privacy",action:async()=>{await Wt(()=>import("./app-privacy.7c9ca355.js"),[])}}]}]),Pd({immediate:!0})}render(){return Ft`
+    `}constructor(){super()}firstUpdated(){var r;new Re((r=this.shadowRoot)==null?void 0:r.querySelector("#routerOutlet")).setRoutes([{path:"",animate:!0,children:[{path:"/",component:"app-home"},{path:"/2022",children:[{path:"/",component:"app-2022",action:async()=>{await Wt(()=>import("./app-2022.3566387d.js"),[])}},{path:"/:topic",component:"app-2022",action:async()=>{await Wt(()=>import("./app-2022.3566387d.js"),[])}}]},{path:"/2021",children:[{path:"/",component:"app-2021",action:async()=>{await Wt(()=>import("./app-2021.32be1938.js"),[])}},{path:"/:topic",component:"app-2021",action:async()=>{await Wt(()=>import("./app-2021.32be1938.js"),[])}}]},{path:"/about",component:"app-about",action:async()=>{await Wt(()=>import("./app-about.713cfff2.js"),[])}},{path:"/blog",children:[{path:"/",component:"app-blog",action:async()=>{await Wt(()=>import("./app-blog.1bb6e296.js"),[])}},{path:"/:article",component:"app-blog",action:async()=>{await Wt(()=>import("./app-blog.1bb6e296.js"),[])}}]},{path:"/tutorial",component:"app-tutorial",action:async()=>{await Wt(()=>import("./app-tutorial.764dc1b4.js"),[])}},{path:"/code-of-conduct",component:"app-coc",action:async()=>{await Wt(()=>import("./app-coc.0c24d86f.js"),[])}},{path:"/privacy",component:"app-privacy",action:async()=>{await Wt(()=>import("./app-privacy.46efda60.js"),[])}}]}]),Pd({immediate:!0})}render(){return Ft`
       <main id="routerOutlet">
       </main>
     `}};$l=A2([_e("app-index")],$l);"serviceWorker"in navigator&&navigator.serviceWorker.register("/sw.js");export{Ft as $,kc as a,Ut as e,_e as n,hf as o,ve as r,St as s};
-//# sourceMappingURL=index.e3c2b4bb.js.map
+//# sourceMappingURL=index.3c3eb19f.js.map
