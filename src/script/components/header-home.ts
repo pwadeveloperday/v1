@@ -431,7 +431,7 @@ export class AppHeaderHome extends LitElement {
                       <a href="" title="即刻预约" id="book">
                         即刻预约
                       </a>
-                      <a href="assets/2022/pwa_dev_day.ics" title="添加日历" id="calendar">
+                      <a href="assets/2022/pwa_dev_day.ics" title="添加日历, 下载到本地后请用 Outlook 打开并保存" id="calendar">
                         添加日历
                       </a>
                     </div>
@@ -461,7 +461,7 @@ export class AppHeaderHome extends LitElement {
                       <a href="https://pwasummit.org/" title="了解更多" id="book">
                         了解更多
                       </a>
-                      <a href="https://pwasummit.org/pwa-summit.ics" title="添加日历" id="calendar">
+                      <a href="https://pwasummit.org/pwa-summit.ics" title="添加日历, 下载到本地后请用 Outlook 打开并保存" id="calendar">
                         添加日历
                       </a>
                     </div>
