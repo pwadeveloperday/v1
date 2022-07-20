@@ -40,7 +40,6 @@ export class AppHeaderHome extends LitElement {
       }
 
       .hero {
-        display: flex;
         text-align: center;
         text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.05);
         color: rgba(255, 255, 255, 0.9);
@@ -250,47 +249,6 @@ export class AppHeaderHome extends LitElement {
         filter: drop-shadow(0px 0px 16px rgba(128, 204, 40, 0.6));
       }
 
-      /*
-
-      .webapi {
-        position: absolute;
-        bottom: 0px;
-        display: block;
-        left:0px;
-        width: 100%;
-        overflow: hidden;
-        color: #fff;
-        font-size: 10px;
-        background: rgba(0, 199, 253, 0.9);
-        padding-top: 8px;
-        padding-bottom: 8px;
-      }
-
-      .webapi div {
-        animation: marquee linear 60s infinite;
-        position: relative;
-        white-space: nowrap;
-      }
-
-      .webapi span {
-        margin: 0 16px;
-      }
-
-      @keyframes marquee {
-        from {transform: translateX(0);}
-        to {transform: translateX(-800%);}
-      }
-
-      .webapi:hover {
-        background: rgba(0, 113, 197, 1.0);
-      }
-
-      .webapi:hover div {
-        animation-play-state: paused;
-      }
-
-      */
-
       @media only screen and (max-width: 640px) {
         .coll {
           grid-column-gap: 16px;
@@ -306,29 +264,14 @@ export class AppHeaderHome extends LitElement {
         }
       }
 
-      @media only screen and (max-width: 420px) {
-
-      }
-
-      @media only screen and (min-width: 421px) and (max-width: 1023px) {
-
-      }
-
-      @media only screen and (min-width: 1024px) {
-
-      }
-
       @media only screen and (max-width: 420px) and (orientation: portrait) {
         .hero h1 {
-          font-size: clamp(26px, 4vw, 44px)
+          font-size: clamp(30px, 3vw, 40px);
         }
 
         .hero h2 {
           margin: 0rem auto 0.5rem auto;
-        }
-        
-        .hero .h3b {
-          font-size: clamp(14px, 2.2vw, 18px)
+          font-size: clamp(36px, 4vw, 44px);
         }
 
         .hero .h1b {
@@ -354,10 +297,10 @@ export class AppHeaderHome extends LitElement {
         }
 
         .hero h2 {
-          font-size: clamp(20px, 3vw, 28px);
+          font-size: clamp(32px, 4vw, 44px);
         }
         .hero h3 {
-          font-size: clamp(16px, 2.4vw, 22px)
+          font-size: clamp(16px, 22px);
         }
 
         .register {
@@ -481,7 +424,7 @@ export class AppHeaderHome extends LitElement {
                   <div class="superhero">
                     <h3>${this.subtitle}</h3>
                     <h2>中国 <pwa-logo></pwa-logo> 开发者日</h2>
-                    <h3 class="h3b">${this.time}</h3>
+                    <h3>${this.time}</h3>
                     <h1 class="text-gradient">在线 免费 分享</h1>
                     <h1 class="h1b text-gradient">借助 PWA 获得成功</h1>
                     <div class="register">
@@ -509,12 +452,14 @@ export class AppHeaderHome extends LitElement {
                 <div class="super">
                   <div class="superhero">
                     <h3>隆重推荐</h3>
-                    <h2>PWA Summit 2022</h2>
-                    <h2>2022 全球 PWA 峰会</h2>
-                    <h3 class="h3b">研讨会: 10 月 5 日 | 技术分享: 10 月 6 日</h3>
+                    <h2>PWA Summit</h2>
+                    <h3>10 月 5-6 日</h3>
+                    <br>
+                    <h3 class="text-gradient">A free, online, single-track conference</h3>
+                    <h3 class="text-gradient">Helping everyone succeed with PWA</h3>
                     <div class="register">
-                      <a href="https://pwasummit.org/" title="即刻预约" id="book">
-                        访问 Visit
+                      <a href="https://pwasummit.org/" title="了解更多" id="book">
+                        了解更多
                       </a>
                       <a href="https://pwasummit.org/pwa-summit.ics" title="添加日历" id="calendar">
                         添加日历

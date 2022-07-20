@@ -121,7 +121,7 @@ export class AppNav extends LitElement {
       flex-direction: column;
       justify-content: center;
       box-shadow: 0px 1px 9px -2px rgba(0,0,0,0.75);
-      z-index: 1;
+      z-index: 2;
     }
 
     #menu div {
