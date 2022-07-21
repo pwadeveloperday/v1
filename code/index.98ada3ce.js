@@ -3262,25 +3262,25 @@ void main(void)
       <div class="wechat">
         <div>
           <div>
-            <a href="http://hdxu.cn/eNmed" title="了解活动详情并报名"><img src="assets/2022/hdx.png" alt="活动详情"></a>
+            <a href="http://hdxu.cn/eNmed" title="了解活动详情并报名"><img src="assets/2022/hdx_t.png" alt="活动详情"></a>
           </div>
           <div class="note">活动详情</div>
         </div>
         <div>
           <div>
-            <img src="assets/2022/promote.png" alt="微信报名">
+            <img src="assets/2022/promote_t.png" alt="微信报名">
           </div>
           <div class="note">微信小程序报名</div>
         </div>
         <div>
           <div>
-            <img src="assets/2022/wechat_group_1.png" alt="PWA 开发者交流群">
+            <img src="assets/2022/wechat_group_1_t.png" alt="PWA 开发者交流群">
           </div>
           <div class="note">PWA 开发者交流群</div>
         </div>
         <div>
           <div>
-            <img src="assets/2022/wechat_admin_invite.png" alt="加此微信邀请入群">
+            <img src="assets/2022/wechat_admin_invite_t.png" alt="加此微信邀请入群">
           </div>
           <div class="note">加此微信邀请入群</div>
         </div>
@@ -3329,8 +3329,8 @@ void main(void)
           opacity: 1;
         }
       }
-    `}constructor(){super()}firstUpdated(){var r;new Re((r=this.shadowRoot)==null?void 0:r.querySelector("#routerOutlet")).setRoutes([{path:"",animate:!0,children:[{path:"/",component:"app-home"},{path:"/2022",children:[{path:"/",component:"app-2022",action:async()=>{await Wt(()=>import("./app-2022.71865967.js"),[])}},{path:"/:topic",component:"app-2022",action:async()=>{await Wt(()=>import("./app-2022.71865967.js"),[])}}]},{path:"/2021",children:[{path:"/",component:"app-2021",action:async()=>{await Wt(()=>import("./app-2021.f65ffdd9.js"),[])}},{path:"/:topic",component:"app-2021",action:async()=>{await Wt(()=>import("./app-2021.f65ffdd9.js"),[])}}]},{path:"/about",component:"app-about",action:async()=>{await Wt(()=>import("./app-about.e905b4dc.js"),[])}},{path:"/blog",children:[{path:"/",component:"app-blog",action:async()=>{await Wt(()=>import("./app-blog.16177880.js"),[])}},{path:"/:article",component:"app-blog",action:async()=>{await Wt(()=>import("./app-blog.16177880.js"),[])}}]},{path:"/tutorial",component:"app-tutorial",action:async()=>{await Wt(()=>import("./app-tutorial.f0b7ef9f.js"),[])}},{path:"/code-of-conduct",component:"app-coc",action:async()=>{await Wt(()=>import("./app-coc.e6485d2b.js"),[])}},{path:"/privacy",component:"app-privacy",action:async()=>{await Wt(()=>import("./app-privacy.bc15ec78.js"),[])}}]}]),Pd({immediate:!0})}render(){return Ft`
+    `}constructor(){super()}firstUpdated(){var r;new Re((r=this.shadowRoot)==null?void 0:r.querySelector("#routerOutlet")).setRoutes([{path:"",animate:!0,children:[{path:"/",component:"app-home"},{path:"/2022",children:[{path:"/",component:"app-2022",action:async()=>{await Wt(()=>import("./app-2022.b549bc73.js"),[])}},{path:"/:topic",component:"app-2022",action:async()=>{await Wt(()=>import("./app-2022.b549bc73.js"),[])}}]},{path:"/2021",children:[{path:"/",component:"app-2021",action:async()=>{await Wt(()=>import("./app-2021.b009bbac.js"),[])}},{path:"/:topic",component:"app-2021",action:async()=>{await Wt(()=>import("./app-2021.b009bbac.js"),[])}}]},{path:"/about",component:"app-about",action:async()=>{await Wt(()=>import("./app-about.80db929b.js"),[])}},{path:"/blog",children:[{path:"/",component:"app-blog",action:async()=>{await Wt(()=>import("./app-blog.d9eb1c9e.js"),[])}},{path:"/:article",component:"app-blog",action:async()=>{await Wt(()=>import("./app-blog.d9eb1c9e.js"),[])}}]},{path:"/tutorial",component:"app-tutorial",action:async()=>{await Wt(()=>import("./app-tutorial.48aef201.js"),[])}},{path:"/code-of-conduct",component:"app-coc",action:async()=>{await Wt(()=>import("./app-coc.838fde09.js"),[])}},{path:"/privacy",component:"app-privacy",action:async()=>{await Wt(()=>import("./app-privacy.ed96ab8f.js"),[])}}]}]),Pd({immediate:!0})}render(){return Ft`
       <main id="routerOutlet">
       </main>
     `}};$l=A2([_e("app-index")],$l);"serviceWorker"in navigator&&navigator.serviceWorker.register("/sw.js");export{Ft as $,kc as a,Ut as e,_e as n,hf as o,ve as r,St as s};
-//# sourceMappingURL=index.80920352.js.map
+//# sourceMappingURL=index.98ada3ce.js.map
