@@ -94,6 +94,7 @@ export class AppFooterHome extends LitElement {
       .wechat {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
         grid-template-rows: 1fr;
         grid-column-gap: 16px;
         grid-row-gap: 0px;
@@ -102,20 +103,13 @@ export class AppFooterHome extends LitElement {
         margin: 16px auto;
       }
 
-      #wechatg1, #wechatg1 img {
+      .wechat div div:first-child, .wechat div div:first-child img {
         height: 160px;
         width: 160px;
-        /* background: url('assets/2022/wechat_group_1.png') center center / 160px 160px no-repeat padding-box content-box */
-      }
-
-      #wechatinvite, #wechatinvite img {
-        height: 160px;
-        width: 160px;
-        /* background: url('assets/2022/wechat_admin_invite.png') center center / 160px 160px no-repeat padding-box content-box */
       }
 
       .note {
-        margin-top: 8px;
+        margin: 8px auto;
         text-align: center;
         font-size: 12px;
       }
@@ -137,13 +131,25 @@ export class AppFooterHome extends LitElement {
     return html`
       <div class="wechat">
         <div>
-          <div id="wechatg1">
+          <div>
+            <a href="http://hdxu.cn/eNmed" title="了解活动详情并报名"><img src="assets/2022/hdx.png" alt="活动详情"></a>
+          </div>
+          <div class="note">活动详情</div>
+        </div>
+        <div>
+          <div>
+            <img src="assets/2022/promote.png" alt="微信报名">
+          </div>
+          <div class="note">微信小程序报名</div>
+        </div>
+        <div>
+          <div>
             <img src="assets/2022/wechat_group_1.png" alt="PWA 开发者交流群">
           </div>
           <div class="note">PWA 开发者交流群</div>
         </div>
         <div>
-          <div id="wechatinvite">
+          <div>
             <img src="assets/2022/wechat_admin_invite.png" alt="加此微信邀请入群">
           </div>
           <div class="note">加此微信邀请入群</div>

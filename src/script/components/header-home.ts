@@ -428,7 +428,7 @@ export class AppHeaderHome extends LitElement {
                     <h1 class="text-gradient">在线 免费 分享</h1>
                     <h1 class="h1b text-gradient">借助 PWA 获得成功</h1>
                     <div class="register">
-                      <a href="" title="即刻预约" id="book">
+                      <a href="http://hdxu.cn/eNmed" title="即刻预约" id="book">
                         即刻预约
                       </a>
                       <a href="https://data.pwadev.io/2022/calendar/pwa_dev_day.ics" title="添加日历, 下载到本地后请用 Outlook 打开并保存" id="calendar">
