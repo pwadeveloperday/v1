@@ -2210,7 +2210,7 @@ void main(void)
           <app-nav></app-nav>
         </div>
       </header>
-    `}};vc([Ut({type:Boolean})],Ua.prototype,"enableBack",2);Ua=vc([_e("app-header")],Ua);var v2=Object.defineProperty,_2=Object.getOwnPropertyDescriptor,yi=(t,r,e,i)=>{for(var n=i>1?void 0:i?_2(r,e):r,s=t.length-1,a;s>=0;s--)(a=t[s])&&(n=(i?a(r,e,n):a(n))||n);return i&&n&&v2(r,e,n),n};let xr=class extends St{constructor(){super(),this.enableBack=!1,this.subtitle="\u7B2C\u4E8C\u5C4A",this.title="",this.time="8 \u6708 6 \u65E5 (\u5468\u516D) 09:00 - 17:00"}static get styles(){return ve`
+    `}};vc([Ut({type:Boolean})],Ua.prototype,"enableBack",2);Ua=vc([_e("app-header")],Ua);var v2=Object.defineProperty,_2=Object.getOwnPropertyDescriptor,yi=(t,r,e,i)=>{for(var n=i>1?void 0:i?_2(r,e):r,s=t.length-1,a;s>=0;s--)(a=t[s])&&(n=(i?a(r,e,n):a(n))||n);return i&&n&&v2(r,e,n),n};let xr=class extends St{constructor(){super(),this.enableBack=!1,this.subtitle="\u7B2C\u4E8C\u5C4A",this.title="",this.time="8 \u6708 6 \u65E5 (\u5468\u516D) 10:00 - 17:00"}static get styles(){return ve`
      header {
       height: 100vh;
       width: 100%;
@@ -2604,7 +2604,7 @@ void main(void)
                     <h1 class="text-gradient">在线 免费 分享</h1>
                     <h1 class="h1b text-gradient">借助 PWA 获得成功</h1>
                     <div class="register">
-                      <a href="" title="即刻预约" id="book">
+                      <a href="http://hdxu.cn/eNmed" title="即刻预约" id="book">
                         即刻预约
                       </a>
                       <a href="https://data.pwadev.io/2022/calendar/pwa_dev_day.ics" title="添加日历, 下载到本地后请用 Outlook 打开并保存" id="calendar">
@@ -3238,6 +3238,7 @@ void main(void)
       .wechat {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
         grid-template-rows: 1fr;
         grid-column-gap: 16px;
         grid-row-gap: 0px;
@@ -3246,20 +3247,13 @@ void main(void)
         margin: 16px auto;
       }
 
-      #wechatg1, #wechatg1 img {
+      .wechat div div:first-child, .wechat div div:first-child img {
         height: 160px;
         width: 160px;
-        /* background: url('assets/2022/wechat_group_1.png') center center / 160px 160px no-repeat padding-box content-box */
-      }
-
-      #wechatinvite, #wechatinvite img {
-        height: 160px;
-        width: 160px;
-        /* background: url('assets/2022/wechat_admin_invite.png') center center / 160px 160px no-repeat padding-box content-box */
       }
 
       .note {
-        margin-top: 8px;
+        margin: 8px auto;
         text-align: center;
         font-size: 12px;
       }
@@ -3267,13 +3261,25 @@ void main(void)
     `}updated(t){t.has("enableBack")&&console.log("enableBack",this.enableBack)}render(){return Ft`
       <div class="wechat">
         <div>
-          <div id="wechatg1">
+          <div>
+            <a href="http://hdxu.cn/eNmed" title="了解活动详情并报名"><img src="assets/2022/hdx.png" alt="活动详情"></a>
+          </div>
+          <div class="note">活动详情</div>
+        </div>
+        <div>
+          <div>
+            <img src="assets/2022/promote.png" alt="微信报名">
+          </div>
+          <div class="note">微信小程序报名</div>
+        </div>
+        <div>
+          <div>
             <img src="assets/2022/wechat_group_1.png" alt="PWA 开发者交流群">
           </div>
           <div class="note">PWA 开发者交流群</div>
         </div>
         <div>
-          <div id="wechatinvite">
+          <div>
             <img src="assets/2022/wechat_admin_invite.png" alt="加此微信邀请入群">
           </div>
           <div class="note">加此微信邀请入群</div>
@@ -3323,8 +3329,8 @@ void main(void)
           opacity: 1;
         }
       }
-    `}constructor(){super()}firstUpdated(){var r;new Re((r=this.shadowRoot)==null?void 0:r.querySelector("#routerOutlet")).setRoutes([{path:"",animate:!0,children:[{path:"/",component:"app-home"},{path:"/2022",children:[{path:"/",component:"app-2022",action:async()=>{await Wt(()=>import("./app-2022.3566387d.js"),[])}},{path:"/:topic",component:"app-2022",action:async()=>{await Wt(()=>import("./app-2022.3566387d.js"),[])}}]},{path:"/2021",children:[{path:"/",component:"app-2021",action:async()=>{await Wt(()=>import("./app-2021.32be1938.js"),[])}},{path:"/:topic",component:"app-2021",action:async()=>{await Wt(()=>import("./app-2021.32be1938.js"),[])}}]},{path:"/about",component:"app-about",action:async()=>{await Wt(()=>import("./app-about.713cfff2.js"),[])}},{path:"/blog",children:[{path:"/",component:"app-blog",action:async()=>{await Wt(()=>import("./app-blog.1bb6e296.js"),[])}},{path:"/:article",component:"app-blog",action:async()=>{await Wt(()=>import("./app-blog.1bb6e296.js"),[])}}]},{path:"/tutorial",component:"app-tutorial",action:async()=>{await Wt(()=>import("./app-tutorial.764dc1b4.js"),[])}},{path:"/code-of-conduct",component:"app-coc",action:async()=>{await Wt(()=>import("./app-coc.0c24d86f.js"),[])}},{path:"/privacy",component:"app-privacy",action:async()=>{await Wt(()=>import("./app-privacy.46efda60.js"),[])}}]}]),Pd({immediate:!0})}render(){return Ft`
+    `}constructor(){super()}firstUpdated(){var r;new Re((r=this.shadowRoot)==null?void 0:r.querySelector("#routerOutlet")).setRoutes([{path:"",animate:!0,children:[{path:"/",component:"app-home"},{path:"/2022",children:[{path:"/",component:"app-2022",action:async()=>{await Wt(()=>import("./app-2022.71865967.js"),[])}},{path:"/:topic",component:"app-2022",action:async()=>{await Wt(()=>import("./app-2022.71865967.js"),[])}}]},{path:"/2021",children:[{path:"/",component:"app-2021",action:async()=>{await Wt(()=>import("./app-2021.f65ffdd9.js"),[])}},{path:"/:topic",component:"app-2021",action:async()=>{await Wt(()=>import("./app-2021.f65ffdd9.js"),[])}}]},{path:"/about",component:"app-about",action:async()=>{await Wt(()=>import("./app-about.e905b4dc.js"),[])}},{path:"/blog",children:[{path:"/",component:"app-blog",action:async()=>{await Wt(()=>import("./app-blog.16177880.js"),[])}},{path:"/:article",component:"app-blog",action:async()=>{await Wt(()=>import("./app-blog.16177880.js"),[])}}]},{path:"/tutorial",component:"app-tutorial",action:async()=>{await Wt(()=>import("./app-tutorial.f0b7ef9f.js"),[])}},{path:"/code-of-conduct",component:"app-coc",action:async()=>{await Wt(()=>import("./app-coc.e6485d2b.js"),[])}},{path:"/privacy",component:"app-privacy",action:async()=>{await Wt(()=>import("./app-privacy.bc15ec78.js"),[])}}]}]),Pd({immediate:!0})}render(){return Ft`
       <main id="routerOutlet">
       </main>
     `}};$l=A2([_e("app-index")],$l);"serviceWorker"in navigator&&navigator.serviceWorker.register("/sw.js");export{Ft as $,kc as a,Ut as e,_e as n,hf as o,ve as r,St as s};
-//# sourceMappingURL=index.3c3eb19f.js.map
+//# sourceMappingURL=index.80920352.js.map
