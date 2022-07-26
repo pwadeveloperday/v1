@@ -11,8 +11,8 @@ export class App2022 extends LitElement {
   @property({ type: String }) title = '中国 PWA 开发者日';
   @property({ type: String }) time = '8 月 6 日 (周六) 09:00 - 17:00';
   @property({ type: String }) description = `
-    为加速推动渐进式 Web 应用 (PWA) 在中国的发展，微软与英特尔携手举办“第二届中国 PWA 开发者日”。
-    本次活动邀请一众业界大咖围绕 PWA 展开分享，探讨最新技术进展，及 PWA 生态的实践与落地。
+    为加速推动渐进式 Web 应用 (PWA) 在中国的发展，微软、英特尔与谷歌携手举办第二届中国 PWA 开发者日活动。
+    本次活动邀请一众业界大咖围绕 PWA 展开分享，探讨最新技术进展，以及 PWA 生态的实践与落地。
     
     期待与您线上相聚。
     `;

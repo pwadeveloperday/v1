@@ -74,13 +74,14 @@ export class AppAbout extends LitElement {
           <p>主办方：
             <ul>
               <li>2021 年：英特尔 鼎道智联</li>
-              <li>2022 年：英特尔 微软</li>
+              <li>2022 年：英特尔 微软 谷歌</li>
             </ul>  
           </p>
           <p>2022 年主办方成员：
             <ul>
               <li>张敏 英特尔软件技术经理</li>
               <li>宋青见 微软首席产品经理</li>
+              <li>丛慧君 谷歌高级解决方案顾问</li>
             </ul>  
           </p>
           <p>联系我们: 
