@@ -1,4 +1,4 @@
-import{s as t,r as d,$ as u,n as i}from"./index.98ada3ce.js";var c=Object.defineProperty,m=Object.getOwnPropertyDescriptor,b=(s,r,e,p)=>{for(var a=p>1?void 0:p?m(r,e):r,l=s.length-1,o;l>=0;l--)(o=s[l])&&(a=(p?o(r,e,a):o(a))||a);return p&&a&&c(r,e,a),a};let n=class extends t{static get styles(){return d`
+import{s as t,r as d,$ as i,n as u}from"./index.83fba269.js";var c=Object.defineProperty,m=Object.getOwnPropertyDescriptor,b=(s,r,e,p)=>{for(var a=p>1?void 0:p?m(r,e):r,l=s.length-1,o;l>=0;l--)(o=s[l])&&(a=(p?o(r,e,a):o(a))||a);return p&&a&&c(r,e,a),a};let n=class extends t{static get styles(){return d`
     .about {
       padding: 0 16px;
       margin: 1rem 0 0rem 0;
@@ -44,7 +44,7 @@ import{s as t,r as d,$ as u,n as i}from"./index.98ada3ce.js";var c=Object.define
     .spam {
       display: none;
     }
-    `}constructor(){super()}render(){return u`
+    `}constructor(){super()}render(){return i`
       <app-header ?enableBack="${!0}"></app-header>
       <div class="about">
         <h2>关于中国 PWA 开发者日</h2>
@@ -60,13 +60,14 @@ import{s as t,r as d,$ as u,n as i}from"./index.98ada3ce.js";var c=Object.define
           <p>主办方：
             <ul>
               <li>2021 年：英特尔 鼎道智联</li>
-              <li>2022 年：英特尔 微软</li>
+              <li>2022 年：英特尔 微软 谷歌</li>
             </ul>  
           </p>
           <p>2022 年主办方成员：
             <ul>
               <li>张敏 英特尔软件技术经理</li>
               <li>宋青见 微软首席产品经理</li>
+              <li>丛慧君 谷歌高级解决方案顾问</li>
             </ul>  
           </p>
           <p>联系我们: 
@@ -77,5 +78,5 @@ import{s as t,r as d,$ as u,n as i}from"./index.98ada3ce.js";var c=Object.define
           </fluent-card>
       </div>
       <app-footer></app-footer>
-    `}};n=b([i("app-about")],n);export{n as AppAbout};
-//# sourceMappingURL=app-about.80db929b.js.map
+    `}};n=b([u("app-about")],n);export{n as AppAbout};
+//# sourceMappingURL=app-about.54f11424.js.map
