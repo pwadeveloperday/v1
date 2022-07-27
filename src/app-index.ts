@@ -147,6 +147,20 @@ export class AppIndex extends LitElement {
               await import('./script/pages/app-privacy.js');
             },
           },
+          {
+            path: '/sample/file-handling',
+            component: 'sample-fh',
+            action: async () => {
+              await import('./script/pages/sample-fh.js');
+            },
+          },
+          {
+            path: '/sample/media-player',
+            component: 'sample-mp',
+            action: async () => {
+              await import('./script/pages/sample-mp.js');
+            },
+          },
         ],
       } as any,
     ]);

@@ -66,6 +66,26 @@
       "type": "image/png"
     }
   ],
+  "file_handlers": [
+    {
+      "note": "@Thomas Steiner: I understand the event site portal shouldn't register itself as a file_handler, but the file_handlers doesn't work for demos.pwadev.io anyway, do you know if any multi-origin sites limitation for the file_handlers? Thank you! :) https://pwadev.io/manifest.json vs https://demos.pwadev.io/manifest.json",
+      "action": "/sample/file-handling",
+      "accept": {
+        "image/webp": [".webp"],
+        "image/jpeg": [".jpeg", ".jpg"],
+        "image/png": [".png"]
+      },
+      "launch_type": "single-client"
+    },
+    {
+      "action": "/sample/media-player",
+      "accept": {
+        "video/*": [".mp4",".mkv",".webm",".3gp",".avi",".mpeg",".mpg",".ogg",".wmv",".mov"],
+        "audio/*": [".aac",".flac",".mp3",".wma",".wav",".midi"]
+      },
+      "launch_type": "single-client"
+    }
+  ],
   "features": [
     "渐进式 Web 应用 (PWA)",
     "历届中国 PWA 开发者日视频",
