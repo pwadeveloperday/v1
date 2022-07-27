@@ -93,7 +93,8 @@ export class AppFooterHome extends LitElement {
 
       .wechat {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
         grid-template-rows: 1fr;
         grid-column-gap: 16px;
         grid-row-gap: 0px;
@@ -143,9 +144,15 @@ export class AppFooterHome extends LitElement {
         </div>
         <div>
           <div>
+            <img src="assets/2022/wechat_group_1_t.png" alt="PWA 开发者交流群">
+          </div>
+          <div class="note">PWA 开发者交流群 (8月3日前)</div>
+        </div>
+        <div>
+          <div>
             <img src="assets/2022/wechat_admin_invite_t.png" alt="加此微信邀请入群">
           </div>
-          <div class="note">加入 PWA 开发交流群</div>
+          <div class="note">加此微信邀请入群</div>
         </div>
       </div>
       <div id="slogan">
