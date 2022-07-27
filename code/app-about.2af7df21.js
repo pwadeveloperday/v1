@@ -1,4 +1,4 @@
-import{s as t,r as d,$ as i,n as u}from"./index.83fba269.js";var c=Object.defineProperty,m=Object.getOwnPropertyDescriptor,b=(s,r,e,p)=>{for(var a=p>1?void 0:p?m(r,e):r,l=s.length-1,o;l>=0;l--)(o=s[l])&&(a=(p?o(r,e,a):o(a))||a);return p&&a&&c(r,e,a),a};let n=class extends t{static get styles(){return d`
+import{s as l,r as n,$ as o,n as c}from"./index.61f32dba.js";var m=Object.defineProperty,u=Object.getOwnPropertyDescriptor,g=(s,e,p,r)=>{for(var a=r>1?void 0:r?u(e,p):e,i=s.length-1,t;i>=0;i--)(t=s[i])&&(a=(r?t(e,p,a):t(a))||a);return r&&a&&m(e,p,a),a};let d=class extends l{static get styles(){return n`
     .about {
       padding: 0 16px;
       margin: 1rem 0 0rem 0;
@@ -44,7 +44,30 @@ import{s as t,r as d,$ as i,n as u}from"./index.83fba269.js";var c=Object.define
     .spam {
       display: none;
     }
-    `}constructor(){super()}render(){return i`
+
+    
+    .wechat {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 16px;
+      grid-row-gap: 0px;
+      align-items: center;
+      justify-items: center;
+      margin: 16px auto;
+    }
+
+    .wechat div div:first-child, .wechat div div:first-child img {
+      height: 160px;
+      width: 160px;
+    }
+
+    .note {
+      margin: 8px auto;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    `}constructor(){super()}render(){return o`
       <app-header ?enableBack="${!0}"></app-header>
       <div class="about">
         <h2>关于中国 PWA 开发者日</h2>
@@ -71,12 +94,26 @@ import{s as t,r as d,$ as i,n as u}from"./index.83fba269.js";var c=Object.define
             </ul>  
           </p>
           <p>联系我们: 
-          <ul>
+            <ul>
               <li>pwadeveloperday<span class="spam">spam</span>@<span class="spam">spam</span>outlook<span class="spam">spam</span>.com</li>
-            </ul>  
+            </ul>
+            <div class="wechat">
+              <div>
+                <div>
+                  <img src="assets/2022/wechat_group_1_t.png" alt="PWA 开发者交流群">
+                </div>
+                <div class="note">PWA 开发者交流群</div>
+              </div>
+              <div>
+                <div>
+                  <img src="assets/2022/wechat_admin_invite_t.png" alt="加此微信邀请入群">
+                </div>
+                <div class="note">加此微信邀请入群</div>
+              </div>
+            </div>
           </p>
           </fluent-card>
       </div>
       <app-footer></app-footer>
-    `}};n=b([u("app-about")],n);export{n as AppAbout};
-//# sourceMappingURL=app-about.54f11424.js.map
+    `}};d=g([c("app-about")],d);export{d as AppAbout};
+//# sourceMappingURL=app-about.2af7df21.js.map
