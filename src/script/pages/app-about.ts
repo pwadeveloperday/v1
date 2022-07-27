@@ -50,6 +50,29 @@ export class AppAbout extends LitElement {
     .spam {
       display: none;
     }
+
+    
+    .wechat {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 16px;
+      grid-row-gap: 0px;
+      align-items: center;
+      justify-items: center;
+      margin: 16px auto;
+    }
+
+    .wechat div div:first-child, .wechat div div:first-child img {
+      height: 160px;
+      width: 160px;
+    }
+
+    .note {
+      margin: 8px auto;
+      text-align: center;
+      font-size: 12px;
+    }
+
     `;
   }
 
@@ -85,9 +108,23 @@ export class AppAbout extends LitElement {
             </ul>  
           </p>
           <p>联系我们: 
-          <ul>
+            <ul>
               <li>pwadeveloperday<span class="spam">spam</span>@<span class="spam">spam</span>outlook<span class="spam">spam</span>.com</li>
-            </ul>  
+            </ul>
+            <div class="wechat">
+              <div>
+                <div>
+                  <img src="assets/2022/wechat_group_1_t.png" alt="PWA 开发者交流群">
+                </div>
+                <div class="note">PWA 开发者交流群</div>
+              </div>
+              <div>
+                <div>
+                  <img src="assets/2022/wechat_admin_invite_t.png" alt="加此微信邀请入群">
+                </div>
+                <div class="note">加此微信邀请入群</div>
+              </div>
+            </div>
           </p>
           </fluent-card>
       </div>
