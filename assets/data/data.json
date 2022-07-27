@@ -28,7 +28,7 @@
       "path" : "open-speech",
       "title": "开场演讲",
       "des": "之于迅速缩小和小程序功能差距的背景之下，拥抱小程序生态，PWA 大有机会！\n\n过去 6 年来 PWA 本地原生能力的不断增强加上新兴的 Web Packaging 和 Web Bundles 标准，如何为 Web 开发者打造融合小程序生态的伟大平台；浏览器开发者支持小程序融合生态的机会所在；坚持 Web 标准之于跨设备的优势；将 Web 视为应用平台的集散地的优势。\n\nAs the father of the PWA, Alex will give us the open speech to discuss below topics:\n\nThe PWA opportunity in the context of closing the gaps with MiniApps capabilities: How emerging standards (Web Packaging and Web Bundles) along with the last 6 years of progress in PWA capabilities set the web up to be a great platform for challenger apps looking to grow a mini-app ecosystem. The opportunities to browser makers for supporting this work. The cross-device advantages of building for a standards-based platform. Export-market benefits of considering the web as an application platform.",
-      "speaker": "Alex Russel",
+      "speaker": "Alex Russell",
       "pos": "PWA 之父 全球合伙人产品经理",
       "com": "微软 Edge 浏览器团队",
       "iconid": "alex",
