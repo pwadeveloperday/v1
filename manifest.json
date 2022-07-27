@@ -68,6 +68,7 @@
   ],
   "file_handlers": [
     {
+      "note": "@Thomas Steiner: I understand the event site portal shouldn't register itself as a file_handler, but the file_handlers doesn't work for demos.pwadev.io anyway, do you know if any multi-origin sites limitation for the file_handlers? Thank you! :) https://pwadev.io/manifest.json vs https://demos.pwadev.io/manifest.json",
       "action": "/sample/file-handling",
       "accept": {
         "image/webp": [".webp"],
