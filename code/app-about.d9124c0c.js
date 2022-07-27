@@ -1,4 +1,4 @@
-import{s as l,r as n,$ as o,n as c}from"./index.61f32dba.js";var m=Object.defineProperty,u=Object.getOwnPropertyDescriptor,g=(s,e,p,r)=>{for(var a=r>1?void 0:r?u(e,p):e,i=s.length-1,t;i>=0;i--)(t=s[i])&&(a=(r?t(e,p,a):t(a))||a);return r&&a&&m(e,p,a),a};let d=class extends l{static get styles(){return n`
+import{s as d,r as n,$ as o,n as c}from"./index.34f1fc16.js";var m=Object.defineProperty,u=Object.getOwnPropertyDescriptor,g=(l,e,p,r)=>{for(var a=r>1?void 0:r?u(e,p):e,i=l.length-1,t;i>=0;i--)(t=l[i])&&(a=(r?t(e,p,a):t(a))||a);return r&&a&&m(e,p,a),a};let s=class extends d{static get styles(){return n`
     .about {
       padding: 0 16px;
       margin: 1rem 0 0rem 0;
@@ -48,7 +48,7 @@ import{s as l,r as n,$ as o,n as c}from"./index.61f32dba.js";var m=Object.define
     
     .wechat {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(1, 1fr);
       grid-column-gap: 16px;
       grid-row-gap: 0px;
       align-items: center;
@@ -100,20 +100,14 @@ import{s as l,r as n,$ as o,n as c}from"./index.61f32dba.js";var m=Object.define
             <div class="wechat">
               <div>
                 <div>
-                  <img src="assets/2022/wechat_group_1_t.png" alt="PWA 开发者交流群">
-                </div>
-                <div class="note">PWA 开发者交流群</div>
-              </div>
-              <div>
-                <div>
                   <img src="assets/2022/wechat_admin_invite_t.png" alt="加此微信邀请入群">
                 </div>
-                <div class="note">加此微信邀请入群</div>
+                <div class="note">邀请加入 PWA 开发者交流群</div>
               </div>
             </div>
           </p>
           </fluent-card>
       </div>
       <app-footer></app-footer>
-    `}};d=g([c("app-about")],d);export{d as AppAbout};
-//# sourceMappingURL=app-about.2af7df21.js.map
+    `}};s=g([c("app-about")],s);export{s as AppAbout};
+//# sourceMappingURL=app-about.d9124c0c.js.map

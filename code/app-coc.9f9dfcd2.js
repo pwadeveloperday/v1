@@ -1,4 +1,4 @@
-import{s as d,r as c,$ as l,n as m}from"./index.61f32dba.js";var u=Object.defineProperty,h=Object.getOwnPropertyDescriptor,i=(s,a,e,p)=>{for(var r=p>1?void 0:p?h(a,e):a,o=s.length-1,t;o>=0;o--)(t=s[o])&&(r=(p?t(a,e,r):t(r))||r);return p&&r&&u(a,e,r),r};let n=class extends d{static get styles(){return c`
+import{s as d,r as c,$ as l,n as m}from"./index.34f1fc16.js";var u=Object.defineProperty,h=Object.getOwnPropertyDescriptor,i=(s,a,e,p)=>{for(var r=p>1?void 0:p?h(a,e):a,o=s.length-1,t;o>=0;o--)(t=s[o])&&(r=(p?t(a,e,r):t(r))||r);return p&&r&&u(a,e,r),r};let n=class extends d{static get styles(){return c`
     .spam {
       display: none;
     }
@@ -90,4 +90,4 @@ import{s as d,r as c,$ as l,n as m}from"./index.61f32dba.js";var u=Object.define
       </div>
       <app-footer></app-footer>
     `}};n=i([m("app-coc")],n);export{n as AppCoC};
-//# sourceMappingURL=app-coc.255713da.js.map
+//# sourceMappingURL=app-coc.9f9dfcd2.js.map

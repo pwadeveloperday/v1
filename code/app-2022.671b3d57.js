@@ -1,4 +1,4 @@
-import{s as u,r as g,$ as d,o as c,e as s,n as h}from"./index.61f32dba.js";var b=Object.defineProperty,m=Object.getOwnPropertyDescriptor,n=(i,a,r,e)=>{for(var t=e>1?void 0:e?m(a,r):a,l=i.length-1,p;l>=0;l--)(p=i[l])&&(t=(e?p(a,r,t):p(t))||t);return e&&t&&b(a,r,t),t};let o=class extends u{constructor(){super(),this.subtitle="\u7B2C\u4E8C\u5C4A",this.title="\u4E2D\u56FD PWA \u5F00\u53D1\u8005\u65E5",this.time="8 \u6708 6 \u65E5 (\u5468\u516D) 09:00 - 17:00",this.description=`
+import{s as u,r as g,$ as d,o as c,e as s,n as h}from"./index.34f1fc16.js";var b=Object.defineProperty,m=Object.getOwnPropertyDescriptor,n=(i,a,r,e)=>{for(var t=e>1?void 0:e?m(a,r):a,l=i.length-1,p;l>=0;l--)(p=i[l])&&(t=(e?p(a,r,t):p(t))||t);return e&&t&&b(a,r,t),t};let o=class extends u{constructor(){super(),this.subtitle="\u7B2C\u4E8C\u5C4A",this.title="\u4E2D\u56FD PWA \u5F00\u53D1\u8005\u65E5",this.time="8 \u6708 6 \u65E5 (\u5468\u516D) 09:00 - 17:00",this.description=`
     \u4E3A\u52A0\u901F\u63A8\u52A8\u6E10\u8FDB\u5F0F Web \u5E94\u7528 (PWA) \u5728\u4E2D\u56FD\u7684\u53D1\u5C55\uFF0C\u5FAE\u8F6F\u3001\u82F1\u7279\u5C14\u4E0E\u8C37\u6B4C\u643A\u624B\u4E3E\u529E\u7B2C\u4E8C\u5C4A\u4E2D\u56FD PWA \u5F00\u53D1\u8005\u65E5\u6D3B\u52A8\u3002
     \u672C\u6B21\u6D3B\u52A8\u9080\u8BF7\u4E00\u4F17\u4E1A\u754C\u5927\u5496\u56F4\u7ED5 PWA \u5C55\u5F00\u5206\u4EAB\uFF0C\u63A2\u8BA8\u6700\u65B0\u6280\u672F\u8FDB\u5C55\uFF0C\u4EE5\u53CA PWA \u751F\u6001\u7684\u5B9E\u8DF5\u4E0E\u843D\u5730\u3002
     
@@ -569,4 +569,4 @@ import{s as u,r as g,$ as d,o as c,e as s,n as h}from"./index.61f32dba.js";var b
         </svg>
       </pwa-install>
       `}else return d`<div>No data</div>`}};n([s({type:String})],o.prototype,"subtitle",2);n([s({type:String})],o.prototype,"title",2);n([s({type:String})],o.prototype,"time",2);n([s({type:String})],o.prototype,"description",2);n([s({type:Object})],o.prototype,"jsondata",2);n([s({type:String})],o.prototype,"screenwidth",2);n([s({type:String})],o.prototype,"screenheight",2);o=n([h("app-2022")],o);export{o as App2022};
-//# sourceMappingURL=app-2022.9530dafe.js.map
+//# sourceMappingURL=app-2022.671b3d57.js.map
