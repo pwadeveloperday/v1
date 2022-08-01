@@ -146,7 +146,7 @@ export class AppFooterHome extends LitElement {
           <div>
             <img src="assets/2022/wechat_group_1_t.png" alt="PWA 开发者交流群">
           </div>
-          <div class="note">PWA 开发者交流群 (8月3日前)</div>
+          <div class="note">PWA 开发者交流群 (8月8日前)</div>
         </div>
         <div>
           <div>
