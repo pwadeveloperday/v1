@@ -1,4 +1,4 @@
-import{s as ye,r as ge,$ as Se,i as ee,n as we}from"./index.4e4316de.js";/**
+import{s as ye,r as ge,$ as Se,i as ee,n as we}from"./index.f31c97f1.js";/**
  * @license
  * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
  * This code may only be used under the BSD style license found at
@@ -313,4 +313,4 @@ found at http://polymer.github.io/PATENTS.txt
         </a>
       </fluent-card>
     `}};J([ee("#first-video")],R.prototype,"video",2);J([ee("#msg")],R.prototype,"msg",2);R=J([we("sample-mp")],R);export{R as SampleMP};
-//# sourceMappingURL=sample-mp.ba4f0dbd.js.map
+//# sourceMappingURL=sample-mp.3dd13bf7.js.map

@@ -3293,7 +3293,7 @@ void main(void)
           <div>
             <img src="assets/2022/wechat_group_1_t.png" alt="PWA 开发者交流群">
           </div>
-          <div class="note">PWA 开发者交流群 (8月3日前)</div>
+          <div class="note">PWA 开发者交流群 (8月8日前)</div>
         </div>
         <div>
           <div>
@@ -3346,8 +3346,8 @@ void main(void)
           opacity: 1;
         }
       }
-    `}constructor(){super()}firstUpdated(){var r;new Re((r=this.shadowRoot)==null?void 0:r.querySelector("#routerOutlet")).setRoutes([{path:"",animate:!0,children:[{path:"/",component:"app-home"},{path:"/2022",children:[{path:"/",component:"app-2022",action:async()=>{await Lt(()=>import("./app-2022.298af7a7.js"),[])}},{path:"/:topic",component:"app-2022",action:async()=>{await Lt(()=>import("./app-2022.298af7a7.js"),[])}}]},{path:"/2021",children:[{path:"/",component:"app-2021",action:async()=>{await Lt(()=>import("./app-2021.6d3069e5.js"),[])}},{path:"/:topic",component:"app-2021",action:async()=>{await Lt(()=>import("./app-2021.6d3069e5.js"),[])}}]},{path:"/about",component:"app-about",action:async()=>{await Lt(()=>import("./app-about.717444d4.js"),[])}},{path:"/blog",children:[{path:"/",component:"app-blog",action:async()=>{await Lt(()=>import("./app-blog.d2a34581.js"),[])}},{path:"/:article",component:"app-blog",action:async()=>{await Lt(()=>import("./app-blog.d2a34581.js"),[])}}]},{path:"/tutorial",component:"app-tutorial",action:async()=>{await Lt(()=>import("./app-tutorial.461e9cef.js"),[])}},{path:"/code-of-conduct",component:"app-coc",action:async()=>{await Lt(()=>import("./app-coc.cca53957.js"),[])}},{path:"/privacy",component:"app-privacy",action:async()=>{await Lt(()=>import("./app-privacy.87498454.js"),[])}},{path:"/sample/file-handling",component:"sample-fh",action:async()=>{await Lt(()=>import("./sample-fh.c081f0e4.js"),[])}},{path:"/sample/media-player",component:"sample-mp",action:async()=>{await Lt(()=>import("./sample-mp.ba4f0dbd.js"),[])}}]}]),Pd({immediate:!0})}render(){return Gt`
+    `}constructor(){super()}firstUpdated(){var r;new Re((r=this.shadowRoot)==null?void 0:r.querySelector("#routerOutlet")).setRoutes([{path:"",animate:!0,children:[{path:"/",component:"app-home"},{path:"/2022",children:[{path:"/",component:"app-2022",action:async()=>{await Lt(()=>import("./app-2022.08f5727f.js"),[])}},{path:"/:topic",component:"app-2022",action:async()=>{await Lt(()=>import("./app-2022.08f5727f.js"),[])}}]},{path:"/2021",children:[{path:"/",component:"app-2021",action:async()=>{await Lt(()=>import("./app-2021.7fd55b4a.js"),[])}},{path:"/:topic",component:"app-2021",action:async()=>{await Lt(()=>import("./app-2021.7fd55b4a.js"),[])}}]},{path:"/about",component:"app-about",action:async()=>{await Lt(()=>import("./app-about.299f331e.js"),[])}},{path:"/blog",children:[{path:"/",component:"app-blog",action:async()=>{await Lt(()=>import("./app-blog.2ca4d607.js"),[])}},{path:"/:article",component:"app-blog",action:async()=>{await Lt(()=>import("./app-blog.2ca4d607.js"),[])}}]},{path:"/tutorial",component:"app-tutorial",action:async()=>{await Lt(()=>import("./app-tutorial.8cf1c24e.js"),[])}},{path:"/code-of-conduct",component:"app-coc",action:async()=>{await Lt(()=>import("./app-coc.1aaf823e.js"),[])}},{path:"/privacy",component:"app-privacy",action:async()=>{await Lt(()=>import("./app-privacy.8fe33e85.js"),[])}},{path:"/sample/file-handling",component:"sample-fh",action:async()=>{await Lt(()=>import("./sample-fh.bd6b5b83.js"),[])}},{path:"/sample/media-player",component:"sample-mp",action:async()=>{await Lt(()=>import("./sample-mp.3dd13bf7.js"),[])}}]}]),Pd({immediate:!0})}render(){return Gt`
       <main id="routerOutlet">
       </main>
     `}};$u=A2([_e("app-index")],$u);"serviceWorker"in navigator&&navigator.serviceWorker.register("/sw.js");export{Gt as $,kc as a,Ut as e,pn as i,_e as n,hf as o,ve as r,St as s};
-//# sourceMappingURL=index.4e4316de.js.map
+//# sourceMappingURL=index.f31c97f1.js.map
