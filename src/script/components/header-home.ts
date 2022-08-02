@@ -225,6 +225,8 @@ export class AppHeaderHome extends LitElement {
       .coll a {
         color: rgba(0, 199, 253, 0.9);
         text-decoration: none;
+        font-size: 15px;
+        font-weight: 600;
       }
 
       .coll:hover a {
