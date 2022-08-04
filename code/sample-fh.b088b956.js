@@ -1,6 +1,6 @@
-import{s as d,r as p,$ as g,i as c,n as u}from"./index.bf7d3a51.js";var b=Object.defineProperty,m=Object.getOwnPropertyDescriptor,l=(a,e,o,t)=>{for(var i=t>1?void 0:t?m(e,o):e,n=a.length-1,s;n>=0;n--)(s=a[n])&&(i=(t?s(e,o,i):s(i))||i);return t&&i&&b(e,o,i),i};let r=class extends d{constructor(){super()}async _playFileHandler(){"launchQueue"in window&&"files"in LaunchParams.prototype&&(console.log("\u60A8\u7684\u6D4F\u89C8\u5668\u652F\u6301\u6587\u4EF6\u5904\u7406 API"),launchQueue.setConsumer(async a=>{if(!a.files.length){this.msg.innerHTML="\u6CA1\u6709\u4ECE\u56FE\u7247\u6587\u4EF6\u53F3\u952E\u83DC\u5355\u6253\u5F00\u672C\u9875\u9762";return}for(let e of a.files){console.log(e);const o=await e.getFile();console.log(o),this.show.setAttribute("style","display: block;"),this.show.innerHTML=`
-            <img src="${URL.createObjectURL(o)}">
-          `}}))}async connectedCallback(){super.connectedCallback(),this._playFileHandler()}static get styles(){return p`
+import{s as p,r as c,$ as u,i as s,n as g}from"./index.82190d99.js";var b=Object.defineProperty,m=Object.getOwnPropertyDescriptor,n=(o,e,a,i)=>{for(var r=i>1?void 0:i?m(e,a):e,l=o.length-1,d;l>=0;l--)(d=o[l])&&(r=(i?d(e,a,r):d(r))||r);return i&&r&&b(e,a,r),r};let t=class extends p{constructor(){super()}async _playFileHandler(){"launchQueue"in window&&"files"in LaunchParams.prototype&&(console.log("\u60A8\u7684\u6D4F\u89C8\u5668\u652F\u6301\u6587\u4EF6\u5904\u7406 API"),launchQueue.setConsumer(async o=>{if(!o.files.length){this.msg.innerHTML="\u6CA1\u6709\u4ECE\u56FE\u7247\u6587\u4EF6\u53F3\u952E\u83DC\u5355\u6253\u5F00\u672C\u9875\u9762";return}for(let e of o.files){console.log(e);const a=await e.getFile();console.log(a),this.show.setAttribute("style","display: block;"),this.show.innerHTML=`
+            <img src="${URL.createObjectURL(a)}">
+          `}}))}async connectedCallback(){super.connectedCallback(),this._playFileHandler()}static get styles(){return c`
     .about {
       padding: 0 16px;
       margin: 1rem 0 0rem 0;
@@ -198,7 +198,7 @@ import{s as d,r as p,$ as g,i as c,n as u}from"./index.bf7d3a51.js";var b=Object
       display: none;
     }
 
-    `}render(){return g`
+    `}render(){return u`
       <app-header ?enableBack="${!0}"></app-header>
       <div class="about">
         <fluent-breadcrumb>
@@ -226,29 +226,8 @@ import{s as d,r as p,$ as g,i as c,n as u}from"./index.bf7d3a51.js";var b=Object
               教程：注册应用到系统的文件处理
             </a>
           </div>
-          <div class="w3c"><icon-w3c class="w3clogo"></icon-w3c> <a href="https://wicg.github.io/manifest-incubations/index.html#file_handlers-member" title="File Handling">File Handling</a></div>
-          <div class="imp">
-            <div class="des">
-              <a href="https://chromestatus.com/feature/5721776357113856" title="在 Chromium 102 版本支持">🐡 M102</a>
-            </div>
-            <div class="des">
-              <div class="det">
-              <icon-chr class="yes" title="Google Chrome 浏览器"></icon-chr>
-              <icon-edg class="yes" title="微软 Edge 浏览器"></icon-edg> <icon-ope class="yes" title="Opera 浏览器"></icon-ope> <icon-viv class="yes" title="Vivaldi 浏览器"></icon-viv>
-              <icon-saf class="no" title="Apple Safari 浏览器"></icon-saf> <icon-fir class="no" title="Mozilla Firefox 浏览器"></icon-fir>
-              </div>
-            </div>
-            <div class="des">
-              <div class="det">
-                <icon-mac class="yes" title="Mac"></icon-mac> <icon-win class="yes" title="Windows"></icon-win> <icon-lin class="yes" title="Linux"></icon-lin> 
-              </div>
-              <div class="det">
-                <icon-and class="no" title="Android"></icon-and> <icon-ios class="no" title="iOS"></icon-ios>
-              </div>
-            </div>   
-          </div>
         </fluent-card>
       </div>
       <app-footer></app-footer>
-    `}};l([c("#first-video")],r.prototype,"video",2);l([c("#msg")],r.prototype,"msg",2);l([c("#show")],r.prototype,"show",2);r=l([u("sample-fh")],r);export{r as SampleFH};
-//# sourceMappingURL=sample-fh.0775a8a7.js.map
+    `}};n([s("#first-video")],t.prototype,"video",2);n([s("#msg")],t.prototype,"msg",2);n([s("#show")],t.prototype,"show",2);t=n([g("sample-fh")],t);export{t as SampleFH};
+//# sourceMappingURL=sample-fh.b088b956.js.map
