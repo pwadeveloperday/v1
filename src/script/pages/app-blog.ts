@@ -13,6 +13,7 @@ export class AppBlog extends LitElement {
         "path" : "china-pwa-developer-day-2022",
         "title": "第二届中国 PWA 开发者日",
         "des": "第二届中国 PWA 开发者日 (China PWA Developer Day 2022) 即将于 2022 年 8 月 6 日线上举行。欢迎您的参与！",
+        "des2": "",
         "date": "2022-08-06",
         "authors": [ {
           "author": "宋青见 (Edwin Song)",
@@ -222,6 +223,14 @@ export class AppBlog extends LitElement {
       background-image: url('assets/2022/people/120/edwin.png');
     }
 
+    #icon_wpe {
+      background-image: url('assets/2022/people/120/wpe.png');
+    }
+
+    #icon_hongjuan {
+      background-image: url('assets/2022/people/120/hongjuan.png');
+    }
+
     a {
       color: rgba(0, 113, 197, 0.9);
       cursor: pointer;
@@ -289,6 +298,7 @@ export class AppBlog extends LitElement {
         for(let i of this.jsondata.blog) {
           if(this._getpath() === i.path) {
             let abstract = i.des.replace(/\n/g, '<br>');
+            let abstract2 = i.des2.replace(/\n/g, '<br>');
             let authorcontent = '';
             for(let a of i.authors) {
               authorcontent += `
@@ -308,6 +318,7 @@ export class AppBlog extends LitElement {
                 <div class="date">${i.date}</div>
                 <div class="article">
                   ${abstract}
+                  ${abstract2}
                 </div>
                 <div class="details">
                   ${authorcontent}
@@ -324,7 +335,7 @@ export class AppBlog extends LitElement {
       if(!this._getpath()) {
         hero = `
           <h2><a href="/blog" title="博客">Blog</a></h2>
-          <div class="desc">为您准备的关于 PWA 及 Fugu API 的更新和故事</div>
+          <div class="desc">为您准备的关于 Web, PWA 及 Fugu API 的更新和故事</div>
         `;
       }
 
