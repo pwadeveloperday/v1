@@ -270,27 +270,6 @@ export class SampleFH extends LitElement {
               教程：注册应用到系统的文件处理
             </a>
           </div>
-          <div class="w3c"><icon-w3c class="w3clogo"></icon-w3c> <a href="https://wicg.github.io/manifest-incubations/index.html#file_handlers-member" title="File Handling">File Handling</a></div>
-          <div class="imp">
-            <div class="des">
-              <a href="https://chromestatus.com/feature/5721776357113856" title="在 Chromium 102 版本支持">🐡 M102</a>
-            </div>
-            <div class="des">
-              <div class="det">
-              <icon-chr class="yes" title="Google Chrome 浏览器"></icon-chr>
-              <icon-edg class="yes" title="微软 Edge 浏览器"></icon-edg> <icon-ope class="yes" title="Opera 浏览器"></icon-ope> <icon-viv class="yes" title="Vivaldi 浏览器"></icon-viv>
-              <icon-saf class="no" title="Apple Safari 浏览器"></icon-saf> <icon-fir class="no" title="Mozilla Firefox 浏览器"></icon-fir>
-              </div>
-            </div>
-            <div class="des">
-              <div class="det">
-                <icon-mac class="yes" title="Mac"></icon-mac> <icon-win class="yes" title="Windows"></icon-win> <icon-lin class="yes" title="Linux"></icon-lin> 
-              </div>
-              <div class="det">
-                <icon-and class="no" title="Android"></icon-and> <icon-ios class="no" title="iOS"></icon-ios>
-              </div>
-            </div>   
-          </div>
         </fluent-card>
       </div>
       <app-footer></app-footer>
