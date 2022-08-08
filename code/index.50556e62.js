@@ -2629,11 +2629,11 @@ void main(void)
                     <h1 class="text-gradient">在线 免费 分享</h1>
                     <h1 class="h1b text-gradient">借助 PWA 获得成功</h1>
                     <div class="register">
-                      <a href="http://hdxu.cn/eNmed" title="即刻预约" id="book">
-                        即刻预约
+                      <a href="#" title="明年再聚" id="book">
+                        明年再聚
                       </a>
-                      <a href="https://data.pwadev.io/2022/calendar/pwa_dev_day.ics" title="添加日历, 下载到本地后请用 Outlook 打开并保存" id="calendar">
-                        添加日历
+                      <a href="2022" title="视频回放" id="book">
+                        视频回放 (整理中)
                       </a>
                     </div>
                     <h3 class="joint">联合主办</h3>
@@ -3264,7 +3264,6 @@ void main(void)
       .wechat {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
         grid-template-rows: 1fr;
         grid-column-gap: 16px;
         grid-row-gap: 0px;
@@ -3288,21 +3287,9 @@ void main(void)
       <div class="wechat">
         <div>
           <div>
-            <a href="http://hdxu.cn/eNmed" title="了解活动详情并报名"><img src="assets/2022/hdx_t.png" alt="活动详情"></a>
-          </div>
-          <div class="note">活动详情</div>
-        </div>
-        <div>
-          <div>
-            <img src="assets/2022/promote_t.png" alt="微信报名">
-          </div>
-          <div class="note">微信小程序报名</div>
-        </div>
-        <div>
-          <div>
             <img src="assets/2022/wechat_group_1_t.png" alt="PWA 开发者交流群">
           </div>
-          <div class="note">PWA 开发者交流群 (8月8日前)</div>
+          <div class="note">PWA 开发者交流群</div>
         </div>
         <div>
           <div>
@@ -3355,8 +3342,8 @@ void main(void)
           opacity: 1;
         }
       }
-    `}constructor(){super()}firstUpdated(){var r;new Re((r=this.shadowRoot)==null?void 0:r.querySelector("#routerOutlet")).setRoutes([{path:"",animate:!0,children:[{path:"/",component:"app-home"},{path:"/2022",children:[{path:"/",component:"app-2022",action:async()=>{await Lt(()=>import("./app-2022.d45e67ae.js"),[])}},{path:"/:topic",component:"app-2022",action:async()=>{await Lt(()=>import("./app-2022.d45e67ae.js"),[])}}]},{path:"/2021",children:[{path:"/",component:"app-2021",action:async()=>{await Lt(()=>import("./app-2021.3aa2f41c.js"),[])}},{path:"/:topic",component:"app-2021",action:async()=>{await Lt(()=>import("./app-2021.3aa2f41c.js"),[])}}]},{path:"/about",component:"app-about",action:async()=>{await Lt(()=>import("./app-about.be5db7bf.js"),[])}},{path:"/blog",children:[{path:"/",component:"app-blog",action:async()=>{await Lt(()=>import("./app-blog.93a923ed.js"),[])}},{path:"/:article",component:"app-blog",action:async()=>{await Lt(()=>import("./app-blog.93a923ed.js"),[])}}]},{path:"/tutorial",component:"app-tutorial",action:async()=>{await Lt(()=>import("./app-tutorial.32d82644.js"),[])}},{path:"/code-of-conduct",component:"app-coc",action:async()=>{await Lt(()=>import("./app-coc.e9f432ed.js"),[])}},{path:"/privacy",component:"app-privacy",action:async()=>{await Lt(()=>import("./app-privacy.5f080f57.js"),[])}},{path:"/sample/file-handling",component:"sample-fh",action:async()=>{await Lt(()=>import("./sample-fh.e77a84f4.js"),[])}},{path:"/sample/media-player",component:"sample-mp",action:async()=>{await Lt(()=>import("./sample-mp.2e529e7d.js"),[])}}]}]),Pd({immediate:!0})}render(){return Gt`
+    `}constructor(){super()}firstUpdated(){var r;new Re((r=this.shadowRoot)==null?void 0:r.querySelector("#routerOutlet")).setRoutes([{path:"",animate:!0,children:[{path:"/",component:"app-home"},{path:"/2022",children:[{path:"/",component:"app-2022",action:async()=>{await Lt(()=>import("./app-2022.cec07a2a.js"),[])}},{path:"/:topic",component:"app-2022",action:async()=>{await Lt(()=>import("./app-2022.cec07a2a.js"),[])}}]},{path:"/2021",children:[{path:"/",component:"app-2021",action:async()=>{await Lt(()=>import("./app-2021.78a71467.js"),[])}},{path:"/:topic",component:"app-2021",action:async()=>{await Lt(()=>import("./app-2021.78a71467.js"),[])}}]},{path:"/about",component:"app-about",action:async()=>{await Lt(()=>import("./app-about.2e89a5f0.js"),[])}},{path:"/blog",children:[{path:"/",component:"app-blog",action:async()=>{await Lt(()=>import("./app-blog.2aee7d95.js"),[])}},{path:"/:article",component:"app-blog",action:async()=>{await Lt(()=>import("./app-blog.2aee7d95.js"),[])}}]},{path:"/tutorial",component:"app-tutorial",action:async()=>{await Lt(()=>import("./app-tutorial.d8fb40b9.js"),[])}},{path:"/code-of-conduct",component:"app-coc",action:async()=>{await Lt(()=>import("./app-coc.d42f0ef3.js"),[])}},{path:"/privacy",component:"app-privacy",action:async()=>{await Lt(()=>import("./app-privacy.9263d532.js"),[])}},{path:"/sample/file-handling",component:"sample-fh",action:async()=>{await Lt(()=>import("./sample-fh.d8a55632.js"),[])}},{path:"/sample/media-player",component:"sample-mp",action:async()=>{await Lt(()=>import("./sample-mp.d90bc7e5.js"),[])}}]}]),Pd({immediate:!0})}render(){return Gt`
       <main id="routerOutlet">
       </main>
     `}};$l=Ab([_e("app-index")],$l);"serviceWorker"in navigator&&navigator.serviceWorker.register("/sw.js");export{Gt as $,kc as a,Ut as e,pn as i,_e as n,hf as o,ve as r,St as s};
-//# sourceMappingURL=index.3b178049.js.map
+//# sourceMappingURL=index.50556e62.js.map

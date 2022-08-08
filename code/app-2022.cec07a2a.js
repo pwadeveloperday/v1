@@ -1,4 +1,4 @@
-import{s as u,r as g,$ as d,o as c,e as s,n as h}from"./index.3b178049.js";var b=Object.defineProperty,m=Object.getOwnPropertyDescriptor,n=(i,a,r,e)=>{for(var t=e>1?void 0:e?m(a,r):a,l=i.length-1,p;l>=0;l--)(p=i[l])&&(t=(e?p(a,r,t):p(t))||t);return e&&t&&b(a,r,t),t};let o=class extends u{constructor(){super(),this.subtitle="\u7B2C\u4E8C\u5C4A",this.title="\u4E2D\u56FD PWA \u5F00\u53D1\u8005\u65E5",this.time="8 \u6708 6 \u65E5 (\u5468\u516D) 09:00 - 17:00",this.description=`
+import{s as u,r as g,$ as d,o as c,e as l,n as h}from"./index.50556e62.js";var b=Object.defineProperty,m=Object.getOwnPropertyDescriptor,n=(i,a,r,e)=>{for(var t=e>1?void 0:e?m(a,r):a,o=i.length-1,p;o>=0;o--)(p=i[o])&&(t=(e?p(a,r,t):p(t))||t);return e&&t&&b(a,r,t),t};let s=class extends u{constructor(){super(),this.subtitle="\u7B2C\u4E8C\u5C4A",this.title="\u4E2D\u56FD PWA \u5F00\u53D1\u8005\u65E5",this.time="8 \u6708 6 \u65E5 (\u5468\u516D) 09:00 - 17:00",this.description=`
     \u4E3A\u52A0\u901F\u63A8\u52A8\u6E10\u8FDB\u5F0F Web \u5E94\u7528 (PWA) \u5728\u4E2D\u56FD\u7684\u53D1\u5C55\uFF0C\u5FAE\u8F6F\u3001\u82F1\u7279\u5C14\u4E0E\u8C37\u6B4C\u643A\u624B\u4E3E\u529E\u7B2C\u4E8C\u5C4A\u4E2D\u56FD PWA \u5F00\u53D1\u8005\u65E5\u6D3B\u52A8\u3002
     \u672C\u6B21\u6D3B\u52A8\u9080\u8BF7\u4E00\u4F17\u4E1A\u754C\u5927\u5496\u56F4\u7ED5 PWA \u5C55\u5F00\u5206\u4EAB\uFF0C\u63A2\u8BA8\u6700\u65B0\u6280\u672F\u8FDB\u5C55\uFF0C\u4EE5\u53CA PWA \u751F\u6001\u7684\u5B9E\u8DF5\u4E0E\u843D\u5730\u3002
     
@@ -476,6 +476,20 @@ import{s as u,r as g,$ as d,o as c,e as s,n as h}from"./index.3b178049.js";var b
         background-color: rgba(255, 255, 255, 0.95);
       }
 
+      .pdf {
+        margin-top: 16px;
+      }
+
+      .pdf svg {
+        width: 18px;
+        height: 14px;
+        fill: rgba(0, 113, 197, 0.9);
+      }
+
+      .pdf:hover svg {
+        fill: rgba(0, 113, 197, 1.0);
+      }
+
      `}async firstUpdated(){console.log("\u6B22\u8FCE\u60A8!")}render(){if(this.jsondata){let i="",a=`
         <div class="p2022 section">
           <div class="hero">
@@ -490,7 +504,12 @@ import{s as u,r as g,$ as d,o as c,e as s,n as h}from"./index.3b178049.js";var b
             </svg>
           </div>
         </div>
-      `;if(this._getpath())for(let e of this.jsondata.t2022){let t="";this._getpath()===e.path&&(t=`
+      `;if(this._getpath())for(let e of this.jsondata.t2022){let t="";e.pdf&&(t=`
+              <a href="${e.pdf}">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M144 480C64.47 480 0 415.5 0 336C0 273.2 40.17 219.8 96.2 200.1C96.07 197.4 96 194.7 96 192C96 103.6 167.6 32 256 32C315.3 32 367 64.25 394.7 112.2C409.9 101.1 428.3 96 448 96C501 96 544 138.1 544 192C544 204.2 541.7 215.8 537.6 226.6C596 238.4 640 290.1 640 352C640 422.7 582.7 480 512 480H144zM303 392.1C312.4 402.3 327.6 402.3 336.1 392.1L416.1 312.1C426.3 303.6 426.3 288.4 416.1 279C407.6 269.7 392.4 269.7 383 279L344 318.1V184C344 170.7 333.3 160 320 160C306.7 160 296 170.7 296 184V318.1L256.1 279C247.6 269.7 232.4 269.7 223 279C213.7 288.4 213.7 303.6 223 312.1L303 392.1z"/></svg>
+                ${e.title} (PDF)
+              </a>
+            `);let o="";this._getpath()===e.path&&(o=`
             <fluent-card class="section-single">
               <div class="title">
                 ${e.title}
@@ -498,6 +517,9 @@ import{s as u,r as g,$ as d,o as c,e as s,n as h}from"./index.3b178049.js";var b
               <div class="topic">
                 <div class="bili">
                   <iframe width="${this.screenwidth}" height="${this.screenheight}" src="https://player.bilibili.com/player.html?cid=${e.cid}&aid=${e.aid}&page=1&as_wide=1&high_quality=1&danmaku=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+                  <div class="pdf">
+                    ${t}
+                  </div>
                 </div>
                 <div class="des-single">
                   <h3>\u4E3B\u9898\u6982\u8981</h3>
@@ -524,13 +546,21 @@ import{s as u,r as g,$ as d,o as c,e as s,n as h}from"./index.3b178049.js";var b
 
               <app-footer-home></app-footer-home>
             </fluent-card>
-            `,i+=t,a="")}else for(let e of this.jsondata.t2022){let t="";t=`
+            `,i+=o,a="")}else for(let e of this.jsondata.t2022){let t="";e.pdf&&(t=`
+              <a href="${e.pdf}">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M144 480C64.47 480 0 415.5 0 336C0 273.2 40.17 219.8 96.2 200.1C96.07 197.4 96 194.7 96 192C96 103.6 167.6 32 256 32C315.3 32 367 64.25 394.7 112.2C409.9 101.1 428.3 96 448 96C501 96 544 138.1 544 192C544 204.2 541.7 215.8 537.6 226.6C596 238.4 640 290.1 640 352C640 422.7 582.7 480 512 480H144zM303 392.1C312.4 402.3 327.6 402.3 336.1 392.1L416.1 312.1C426.3 303.6 426.3 288.4 416.1 279C407.6 269.7 392.4 269.7 383 279L344 318.1V184C344 170.7 333.3 160 320 160C306.7 160 296 170.7 296 184V318.1L256.1 279C247.6 269.7 232.4 269.7 223 279C213.7 288.4 213.7 303.6 223 312.1L303 392.1z"/></svg>
+                ${e.title} (PDF)
+              </a>
+            `);let o="";o=`
             <fluent-card class="section">
               <div class="title">
                 <a href="/2022/${e.path}">${e.title}</a></div>
               <div class="topic">
                 <div class="bili">
                   <iframe width="${this.screenwidth}" height="${this.screenheight}" src="https://player.bilibili.com/player.html?cid=${e.cid}&aid=${e.aid}&page=1&as_wide=1&high_quality=1&danmaku=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+                  <div class="pdf">
+                    ${t}
+                  </div>
                 </div>
                 <div>
                   <fluent-tabs activeid="apps">
@@ -555,7 +585,7 @@ import{s as u,r as g,$ as d,o as c,e as s,n as h}from"./index.3b178049.js";var b
                 </div>
               </div>
             </fluent-card>
-          `,i+=t}let r="";return a?r="scroll100":r="",d`
+          `,i+=o}let r="";return a?r="scroll100":r="",d`
       <app-header ?enableBack="${!0}"></app-header>
       <div class="${r}">
         ${c(a)}
@@ -568,5 +598,5 @@ import{s as u,r as g,$ as d,o as c,e as s,n as h}from"./index.3b178049.js";var b
           />
         </svg>
       </pwa-install>
-      `}else return d`<div>No data</div>`}};n([s({type:String})],o.prototype,"subtitle",2);n([s({type:String})],o.prototype,"title",2);n([s({type:String})],o.prototype,"time",2);n([s({type:String})],o.prototype,"description",2);n([s({type:Object})],o.prototype,"jsondata",2);n([s({type:String})],o.prototype,"screenwidth",2);n([s({type:String})],o.prototype,"screenheight",2);o=n([h("app-2022")],o);export{o as App2022};
-//# sourceMappingURL=app-2022.d45e67ae.js.map
+      `}else return d`<div>No data</div>`}};n([l({type:String})],s.prototype,"subtitle",2);n([l({type:String})],s.prototype,"title",2);n([l({type:String})],s.prototype,"time",2);n([l({type:String})],s.prototype,"description",2);n([l({type:Object})],s.prototype,"jsondata",2);n([l({type:String})],s.prototype,"screenwidth",2);n([l({type:String})],s.prototype,"screenheight",2);s=n([h("app-2022")],s);export{s as App2022};
+//# sourceMappingURL=app-2022.cec07a2a.js.map
