@@ -94,7 +94,6 @@ export class AppFooterHome extends LitElement {
       .wechat {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
         grid-template-rows: 1fr;
         grid-column-gap: 16px;
         grid-row-gap: 0px;
@@ -132,21 +131,9 @@ export class AppFooterHome extends LitElement {
       <div class="wechat">
         <div>
           <div>
-            <a href="http://hdxu.cn/eNmed" title="了解活动详情并报名"><img src="assets/2022/hdx_t.png" alt="活动详情"></a>
-          </div>
-          <div class="note">活动详情</div>
-        </div>
-        <div>
-          <div>
-            <img src="assets/2022/promote_t.png" alt="微信报名">
-          </div>
-          <div class="note">微信小程序报名</div>
-        </div>
-        <div>
-          <div>
             <img src="assets/2022/wechat_group_1_t.png" alt="PWA 开发者交流群">
           </div>
-          <div class="note">PWA 开发者交流群 (8月8日前)</div>
+          <div class="note">PWA 开发者交流群</div>
         </div>
         <div>
           <div>
