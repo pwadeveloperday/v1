@@ -2392,7 +2392,7 @@ void main(void)
 
         font-weight: 600;
         letter-spacing: 2px;
-        color: rgba(0, 199, 253, 0.9);
+        color: rgba(0, 113, 197, 0.9); 
         padding: 12px 36px;
         box-sizing: border-box;
         text-decoration: none;
@@ -2423,7 +2423,7 @@ void main(void)
       }
 
       .coll a {
-        color: rgba(0, 199, 253, 0.9);
+        color: rgba(0, 113, 197, 0.9);;
         text-decoration: none;
         font-size: 15px;
         font-weight: 600;
@@ -2633,7 +2633,7 @@ void main(void)
                         明年再聚
                       </a>
                       <a href="2022" title="视频回放" id="book">
-                        视频回放 (整理中)
+                        视频回放
                       </a>
                     </div>
                     <h3 class="joint">联合主办</h3>
@@ -3342,8 +3342,8 @@ void main(void)
           opacity: 1;
         }
       }
-    `}constructor(){super()}firstUpdated(){var r;new Re((r=this.shadowRoot)==null?void 0:r.querySelector("#routerOutlet")).setRoutes([{path:"",animate:!0,children:[{path:"/",component:"app-home"},{path:"/2022",children:[{path:"/",component:"app-2022",action:async()=>{await Lt(()=>import("./app-2022.cec07a2a.js"),[])}},{path:"/:topic",component:"app-2022",action:async()=>{await Lt(()=>import("./app-2022.cec07a2a.js"),[])}}]},{path:"/2021",children:[{path:"/",component:"app-2021",action:async()=>{await Lt(()=>import("./app-2021.78a71467.js"),[])}},{path:"/:topic",component:"app-2021",action:async()=>{await Lt(()=>import("./app-2021.78a71467.js"),[])}}]},{path:"/about",component:"app-about",action:async()=>{await Lt(()=>import("./app-about.2e89a5f0.js"),[])}},{path:"/blog",children:[{path:"/",component:"app-blog",action:async()=>{await Lt(()=>import("./app-blog.2aee7d95.js"),[])}},{path:"/:article",component:"app-blog",action:async()=>{await Lt(()=>import("./app-blog.2aee7d95.js"),[])}}]},{path:"/tutorial",component:"app-tutorial",action:async()=>{await Lt(()=>import("./app-tutorial.d8fb40b9.js"),[])}},{path:"/code-of-conduct",component:"app-coc",action:async()=>{await Lt(()=>import("./app-coc.d42f0ef3.js"),[])}},{path:"/privacy",component:"app-privacy",action:async()=>{await Lt(()=>import("./app-privacy.9263d532.js"),[])}},{path:"/sample/file-handling",component:"sample-fh",action:async()=>{await Lt(()=>import("./sample-fh.d8a55632.js"),[])}},{path:"/sample/media-player",component:"sample-mp",action:async()=>{await Lt(()=>import("./sample-mp.d90bc7e5.js"),[])}}]}]),Pd({immediate:!0})}render(){return Gt`
+    `}constructor(){super()}firstUpdated(){var r;new Re((r=this.shadowRoot)==null?void 0:r.querySelector("#routerOutlet")).setRoutes([{path:"",animate:!0,children:[{path:"/",component:"app-home"},{path:"/2022",children:[{path:"/",component:"app-2022",action:async()=>{await Lt(()=>import("./app-2022.2873ac39.js"),[])}},{path:"/:topic",component:"app-2022",action:async()=>{await Lt(()=>import("./app-2022.2873ac39.js"),[])}}]},{path:"/2021",children:[{path:"/",component:"app-2021",action:async()=>{await Lt(()=>import("./app-2021.54f9cbd0.js"),[])}},{path:"/:topic",component:"app-2021",action:async()=>{await Lt(()=>import("./app-2021.54f9cbd0.js"),[])}}]},{path:"/about",component:"app-about",action:async()=>{await Lt(()=>import("./app-about.e9f33f6c.js"),[])}},{path:"/blog",children:[{path:"/",component:"app-blog",action:async()=>{await Lt(()=>import("./app-blog.9c1f9358.js"),[])}},{path:"/:article",component:"app-blog",action:async()=>{await Lt(()=>import("./app-blog.9c1f9358.js"),[])}}]},{path:"/tutorial",component:"app-tutorial",action:async()=>{await Lt(()=>import("./app-tutorial.231d1632.js"),[])}},{path:"/code-of-conduct",component:"app-coc",action:async()=>{await Lt(()=>import("./app-coc.85554ecd.js"),[])}},{path:"/privacy",component:"app-privacy",action:async()=>{await Lt(()=>import("./app-privacy.a51b1fee.js"),[])}},{path:"/sample/file-handling",component:"sample-fh",action:async()=>{await Lt(()=>import("./sample-fh.1cde4785.js"),[])}},{path:"/sample/media-player",component:"sample-mp",action:async()=>{await Lt(()=>import("./sample-mp.3d575594.js"),[])}}]}]),Pd({immediate:!0})}render(){return Gt`
       <main id="routerOutlet">
       </main>
     `}};$l=Ab([_e("app-index")],$l);"serviceWorker"in navigator&&navigator.serviceWorker.register("/sw.js");export{Gt as $,kc as a,Ut as e,pn as i,_e as n,hf as o,ve as r,St as s};
-//# sourceMappingURL=index.50556e62.js.map
+//# sourceMappingURL=index.ee16acc0.js.map
