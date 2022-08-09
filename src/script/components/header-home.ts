@@ -192,7 +192,7 @@ export class AppHeaderHome extends LitElement {
 
         font-weight: 600;
         letter-spacing: 2px;
-        color: rgba(0, 199, 253, 0.9);
+        color: rgba(0, 113, 197, 0.9); 
         padding: 12px 36px;
         box-sizing: border-box;
         text-decoration: none;
@@ -223,7 +223,7 @@ export class AppHeaderHome extends LitElement {
       }
 
       .coll a {
-        color: rgba(0, 199, 253, 0.9);
+        color: rgba(0, 113, 197, 0.9);;
         text-decoration: none;
         font-size: 15px;
         font-weight: 600;
@@ -471,7 +471,7 @@ export class AppHeaderHome extends LitElement {
                         明年再聚
                       </a>
                       <a href="2022" title="视频回放" id="book">
-                        视频回放 (整理中)
+                        视频回放
                       </a>
                     </div>
                     <h3 class="joint">联合主办</h3>
