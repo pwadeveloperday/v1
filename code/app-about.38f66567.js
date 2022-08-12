@@ -1,4 +1,4 @@
-import{s as d,r as n,$ as o,n as c}from"./index.ee16acc0.js";var m=Object.defineProperty,u=Object.getOwnPropertyDescriptor,g=(l,e,p,r)=>{for(var a=r>1?void 0:r?u(e,p):e,i=l.length-1,t;i>=0;i--)(t=l[i])&&(a=(r?t(e,p,a):t(a))||a);return r&&a&&m(e,p,a),a};let s=class extends d{static get styles(){return n`
+import{s as d,r as n,$ as o,n as c}from"./index.079a88c6.js";var m=Object.defineProperty,u=Object.getOwnPropertyDescriptor,g=(l,e,p,r)=>{for(var a=r>1?void 0:r?u(e,p):e,i=l.length-1,t;i>=0;i--)(t=l[i])&&(a=(r?t(e,p,a):t(a))||a);return r&&a&&m(e,p,a),a};let s=class extends d{static get styles(){return n`
     .about {
       padding: 0 16px;
       margin: 1rem 0 0rem 0;
@@ -110,4 +110,4 @@ import{s as d,r as n,$ as o,n as c}from"./index.ee16acc0.js";var m=Object.define
       </div>
       <app-footer></app-footer>
     `}};s=g([c("app-about")],s);export{s as AppAbout};
-//# sourceMappingURL=app-about.e9f33f6c.js.map
+//# sourceMappingURL=app-about.38f66567.js.map
