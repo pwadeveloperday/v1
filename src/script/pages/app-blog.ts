@@ -1,5 +1,5 @@
 import { LitElement, css, html } from 'lit';
-import { property, customElement, query } from 'lit/decorators.js';
+import { property, customElement } from 'lit/decorators.js';
 import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
 
 @customElement('app-blog')
@@ -153,7 +153,6 @@ export class AppBlog extends LitElement {
       font-size: 14px;
       overflow-y: auto;
       background: rgba(255, 255, 255, 0.2);
-      letter-spacing: 1px;
       margin: 16px auto;
     }
 
@@ -213,6 +212,10 @@ export class AppBlog extends LitElement {
 
     #icon_belem {
       background-image: url('assets/2022/people/120/belem.png');
+    }
+
+    #icon_qi {
+      background-image: url('assets/2022/people/120/qi.png');
     }
 
     #icon_wanming {

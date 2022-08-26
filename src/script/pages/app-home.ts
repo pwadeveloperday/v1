@@ -1,5 +1,5 @@
 import { LitElement, css, html } from 'lit';
-import { property, customElement, query, queryAll } from 'lit/decorators.js';
+import { property, customElement, query } from 'lit/decorators.js';
 import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
 import '@pwabuilder/pwainstall';
 import * as PIXI from "pixi.js";

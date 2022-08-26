@@ -23,13 +23,13 @@ export class AppFooterHome extends LitElement {
         justify-self: end;
       }
 
-      footer a {
+      #menu a, footer a {
         color: rgba(61, 61, 61, 1);
         text-decoration: none;
         margin: 0 2px;
       }
 
-      footer a:hover {
+      #menu a:hover, footer a:hover {
         color: rgba(0,113,197, 1.0);
         border-bottom: 1px dashed rgba(0,113,197, 1);
       }
@@ -113,6 +113,10 @@ export class AppFooterHome extends LitElement {
         font-size: 12px;
       }
 
+      #menu {
+        margin: 1rem auto 0 auto;
+        text-align: center;
+      }
     `;
   }
 
@@ -145,6 +149,15 @@ export class AppFooterHome extends LitElement {
       <div id="slogan">
         <span id="engage">为 Web 赋能</span>
         <span id="play">Play for Team Web</span>
+      </div>
+      <div id="menu"> 
+        <a href="/2022">2022</a>
+        <a href="/2021">2021</a>
+        <a href="/blog" title="博客">Blog</a>
+        <a href="/tutorial" title="教程">教程</a>
+        <!-- 
+          <div><fluent-anchor href="https://demos.pwadev.io" appearance="primary" target="_blank">示例</fluent-anchor></div>
+        -->
       </div>
       <footer>
         <div>&copy;2022 <a href="https://pwadev.io" title="中国 PWA 开发者日">中国 PWA 开发者日</a></div>
