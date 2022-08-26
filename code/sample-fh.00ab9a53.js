@@ -1,4 +1,4 @@
-import{s as p,r as c,$ as u,i as s,n as g}from"./index.079a88c6.js";var b=Object.defineProperty,m=Object.getOwnPropertyDescriptor,n=(o,e,a,i)=>{for(var r=i>1?void 0:i?m(e,a):e,l=o.length-1,d;l>=0;l--)(d=o[l])&&(r=(i?d(e,a,r):d(r))||r);return i&&r&&b(e,a,r),r};let t=class extends p{constructor(){super()}async _playFileHandler(){"launchQueue"in window&&"files"in LaunchParams.prototype&&(console.log("\u60A8\u7684\u6D4F\u89C8\u5668\u652F\u6301\u6587\u4EF6\u5904\u7406 API"),launchQueue.setConsumer(async o=>{if(!o.files.length){this.msg.innerHTML="\u6CA1\u6709\u4ECE\u56FE\u7247\u6587\u4EF6\u53F3\u952E\u83DC\u5355\u6253\u5F00\u672C\u9875\u9762";return}for(let e of o.files){console.log(e);const a=await e.getFile();console.log(a),this.show.setAttribute("style","display: block;"),this.show.innerHTML=`
+import{s as p,r as c,$ as u,i as s,n as g}from"./index.b5c802cd.js";var b=Object.defineProperty,m=Object.getOwnPropertyDescriptor,n=(o,e,a,i)=>{for(var r=i>1?void 0:i?m(e,a):e,l=o.length-1,d;l>=0;l--)(d=o[l])&&(r=(i?d(e,a,r):d(r))||r);return i&&r&&b(e,a,r),r};let t=class extends p{constructor(){super()}async _playFileHandler(){"launchQueue"in window&&"files"in LaunchParams.prototype&&(console.log("\u60A8\u7684\u6D4F\u89C8\u5668\u652F\u6301\u6587\u4EF6\u5904\u7406 API"),launchQueue.setConsumer(async o=>{if(!o.files.length){this.msg.innerHTML="\u6CA1\u6709\u4ECE\u56FE\u7247\u6587\u4EF6\u53F3\u952E\u83DC\u5355\u6253\u5F00\u672C\u9875\u9762";return}for(let e of o.files){console.log(e);const a=await e.getFile();console.log(a),this.show.setAttribute("style","display: block;"),this.show.innerHTML=`
             <img src="${URL.createObjectURL(a)}">
           `}}))}async connectedCallback(){super.connectedCallback(),this._playFileHandler()}static get styles(){return c`
     .about {
@@ -230,4 +230,4 @@ import{s as p,r as c,$ as u,i as s,n as g}from"./index.079a88c6.js";var b=Object
       </div>
       <app-footer></app-footer>
     `}};n([s("#first-video")],t.prototype,"video",2);n([s("#msg")],t.prototype,"msg",2);n([s("#show")],t.prototype,"show",2);t=n([g("sample-fh")],t);export{t as SampleFH};
-//# sourceMappingURL=sample-fh.ecbee60b.js.map
+//# sourceMappingURL=sample-fh.00ab9a53.js.map
